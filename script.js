@@ -49,11 +49,13 @@ const TEXT_SIZE_LIMIT = 2048;//number of words in text approximately
 async function getEmbeddings(texts) {
   try{
     const response = await openai.embeddings.create({
-        model: 'text-embedding-3-small',
+        model: 'text-embedding-3-large',
         input: texts,
+        dimensions : 256
     });
     return response.data.map(a => a.embedding);
   } catch(e){
+    console.log(e);
     return null;
   }
 }
@@ -140,13 +142,15 @@ class WordEmbeddings {
             return;
           }
           // Filter out embeddings that are already present
-          const embeddingsToAdd = embeddings.filter((embedding, index) => !this.embeddingMap.has(texts[i + index]));
-          for (let j = 0; j < embeddingsToAdd.length; j++) {
-              this.embeddingMap.set(texts[i + j], embeddingsToAdd[j]);
+          const indicesToadd = texts.slice(i, i + TEXT_SIZE_LIMIT).map((w, i) => ({w, i})).filter((a) => {
+            return !this.embeddingMap.has(a.w)
+          }).map(({w,i})=>i);
+          for (let j of indicesToadd) {
+              this.embeddingMap.set(texts[i + j], embeddings[j]);
           }
           //append the word and its embedding to the file at this.filePath
-          const lines = embeddingsToAdd.map((embedding, j) => `${texts[i + j]}\t${embedding.join(',')}`);
-          await fs.promises.appendFile(this.filePath, lines.join('\n') + '\n');
+          const lines = indicesToadd.map((j) => `${texts[i + j]}\t${embeddings[j].join(',')}`);
+          await fs.promises.appendFile(this.filePath, lines.join('\n') + (lines.length ? '\n' : ''));
       }
   }
 }
@@ -164,9 +168,9 @@ socketServer.on("connection", async (socket)=>{
     }
     const sim = cosineSimilarity(wordE, e);
     return {word, sim};
-  }).sort((a, b) => b.sim - a.sim).filter((({sim}) => sim < 0.6));
+  }).sort((a, b) => b.sim - a.sim).filter((({sim}) => sim < 0.65));
   if (wordsBySimilarity[20].sim > 0.4){
-    wordsBySimilarity = wordsBySimilarity.filter(({sim}) => sim > 0.4);
+    wordsBySimilarity = wordsBySimilarity.filter(({sim}) => sim > 0.45);
   } else{
     wordsBySimilarity = wordsBySimilarity.splice(0,20);
   }
