@@ -10,6 +10,7 @@ import { CONFIG } from "./common/socketConfig.js";
 import { words } from './common/word_list.js';
 
 import fs from 'fs';
+import readline from 'readline';
 import OpenAI from 'openai';
 
 const app = express();
@@ -48,7 +49,7 @@ const TEXT_SIZE_LIMIT = 2048;//number of words in text approximately
 async function getEmbeddings(texts) {
   try{
     const response = await openai.embeddings.create({
-        model: 'text-embedding-3-large',
+        model: 'text-embedding-3-small',
         input: texts,
     });
     return response.data.map(a => a.embedding);
@@ -71,41 +72,50 @@ class WordEmbeddings {
   }
 
   async init() {
-      if (this.embeddingMap) {
-          return;
+    if (this.embeddingMap) {
+      return;
+    }
+    if (this.initiated) {
+      return new Promise((resolve) => {
+        this.initateJobQueue.push(resolve);
+      });
+    }
+    this.embeddingMap = new Map();
+    try {
+      await fs.promises.access("./cache", fs.constants.F_OK);
+    } catch (err) {
+      // If the directory doesn't exist, create it
+      await fs.promises.mkdir("./cache");
+    }
+    // Check if the file exists
+    try {
+      await fs.promises.access(this.filePath, fs.constants.F_OK);
+    } catch (err) {
+      // If the file doesn't exist, create it
+      await fs.promises.writeFile(this.filePath, "");
+    }
+  
+    // Read and parse the file line by line
+    const readStream = fs.createReadStream(this.filePath, "utf8");
+    const rl = readline.createInterface({
+      input: readStream,
+      crlfDelay: Infinity,
+    });
+  
+    for await (const line of rl) {
+      if (line.length === 0) {
+        continue;
       }
-      if (this.initiated) {
-          return new Promise((resolve) => {this.initateJobQueue.push(resolve)});
+      const [word, embedding] = line.split("\t");
+      // Only add if the word isn't already in the map
+      if (!this.embeddingMap.has(word)) {
+        this.embeddingMap.set(word, embedding.split(",").map(parseFloat));
       }
-      this.embeddingMap = new Map();
-      try {
-        await fs.promises.access('./cache', fs.constants.F_OK);
-      } catch (err) {
-          // If the directory doesn't exist, create it
-          await fs.promises.mkdir('./cache');
-      }
-      // Check if the file exists
-      try {
-          await fs.promises.access(this.filePath, fs.constants.F_OK);
-      } catch (err) {
-          // If the file doesn't exist, create it
-          await fs.promises.writeFile(this.filePath, '');
-      }
-
-      // Read and parse the file
-      const data = await fs.promises.readFile(this.filePath, 'utf8');
-      const lines = data.split('\n');
-      for (const line of lines) {
-          if (line.length === 0) {
-              continue;
-          }
-          const [word, embedding] = line.split('\t');
-          this.embeddingMap.set(word, embedding.split(',').map(parseFloat));
-      }
-
-      this.initiated = true;
-      this.initateJobQueue.forEach(resolve => resolve());
-      this.initateJobQueue = [];
+    }
+  
+    this.initiated = true;
+    this.initateJobQueue.forEach((resolve) => resolve());
+    this.initateJobQueue = [];
   }
 
   async getEmbeddings(texts) {
@@ -129,11 +139,13 @@ class WordEmbeddings {
           if (embeddings == null){
             return;
           }
-          for (let j = 0; j < embeddings.length; j++) {
-              this.embeddingMap.set(texts[i + j], embeddings[j]);
+          // Filter out embeddings that are already present
+          const embeddingsToAdd = embeddings.filter((embedding, index) => !this.embeddingMap.has(texts[i + index]));
+          for (let j = 0; j < embeddingsToAdd.length; j++) {
+              this.embeddingMap.set(texts[i + j], embeddingsToAdd[j]);
           }
           //append the word and its embedding to the file at this.filePath
-          const lines = embeddings.map((embedding, j) => `${texts[i + j]}\t${embedding.join(',')}`);
+          const lines = embeddingsToAdd.map((embedding, j) => `${texts[i + j]}\t${embedding.join(',')}`);
           await fs.promises.appendFile(this.filePath, lines.join('\n') + '\n');
       }
   }
@@ -147,6 +159,9 @@ socketServer.on("connection", async (socket)=>{
   const wordsEmbeddings = await wordEmbeddings.getEmbeddings(words);
   let wordsBySimilarity = wordsEmbeddings.map((e, i)=>{
     const word = words[i];
+    if (e == null){
+      return {word, sim : 0};
+    }
     const sim = cosineSimilarity(wordE, e);
     return {word, sim};
   }).sort((a, b) => b.sim - a.sim).filter((({sim}) => sim < 0.6));
