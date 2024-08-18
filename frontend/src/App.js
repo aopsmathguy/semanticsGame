@@ -10,7 +10,8 @@ import {
 } from './ws';
 import { 
   setHints,
-  setScoreGuess, selectGuesses
+  setScoreGuess, selectGuesses,
+  selectLastGuess
 } from './store/slices/semantle';
 
 function TextBoldIndices({word, indices}){
@@ -35,6 +36,7 @@ function TextBoldIndices({word, indices}){
 function App() {
   const dispatch = useDispatch();
   const guesses = useSelector(selectGuesses);
+  const lastGuess = useSelector(selectLastGuess);
   const wordFuse = useRef(new Fuse(words, {includeMatches: true}));
   const [currGuess, setCurrGuess] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -109,52 +111,80 @@ function App() {
 
   return (
     <div className="App" style={{margin : "10px"}}>
-      <div style={{ position: 'relative', display: 'inline-block' }}> {/* Added inline-block */}
-        <input 
-          ref={inputRef}
-          value={currGuess} 
-          onKeyDown={handleKeyDown} 
-          onChange={onChange}
-          onFocus={() => setShowSuggestions(true)}
-        />
-
-        {showSuggestions && currGuess.length > 0 && (
-          <div 
-            className="suggestions-box" 
-            ref={suggestionRef}
-            style={{
-              position: 'absolute', // Make suggestions box positioned relative to parent
-              top: inputRef.current ? inputRef.current.offsetHeight + 'px' : 'auto', // Position below input
-              left: 0, // Align left with input
-              width: inputRef.current ? inputRef.current.offsetWidth + 'px' : 'auto',
-            }}
-          > 
-            {suggestions.map((suggestion, index) => (
-              <div style={{
-                width: '100%',
-                background: highlightedSuggestion === index ? 'lightgray' : 'white'
+      <div style={{display: 'flex'}}>
+        {/* Table for guesses */}
+        <table cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <td width="150px"><b>Word</b></td>
+              <td width="50px"><b>Similarity</b></td>
+              <td width="200px"></td>
+            </tr>
+          </thead>
+          <tbody>
+            {Object.entries(guesses).sort((a, b)=> b[1] - a[1]).map(([guess, sim]) => (
+              <tr key={guess} style={{
+                backgroundColor: guess === lastGuess?.guess ? 'lightgreen' : 'white'
               }}>
-                <button 
-                  key={index} 
-                  onClick={() => {
-                    setCurrGuess(suggestion.word);
-                    setShowSuggestions(false);
-                    doGuess(suggestion.word);
-                  }}
-                  onMouseEnter={() => setHighlightedSuggestion(index)}
-                  onMouseLeave={() => setHighlightedSuggestion(null)}
-                >
-                  <TextBoldIndices word={suggestion.word} indices={suggestion.indices}/>
-                </button>
-              </div>
+                <td>{guess}</td>
+                <td>{Math.round(100 * sim)}%</td>
+                <td>
+                  <div style={{
+                    width: `${sim * 100}%`, 
+                    backgroundColor: `hsl(${sim**0.5 * 100}, 100%, 50%)`, 
+                    height: '20px',
+                    margin : '5px 0px',
+                    border : '2px solid black'
+                  }}></div>
+                </td>
+              </tr>
             ))}
-          </div>
-        )}
-      </div>
+          </tbody>
+        </table>
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+          <input 
+            ref={inputRef}
+            value={currGuess} 
+            onKeyDown={handleKeyDown} 
+            onChange={onChange}
+            onFocus={() => setShowSuggestions(true)}
+          />
 
-      {Object.entries(guesses).sort((a, b)=> b[1] - a[1]).map(([guess, sim]) => (
-        <div key={guess}>{guess}: {sim}</div>
-      ))}
+          {showSuggestions && currGuess.length > 0 && (
+            <div 
+              className="suggestions-box" 
+              ref={suggestionRef}
+              style={{
+                position: 'absolute',
+                top: inputRef.current ? inputRef.current.offsetHeight + 'px' : 'auto',
+                left: 0,
+                width: inputRef.current ? inputRef.current.offsetWidth + 'px' : 'auto',
+              }}
+            > 
+              {suggestions.map((suggestion, index) => (
+                <div style={{
+                  width: '100%',
+                  background: highlightedSuggestion === index ? 'lightgray' : 'white'
+                }}>
+                  <button 
+                    key={index} 
+                    onClick={() => {
+                      setCurrGuess(suggestion.word);
+                      setShowSuggestions(false);
+                      doGuess(suggestion.word);
+                    }}
+                    onMouseEnter={() => setHighlightedSuggestion(index)}
+                    onMouseLeave={() => setHighlightedSuggestion(null)}
+                  >
+                    <TextBoldIndices word={suggestion.word} indices={suggestion.indices}/>
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+      
     </div>
   );
 }
