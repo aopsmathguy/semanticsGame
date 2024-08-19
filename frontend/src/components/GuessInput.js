@@ -15,7 +15,6 @@ function GuessInput({ onGuess, wordFuse }) {
       word: a.item,
       indices: a.matches[0].indices,
     }));
-
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       if (event.ctrlKey) {
@@ -94,7 +93,7 @@ function GuessInput({ onGuess, wordFuse }) {
               highlighted={highlightedSuggestion === index}
               key={index}
               onClick={() => {
-                setCurrGuess(suggestion.word);
+                setCurrGuess("");
                 setShowSuggestions(false);
                 onGuess(suggestion.word);
               }}
