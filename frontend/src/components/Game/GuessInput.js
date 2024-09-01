@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import WordSuggestion from './WordSuggestion.js';
-import {StyledSuggestionsContainer} from './styles';
+import { StyledSuggestionsContainer, StyledGuessInputContainer, StyledGuessInput } from './styles.js';
 function GuessInput({ onGuess, wordFuse }) {
   const [currGuess, setCurrGuess] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -10,7 +10,7 @@ function GuessInput({ onGuess, wordFuse }) {
 
   const suggestions = wordFuse.current
     .search(currGuess)
-    .slice(0, 10)
+    .slice(0, 5)
     .map((a) => ({
       word: a.item,
       indices: a.matches[0].indices,
@@ -68,8 +68,8 @@ function GuessInput({ onGuess, wordFuse }) {
   }, []);
 
   return (
-    <div style={{ position: 'relative', display: 'inline-block' }}>
-      <input
+    <StyledGuessInputContainer>
+      <StyledGuessInput
         ref={inputRef}
         value={currGuess}
         onKeyDown={handleKeyDown}
@@ -82,8 +82,8 @@ function GuessInput({ onGuess, wordFuse }) {
           ref={suggestionRef}
           style={{
             position: 'absolute',
-            top: inputRef.current ? inputRef.current.offsetHeight + 'px' : 'auto',
-            left: 0,
+            bottom: inputRef.current ? inputRef.current.offsetHeight + 'px' : 'auto', // Position above input
+            left: inputRef.current ? inputRef.current.offsetLeft + 'px' : 'auto',
             width: inputRef.current ? inputRef.current.offsetWidth + 'px' : 'auto',
           }}
         >
@@ -103,7 +103,7 @@ function GuessInput({ onGuess, wordFuse }) {
           ))}
         </StyledSuggestionsContainer>
       )}
-    </div>
+    </StyledGuessInputContainer>
   );
 }
 
