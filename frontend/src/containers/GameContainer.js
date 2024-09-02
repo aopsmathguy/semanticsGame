@@ -7,10 +7,11 @@ function GameContainer() {
     const wordFuse = useRef(new Fuse(words, { includeMatches: true }));
     return (
         <Game
+            // gameState={'GUESSING'}
             gameState={'WAIT_START'}
-            currentRound={1}
             timer={8}
             timerEmphasize={true}
+            hostId={2}
             playerId={1}
             players={{
                 1: {
@@ -119,6 +120,15 @@ function GameContainer() {
                     },
                 },
             }}
+            settings={{
+                maxPlayers: 8,
+                guessTime: 60,
+                numberOfRounds: 5,
+                numberOfHints: 5,
+            }}
+            onChangeSettings={(data) => {console.log('settings changed', data)}}
+            onStartGame={() => {console.log('start game')}}
+            currentRound={1}
             guesses={{
                 1: {
                     playerId: 1,
@@ -158,7 +168,7 @@ function GameContainer() {
             }}
             lastGuessHash={4}
             wordFuse={wordFuse}
-            onGuess={() => {}}
+            onGuess={(data) => {console.log('guess', data)}}
             messages={[
                 { message: "hello", color: "green" },
                 { message: "hi", color: "red" },
@@ -188,7 +198,7 @@ function GameContainer() {
                 { message: "yo", color: "yellow" },
                 { message: "asef", color: "green" },
             ]}
-            sendMessage={() => {}}
+            sendMessage={(data) => {console.log('message', data)}}
         />
     );
 }

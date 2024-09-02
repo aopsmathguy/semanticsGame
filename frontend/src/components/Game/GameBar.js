@@ -2,6 +2,7 @@ import React from "react";
 import { StyledGameBarContainer } from "./styles";
 import Timer from "./Timer";
 import Avatar from "../Shared/Avatar";
+import { StyledText } from "../Shared/styles";
 
 function GameBar({
     gameState,
@@ -34,8 +35,8 @@ function GameBar({
     return (
         <StyledGameBarContainer>
             <Timer timer={timer} timerEmphasize={timerEmphasize} />
-            <div><b>Round {currentRound}</b></div>
-            <div>{state}</div>
+            <div><StyledText><b>Round {currentRound}</b></StyledText></div>
+            <div><StyledText>{state}</StyledText></div>
             <div style={{position:"absolute", right : "0", top: "0"}}>
                 <Avatar
                     size={70}

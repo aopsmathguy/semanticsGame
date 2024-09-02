@@ -8,7 +8,7 @@ import {
     StyledPlayerScore,
     StyledPlayerAvatar,
 } from "./styles";
-
+import { StyledText } from "../Shared/styles";
 import Avatar from "../Shared/Avatar";
 function PlayerList({ players, playerId }) {
     const myPlayerId = playerId;
@@ -25,9 +25,9 @@ function PlayerList({ players, playerId }) {
                             <StyledPlayerInfo>
                                 <StyledPlayerName 
                                     isMe={playerId == myPlayerId}
-                                >{name}</StyledPlayerName>
+                                ><StyledText>{name}</StyledText></StyledPlayerName>
                                 <StyledPlayerScore>
-                                    {score} points
+                                <StyledText color="grey">{score} points</StyledText>
                                 </StyledPlayerScore>
                             </StyledPlayerInfo>
                             <StyledPlayerAvatar>

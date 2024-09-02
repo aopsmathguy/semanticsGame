@@ -22,3 +22,11 @@ export const StyledSpriteImage = styled.div`
     -ms-interpolation-mode: nearest-neighbor;
     image-rendering: pixelated;
 `
+
+export const StyledText = styled.div`
+    color: ${({ color }) => color || "black"};
+    font-size: ${({ fontSize }) => fontSize || "20"}px;
+    display: flex;
+    align-items: center;
+    justify-content: ${({ justify }) => justify || "left"};
+`;

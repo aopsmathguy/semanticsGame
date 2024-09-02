@@ -24,6 +24,7 @@ export const StyledPlayersSidebarWrapper = styled.div`
 `;
 
 export const StyledGuessListAndInputWrapper = styled.div`
+    position: relative;
     flex-grow: 1;
 `;
 
@@ -126,7 +127,6 @@ export const StyledPlayerName = styled.div`
 
 export const StyledPlayerScore = styled.div`
     font-style: italic;
-    color: gray;
 `;
 export const StyledPlayerAvatar = styled.div`
     position: absolute;
@@ -155,7 +155,6 @@ export const StyledChatMessagesContainer = styled.div`
 export const StyledChatMessageItem = styled.p`
     padding: 0.2em;
     margin: 0;
-    color: ${({ color }) => color || "black"};
     &:nth-child(odd) {
         background-color: #f0f0f0;
     }
@@ -164,11 +163,12 @@ export const StyledChatMessageItem = styled.p`
     }
 `;
 export const StyledChatSendArea = styled.input`
+    position: relative;
     font: inherit;
-    flex: 0 0 auto;
     height: 2.2em;
     width: auto;
-    padding: 0.2em;
+    flex-grow: 1;
+    min-width: 0;
 `;
 //guess list and input
 export const StyledGuessAreaContainer = styled.div`
@@ -180,14 +180,17 @@ export const StyledGuessAreaContainer = styled.div`
     border: 3px solid black;
     align-items: center;
 `;
+//overlay stuff
 export const StyledGuessAreaOverlay = styled.div`
     position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     opacity: ${({ hidden }) => (hidden ? 0 : 1)};
     visibility: ${({ hidden }) => (hidden ? "hidden" : "visible")};
-    transition: opacity 0.2s, visibility 0.2s;
+    transition: opacity 1s, visibility 1s;
 `;
 export const StyledGuessAreaOverlayContent = styled.div`
     position: absolute;
@@ -201,17 +204,46 @@ export const StyledGuessAreaOverlayContent = styled.div`
     height: 100%;
     transform: ${({hidden})=> (hidden ? "translateY(-100%)" : "translateY(0)")};
     visibility: ${({ hidden }) => (hidden ? "hidden" : "visible")};
-    transition: transform 0.2s, visibility 0.2s;
+    transition: transform 1s, visibility 1s;
+`;
+export const StyledRoomSettingsContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+`;
+
+export const StyledSettingRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+`;
+
+export const StyledLabel = styled.label`
+  text-align: left;
+`;
+
+export const StyledSelect = styled.select`
+    font: inherit;
+    width: 100px;
+`;
+export const StyledButton = styled.button`
+    font: inherit;
+    padding: 5px;
+    flex: 1 1 auto;
 `;
 //guess input stuff
 export const StyledGuessInputContainer = styled.div`
     display: flex;
     flex: 0 0 auto;
 `;
-export const StyledGuessInput = styled.input`
+export const StyledGuessInputDiv = styled.input`
     font: inherit;
     position: relative;
     flex: 1 1 auto;
+    width: 120px;
 `;
 export const StyledSuggestionsContainer = styled.div`
     position: absolute;

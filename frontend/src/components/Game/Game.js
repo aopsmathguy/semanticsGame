@@ -11,21 +11,60 @@ import GameBar from "./GameBar";
 import PlayerList from "./PlayerList";
 import GuessArea from "./GuessArea";
 import Chat from "./Chat";
-function Game({ gameState,
-    currentRound,
+import GuessAreaOverlay from "./GuessAreaOverlay";
+function Game({
+    gameState,
     timer,
-    timerEmphasize, playerId, players, guesses, lastGuessHash, onGuess, messages, sendMessage, wordFuse }) {
+    timerEmphasize,
+    hostId,
+    playerId,
+    players,
+    settings,
+    onChangeSettings,
+    onStartGame,
+    currentRound,
+    guesses,
+    lastGuessHash,
+    onGuess,
+    messages,
+    sendMessage,
+    wordFuse,
+}) {
     return (
         <StyledGameLayout>
-            <StyledGameBarWrapper >
-                <GameBar gameState={gameState} currentRound={currentRound} timer={timer} timerEmphasize={timerEmphasize} players={players} playerId={playerId}/>
+            <StyledGameBarWrapper>
+                <GameBar
+                    gameState={gameState}
+                    currentRound={currentRound}
+                    timer={timer}
+                    timerEmphasize={timerEmphasize}
+                    players={players}
+                    playerId={playerId}
+                />
             </StyledGameBarWrapper>
             <StyledGameContentWrapper>
                 <StyledPlayersSidebarWrapper>
-                    <PlayerList players={players} playerId={playerId}/>
+                    <PlayerList players={players} playerId={playerId} />
                 </StyledPlayersSidebarWrapper>
                 <StyledGuessListAndInputWrapper>
-                    <GuessArea guesses={guesses} lastGuessHash={lastGuessHash} players={players} onGuess={onGuess} wordFuse={wordFuse}/>
+                    <GuessArea
+                        guesses={guesses}
+                        lastGuessHash={lastGuessHash}
+                        players={players}
+                        onGuess={onGuess}
+                        wordFuse={wordFuse}
+                    />
+                    <GuessAreaOverlay
+                        settings={settings}
+                        onChangeSettings={onChangeSettings} 
+                        onStartGame={onStartGame}
+                        gameState={gameState}
+                        currentRound={currentRound}
+                        timer={timer}
+                        playerId={playerId}
+                        players={players}
+                        hostId={hostId}
+                    />
                 </StyledGuessListAndInputWrapper>
                 <StyledChatWrapper>
                     <Chat messages={messages} sendMessage={sendMessage} />
