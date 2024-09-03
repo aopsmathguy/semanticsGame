@@ -30,6 +30,10 @@ const useSocket = () => {
   // Register listener helper function
   const useEventListener = (eventName, callback) => {
     useEffect(() => {
+      const listener = (data) => {
+        console.log(`Received event: ${eventName}`, data);
+        callback(data);
+      }
       socket.on(eventName, callback);
       return () => socket.removeListener(eventName, callback);
     }, [callback]);
@@ -63,6 +67,7 @@ const useSocket = () => {
   const useOnPlayerLeave = (callback) => useEventListener("player-leave", callback);
   const useOnNewHost = (callback) => useEventListener("new-host", callback);
   const useOnGuessResponse = (callback) => useEventListener("guess-response", callback);
+  const useOnSpellingHint = (callback) => useEventListener("spelling-hint", callback);
   const useOnChatMessageResponse = (callback) => useEventListener("chat-message-response", callback);
 
   return {
@@ -92,6 +97,7 @@ const useSocket = () => {
     useOnPlayerLeave,
     useOnNewHost,
     useOnGuessResponse,
+    useOnSpellingHint,
     useOnChatMessageResponse,
   };
 };

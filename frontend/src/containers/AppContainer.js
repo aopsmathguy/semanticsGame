@@ -19,6 +19,7 @@ import {
     handlePlayerLeave,
     handleNewHost,
     handleGuessResponse,
+    handleSpellingHint,
     handleChatMessageResponse
 } from "../redux/slices/game";
 
@@ -54,7 +55,11 @@ function AppContainer() {
     socket.useOnPlayerLeave((data) => dispatch(handlePlayerLeave(data)));
     socket.useOnNewHost((data) => dispatch(handleNewHost(data)));
     socket.useOnGuessResponse((data) => dispatch(handleGuessResponse(data)));
+    socket.useOnSpellingHint((data) => dispatch(handleSpellingHint(data)));
     socket.useOnChatMessageResponse((data) => dispatch(handleChatMessageResponse(data)));
+    setTimeout(() => {
+        console.log(socket.socket.listeners[25]);
+    }, 1000);
     const activeView = useSelector(selectActiveView);
     return <div>
       {activeView == "MainMenu" && <MainMenuContainer />}

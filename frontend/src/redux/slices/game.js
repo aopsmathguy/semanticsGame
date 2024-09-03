@@ -202,6 +202,11 @@ export const gameSlice = createSlice({
                 playerRoomInfo.solved = true;
             }
         },
+        handleSpellingHint : (state, action) => {
+            const { targetWord } = action.payload;
+            const room = state.room;
+            room.targetWord = targetWord;
+        }, 
         handleChatMessageResponse: (state, action) => {
             const { playerId, message } = action.payload;
             const room = state.room;
@@ -227,6 +232,7 @@ export const {
     handlePlayerLeave,
     handleNewHost,
     handleGuessResponse,
+    handleSpellingHint,
     handleChatMessageResponse,
 } = gameSlice.actions;
 
