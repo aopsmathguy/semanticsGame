@@ -9,6 +9,7 @@ function RoomList({ roomList, onJoinRoom, onMakeRoom, onRefresh }) {
     const refreshHandler = () => {
         onRefresh({});
     }
+    const roomListEntries = Object.entries(roomList);
     return (
         <StyledRoomListWrapper>
             <StyledRoomListBarWrapper>
@@ -16,7 +17,7 @@ function RoomList({ roomList, onJoinRoom, onMakeRoom, onRefresh }) {
                 <button onClick={refreshHandler} style={{marginLeft: "10px"}}>Refresh</button>
             </StyledRoomListBarWrapper>
             <StyledRoomListContainer>
-                {Object.entries(roomList).map(([roomId, room]) => {
+                {roomListEntries.length > 0 ? roomListEntries.map(([roomId, room]) => {
                     const { roomName, playersData, settings } = room;
                     const roomIdInt = parseInt(roomId);
                     return (
@@ -28,7 +29,7 @@ function RoomList({ roomList, onJoinRoom, onMakeRoom, onRefresh }) {
                             onJoinRoom={joinRoomHandler.bind(this, roomIdInt)}
                         />
                     );
-                })}
+                }) : <StyledText fontSize={20} color="grey">No rooms available</StyledText>}
             </StyledRoomListContainer>
             <StyledMakeRoomContainer>
                 <CreateRoomForm onMakeRoom={onMakeRoom} />
