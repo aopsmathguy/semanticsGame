@@ -2,7 +2,6 @@ import React from "react";
 import { StyledGameBarContainer } from "./styles";
 import Timer from "./Timer";
 import Avatar from "../Shared/Avatar";
-import { StyledText } from "../Shared/styles";
 
 function GameBar({
     gameState,
@@ -16,7 +15,7 @@ function GameBar({
     const { name, avatar } = profile;
     const state = (() => {
         switch (
-            gameState //'WAIT_START' | 'WAIT_ROUND_START' | 'GUESSING' | 'ROUND_OVER' | 'GAME_OVER'
+            gameState //'WAIT_START' | 'WAIT_ROUND_START' | 'GUESSING' | 'WAIT_ROUND_END' | 'WAIT_GAME_END'
         ) {
             case "WAIT_START":
                 return "Waiting for host to start...";
@@ -35,8 +34,8 @@ function GameBar({
     return (
         <StyledGameBarContainer>
             <Timer timer={timer} timerEmphasize={timerEmphasize} />
-            <div><StyledText><b>Round {currentRound}</b></StyledText></div>
-            <div><StyledText>{state}</StyledText></div>
+            <div><b>Round {currentRound}</b></div>
+            <div>{state}</div>
             <div style={{position:"absolute", right : "0", top: "0"}}>
                 <Avatar
                     size={70}

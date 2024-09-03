@@ -7,7 +7,7 @@ import gameReducer from "./slices/game";
 const persistConfig = {
     key: "root", // Key for the localStorage (can be any string)
     storage,
-    blacklist: ['game'], // List of reducers to exclude from persistence
+    blacklist: ["game"], // Don't persist activeView
 };
 
 // Combine reducers

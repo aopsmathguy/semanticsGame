@@ -12,6 +12,7 @@ import PlayerList from "./PlayerList";
 import GuessArea from "./GuessArea";
 import Chat from "./Chat";
 import GuessAreaOverlay from "./GuessAreaOverlay";
+
 function Game({
     gameState,
     timer,
@@ -26,6 +27,7 @@ function Game({
     guesses,
     lastGuessHash,
     onGuess,
+    targetWord,
     messages,
     sendMessage,
     wordFuse,
@@ -44,7 +46,11 @@ function Game({
             </StyledGameBarWrapper>
             <StyledGameContentWrapper>
                 <StyledPlayersSidebarWrapper>
-                    <PlayerList players={players} playerId={playerId} />
+                    <PlayerList
+                        players={players}
+                        playerId={playerId}
+                        hostId={hostId}
+                    />
                 </StyledPlayersSidebarWrapper>
                 <StyledGuessListAndInputWrapper>
                     <GuessArea
@@ -56,7 +62,7 @@ function Game({
                     />
                     <GuessAreaOverlay
                         settings={settings}
-                        onChangeSettings={onChangeSettings} 
+                        onChangeSettings={onChangeSettings}
                         onStartGame={onStartGame}
                         gameState={gameState}
                         currentRound={currentRound}
@@ -64,10 +70,16 @@ function Game({
                         playerId={playerId}
                         players={players}
                         hostId={hostId}
+                        targetWord={targetWord}
                     />
                 </StyledGuessListAndInputWrapper>
                 <StyledChatWrapper>
-                    <Chat messages={messages} sendMessage={sendMessage} />
+                    <Chat
+                        messages={messages}
+                        sendMessage={sendMessage}
+                        players={players}
+                        playerId={playerId}
+                    />
                 </StyledChatWrapper>
             </StyledGameContentWrapper>
         </StyledGameLayout>

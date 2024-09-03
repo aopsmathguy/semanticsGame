@@ -121,12 +121,14 @@ export const StyledPlayerInfo = styled.div`
 
 export const StyledPlayerName = styled.div`
     font-weight: bold;
-    margin-right: 10px; /* Adjust as needed for spacing */
-    color : ${({ isMe }) => isMe ? "blue" : "black"};
+    margin-bottom: -7px; /* Adjust as needed for spacing */
+    color: ${({ isMe }) => (isMe ? "blue" : "black")};
+    text-decoration: ${({ isHost }) => (isHost ? "underline" : "none")};
 `;
 
 export const StyledPlayerScore = styled.div`
     font-style: italic;
+    color: grey;
 `;
 export const StyledPlayerAvatar = styled.div`
     position: absolute;
@@ -155,6 +157,7 @@ export const StyledChatMessagesContainer = styled.div`
 export const StyledChatMessageItem = styled.p`
     padding: 0.2em;
     margin: 0;
+    color: ${({color}) => color || "inherit"};
     &:nth-child(odd) {
         background-color: #f0f0f0;
     }
@@ -167,8 +170,10 @@ export const StyledChatSendArea = styled.input`
     font: inherit;
     height: 2.2em;
     width: auto;
-    flex-grow: 1;
+    flex-grow: 0;
     min-width: 0;
+    box-sizing: border-box;
+    border: 2px solid black;
 `;
 //guess list and input
 export const StyledGuessAreaContainer = styled.div`
@@ -188,8 +193,8 @@ export const StyledGuessAreaOverlay = styled.div`
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    opacity: ${({ hidden }) => (hidden ? 0 : 1)};
-    visibility: ${({ hidden }) => (hidden ? "hidden" : "visible")};
+    opacity: ${({ hideOverlay }) => (hideOverlay ? 0 : 1)};
+    visibility: ${({ hideOverlay }) => (hideOverlay ? "hidden" : "visible")};
     transition: opacity 1s, visibility 1s;
 `;
 export const StyledGuessAreaOverlayContent = styled.div`
@@ -202,16 +207,17 @@ export const StyledGuessAreaOverlayContent = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    transform: ${({hidden})=> (hidden ? "translateY(-100%)" : "translateY(0)")};
-    visibility: ${({ hidden }) => (hidden ? "hidden" : "visible")};
+    transform: ${({hideOverlay})=> (hideOverlay ? "translateY(-100%)" : "translateY(0)")};
+    visibility: ${({ hideOverlay }) => (hideOverlay ? "hidden" : "visible")};
     transition: transform 1s, visibility 1s;
+    overflow-y: auto;
 `;
 export const StyledRoomSettingsContainer = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    // overflow-y: auto;
 `;
 
 export const StyledSettingRow = styled.div`
@@ -223,6 +229,7 @@ export const StyledSettingRow = styled.div`
 
 export const StyledLabel = styled.label`
   text-align: left;
+  color: white;
 `;
 
 export const StyledSelect = styled.select`
@@ -234,16 +241,42 @@ export const StyledButton = styled.button`
     padding: 5px;
     flex: 1 1 auto;
 `;
+export const StyledWordReveal = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+`;
+export const StyledPlayerRoundScoresContainer = styled.div`
+    width: min(200px, 100%);
+    display: flex;
+    flex-direction: column;
+    // overflow-y: auto;
+`;
+export const StyledPlayerRoundScores = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const StyledWaitRoundContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+`;
+
 //guess input stuff
 export const StyledGuessInputContainer = styled.div`
     display: flex;
     flex: 0 0 auto;
 `;
-export const StyledGuessInputDiv = styled.input`
+export const StyledGuessInput = styled.input`
     font: inherit;
     position: relative;
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     width: 120px;
+    box-sizing: border-box;
+    border: 2px solid black;
 `;
 export const StyledSuggestionsContainer = styled.div`
     position: absolute;

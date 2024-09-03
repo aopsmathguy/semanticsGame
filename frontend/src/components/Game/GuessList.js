@@ -9,16 +9,15 @@ import {
     StyledProgressBar,
     StyledPlayerAvatarColumn
 } from "./styles";
-import { StyledText } from "../Shared/styles";
 import Avatar from "../Shared/Avatar";
 function GuessList({ guesses, lastGuessHash, players }) {
     return (
         <StyledGuessListContainer>
             <StyledGuessRow>
-                <StyledWordColumn><StyledText>Word</StyledText></StyledWordColumn>
-                <StyledSimilarityColumn><StyledText>similarity</StyledText></StyledSimilarityColumn>
+                <StyledWordColumn>Word</StyledWordColumn>
+                <StyledSimilarityColumn>Similarity</StyledSimilarityColumn>
                 <StyledProgressBarContainer></StyledProgressBarContainer>
-                <StyledPlayerAvatarColumn><StyledText>Player</StyledText></StyledPlayerAvatarColumn>
+                <StyledPlayerAvatarColumn>Player</StyledPlayerAvatarColumn>
             </StyledGuessRow>
             {Object.entries(guesses)
                 .sort((a, b) => b[1].similarity - a[1].similarity)
@@ -28,9 +27,8 @@ function GuessList({ guesses, lastGuessHash, players }) {
                         key={wordHash}
                         isLastGuess={wordHash == lastGuessHash}
                     >
-                        <StyledWordColumn><StyledText>{word}</StyledText></StyledWordColumn>
-                        <StyledSimilarityColumn>
-                            <StyledText>{(100 * similarity).toFixed(1)}%</StyledText>
+                        <StyledWordColumn>{word}</StyledWordColumn>
+                        <StyledSimilarityColumn>{(100 * similarity).toFixed(1)}%
                         </StyledSimilarityColumn>
                         <StyledProgressBarContainer>
                             <StyledProgressBarBorder>

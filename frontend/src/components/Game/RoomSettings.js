@@ -6,7 +6,6 @@ import {
     StyledSelect,
     StyledButton,
 } from "./styles";
-import { StyledText } from "../Shared/styles";
 function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
     const [localSettings, setLocalSettings] = useState(settings);
 
@@ -18,106 +17,102 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
         } catch (e) {
             newValue = value;
         }
-        setLocalSettings({ ...localSettings, [name]: newValue });
-        onChangeSettings({ ...localSettings, [name]: newValue });
+        const newSettings = { ...localSettings, [name]: newValue };
+        setLocalSettings(newSettings);
+        onChangeSettings({ settings : newSettings });
     };
+    const handleStartClick = () => {
+        onStartGame({}); // no data needed for now
+    }
     return (
         <StyledRoomSettingsContainer>
             <StyledSettingRow>
                 <StyledLabel htmlFor="maxPlayers">
-                    <StyledText color="white">Max Players:</StyledText>
+                    Max Players:
                 </StyledLabel>
-                <StyledText>
-                    <StyledSelect
-                        id="maxPlayers"
-                        name="maxPlayers"
-                        value={localSettings.maxPlayers}
-                        onChange={handleChange}
-                        disabled={!isHost}
-                    >
-                        {/* Add options for max players (e.g., 2-10) */}
-                        {Array.from({ length: 9 }, (_, i) => i + 2).map(
-                            (num) => (
-                                <option key={num} value={num}>
-                                    {num}
-                                </option>
-                            )
-                        )}
-                    </StyledSelect>
-                </StyledText>
+                <StyledSelect
+                    id="maxPlayers"
+                    name="maxPlayers"
+                    value={localSettings.maxPlayers}
+                    onChange={handleChange}
+                    disabled={!isHost}
+                >
+                    {/* Add options for max players (e.g., 2-10) */}
+                    {Array.from({ length: 9 }, (_, i) => i + 2).map(
+                        (num) => (
+                            <option key={num} value={num}>
+                                {num}
+                            </option>
+                        )
+                    )}
+                </StyledSelect>
             </StyledSettingRow>
 
             <StyledSettingRow>
                 <StyledLabel htmlFor="guessTime">
-                    <StyledText color="white">Guess Time (seconds):</StyledText>
+                    Guess Time (seconds):
                 </StyledLabel>
-                <StyledText>
-                    <StyledSelect
-                        id="guessTime"
-                        name="guessTime"
-                        value={localSettings.guessTime}
-                        onChange={handleChange}
-                        disabled={!isHost}
-                    >
-                        {/* Add options for guess time (e.g., 30, 60, 90) */}
-                        {[30, 60, 90, 120].map((time) => (
-                            <option key={time} value={time}>
-                                {time}
-                            </option>
-                        ))}
-                    </StyledSelect>
-                </StyledText>
+                <StyledSelect
+                    id="guessTime"
+                    name="guessTime"
+                    value={localSettings.guessTime}
+                    onChange={handleChange}
+                    disabled={!isHost}
+                >
+                    {/* Add options for guess time (e.g., 30, 60, 90) */}
+                    {[30, 60, 90, 120].map((time) => (
+                        <option key={time} value={time}>
+                            {time}
+                        </option>
+                    ))}
+                </StyledSelect>
             </StyledSettingRow>
 
             {/* Add similar rows for numberOfRounds and numberOfHints */}
             <StyledSettingRow>
                 <StyledLabel htmlFor="numberOfRounds">
-                    <StyledText color="white"> Number of Rounds:</StyledText>
+                    Number of Rounds:
                 </StyledLabel>
-                <StyledText>
-                    <StyledSelect
-                        id="numberOfRounds"
-                        name="numberOfRounds"
-                        value={localSettings.numberOfRounds}
-                        onChange={handleChange}
-                        disabled={!isHost}
-                    >
-                        {/* Add options for number of rounds (e.g., 3-10) */}
-                        {Array.from({ length: 8 }, (_, i) => i + 3).map(
-                            (num) => (
-                                <option key={num} value={num}>
-                                    {num}
-                                </option>
-                            )
-                        )}
-                    </StyledSelect>
-                </StyledText>
+                <StyledSelect
+                    id="numberOfRounds"
+                    name="numberOfRounds"
+                    value={localSettings.numberOfRounds}
+                    onChange={handleChange}
+                    disabled={!isHost}
+                >
+                    {/* Add options for number of rounds (e.g., 3-10) */}
+                    {Array.from({ length: 8 }, (_, i) => i + 3).map(
+                        (num) => (
+                            <option key={num} value={num}>
+                                {num}
+                            </option>
+                        )
+                    )}
+                </StyledSelect>
             </StyledSettingRow>
 
             <StyledSettingRow>
                 <StyledLabel htmlFor="numberOfHints">
-                    <StyledText color="white">Number of Hints:</StyledText>
+                    Number of Hints:
                 </StyledLabel>
-                <StyledText>
-                    <StyledSelect
-                        id="numberOfHints"
-                        name="numberOfHints"
-                        value={localSettings.numberOfHints}
-                        onChange={handleChange}
-                        disabled={!isHost}
-                    >
-                        {/* Add options for number of hints (e.g., 0-5) */}
-                        {Array.from({ length: 6 }, (_, i) => i).map((num) => (
-                            <option key={num} value={num}>
-                                {num}
-                            </option>
-                        ))}
-                    </StyledSelect>
-                </StyledText>
+                <StyledSelect
+                    id="numberOfHints"
+                    name="numberOfHints"
+                    value={localSettings.numberOfHints}
+                    onChange={handleChange}
+                    disabled={!isHost}
+                >
+                    {/* Add options for number of hints (e.g., 0-5) */}
+                    {Array.from({ length: 6 }, (_, i) => i).map((num) => (
+                        <option key={num} value={num}>
+                            {num}
+                        </option>
+                    ))}
+                </StyledSelect>
             </StyledSettingRow>
             <StyledSettingRow>
-                <StyledButton onClick={onStartGame} disabled={!isHost}>
-                    <StyledText justify={"center"}>Start</StyledText>
+                <StyledButton onClick={handleStartClick} disabled={!isHost}>
+                    Start
                 </StyledButton>
             </StyledSettingRow>
         </StyledRoomSettingsContainer>

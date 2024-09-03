@@ -140,7 +140,6 @@ export class SocketClient{
         // this._ws.onclose();
     }
     emit(eventName, info){
-        
         const eventCode = this.cfg.eventCodes[eventName];
         this.emitEventCode(eventCode, info);
     }

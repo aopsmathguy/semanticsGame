@@ -5,9 +5,9 @@ import {
     StyledChatMessageItem,
     StyledChatSendArea,
 } from "./styles";
-import { StyledText } from "../Shared/styles";
 
-function Chat({ messages, sendMessage }) {
+function Chat({ messages, sendMessage, players, playerId }) {
+    const myPlayerId = playerId;
     const [message, setMessage] = useState("");
     const messagesContainerRef = useRef(null);
 
@@ -17,7 +17,7 @@ function Chat({ messages, sendMessage }) {
 
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
-            sendMessage(message);
+            sendMessage({message});
             setMessage("");
         }
     };
@@ -26,11 +26,12 @@ function Chat({ messages, sendMessage }) {
         const container = messagesContainerRef.current;
         if (container) {
             // Check if we're at the bottom before new message
-            const isAtBottom = container.scrollHeight - container.scrollTop <= container.clientHeight + 35;
-            console.log(container.scrollHeight - container.scrollTop,  container.clientHeight);
+            const isAtBottom =
+                container.scrollHeight - container.scrollTop <=
+                container.clientHeight + 35;
             if (isAtBottom) {
                 // Scroll to bottom if we were at the bottom
-                container.scrollTop = container.scrollHeight; 
+                container.scrollTop = container.scrollHeight;
             }
         }
     }, [messages]); // Run effect whenever messages array changes
@@ -38,21 +39,21 @@ function Chat({ messages, sendMessage }) {
     return (
         <StyledChatContainer>
             <StyledChatMessagesContainer ref={messagesContainerRef}>
-                {messages.map(({ message, color }, index) => (
-                    <StyledChatMessageItem key={index}>
-                        <StyledText color={color}>{message}</StyledText>
+                {messages.map(({ message, playerId }, index) => (
+                    <StyledChatMessageItem key={index}
+                    color={myPlayerId == playerId ? "blue" : "black"}>
+                            
+                            {players[playerId].profile.name}: {message}
                     </StyledChatMessageItem>
                 ))}
             </StyledChatMessagesContainer>
-            <StyledText>
-                <StyledChatSendArea
-                    type="text"
-                    placeholder="Type a message"
-                    value={message}
-                    onChange={handleChange}
-                    onKeyDown={handleKeyDown}
-                />
-            </StyledText>
+            <StyledChatSendArea
+                type="text"
+                placeholder="Type a message"
+                value={message}
+                onChange={handleChange}
+                onKeyDown={handleKeyDown}
+            />
         </StyledChatContainer>
     );
 }

@@ -11,13 +11,14 @@ export const gameSlice = createSlice({
     },
     reducers: {
         handleJoinResponse: (state, action) => {
+            console.log("handleJoinResponse", action.payload);
             const { playerId, profile } = action.payload;
             const { name, avatar } = profile;
             state.playerId = playerId;
             state.profile = { name, avatar };
-            state.activeView = "RoomList";
         },
         handleRoomListResponse: (state, action) => {
+            console.log("handleRoomListResponse", action.payload);
             const { rooms } = action.payload;
             const roomList = {};
             for (const room of rooms) {
@@ -26,13 +27,16 @@ export const gameSlice = createSlice({
                 const playersData = {};
                 for (const player of players) {
                     const { playerId, profile, playerRoomInfo } = player;
-                    players[playerId] = { profile, playerRoomInfo };
+                    playersData[playerId] = { profile, playerRoomInfo };
                 }
                 roomList[roomId] = { roomName, playersData, settings };
             }
+            console.log("roomList", roomList);
             state.roomList = roomList;
+            state.activeView = "RoomList";
         },
         handleJoinRoomResponse: (state, action) => {
+            console.log("handleJoinRoomResponse", action.payload);
             const { roomId, room: roomData } = action.payload;
             const {
                 "room-name": roomName,
@@ -83,6 +87,10 @@ export const gameSlice = createSlice({
             };
             state.activeView = "Game";
         },
+        handleJoinRoomFail: (state) => {
+            state.room = null;
+            state.activeView = "RoomList";
+        },
         handleLeaveRoomResponse: (state) => {
             state.room = null;
             state.activeView = "RoomList";
@@ -95,6 +103,10 @@ export const gameSlice = createSlice({
             const { currentRound } = action.payload;
             const room = state.room;
             room.currentRound = currentRound;
+            room.gameState = "WAIT_ROUND_START";
+        },
+        handleGuessStart: (state, action) => {
+            const room = state.room;
             room.guesses = {};
             room.targetWord = "";
             for (const playerId in room.players) {
@@ -102,14 +114,11 @@ export const gameSlice = createSlice({
                 playerRoomInfo.roundScore = 0;
                 playerRoomInfo.solved = false;
             }
-            room.gameState = "WAIT_ROUND_START";
-        },
-        handleGuessStart: (state, action) => {
-            const room = state.room;
             room.gameState = "GUESSING";
         },
         handleRoundEnd: (state, action) => {
             const { targetWord, scores } = action.payload;
+            console.log("handleRoundEnd", targetWord, scores);
             const room = state.room;
             room.targetWord = targetWord;
             for (const player of scores) {
@@ -119,7 +128,7 @@ export const gameSlice = createSlice({
                 playerRoomInfo.roundScore = roundScore;
                 playerRoomInfo.solved = solved;
             }
-            room.gameState = "WAIT_ROUND_END";
+            room.gameState = "ROUND_OVER";
         },
         handleGameEnd: (state, action) => {
             const { scores } = action.payload;
@@ -129,7 +138,7 @@ export const gameSlice = createSlice({
                 const { playerRoomInfo } = room.players[playerId];
                 playerRoomInfo.score = score;
             }
-            room.gameState = "WAIT_GAME_END";
+            room.gameState = "GAME_OVER";
         },
         handleWaitStartGame: (state) => {
             const room = state.room;
@@ -141,7 +150,7 @@ export const gameSlice = createSlice({
             }
             room.timer = 0;
             room.currentRound = 0;
-            room.gameState = "WAIT_START_GAME";
+            room.gameState = "WAIT_START";
         },
         handleTimer: (state, action) => {
             const { timeLeft, emphasize } = action.payload;
@@ -165,7 +174,9 @@ export const gameSlice = createSlice({
         handleNewHost: (state, action) => {
             const { hostId } = action.payload;
             const room = state.room;
-            room.hostId = hostId;
+            if (room){
+                room.hostId = hostId;
+            }
         },
         handleGuessResponse: (state, action) => {
             const { playerId, word, wordHash, similarity, hidden, solved } =
@@ -202,6 +213,7 @@ export const {
     handleJoinResponse,
     handleRoomListResponse,
     handleJoinRoomResponse,
+    handleJoinRoomFail,
     handleLeaveRoomResponse,
     handleSettingsChangeResponse,
     handleRoundStart,
@@ -217,4 +229,22 @@ export const {
     handleChatMessageResponse,
 } = gameSlice.actions;
 
+export const selectActiveView = (state) => state.game.activeView;
+
+export const selectProfile = (state) => state.game.profile;
+
+export const selectRoomList = (state) => state.game.roomList;
+
+export const selectGameState = (state) => state.game.room?.gameState;
+export const selectTimer = (state) => state.game.room?.timer;
+export const selectTimerEmphasize = (state) => state.game.room?.timerEmphasize;
+export const selectHostId = (state) => state.game.room?.hostId;
+export const selectPlayerId = (state) => state.game.playerId;
+export const selectPlayers = (state) => state.game.room?.players;
+export const selectSettings = (state) => state.game.room?.settings;
+export const selectCurrentRound = (state) => state.game.room?.currentRound;
+export const selectGuesses = (state) => state.game.room?.guesses;
+export const selectLastGuessHash = (state) => state.game.room?.lastGuessHash;
+export const selectTargetWord = (state) => state.game.room?.targetWord;
+export const selectChatMessages = (state) => state.game.room?.chatMessages;
 export default gameSlice.reducer;

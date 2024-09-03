@@ -90,6 +90,9 @@ export const CONFIG = new SocketConfig({
                 "targetWord": "string",
             },
         },
+        "join-room-fail": {
+            "reason": "string",
+        },
         "leave-room-response": {},
         "settings-change-response": {
             settings: roomSettingsSchema

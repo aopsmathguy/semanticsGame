@@ -8,9 +8,8 @@ import {
     StyledPlayerScore,
     StyledPlayerAvatar,
 } from "./styles";
-import { StyledText } from "../Shared/styles";
 import Avatar from "../Shared/Avatar";
-function PlayerList({ players, playerId }) {
+function PlayerList({ players, playerId, hostId }) {
     const myPlayerId = playerId;
     const playerValues = Object.values(players);
     return (
@@ -23,11 +22,11 @@ function PlayerList({ players, playerId }) {
                     return (
                         <StyledPlayerCard key={playerId} solved={solved}>
                             <StyledPlayerInfo>
-                                <StyledPlayerName 
-                                    isMe={playerId == myPlayerId}
-                                ><StyledText>{name}</StyledText></StyledPlayerName>
+                                <StyledPlayerName isMe={playerId == myPlayerId} isHost={playerId==hostId}>
+                                        {name}
+                                </StyledPlayerName>
                                 <StyledPlayerScore>
-                                <StyledText color="grey">{score} points</StyledText>
+                                    {score} points
                                 </StyledPlayerScore>
                             </StyledPlayerInfo>
                             <StyledPlayerAvatar>

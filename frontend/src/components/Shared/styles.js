@@ -23,10 +23,7 @@ export const StyledSpriteImage = styled.div`
     image-rendering: pixelated;
 `
 
-export const StyledText = styled.div`
+export const StyledText = styled.span`
     color: ${({ color }) => color || "black"};
     font-size: ${({ fontSize }) => fontSize || "20"}px;
-    display: flex;
-    align-items: center;
-    justify-content: ${({ justify }) => justify || "left"};
 `;

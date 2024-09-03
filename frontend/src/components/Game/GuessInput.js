@@ -3,9 +3,8 @@ import WordSuggestion from "./WordSuggestion.js";
 import {
     StyledSuggestionsContainer,
     StyledGuessInputContainer,
-    StyledGuessInputDiv,
+    StyledGuessInput,
 } from "./styles.js";
-import { StyledText } from "../Shared/styles.js";
 function GuessInput({ onGuess, wordFuse }) {
     const [currGuess, setCurrGuess] = useState("");
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -33,7 +32,7 @@ function GuessInput({ onGuess, wordFuse }) {
                 setCurrGuess("");
                 setHighlightedSuggestion(null);
                 setShowSuggestions(false);
-                onGuess(guess);
+                onGuess({word : guess});
             }
         } else if (event.key === "ArrowDown") {
             event.preventDefault();
@@ -77,12 +76,10 @@ function GuessInput({ onGuess, wordFuse }) {
 
     return (
         <StyledGuessInputContainer>
-            <StyledText>
-              <StyledGuessInputDiv ref={inputRef} value={currGuess}
-                      onKeyDown={handleKeyDown}
-                      onChange={onChange}
-                      onFocus={() => setShowSuggestions(true)}/>
-            </StyledText>
+            <StyledGuessInput ref={inputRef} value={currGuess}
+                    onKeyDown={handleKeyDown}
+                    onChange={onChange}
+                    onFocus={() => setShowSuggestions(true)}/>
             {showSuggestions && currGuess.length > 0 && (
                 <StyledSuggestionsContainer
                     ref={suggestionRef}
@@ -107,7 +104,7 @@ function GuessInput({ onGuess, wordFuse }) {
                             onClick={() => {
                                 setCurrGuess("");
                                 setShowSuggestions(false);
-                                onGuess(suggestion.word);
+                                onGuess({word : suggestion.word});
                             }}
                             onMouseEnter={() => setHighlightedSuggestion(index)}
                             onMouseLeave={() => setHighlightedSuggestion(null)}

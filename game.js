@@ -63,16 +63,21 @@ class Game {
         );
         socket.on("start-game", (data) => this.startGameHandler(socket, data));
         socket.on("guess", (data) => this.guessHandler(socket, data));
-        socket.on("disconnect", () => this.disconnectHandler(socket));
+        socket.on("chat-message", (data) => this.chatMessageHandler(socket, data));
+        socket.on("disconnect", () => {
+            this.disconnectHandler(socket)
+        });
     }
     joinHandler(socket, data) {
         const { profile } = data;
+        profile.name = profile.name || words[Math.floor(Math.random() * words.length)];
         const playerId = generateId();
+        console.log("Player joined", playerId, profile);
         socket.playerId = playerId;
         const player = new Player(socket, playerId, profile);
         this.players.set(playerId, player);
-
         socket.emit("join-response", { playerId, profile });
+        this.roomListRequestHandler(socket, {});
     }
     roomListRequestHandler(socket, data) {
         const rooms = [];
@@ -89,28 +94,40 @@ class Game {
                 "players": playersData,
                 "settings": roomObj.settings,
             };
-            rooms.push({ roomId, room });
+            rooms.push({ roomId : roomId, room });
         }
         socket.emit("room-list-response", { rooms });
     }
     makeRoomHandler(socket, data) {
-        const { "room-name": roomName } = data;
+        let { "room-name": roomName } = data;
+        roomName = roomName || words[Math.floor(Math.random() * words.length)];
         const roomId = generateId();
         const room = new Room(this, roomId, roomName);
         this.rooms.set(roomId, room);
         this.joinRoomHandler(socket, { roomId });
     }
-    joinRoomHandler(socket, data) {
+    async joinRoomHandler(socket, data) {
         const { roomId } = data;
         const playerId = socket.playerId;
         const player = this.players.get(playerId);
-        player.roomId = roomId;
         const roomObj = this.rooms.get(roomId);
+        if (roomObj === undefined) {
+            console.log("Room not found", roomId);
+            socket.emit("join-room-fail", { reason: "Room not found" });
+            return;
+        }
+        const { maxPlayers } = roomObj.settings;
+        if (roomObj.players.size >= maxPlayers) {
+            console.log("Room is full", roomId);
+            socket.emit("join-room-fail", { reason: "Room is full" });
+            return;
+        }
+        player.roomId = roomId;
         roomObj.players.set(playerId, {
             playerRoomInfo: new PlayerRoomInfo(player.playerId),
             profile: player.profile,
         });
-        if (roomObj.hostId === null) {
+        if (!roomObj.hostId) {
             roomObj.hostId = playerId;
         }
         const playersData = [];
@@ -125,9 +142,7 @@ class Game {
             "players": playersData,
             "settings": roomObj.settings,
             "currentRound": roomObj.currentRound,
-            "guesses": roomObj.guesses.map(
-                roomObj.createGuessResponse.bind(roomObj)
-            ),
+            "guesses": roomObj.guesses.map(roomObj.createGuessResponse.bind(roomObj)),
             "targetWord":
                 roomObj.gameState === "ROUND_OVER" ? roomObj.targetWord : "",
         };
@@ -151,7 +166,7 @@ class Game {
             if (roomObj.players.size > 0) {
                 roomObj.hostId = Array.from(roomObj.players.keys())[0];
             } else {
-                roomObj.hostId = null;
+                roomObj.hostId = 0;
             }
         }
         roomObj.playerSolveOrder = roomObj.playerSolveOrder.filter(
@@ -193,10 +208,12 @@ class Game {
         const roomId = player.roomId;
         const roomObj = this.rooms.get(roomId);
         if (roomObj.gameState !== "GUESSING") {
+            console.log("Not guessing state", roomObj.gameState);
             return;
         }
         const { playerRoomInfo } = roomObj.players.get(playerId);
         if (playerRoomInfo.solved) {
+            console.log("Player already solved", playerId);
             return;
         }
         if (word == roomObj.targetWord) {
@@ -229,6 +246,7 @@ class Game {
     }
     disconnectHandler(socket) {
         const playerId = socket.playerId;
+        console.log("Player disconnected", playerId);
         const player = this.players.get(playerId);
         if (player === undefined) {
             return;
@@ -236,7 +254,7 @@ class Game {
         if (player.roomId !== null) {
             this.leaveRoomHandler(socket, {});
         }
-        this.players.delete(playerId);
+        this.players.delete(playerId); 
     }
 }
 class Room {
@@ -274,7 +292,7 @@ class Room {
     async createHints() {
         const word = this.targetWord;
         const hints = this.settings.numberOfHints;
-        const wordsBySimilarity = (
+        let wordsBySimilarity = (
             await wordEmbeddings.getSimilarities(word, words)
         ).filter(({ similarity }) => similarity < 0.65);
         if (wordsBySimilarity[20].similarity > 0.4) {
@@ -286,7 +304,7 @@ class Room {
         }
         return getDistinctSubset(wordsBySimilarity, hints);
     }
-    async createGuessResponse(guess, isSender) {
+    createGuessResponse(guess, isSender) {
         const settings = this.settings;
         const wordHash = hashStr(guess.word + this.salt);
         const hidden = guess.similarity > 0.65 && !isSender;
@@ -304,23 +322,14 @@ class Room {
             return;
         }
         this.currentRound = 0;
-        while (this.currentRound <= this.settings.numberOfRounds) {
+        while (this.currentRound < this.settings.numberOfRounds) {
             await this.doRound();
         }
         await this.gameOver();
     }
     async doRound() {
-        const hints = await this.createHints();
-        this.targetWord = words[Math.floor(Math.random() * words.length)];
         this.currentRound++;
-        for (const [playerId, playerRoomInfo] of this.players) {
-            //reset roundScores to 0
-            playerRoomInfo.roundScore = 0;
-            playerRoomInfo.solved = false;
-        }
-        this.guesses = [];
-        this.playerSolveOrder = [];
-        this.salt = Math.random().toString(36).substring(2, 15);
+        
 
         this.gameState = "WAIT_ROUND_START";
         this.timer = 3;
@@ -335,20 +344,41 @@ class Room {
             await new Promise((resolve) => setTimeout(resolve, 1000));
             this.timer--;
         }
+        
+        this.targetWord = words[Math.floor(Math.random() * words.length)];
+        console.log("Target word", this.targetWord);
+        const hints = await this.createHints();
+        
+        for (const [playerId, { playerRoomInfo }] of this.players) {
+            //reset roundScores to 0
+            playerRoomInfo.roundScore = 0;
+            playerRoomInfo.solved = false;
+        }
+        this.guesses = hints.map(({word, similarity}) => {
+            return {
+                playerId: 0, //dummy playerId
+                word,
+                similarity,
+            };
+        });
+        this.playerSolveOrder = [];
+        this.salt = Math.random().toString(36).substring(2, 15);
+
         this.gameState = "GUESSING";
         this.timer = this.settings.guessTime;
         this.socketEmit("guess-start", {});
         for (const { word, similarity } of hints) {
+            const guess = this.createGuessResponse(
+                {
+                    playerId: 0, //dummy playerId
+                    word,
+                    similarity,
+                },
+                false
+            );
             this.socketEmit(
                 "guess-response",
-                this.createGuessResponse(
-                    {
-                        playerId: 0, //dummy playerId
-                        word,
-                        similarity,
-                    },
-                    false
-                )
+                guess
             );
         }
         while (this.timer > 0) {
@@ -366,16 +396,17 @@ class Room {
         this.gameState = "ROUND_OVER";
         this.timer = 5;
         for (const [i, playerId] of this.playerSolveOrder.entries()) {
-            const playerRoomInfo = this.players.get(playerId);
+            const playerRoomInfo = this.players.get(playerId).playerRoomInfo;
             const numPlayers = this.players.size;
             playerRoomInfo.roundScore = Math.floor(
                 50 + (50 * (numPlayers - i)) / numPlayers
             );
             playerRoomInfo.score += playerRoomInfo.roundScore;
         }
+        const scores = Array.from(this.players.values()).map((playerInfo) => playerInfo.playerRoomInfo);
         this.socketEmit("round-end", {
             targetWord: this.targetWord,
-            scores: Array.from(this.players.values()),
+            scores,
         });
         while (this.timer > 0) {
             this.socketEmit("timer", {
@@ -389,8 +420,9 @@ class Room {
     async gameOver() {
         this.gameState = "GAME_OVER";
         this.timer = 10;
+        const scores = Array.from(this.players.values()).map((playerInfo) => playerInfo.playerRoomInfo);
         this.socketEmit("game-end", {
-            scores: Array.from(this.players.values()),
+            scores: scores,
         });
         while (this.timer > 0) {
             this.socketEmit("timer", {
@@ -403,14 +435,14 @@ class Room {
         this.gameState = "WAIT_START";
         this.timer = 0;
         this.currentRound = 0;
-        for (const [playerId, playerRoomInfo] of this.players) {
+        for (const [playerId, { playerRoomInfo }] of this.players) {
             playerRoomInfo.score = 0;
             playerRoomInfo.roundScore = 0;
         }
         this.socketEmit("wait-start-game", {});
     }
     socketEmit(event, data, excludePlayerId = null) {
-        for (const [playerId, playerRoomInfo] of this.players) {
+        for (const [playerId, { playerRoomInfo }] of this.players) {
             if (playerId !== excludePlayerId) {
                 this.game.players.get(playerId).socketEmit(event, data);
             }
