@@ -183,6 +183,9 @@ export const gameSlice = createSlice({
             const { playerId, word, wordHash, similarity, hidden, solved } =
                 action.payload;
             const room = state.room;
+            if (playerId === state.playerId) {
+                room.lastGuessHash = wordHash;
+            }
             const existingGuess = room.guesses[wordHash];
             if (existingGuess && !existingGuess.hidden) {
                 return;
@@ -194,9 +197,6 @@ export const gameSlice = createSlice({
                 hidden,
                 solved,
             };
-            if (playerId === state.playerId) {
-                room.lastGuessHash = wordHash;
-            }
             if (solved) {
                 const { playerRoomInfo } = room.players[playerId];
                 playerRoomInfo.solved = true;
