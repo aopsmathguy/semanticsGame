@@ -3,10 +3,10 @@ import wordEmbeddings from "./embeddings.js";
 function generateId() {
     return crypto.getRandomValues(new Int32Array(1))[0];
 }
-function hiddenString(str) {
+function hiddenString(str, indices) {
     return str
         .split("")
-        .map(() => "*")
+        .map((c, i) => (indices ? (indices.includes(i) ? c : "_") : "_"))
         .join("");
 }
 function hashStr(str) {
@@ -109,6 +109,10 @@ class Game {
     async joinRoomHandler(socket, data) {
         const { roomId } = data;
         const playerId = socket.playerId;
+        if (!playerId) {
+            console.log("Player not found", playerId);
+            return;
+        }
         const player = this.players.get(playerId);
         const roomObj = this.rooms.get(roomId);
         if (roomObj === undefined) {
@@ -158,6 +162,10 @@ class Game {
     }
     leaveRoomHandler(socket, data) {
         const playerId = socket.playerId;
+        if (!playerId) {
+            console.log("Player not found", playerId);
+            return;
+        }
         const player = this.players.get(playerId);
         const roomId = player.roomId;
         const roomObj = this.rooms.get(roomId);
@@ -181,6 +189,10 @@ class Game {
     }
     async settingsChangeHandler(socket, data) {
         const playerId = socket.playerId;
+        if (!playerId) {
+            console.log("Player not found", playerId);
+            return;
+        }
         const player = this.players.get(playerId);
         const roomId = player.roomId;
         const roomObj = this.rooms.get(roomId);
@@ -193,6 +205,10 @@ class Game {
     }
     async startGameHandler(socket, data) {
         const playerId = socket.playerId;
+        if (!playerId) {
+            console.log("Player not found", playerId);
+            return;
+        }
         const player = this.players.get(playerId);
         const roomId = player.roomId;
         const roomObj = this.rooms.get(roomId);
@@ -204,6 +220,10 @@ class Game {
     async guessHandler(socket, data) {
         const { word } = data;
         const playerId = socket.playerId;
+        if (!playerId) {
+            console.log("Player not found", playerId);
+            return;
+        }
         const player = this.players.get(playerId);
         const roomId = player.roomId;
         const roomObj = this.rooms.get(roomId);
@@ -239,6 +259,10 @@ class Game {
     chatMessageHandler(socket, data) {
         const { message } = data;
         const playerId = socket.playerId;
+        if (!playerId) {
+            console.log("Player not found", playerId);
+            return;
+        }
         const player = this.players.get(playerId);
         const roomId = player.roomId;
         const roomObj = this.rooms.get(roomId);
@@ -346,6 +370,7 @@ class Room {
         }
         
         this.targetWord = words[Math.floor(Math.random() * words.length)];
+
         console.log("Target word", this.targetWord);
         const hints = await this.createHints();
         
@@ -381,6 +406,10 @@ class Room {
                 guess
             );
         }
+
+        const spellingHints = this.targetWord.length > 3 ? 2 : 1;
+        const indices = getDistinctSubset(Array.from({ length: this.targetWord.length }, (_, i) => i), spellingHints);
+        let spellingHintsRevealed = 0;
         while (this.timer > 0) {
             const emphasize = this.timer < 10;
             this.socketEmit("timer", {
@@ -389,6 +418,15 @@ class Room {
             });
             if (this.playerSolveOrder.length === this.players.size) {
                 break;
+            }
+            const hintsReveal = Math.floor((spellingHints + 1) * (1 - this.timer / this.settings.guessTime));
+            if (hintsReveal > spellingHintsRevealed) {
+                spellingHintsRevealed = hintsReveal;
+                const hintedWord = hiddenString(this.targetWord, indices.slice(0, hintsReveal));
+                console.log("Spelling hint", hintedWord);
+                this.socketEmit("spelling-hint", {
+                    targetWord : hintedWord,
+                });
             }
             await new Promise((resolve) => setTimeout(resolve, 1000));
             this.timer--;

@@ -120,6 +120,9 @@ export const CONFIG = new SocketConfig({
             timeLeft: "uint8",
             emphasize: "boolean",
         },
+        "spelling-hint": {
+            targetWord: "string",//gives another letter in the spelling
+        },
         "player-join": {
             playerId: "int32",
             profile: profileSchema,
