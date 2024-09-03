@@ -1,48 +1,99 @@
-import { SocketClient } from '../common/socketUtility';
-import { CONFIG } from '../common/socketConfig';
+// useSocket.js
+import { useState, useEffect, useRef } from "react";
+import { SocketClient } from "../common/socketUtility";
+import { CONFIG } from "../common/socketConfig";
 
-const WEBSOCKET_HOST = process.env.WEBSOCKET_HOST || "wss://semantics-game.onrender.com/api/ws";
-// const WEBSOCKET_HOST = "ws://localhost:3000/api/ws";
-
-// Instantiate the socket client
-export const socket = new SocketClient(null, CONFIG);
-
-// Function to connect the WebSocket
-function connect() {
-    socket.ws = new WebSocket(WEBSOCKET_HOST);
-}
-
-// Attempt to reconnect on disconnection
+const WEBSOCKET_HOST =
+  process.env.REACT_APP_WEBSOCKET_HOST || "ws://localhost:3000/api/ws"; // Use environment variable for flexibility
+const socket = new SocketClient(null, CONFIG);
+const connect = () => {
+  socket.ws = new WebSocket(WEBSOCKET_HOST);
+};
 socket.on("disconnect", () => {
-    console.log("Disconnected, reconnecting in 1 second");
-    setTimeout(connect, 1000);
+  console.log("Disconnected, reconnecting in 1 second");
+  setTimeout(connect, 1000);
 });
 
-// Handle error events
 socket.on("error", (e) => {
-    console.error("WebSocket error encountered:", e);
-    socket.disconnect();
+  console.error("WebSocket error encountered:", e);
+  socket.disconnect();
 });
+connect();
 
-/**
- * Emit events
- */
-export const sendMakeGuess = (data) => socket.emit("make-guess", data);
+const useSocket = () => {
+  // Emit events
+  const emitEvent = (eventName, data) => {
+    console.log(`Emitting event: ${eventName}`, data);
+    socket.emit(eventName, data);
+  };
 
-/**
- * Register event listeners
- * @param {String} event - event name
- * @param {Function} callback - callback function to handle event
- * @returns {Function} function to remove the event listener
- */
-const registerListener = (event, callback) => {
-    socket.on(event, callback);
-    return () => {
-        socket.removeListener(event, callback);
-    };
+  // Register listener helper function
+  const useEventListener = (eventName, callback) => {
+    useEffect(() => {
+      socket.on(eventName, callback);
+      return () => socket.removeListener(eventName, callback);
+    }, [callback]);
+  }
+
+  // Specific event emitters (for better readability)
+  const emitJoin = (data) => emitEvent("join", data);
+  const emitRoomListRequest = (data) => emitEvent("room-list-request", data);
+  const emitMakeRoom = (data) => emitEvent("make-room", data);
+  const emitJoinRoom = (data) => emitEvent("join-room", data);
+  const emitLeaveRoom = (data) => emitEvent("leave-room", data);
+  const emitSettingsChange = (data) => emitEvent("settings-change", data);
+  const emitStartGame = (data) => emitEvent("start-game", data);
+  const emitGuess = (data) => emitEvent("guess", data);
+  const emitChatMessage = (data) => emitEvent("chat-message", data);
+
+  // Specific event listeners
+  const useOnJoinResponse = (callback) => useEventListener("join-response", callback);
+  const useOnRoomListResponse = (callback) => useEventListener("room-list-response", callback);
+  const useOnJoinRoomResponse = (callback) => useEventListener("join-room-response", callback);
+  const useOnJoinRoomFail = (callback) => useEventListener("join-room-fail", callback);
+  const useOnLeaveRoomResponse = (callback) => useEventListener("leave-room-response", callback);
+  const useOnSettingsChangeResponse = (callback) => useEventListener("settings-change-response", callback);
+  const useOnRoundStart = (callback) => useEventListener("round-start", callback);
+  const useOnGuessStart = (callback) => useEventListener("guess-start", callback);
+  const useOnRoundEnd = (callback) => useEventListener("round-end", callback);
+  const useOnGameEnd = (callback) => useEventListener("game-end", callback);
+  const useOnWaitStartGame = (callback) => useEventListener("wait-start-game", callback);
+  const useOnTimer = (callback) => useEventListener("timer", callback);
+  const useOnPlayerJoin = (callback) => useEventListener("player-join", callback);
+  const useOnPlayerLeave = (callback) => useEventListener("player-leave", callback);
+  const useOnNewHost = (callback) => useEventListener("new-host", callback);
+  const useOnGuessResponse = (callback) => useEventListener("guess-response", callback);
+  const useOnChatMessageResponse = (callback) => useEventListener("chat-message-response", callback);
+
+  return {
+    socket,
+    emitJoin,
+    emitRoomListRequest,
+    emitMakeRoom,
+    emitJoinRoom,
+    emitLeaveRoom,
+    emitSettingsChange,
+    emitStartGame,
+    emitGuess,
+    emitChatMessage,
+    useOnJoinResponse,
+    useOnRoomListResponse,
+    useOnJoinRoomResponse,
+    useOnJoinRoomFail,
+    useOnLeaveRoomResponse,
+    useOnSettingsChangeResponse,
+    useOnRoundStart,
+    useOnGuessStart,
+    useOnRoundEnd,
+    useOnGameEnd,
+    useOnWaitStartGame,
+    useOnTimer,
+    useOnPlayerJoin,
+    useOnPlayerLeave,
+    useOnNewHost,
+    useOnGuessResponse,
+    useOnChatMessageResponse,
+  };
 };
 
-export const onScoreGuess = (callback) => registerListener("score-guess", callback);
-export const onHints = (callback) => registerListener("hints", callback);
-// Connect the WebSocket on script load
-connect();
+export default useSocket;

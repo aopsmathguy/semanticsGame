@@ -1,5 +1,5 @@
 import { StyledSuggestionItem } from "./styles";
-import TextBoldIndices from "./TextBoldIndices";
+import TextBoldIndices from "../Shared/TextBoldIndices";
 
 const WordSuggestion = function({ suggestion, highlighted, ...props}){
     return (

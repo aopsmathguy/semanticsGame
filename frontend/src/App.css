@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+
+html * {
+    font-family: 'Patrick Hand' !important;
+    font-size: 20px;
+}

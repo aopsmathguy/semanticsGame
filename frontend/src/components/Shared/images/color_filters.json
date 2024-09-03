@@ -1,0 +1,39 @@
+{
+    "colors" : [
+        {
+            "name" : "white",
+            "filter" : "invert(97%) sepia(100%) saturate(0%) hue-rotate(67deg) brightness(103%) contrast(104%)"
+        }, {
+            "name" : "grey",
+            "filter" : "invert(55%) sepia(0%) saturate(1212%) hue-rotate(168deg) brightness(99%) contrast(80%)"
+        },{
+            "name" : "red",
+            "filter" : "invert(34%) sepia(99%) saturate(7396%) hue-rotate(359deg) brightness(97%) contrast(125%)"
+        }, {
+            "name" : "orange",
+            "filter" : "invert(65%) sepia(49%) saturate(4378%) hue-rotate(358deg) brightness(99%) contrast(109%)"
+        }, {
+            "name" : "yellow",
+            "filter" : "invert(98%) sepia(66%) saturate(7500%) hue-rotate(356deg) brightness(106%) contrast(106%)"
+        }, {
+            "name" : "green",
+            "filter" : "invert(41%) sepia(100%) saturate(990%) hue-rotate(86deg) brightness(138%) contrast(113%)"
+        }, {
+            "name" : "cyan",
+            "filter" : "invert(92%) sepia(79%) saturate(7492%) hue-rotate(104deg) brightness(103%) contrast(105%)"
+        }, {
+            "name" : "blue",
+            "filter" : "invert(8%) sepia(100%) saturate(7018%) hue-rotate(246deg) brightness(96%) contrast(144%)"
+        }, {
+            "name" : "magenta",
+            "filter" : "invert(17%) sepia(100%) saturate(2629%) hue-rotate(288deg) brightness(130%) contrast(140%)"
+        }, {
+            "name" : "purple",
+            "filter" : "invert(10%) sepia(87%) saturate(5045%) hue-rotate(294deg) brightness(86%) contrast(116%)"
+        }, {
+            "name" : "pink",
+            "filter" : "invert(87%) sepia(82%) saturate(4405%) hue-rotate(290deg) brightness(107%) contrast(111%)"
+        }
+
+    ]
+}
