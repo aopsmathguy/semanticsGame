@@ -61,8 +61,9 @@ export const ControlButton = styled.div`
 export const JoinButton = styled.button`
     flex-grow: 1;
     box-sizing: border-box;
-    background-color: #0f0;
-    border: 3px solid #0c0;
+    background-color: #080;
+    color : white;
+    border: 3px solid #050;
     padding: 10px;
     cursor: pointer;
     width: 100%; // Make JoinButton take full width of InputContainer

@@ -106,9 +106,10 @@ export const gameSlice = createSlice({
             room.gameState = "WAIT_ROUND_START";
         },
         handleGuessStart: (state, action) => {
+            const { targetWord } = action.payload;
             const room = state.room;
             room.guesses = {};
-            room.targetWord = "";
+            room.targetWord = targetWord;
             for (const playerId in room.players) {
                 const { playerRoomInfo } = room.players[playerId];
                 playerRoomInfo.roundScore = 0;

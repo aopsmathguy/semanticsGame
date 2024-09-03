@@ -100,7 +100,9 @@ export const CONFIG = new SocketConfig({
         "round-start": {
             currentRound: "uint8",
         },
-        "guess-start": {},
+        "guess-start": { 
+            targetWord: "string",
+        },
         "round-end": {
             "targetWord": "string",
             "scores": [playerRoomInfoSchema],

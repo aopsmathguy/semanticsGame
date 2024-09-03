@@ -45,7 +45,7 @@ function AppContainer() {
         dispatch(handleSettingsChangeResponse(data))
     );
     socket.useOnRoundStart((data) => dispatch(handleRoundStart(data)));
-    socket.useOnGuessStart(() => dispatch(handleGuessStart()));
+    socket.useOnGuessStart((data) => dispatch(handleGuessStart(data)));
     socket.useOnRoundEnd((data) => dispatch(handleRoundEnd(data)));
     socket.useOnGameEnd((data) => dispatch(handleGameEnd(data)));
     socket.useOnWaitStartGame(() => dispatch(handleWaitStartGame()));

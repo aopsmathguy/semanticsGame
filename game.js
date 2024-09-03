@@ -27,11 +27,11 @@ function hashStr(str) {
     return hash | 0; // Use bitwise OR with 0 to get signed 32-bit integer
 }
 function getDistinctSubset(words, k) {
-    if (k > words.length) {
-        throw new Error(
-            "k cannot be larger than the number of words in the array"
-        );
-    }
+    // if (k > words.length) {
+    //     throw new Error(
+    //         "k cannot be larger than the number of words in the array"
+    //     );
+    // }
 
     // Create a copy of the array to avoid modifying the original
     const wordsCopy = [...words];
@@ -144,7 +144,7 @@ class Game {
             "currentRound": roomObj.currentRound,
             "guesses": roomObj.guesses.map(roomObj.createGuessResponse.bind(roomObj)),
             "targetWord":
-                roomObj.gameState === "ROUND_OVER" ? roomObj.targetWord : "",
+                roomObj.gameState === "ROUND_OVER" ? roomObj.targetWord : hiddenString(roomObj.targetWord),
         };
         socket.emit("join-room-response", {
             roomId,
@@ -366,7 +366,7 @@ class Room {
 
         this.gameState = "GUESSING";
         this.timer = this.settings.guessTime;
-        this.socketEmit("guess-start", {});
+        this.socketEmit("guess-start", {targetWord : hiddenString(this.targetWord)});
         for (const { word, similarity } of hints) {
             const guess = this.createGuessResponse(
                 {

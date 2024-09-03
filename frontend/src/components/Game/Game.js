@@ -42,6 +42,7 @@ function Game({
                     timerEmphasize={timerEmphasize}
                     players={players}
                     playerId={playerId}
+                    targetWord={targetWord}
                 />
             </StyledGameBarWrapper>
             <StyledGameContentWrapper>

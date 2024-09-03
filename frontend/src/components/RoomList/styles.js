@@ -41,7 +41,7 @@ export const StyledMakeRoomContainer = styled.div`
     margin-top: 10px;
     background-color: white;
     width : min(600px, 100%);
-    height: 100px;
+    height: 60px;
 `;
 
 export const StyledRoomItem = styled.div`
@@ -77,7 +77,6 @@ export const StyledCreateRoom = styled.div`
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    border-bottom: 1px solid #000;
     cursor: pointer;
 `;
 export const StyledRoomNameInput = styled.input`
@@ -85,7 +84,7 @@ export const StyledRoomNameInput = styled.input`
 `;
 export const StyledCreateRoomButton = styled.button`
     flex: 1;
-    background-color: #0f0;
+    background-color: #080;
     color: white;
     border: none;
     cursor: pointer;

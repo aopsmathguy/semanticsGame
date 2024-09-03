@@ -10,6 +10,7 @@ function GameBar({
     timerEmphasize,
     players,
     playerId,
+    targetWord
 }) {
     const { profile } = players[playerId];
     const { name, avatar } = profile;
@@ -22,9 +23,9 @@ function GameBar({
             case "WAIT_ROUND_START":
                 return "Waiting...";
             case "GUESSING":
-                return "Guess the word!";
+                return targetWord;
             case "ROUND_OVER":
-                return "Round over!";
+                return targetWord;
             case "GAME_OVER":
                 return "Game over!";
             default:
