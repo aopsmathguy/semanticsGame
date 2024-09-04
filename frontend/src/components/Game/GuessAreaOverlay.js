@@ -25,8 +25,40 @@ function GuessAreaOverlay({
     hostId,
     targetWord,
 }) {
+    const [roundStartProps, setRoundStartProps] = useState({
+        currentRound: currentRound,
+        timer: timer,
+    });
+    const [roundEndProps, setRoundEndProps] = useState({
+        players: players,
+        targetWord: targetWord,
+        currentRound: currentRound,
+    });
+    const [gameEndProps, setGameEndProps] = useState({
+        players: players,
+    });
+    useEffect(() => {
+        if (gameState == "WAIT_ROUND_START") {
+            setRoundStartProps({
+                currentRound,
+                timer,
+            });
+        }
+        if (gameState == "ROUND_OVER") {
+            setRoundEndProps({
+                players,
+                targetWord,
+                currentRound,
+            });
+        }
+        if (gameState == "GAME_OVER") {
+            setGameEndProps({
+                players,
+            });
+        }
+    }, [gameState, currentRound, timer, players, targetWord]);
     return (
-        <StyledOverlay hideOverlay={gameState == "GUESSING"} >
+        <StyledOverlay hideOverlay={gameState == "GUESSING"}>
             <StyledGuessAreaOverlay hideOverlay={gameState == "GUESSING"} />
             <StyledGuessAreaOverlayContent
                 hideOverlay={gameState != "WAIT_START"}
@@ -41,25 +73,17 @@ function GuessAreaOverlay({
             <StyledGuessAreaOverlayContent
                 hideOverlay={gameState != "WAIT_ROUND_START"}
             >
-                <WaitRoundStart
-                    gameState={gameState}
-                    currentRound={currentRound}
-                    timer={timer}
-                />
+                <WaitRoundStart {...roundStartProps} />
             </StyledGuessAreaOverlayContent>
             <StyledGuessAreaOverlayContent
                 hideOverlay={gameState != "ROUND_OVER"}
             >
-                <RoundEnd
-                    players={players}
-                    targetWord={targetWord}
-                    currentRound={currentRound}
-                />
+                <RoundEnd {...roundEndProps} />
             </StyledGuessAreaOverlayContent>
             <StyledGuessAreaOverlayContent
                 hideOverlay={gameState != "GAME_OVER"}
             >
-                <GameEnd players={players} />
+                <GameEnd {...gameEndProps} />
             </StyledGuessAreaOverlayContent>
         </StyledOverlay>
     );
