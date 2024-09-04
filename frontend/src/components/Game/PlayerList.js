@@ -17,13 +17,12 @@ function PlayerList({ players, playerId, hostId }) {
             <StyledPlayerListContainer>
                 {playerValues.map(({ profile, playerRoomInfo }) => {
                     const { name, avatar } = profile;
-                    const { colorIdx, shapeIdx, eyesIdx } = avatar;
                     const { playerId, score, solved } = playerRoomInfo;
                     return (
                         <StyledPlayerCard key={playerId} solved={solved}>
                             <StyledPlayerInfo>
                                 <StyledPlayerName isMe={playerId == myPlayerId} isHost={playerId==hostId}>
-                                        {name}
+                                    {name}
                                 </StyledPlayerName>
                                 <StyledPlayerScore>
                                     {score} points
@@ -31,7 +30,7 @@ function PlayerList({ players, playerId, hostId }) {
                             </StyledPlayerInfo>
                             <StyledPlayerAvatar>
                                 <Avatar
-                                    opts={{ colorIdx, shapeIdx, eyesIdx }}
+                                    opts={avatar}
                                     size={48}
                                 />
                             </StyledPlayerAvatar>

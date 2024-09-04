@@ -11,15 +11,17 @@ import {
     AvatarControl,
 } from "./styles";
 
-import eyesFrames from "../Shared/images/eyes_frames.json";
-import fillOutlineFrames from "../Shared/images/fill_outline_frames.json";
 import colorFilters from "../Shared/images/color_filters.json";
+import fillOutlineFrames from "../Shared/images/fill_outline_frames.json";
+import eyesFrames from "../Shared/images/eyes_frames.json";
+import mouthFrames from "../Shared/images/mouth_frames.json";
 import { StyledText } from "../Shared/styles";
 
 function MainMenu({ profile, sendJoin }) {
     const shapeNum = fillOutlineFrames.frames.length;
     const colorNum = colorFilters.colors.length;
     const eyesNum = eyesFrames.frames.length;
+    const mouthNum = mouthFrames.frames.length;
 
     const { name, avatar } = profile || {};
     const [localName, setLocalName] = useState(name || "");
@@ -29,6 +31,7 @@ function MainMenu({ profile, sendJoin }) {
     const [shapeIdx, setShapeIdx] = useState(avatar?.shapeIdx || 0);
     const [colorIdx, setColorIdx] = useState(avatar?.colorIdx || 0);
     const [eyesIdx, setEyesIdx] = useState(avatar?.eyesIdx || 0);
+    const [mouthIdx, setMouthIdx] = useState(avatar?.mouthIdx || 0);
 
     const clickLeftShape = () => {
         setShapeIdx((shapeIdx + shapeNum - 1) % shapeNum);
@@ -48,11 +51,18 @@ function MainMenu({ profile, sendJoin }) {
     const clickRightEyes = () => {
         setEyesIdx((eyesIdx + 1) % eyesNum);
     };
+    const clickLeftMouth = () => {
+        setMouthIdx((mouthIdx + mouthNum - 1) % mouthNum);
+    };
+    const clickRightMouth = () => {
+        setMouthIdx((mouthIdx + 1) % mouthNum);
+    }
+
     const clickFindGame = () => {
         const info = {
             profile: {
                 name: localName,
-                avatar: { shapeIdx, colorIdx, eyesIdx },
+                avatar: { shapeIdx, colorIdx, eyesIdx, mouthIdx },
             },
         }
         console.log("Joining game with profile", info)
@@ -74,12 +84,14 @@ function MainMenu({ profile, sendJoin }) {
                         <AvatarControl onClick={clickLeftShape}>{"⬅️"}</AvatarControl>
                         <AvatarControl onClick={clickLeftColor}>{"⬅️"}</AvatarControl>
                         <AvatarControl onClick={clickLeftEyes}>{"⬅️"}</AvatarControl>
+                        <AvatarControl onClick={clickLeftMouth}>{"⬅️"}</AvatarControl>
                     </ControlButton>
-                    <Avatar size={96} opts={{ shapeIdx, colorIdx, eyesIdx }} />
+                    <Avatar size={96} opts={{ shapeIdx, colorIdx, eyesIdx, mouthIdx }} />
                     <ControlButton>
                         <AvatarControl onClick={clickRightShape}>{"➡️"}</AvatarControl>
                         <AvatarControl onClick={clickRightColor}>{"➡️"}</AvatarControl>
                         <AvatarControl onClick={clickRightEyes}>{"➡️"}</AvatarControl>
+                        <AvatarControl onClick={clickRightMouth}>{"➡️"}</AvatarControl>
                     </ControlButton>
                 </AvatarControls>
                 <InputContainer>
