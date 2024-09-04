@@ -5,28 +5,31 @@ import gameReducer from "./slices/game";
 
 // Persist configuration
 const persistConfig = {
-    key: "root", // Key for the localStorage (can be any string)
-    storage,
-    blacklist: ["game"], // Don't persist activeView
+  key: "game.profile", // Key for the localStorage, specific to profile
+  storage,
+  whitelist: ["profile"], // Only persist the 'profile' property within game state
 };
 
 // Combine reducers
 const rootReducer = combineReducers({
-    game: gameReducer,
+  game: gameReducer,
 });
 
-// Create a persisted reducer (for reducers that are not blacklisted)
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+// Create a persisted reducer for the game.profile slice
+const persistedGameReducer = persistReducer(persistConfig, gameReducer);
 
+// Use the persisted reducer for the 'game' slice
 const store = configureStore({
-    reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            serializableCheck: {
-                // Ignore these action types to avoid non-serializable error
-                ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
-            },
-        }),
+  reducer: {
+    game: persistedGameReducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        // Ignore these action types to avoid non-serializable error
+        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
+      },
+    }),
 });
 
 const persistor = persistStore(store);
