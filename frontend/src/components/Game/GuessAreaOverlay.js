@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
+    StyledOverlay,
     StyledGuessAreaOverlay,
     StyledGuessAreaOverlayContent,
 } from "./styles";
@@ -22,12 +23,14 @@ function GuessAreaOverlay({
     playerId,
     players,
     hostId,
-    targetWord
+    targetWord,
 }) {
     return (
-        <>
+        <StyledOverlay hideOverlay={gameState == "GUESSING"} >
             <StyledGuessAreaOverlay hideOverlay={gameState == "GUESSING"} />
-            <StyledGuessAreaOverlayContent hideOverlay={gameState != "WAIT_START"}>
+            <StyledGuessAreaOverlayContent
+                hideOverlay={gameState != "WAIT_START"}
+            >
                 <RoomSettings
                     settings={settings}
                     onChangeSettings={onChangeSettings}
@@ -35,20 +38,30 @@ function GuessAreaOverlay({
                     isHost={hostId == playerId}
                 />
             </StyledGuessAreaOverlayContent>
-            <StyledGuessAreaOverlayContent hideOverlay={gameState != "WAIT_ROUND_START"}>
+            <StyledGuessAreaOverlayContent
+                hideOverlay={gameState != "WAIT_ROUND_START"}
+            >
                 <WaitRoundStart
+                    gameState={gameState}
                     currentRound={currentRound}
-                    timer={timer}/>
+                    timer={timer}
+                />
             </StyledGuessAreaOverlayContent>
-            <StyledGuessAreaOverlayContent hideOverlay={gameState != "ROUND_OVER"}>
+            <StyledGuessAreaOverlayContent
+                hideOverlay={gameState != "ROUND_OVER"}
+            >
                 <RoundEnd
-                    players={players} targetWord={targetWord} currentRound={currentRound}/>
+                    players={players}
+                    targetWord={targetWord}
+                    currentRound={currentRound}
+                />
             </StyledGuessAreaOverlayContent>
-            <StyledGuessAreaOverlayContent hideOverlay={gameState != "GAME_OVER"}>
-                <GameEnd
-                    players={players}/>
+            <StyledGuessAreaOverlayContent
+                hideOverlay={gameState != "GAME_OVER"}
+            >
+                <GameEnd players={players} />
             </StyledGuessAreaOverlayContent>
-        </>
+        </StyledOverlay>
     );
 }
 export default GuessAreaOverlay;

@@ -69,7 +69,7 @@ const useSocket = () => {
   const useOnGuessResponse = (callback) => useEventListener("guess-response", callback);
   const useOnSpellingHint = (callback) => useEventListener("spelling-hint", callback);
   const useOnChatMessageResponse = (callback) => useEventListener("chat-message-response", callback);
-
+  const useOnDisconnect = (callback) => useEventListener("disconnect", callback);
   return {
     socket,
     emitJoin,
@@ -99,6 +99,7 @@ const useSocket = () => {
     useOnGuessResponse,
     useOnSpellingHint,
     useOnChatMessageResponse,
+    useOnDisconnect,
   };
 };
 

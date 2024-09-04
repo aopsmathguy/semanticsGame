@@ -211,6 +211,12 @@ export const gameSlice = createSlice({
             const { playerId, message } = action.payload;
             const room = state.room;
             room.chatMessages.push({ playerId, message });
+        },
+        handleDisconnect: (state) => {
+            state.activeView = "MainMenu";
+            state.playerId = null;
+            state.roomList = null;
+            state.room = null;
         }
     },
 });
@@ -234,6 +240,7 @@ export const {
     handleGuessResponse,
     handleSpellingHint,
     handleChatMessageResponse,
+    handleDisconnect,
 } = gameSlice.actions;
 
 export const selectActiveView = (state) => state.game.activeView;

@@ -186,6 +186,16 @@ export const StyledGuessAreaContainer = styled.div`
     align-items: center;
 `;
 //overlay stuff
+export const StyledOverlay = styled.div`
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: ${({ hideOverlay }) => (hideOverlay ? "hidden" : "visible")};
+    transition: visibility 1s;
+`;
 export const StyledGuessAreaOverlay = styled.div`
     position: absolute;
     left: 0;

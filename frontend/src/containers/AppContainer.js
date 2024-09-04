@@ -20,7 +20,8 @@ import {
     handleNewHost,
     handleGuessResponse,
     handleSpellingHint,
-    handleChatMessageResponse
+    handleChatMessageResponse,
+    handleDisconnect
 } from "../redux/slices/game";
 
 import { selectActiveView } from "../redux/slices/game";
@@ -57,6 +58,7 @@ function AppContainer() {
     socket.useOnGuessResponse((data) => dispatch(handleGuessResponse(data)));
     socket.useOnSpellingHint((data) => dispatch(handleSpellingHint(data)));
     socket.useOnChatMessageResponse((data) => dispatch(handleChatMessageResponse(data)));
+    socket.useOnDisconnect(() => dispatch(handleDisconnect()));
     setTimeout(() => {
         console.log(socket.socket.listeners[25]);
     }, 1000);
@@ -65,7 +67,7 @@ function AppContainer() {
       {activeView == "MainMenu" && <MainMenuContainer />}
       {activeView == "RoomList" && <RoomListContainer />}
       {activeView == "Game" && <GameContainer />}
-      </div>;
+      </div>
 }
 
 export default AppContainer;

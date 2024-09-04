@@ -319,9 +319,10 @@ class Room {
         let wordsBySimilarity = (
             await wordEmbeddings.getSimilarities(word, words)
         ).filter(({ similarity }) => similarity < 0.65);
-        if (wordsBySimilarity[20].similarity > 0.4) {
+        console.log(wordsBySimilarity.map((a, i)=>[a.word, a.similarity, i]));
+        if (wordsBySimilarity[20].similarity > 0.47) {
             wordsBySimilarity = wordsBySimilarity.filter(
-                ({ similarity }) => similarity > 0.45
+                ({ similarity }) => similarity > 0.47
             );
         } else {
             wordsBySimilarity = wordsBySimilarity.splice(0, 20);
