@@ -407,7 +407,7 @@ class Room {
             );
         }
 
-        const spellingHints = Math.floor(this.targetWord.length / 3);
+        const spellingHints = Math.ceil(this.targetWord.length / 3);
         const indices = getDistinctSubset(Array.from({ length: this.targetWord.length }, (_, i) => i), spellingHints);
         let spellingHintsRevealed = 0;
         while (this.timer > 0) {
