@@ -5,6 +5,7 @@ const profileSchema = {
         colorIdx: "uint8",
         shapeIdx: "uint8",
         eyesIdx: "uint8",
+        mouthIdx: "uint8",
     },
 };
 const playerRoomInfoSchema = {
