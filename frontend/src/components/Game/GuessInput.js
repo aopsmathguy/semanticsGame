@@ -32,7 +32,7 @@ function GuessInput({ onGuess, wordFuse }) {
                 setCurrGuess("");
                 setHighlightedSuggestion(null);
                 setShowSuggestions(false);
-                onGuess({word : guess});
+                onGuess({ word: guess });
             }
         } else if (event.key === "ArrowDown") {
             event.preventDefault();
@@ -76,10 +76,14 @@ function GuessInput({ onGuess, wordFuse }) {
 
     return (
         <StyledGuessInputContainer>
-            <StyledGuessInput ref={inputRef} value={currGuess}
-                    onKeyDown={handleKeyDown}
-                    onChange={onChange}
-                    onFocus={() => setShowSuggestions(true)}/>
+            <StyledGuessInput
+                ref={inputRef}
+                value={currGuess}
+                onKeyDown={handleKeyDown}
+                onChange={onChange}
+                onFocus={() => setShowSuggestions(true)}
+                placeholder="Enter guess"
+            />
             {showSuggestions && currGuess.length > 0 && (
                 <StyledSuggestionsContainer
                     ref={suggestionRef}
@@ -104,7 +108,7 @@ function GuessInput({ onGuess, wordFuse }) {
                             onClick={() => {
                                 setCurrGuess("");
                                 setShowSuggestions(false);
-                                onGuess({word : suggestion.word});
+                                onGuess({ word: suggestion.word });
                             }}
                             onMouseEnter={() => setHighlightedSuggestion(index)}
                             onMouseLeave={() => setHighlightedSuggestion(null)}

@@ -319,7 +319,6 @@ class Room {
         let wordsBySimilarity = (
             await wordEmbeddings.getSimilarities(word, words)
         ).filter(({ similarity }) => similarity < 0.65);
-        console.log(wordsBySimilarity.map((a, i)=>[a.word, a.similarity, i]));
         if (wordsBySimilarity[20].similarity > 0.47) {
             wordsBySimilarity = wordsBySimilarity.filter(
                 ({ similarity }) => similarity > 0.47
@@ -408,7 +407,7 @@ class Room {
             );
         }
 
-        const spellingHints = this.targetWord.length > 3 ? 2 : 1;
+        const spellingHints = 1 + Math.floor(this.targetWord.length / 4);
         const indices = getDistinctSubset(Array.from({ length: this.targetWord.length }, (_, i) => i), spellingHints);
         let spellingHintsRevealed = 0;
         while (this.timer > 0) {
@@ -424,7 +423,6 @@ class Room {
             if (hintsReveal > spellingHintsRevealed) {
                 spellingHintsRevealed = hintsReveal;
                 const hintedWord = hiddenString(this.targetWord, indices.slice(0, hintsReveal));
-                console.log("Spelling hint", hintedWord);
                 this.socketEmit("spelling-hint", {
                     targetWord : hintedWord,
                 });
