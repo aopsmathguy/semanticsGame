@@ -100,7 +100,13 @@ class Game {
     }
     makeRoomHandler(socket, data) {
         let { "room-name": roomName } = data;
-        roomName = roomName || words[Math.floor(Math.random() * words.length)];
+        const playerId = socket.playerId;
+        if (!playerId) {
+            console.log("Player not found", playerId);
+            return;
+        }
+        const { profile } = this.players.get(playerId);
+        roomName = roomName || profile.name + "'s room";
         const roomId = generateId();
         const room = new Room(this, roomId, roomName);
         this.rooms.set(roomId, room);
