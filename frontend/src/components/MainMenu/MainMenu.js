@@ -57,7 +57,12 @@ function MainMenu({ profile, sendJoin }) {
     const clickRightMouth = () => {
         setMouthIdx((mouthIdx + 1) % mouthNum);
     }
-
+    const clickRandomizer = () => {
+        setShapeIdx(Math.floor(Math.random() * shapeNum));
+        setColorIdx(Math.floor(Math.random() * colorNum));
+        setEyesIdx(Math.floor(Math.random() * eyesNum));
+        setMouthIdx(Math.floor(Math.random() * mouthNum));
+    }
     const clickFindGame = () => {
         const info = {
             profile: {
@@ -92,6 +97,9 @@ function MainMenu({ profile, sendJoin }) {
                         <AvatarControl onClick={clickRightColor}>{"➡️"}</AvatarControl>
                         <AvatarControl onClick={clickRightEyes}>{"➡️"}</AvatarControl>
                         <AvatarControl onClick={clickRightMouth}>{"➡️"}</AvatarControl>
+                    </ControlButton>
+                    <ControlButton>
+                        <AvatarControl onClick={clickRandomizer}>🎲</AvatarControl>
                     </ControlButton>
                 </AvatarControls>
                 <InputContainer>
