@@ -130,6 +130,10 @@ export const gameSlice = createSlice({
                 playerRoomInfo.solved = solved;
             }
             room.gameState = "ROUND_OVER";
+
+            const color = "#f80";
+            const content = `The word was **${targetWord}**`;
+            room.chatMessages.push({ color, content });
         },
         handleGameEnd: (state, action) => {
             const { scores } = action.payload;
@@ -140,6 +144,11 @@ export const gameSlice = createSlice({
                 playerRoomInfo.score = score;
             }
             room.gameState = "GAME_OVER";
+            
+            const winner = Object.values(room.players).reduce((a, b) => a.playerRoomInfo.score > b.playerRoomInfo.score ? a : b);
+            const color = "#f80";
+            const content = `Game over! **${winner.profile.name}** wins with **${winner.playerRoomInfo.score}** points!`;
+            room.chatMessages.push({ color, content });
         },
         handleWaitStartGame: (state) => {
             const room = state.room;
@@ -166,10 +175,20 @@ export const gameSlice = createSlice({
                 profile,
                 playerRoomInfo: { score: 0, roundScore: 0, solved: false },
             };
+
+            const color = "#56CE27";
+            const content = `**${room.players[playerId].profile.name} joined the room**`;
+            room.chatMessages.push({ color, content });
         },
         handlePlayerLeave: (state, action) => {
             const { playerId } = action.payload;
             const room = state.room;
+
+            const color = "#f00";
+            const content = `**${room.players[playerId].profile.name} left the room**`;
+            room.chatMessages.push({ color, content });
+
+
             delete room.players[playerId];
         },
         handleNewHost: (state, action) => {
@@ -200,6 +219,10 @@ export const gameSlice = createSlice({
             if (solved) {
                 const { playerRoomInfo } = room.players[playerId];
                 playerRoomInfo.solved = true;
+
+                const color = "#56CE27";
+                const content = `**${room.players[playerId].profile.name} found the word!**`;
+                room.chatMessages.push({ color, content });
             }
         },
         handleSpellingHint : (state, action) => {
@@ -210,7 +233,10 @@ export const gameSlice = createSlice({
         handleChatMessageResponse: (state, action) => {
             const { playerId, message } = action.payload;
             const room = state.room;
-            room.chatMessages.push({ playerId, message });
+            const myPlayerId = state.playerId;
+            const color = playerId === myPlayerId ? "blue" : "black";
+            const content = `**${room.players[playerId].profile.name}:** ${message}`;
+            room.chatMessages.push({ color, content });
         },
         handleDisconnect: (state) => {
             state.activeView = "MainMenu";

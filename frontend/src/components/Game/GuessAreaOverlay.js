@@ -38,23 +38,25 @@ function GuessAreaOverlay({
         players: players,
     });
     useEffect(() => {
-        if (gameState == "WAIT_ROUND_START") {
-            setRoundStartProps({
-                currentRound,
-                timer,
-            });
-        }
-        if (gameState == "ROUND_OVER") {
-            setRoundEndProps({
-                players,
-                targetWord,
-                currentRound,
-            });
-        }
-        if (gameState == "GAME_OVER") {
-            setGameEndProps({
-                players,
-            });
+        switch (gameState){
+            case "WAIT_ROUND_START":
+                setRoundStartProps({
+                    currentRound,
+                    timer,
+                });
+                break;
+            case "ROUND_OVER":
+                setRoundEndProps({
+                    players,
+                    targetWord,
+                    currentRound,
+                });
+                break;
+            case "GAME_OVER":
+                setGameEndProps({
+                    players,
+                });
+                break;
         }
     }, [gameState, currentRound, timer, players, targetWord]);
     return (

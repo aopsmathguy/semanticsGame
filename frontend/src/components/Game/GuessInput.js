@@ -25,6 +25,9 @@ function GuessInput({ onGuess, wordFuse }) {
                 setCurrGuess(currGuess + "\n");
             } else {
                 event.preventDefault();
+                if (currGuess.trim() === "") {
+                    return;
+                }
                 let guess = currGuess;
                 if (highlightedSuggestion !== null) {
                     guess = suggestions[highlightedSuggestion].word;

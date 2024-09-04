@@ -5,6 +5,7 @@ import {
     StyledChatMessageItem,
     StyledChatSendArea,
 } from "./styles";
+import Markdown from "react-markdown";
 
 function Chat({ messages, sendMessage, players, playerId }) {
     const myPlayerId = playerId;
@@ -17,6 +18,7 @@ function Chat({ messages, sendMessage, players, playerId }) {
 
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
+            if (message.trim() === "") return;
             sendMessage({message});
             setMessage("");
         }
@@ -39,11 +41,10 @@ function Chat({ messages, sendMessage, players, playerId }) {
     return (
         <StyledChatContainer>
             <StyledChatMessagesContainer ref={messagesContainerRef}>
-                {messages.map(({ message, playerId }, index) => (
+                {messages.map(({ color, content }, index) => (
                     <StyledChatMessageItem key={index}
-                    color={myPlayerId == playerId ? "blue" : "black"}>
-                            
-                            {players[playerId].profile.name}: {message}
+                    color={color}>
+                        <Markdown>{content}</Markdown>
                     </StyledChatMessageItem>
                 ))}
             </StyledChatMessagesContainer>

@@ -323,9 +323,9 @@ export const StyledGuessRow = styled.div`
     display: flex;
     align-items: center;    
     justify-content: center;
-    // padding: 5px;
     background-color: ${({ isLastGuess }) =>
         isLastGuess ? "lightgreen" : "white"};
+    border-bottom: 1px solid black;
 `;
 
 export const StyledWordColumn = styled.div`
