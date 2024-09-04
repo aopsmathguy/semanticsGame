@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import WelcomeSection from "./WelcomeSection";
 import Avatar from "../Shared/Avatar";
 import {
     StyledMainMenuWrapper,
@@ -9,6 +10,7 @@ import {
     ControlButton,
     JoinButton,
     AvatarControl,
+    RandomizerButton,
 } from "./styles";
 
 import colorFilters from "../Shared/images/color_filters.json";
@@ -27,7 +29,7 @@ function MainMenu({ profile, sendJoin }) {
     const [localName, setLocalName] = useState(name || "");
     const onNameChange = (e) => {
         setLocalName(e.target.value);
-    }
+    };
     const [shapeIdx, setShapeIdx] = useState(avatar?.shapeIdx || 0);
     const [colorIdx, setColorIdx] = useState(avatar?.colorIdx || 0);
     const [eyesIdx, setEyesIdx] = useState(avatar?.eyesIdx || 0);
@@ -56,58 +58,79 @@ function MainMenu({ profile, sendJoin }) {
     };
     const clickRightMouth = () => {
         setMouthIdx((mouthIdx + 1) % mouthNum);
-    }
+    };
     const clickRandomizer = () => {
         setShapeIdx(Math.floor(Math.random() * shapeNum));
         setColorIdx(Math.floor(Math.random() * colorNum));
         setEyesIdx(Math.floor(Math.random() * eyesNum));
         setMouthIdx(Math.floor(Math.random() * mouthNum));
-    }
+    };
     const clickFindGame = () => {
         const info = {
             profile: {
                 name: localName,
                 avatar: { shapeIdx, colorIdx, eyesIdx, mouthIdx },
             },
-        }
-        console.log("Joining game with profile", info)
+        };
+        console.log("Joining game with profile", info);
         sendJoin(info);
     };
     return (
         <StyledMainMenuWrapper>
             <StyledText fontSize={64}>COSEMANTLE</StyledText>
-            <StyledText>A game of guessing words based on association</StyledText>
+            <StyledText>
+                A game of guessing words based on association
+            </StyledText>
             <AvatarContainer>
                 <InputContainer>
-                    <Input type="text" placeholder="Enter your name"
-                    onChange={onNameChange} value={localName}
-                     />
+                    <Input
+                        type="text"
+                        placeholder="Enter your name"
+                        onChange={onNameChange}
+                        value={localName}
+                    />
                 </InputContainer>
 
                 <AvatarControls>
                     <ControlButton>
-                        <AvatarControl onClick={clickLeftShape}>{"⬅️"}</AvatarControl>
-                        <AvatarControl onClick={clickLeftColor}>{"⬅️"}</AvatarControl>
-                        <AvatarControl onClick={clickLeftEyes}>{"⬅️"}</AvatarControl>
-                        <AvatarControl onClick={clickLeftMouth}>{"⬅️"}</AvatarControl>
+                        <AvatarControl onClick={clickLeftShape}>
+                            {"⬅️"}
+                        </AvatarControl>
+                        <AvatarControl onClick={clickLeftColor}>
+                            {"⬅️"}
+                        </AvatarControl>
+                        <AvatarControl onClick={clickLeftEyes}>
+                            {"⬅️"}
+                        </AvatarControl>
+                        <AvatarControl onClick={clickLeftMouth}>
+                            {"⬅️"}
+                        </AvatarControl>
                     </ControlButton>
-                    <Avatar size={96} opts={{ shapeIdx, colorIdx, eyesIdx, mouthIdx }} />
+                    <Avatar
+                        size={96}
+                        opts={{ shapeIdx, colorIdx, eyesIdx, mouthIdx }}
+                        onClick={clickRandomizer}
+                    />
                     <ControlButton>
-                        <AvatarControl onClick={clickRightShape}>{"➡️"}</AvatarControl>
-                        <AvatarControl onClick={clickRightColor}>{"➡️"}</AvatarControl>
-                        <AvatarControl onClick={clickRightEyes}>{"➡️"}</AvatarControl>
-                        <AvatarControl onClick={clickRightMouth}>{"➡️"}</AvatarControl>
-                    </ControlButton>
-                    <ControlButton>
-                        <AvatarControl onClick={clickRandomizer}>🎲</AvatarControl>
+                        <AvatarControl onClick={clickRightShape}>
+                            {"➡️"}
+                        </AvatarControl>
+                        <AvatarControl onClick={clickRightColor}>
+                            {"➡️"}
+                        </AvatarControl>
+                        <AvatarControl onClick={clickRightEyes}>
+                            {"➡️"}
+                        </AvatarControl>
+                        <AvatarControl onClick={clickRightMouth}>
+                            {"➡️"}
+                        </AvatarControl>
                     </ControlButton>
                 </AvatarControls>
                 <InputContainer>
-                    <JoinButton 
-                        onClick={clickFindGame}
-                    >Find a Game</JoinButton>
+                    <JoinButton onClick={clickFindGame}>Find a Game</JoinButton>
                 </InputContainer>
             </AvatarContainer>
+            <WelcomeSection/>
         </StyledMainMenuWrapper>
     );
 }

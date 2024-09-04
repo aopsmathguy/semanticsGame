@@ -11,13 +11,13 @@ import outlineAtlas from "./images/outline_atlas.png";
 import eyesAtlas from "./images/eyes_atlas.png";
 import mouthAtlas from "./images/mouth_atlas.png";
 
-function Avatar({ size, opts }) {
+function Avatar({ size, opts, ...props }) {
     const { shapeIdx, colorIdx, eyesIdx, mouthIdx } = opts;
     const avatarSize = size || 48;
     const eyeIndex = eyesIdx || 0;
     const mouthIndex = mouthIdx || 0;
     return (
-        <StyledAvatarContainer size={avatarSize}>
+        <StyledAvatarContainer size={avatarSize} {...props}>
             <SpriteImage
                 index={shapeIdx}
                 atlas={fillAtlas}

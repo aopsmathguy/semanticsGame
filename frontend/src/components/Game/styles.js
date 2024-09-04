@@ -5,7 +5,6 @@ export const StyledGameLayout = styled.div`
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background-color: #c0c0ff;
 `;
 
 export const StyledGameBarWrapper = styled.div`

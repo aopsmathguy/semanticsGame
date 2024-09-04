@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledAvatarContainer = styled.div`
-    pointer-events: none;
     user-select: none;
     position: relative;
     flex: 0 0 auto;

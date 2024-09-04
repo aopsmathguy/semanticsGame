@@ -2,12 +2,9 @@ import styled from 'styled-components';
 
 export const StyledMainMenuWrapper = styled.div`
   display: flex;
+  overflow: auto;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #ccf;
-  width:100vw;
-  height:100vh;
 `;
 
 export const AvatarContainer = styled.div`
@@ -40,6 +37,9 @@ export const AvatarControls = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 `;
 export const AvatarControl = styled.div`
     width: 15px;
@@ -70,4 +70,8 @@ export const JoinButton = styled.button`
     &:hover {
         filter: brightness(90%); // Apply a brightness filter on hover
     }
+`;
+
+export const StyledWelcomeSection = styled.div`
+  margin : 40px;
 `;
