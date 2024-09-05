@@ -192,6 +192,8 @@ class Game {
         if (roomObj.players.size === 0) {
             this.rooms.delete(roomId);
         }
+        
+        this.roomListRequestHandler(socket, {});
     }
     async settingsChangeHandler(socket, data) {
         const playerId = socket.playerId;
