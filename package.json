@@ -4,8 +4,8 @@
   "main": "figure-it-out.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install-all": "cd frontend && npm install && cd ../common && npm install && cd .. && npm install",
-    "start": "cd frontend && npm run build --mode=production && cd .. && node script.js"
+    "install-all": "cd common && npm install && cd ../frontend && npm install && npm run build --mode=production && cd .. && npm install",
+    "start": "node script.js"
   },
   "author": "",
   "license": "ISC",
