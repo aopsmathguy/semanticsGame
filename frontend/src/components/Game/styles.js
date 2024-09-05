@@ -6,7 +6,9 @@ export const StyledGameLayout = styled.div`
     height: 100vh;
     width: 100vw;
 `;
-
+export const StyledRoomBarWrapper = styled.div`
+    height: 30px;
+`;
 export const StyledGameBarWrapper = styled.div`
     height: 70px;
     padding-bottom: 10px;
@@ -31,6 +33,38 @@ export const StyledChatWrapper = styled.div`
     width: min(300px, 36%);
     padding-left: 10px;
 `;
+//roombar
+export const RoomBarContainer = styled.div`
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    background-color: #ccc;
+    box-sizing: border-box;
+    border: 3px solid black;
+`;
+
+export const RoomName = styled.div`
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+`;
+
+export const LeaveButton = styled.div`
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 //game bar
 
 export const StyledGameBarContainer = styled.div`
@@ -40,7 +74,7 @@ export const StyledGameBarContainer = styled.div`
     justify-content: center;
     height: 100%;
     box-sizing: border-box;
-    border-bottom: 3px solid #000;
+    border: 3px solid #000;
     background-color: white;
 `;
 export const StyledGameBar = styled.div`
@@ -49,7 +83,9 @@ export const StyledGameBar = styled.div`
 `;
 export const StyledTimer = styled.div`
     position: absolute;
-    left : 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     align-items: center; /* Align items vertically */
 `;
@@ -58,16 +94,17 @@ export const StyledEmphasis = styled.div`
     top: 50%;
     transform: translate(0px, -50%);
     display: flex;
-    align-items: center; 
+    align-items: center;
 
     opacity: 0;
-    animation: ${({ timerEmphasis }) => (timerEmphasis ? "pulse 0.5s infinite" : "none")};
+    animation: ${({ timerEmphasis }) =>
+        timerEmphasis ? "pulse 0.5s infinite" : "none"};
     @keyframes pulse {
-        0% { 
-            opacity: 0.5; 
+        0% {
+            opacity: 0.5;
         }
-        50% { 
-            opacity: 0; 
+        50% {
+            opacity: 0;
         }
         100% {
             opacity: 0.5;
@@ -75,6 +112,12 @@ export const StyledEmphasis = styled.div`
     }
 `;
 
+export const StyledGameBarPlayerAvatar = styled.div`
+    position: absolute;
+    right: 0;
+    top : 50%;
+    transform: translateY(-50%);
+`;
 //playerlist
 export const StyledPlayerListArea = styled.div`
     display: flex;
@@ -132,8 +175,8 @@ export const StyledPlayerScore = styled.div`
 export const StyledPlayerAvatar = styled.div`
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translate(0px, -50%);
+    top : 50%;
+    transform: translateY(-50%);
 `;
 //chat stuff
 export const StyledChatContainer = styled.div`
@@ -156,7 +199,7 @@ export const StyledChatMessagesContainer = styled.div`
 export const StyledChatMessageItem = styled.p`
     padding: 0.2em;
     margin: 0;
-    color: ${({color}) => color || "inherit"};
+    color: ${({ color }) => color || "inherit"};
     &:nth-child(odd) {
         background-color: #f0f0f0;
     }
@@ -177,7 +220,7 @@ export const StyledChatSendArea = styled.input`
 //guess list and input
 export const StyledGuessAreaContainer = styled.div`
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     height: 100%;
     box-sizing: border-box;
     background-color: white;
@@ -216,7 +259,8 @@ export const StyledGuessAreaOverlayContent = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    transform: ${({hideOverlay})=> (hideOverlay ? "translateY(-100%)" : "translateY(0)")};
+    transform: ${({ hideOverlay }) =>
+        hideOverlay ? "translateY(-100%)" : "translateY(0)"};
     visibility: ${({ hideOverlay }) => (hideOverlay ? "hidden" : "visible")};
     transition: transform 1s, visibility 1s;
     overflow-y: auto;
@@ -230,15 +274,15 @@ export const StyledRoomSettingsContainer = styled.div`
 `;
 
 export const StyledSettingRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 `;
 
 export const StyledLabel = styled.label`
-  text-align: left;
-  color: white;
+    text-align: left;
+    color: white;
 `;
 
 export const StyledSelect = styled.select`
@@ -262,9 +306,9 @@ export const StyledPlayerRoundScoresContainer = styled.div`
     // overflow-y: auto;
 `;
 export const StyledPlayerRoundScores = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const StyledWaitRoundContainer = styled.div`
@@ -320,7 +364,7 @@ export const StyledGuessListContainer = styled.div`
 
 export const StyledGuessRow = styled.div`
     display: flex;
-    align-items: center;    
+    align-items: center;
     justify-content: center;
     background-color: ${({ isLastGuess }) =>
         isLastGuess ? "lightgreen" : "white"};
@@ -340,9 +384,8 @@ export const StyledSimilarityColumn = styled.div`
 export const StyledProgressBarContainer = styled.div`
     width: min(150px, 37.5%);
     margin: 5px 0;
-`
+`;
 export const StyledProgressBarBorder = styled.div`
-    
     border: 2px solid black;
 `;
 

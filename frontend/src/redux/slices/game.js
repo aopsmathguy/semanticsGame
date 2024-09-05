@@ -276,6 +276,7 @@ export const selectProfile = (state) => state.game.profile;
 export const selectRoomList = (state) => state.game.roomList;
 
 export const selectGameState = (state) => state.game.room?.gameState;
+export const selectRoomName = (state) => state.game.room?.roomName;
 export const selectTimer = (state) => state.game.room?.timer;
 export const selectTimerEmphasize = (state) => state.game.room?.timerEmphasize;
 export const selectHostId = (state) => state.game.room?.hostId;

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledGameBarContainer } from "./styles";
+import { StyledGameBarContainer, StyledGameBarPlayerAvatar } from "./styles";
 import Timer from "./Timer";
 import Avatar from "../Shared/Avatar";
 
@@ -33,17 +33,19 @@ function GameBar({
         }
     })();
     return (
-        <StyledGameBarContainer>
-            <Timer timer={timer} timerEmphasize={timerEmphasize} />
-            <div><b>Round {currentRound}</b></div>
-            <div>{state}</div>
-            <div style={{position:"absolute", right : "0", top: "0"}}>
-                <Avatar
-                    size={70}
-                    opts={avatar}
-                    />
-            </div>
-        </StyledGameBarContainer>
+        <div style={{position:"relative", "width" : "100%", height : "100%"}}>
+            <StyledGameBarContainer>
+                <Timer timer={timer} timerEmphasize={timerEmphasize} />
+                <div><b>Round {currentRound}</b></div>
+                <div>{state}</div>
+                <StyledGameBarPlayerAvatar>
+                    <Avatar
+                        size={70}
+                        opts={avatar}
+                        />
+                </StyledGameBarPlayerAvatar>
+            </StyledGameBarContainer>
+        </div>
     );
 }
 

@@ -7,6 +7,7 @@ import Fuse from "fuse.js";
 import { useSelector } from "react-redux";
 import {
     selectGameState,
+    selectRoomName,
     selectTimer,
     selectTimerEmphasize,
     selectHostId,
@@ -24,6 +25,7 @@ import useSocket from "../ws";
 function GameContainer() {
     const wordFuse = useRef(new Fuse(words, { includeMatches: true }));
     const gameState = useSelector(selectGameState);
+    const roomName = useSelector(selectRoomName);
     const timer = useSelector(selectTimer);
     const timerEmphasize = useSelector(selectTimerEmphasize);
     const hostId = useSelector(selectHostId);
@@ -38,6 +40,7 @@ function GameContainer() {
 
     const socket = useSocket();
     const onChangeSettings = socket.emitSettingsChange;
+    const onLeaveRoom = socket.emitLeaveRoom;
     const onStartGame = socket.emitStartGame;
     const onGuess = socket.emitGuess;
     const sendMessage = socket.emitChatMessage;
@@ -47,6 +50,7 @@ function GameContainer() {
             {gameState != null ? (
                 <Game
                     gameState={gameState}
+                    roomName={roomName}
                     timer={timer}
                     timerEmphasize={timerEmphasize}
                     hostId={hostId}
@@ -54,6 +58,7 @@ function GameContainer() {
                     players={players}
                     settings={settings}
                     onChangeSettings={onChangeSettings}
+                    onLeaveRoom={onLeaveRoom}
                     onStartGame={onStartGame}
                     currentRound={currentRound}
                     guesses={guesses}

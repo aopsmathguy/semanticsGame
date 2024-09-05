@@ -1,12 +1,14 @@
 import React from "react";
 import {
     StyledGameLayout,
+    StyledRoomBarWrapper,
     StyledGameBarWrapper,
     StyledGameContentWrapper,
     StyledPlayersSidebarWrapper,
     StyledGuessListAndInputWrapper,
     StyledChatWrapper,
 } from "./styles";
+import RoomBar from "./RoomBar";
 import GameBar from "./GameBar";
 import PlayerList from "./PlayerList";
 import GuessArea from "./GuessArea";
@@ -15,6 +17,7 @@ import GuessAreaOverlay from "./GuessAreaOverlay";
 
 function Game({
     gameState,
+    roomName,
     timer,
     timerEmphasize,
     hostId,
@@ -22,6 +25,7 @@ function Game({
     players,
     settings,
     onChangeSettings,
+    onLeaveRoom,
     onStartGame,
     currentRound,
     guesses,
@@ -34,6 +38,9 @@ function Game({
 }) {
     return (
         <StyledGameLayout>
+            <StyledRoomBarWrapper>
+                <RoomBar roomName={roomName} onLeave={onLeaveRoom} />
+            </StyledRoomBarWrapper>
             <StyledGameBarWrapper>
                 <GameBar
                     gameState={gameState}
