@@ -409,7 +409,7 @@ function getCompiledSchemas(schemas, validate) {
     var strEncodeFunction = "bag.byteOffset=1;"; // Start encoding from the second byte
     var strDecodeFunction = "var ref1={}; bag.byteOffset=1;"; // Start decoding from the second byte
     var strByteCount = "";
-    var strEncodeRefDecs = "var ref1=json;console.log(ref1);";
+    var strEncodeRefDecs = "var ref1=json;";
     var incID = 0;
 
     var repEncArrStack = [""];
@@ -518,10 +518,19 @@ function getCompiledSchemas(schemas, validate) {
 
   function encode(obj, bag) {
     const {eventCode, data} = obj;
-    if (eventCode < 0 || eventCode >= schemas.length) {
-      throw new Error("Invalid eventCode");
+    if (eventCode < 0 || eventCode >= schemas.length || compiledEncodes[eventCode] === null) {
+      const err = new Error("Invalid eventCode: " + eventCode);
+      err.eventCode = eventCode;
+      throw err;
     }
-    const buffer = compiledEncodes[eventCode](data, bag);
+    let buffer;
+    try {
+      buffer = compiledEncodes[eventCode](data, bag);
+    } catch{
+      const err = new Error("Failed to encode data: " + eventCode);
+      err.eventCode = eventCode;
+      throw err;
+    }
     // Write eventCode to the first byte
     buffer.writeUInt8(eventCode, 0);
     return buffer;
@@ -529,10 +538,19 @@ function getCompiledSchemas(schemas, validate) {
 
   function decode(buffer, bag) {
     var eventCode = buffer.readUInt8(0); // Read eventCode from the first byte
-    if (eventCode < 0 || eventCode >= schemas.length) {
-      throw new Error("Invalid eventCode");
+    if (eventCode < 0 || eventCode >= schemas.length || compiledDecodes[eventCode] === null) {
+      const err = new Error("Invalid eventCode: " + eventCode);
+      err.eventCode = eventCode;
+      throw err;
     }
-    var data = compiledDecodes[eventCode](buffer, bag);
+    var data;
+    try {
+      data = compiledDecodes[eventCode](buffer, bag);
+    } catch (e) {
+      const err = new Error("Failed to decode data: " + eventCode);
+      err.eventCode = eventCode;
+      throw err;
+    }
     return { eventCode: eventCode, data: data };
   }
 

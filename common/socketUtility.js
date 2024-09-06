@@ -13,14 +13,18 @@ export class SocketConfig {
         this.keepAliveTimeout = opts.keepAliveTimeout || 10000;
 
         this.eventCodes = {};
+        this.eventCodeNames = new Array(256).fill(null);
         const schemasArray = new Array(256).fill(null);
         const packetSchemaEntries = Object.entries(this.packetSchemas).sort((a, b) => a[0].localeCompare(b[0]));
         for (const [i, [eventName, schema]] of packetSchemaEntries.entries()){
             this.eventCodes[eventName] = i;
+            this.eventCodeNames[i] = eventName;
             schemasArray[i] = schema;
         }
         this.eventCodes["ping"] = PING_CODE;
         this.eventCodes["pong"] = PONG_CODE;
+        this.eventCodeNames[PING_CODE] = "ping";
+        this.eventCodeNames[PONG_CODE] = "pong";
         schemasArray[PING_CODE] = {};
         schemasArray[PONG_CODE] = {};
         this.binaryCodec = buildSchemas(schemasArray);
@@ -108,7 +112,7 @@ export class SocketClient{
                     listener(data);
                 }
             } catch (e){
-                console.log("Packet doesn't fit schema: ");
+                console.log("Packet doesn't fit schema: ", that.cfg.eventCodeNames[e.eventCode]);
                 return;
             }
         }
