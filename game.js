@@ -154,7 +154,7 @@ class Game {
             "currentRound": roomObj.currentRound,
             "guesses": roomObj.guesses.map(roomObj.createGuessResponse.bind(roomObj)),
             "targetWord":
-                roomObj.gameState === "ROUND_OVER" ? roomObj.targetWord : hiddenString(roomObj.targetWord),
+                roomObj.gameState === "ROUND_OVER" ? roomObj.targetWord : roomObj.currentSpellingHint,
         };
         socket.emit("join-room-response", {
             roomId,
@@ -308,6 +308,7 @@ class Room {
 
         this.currentRound = 0;
         this.targetWord = "";
+        this.currentSpellingHint = "";
         this.guesses = []; //{ playerId, word, similarity }
 
         this.playerSolveOrder = [];
@@ -378,7 +379,6 @@ class Room {
         }
         
         this.targetWord = words[Math.floor(Math.random() * words.length)];
-
         console.log("Target word", this.targetWord);
         const hints = await this.createHints();
         
@@ -418,6 +418,7 @@ class Room {
         const spellingHints = Math.ceil(this.targetWord.length / 3);
         const indices = getDistinctSubset(Array.from({ length: this.targetWord.length }, (_, i) => i), spellingHints);
         let spellingHintsRevealed = 0;
+        this.currentSpellingHint = hiddenString(this.targetWord);
         while (this.timer > 0) {
             const emphasize = this.timer < 10;
             this.socketEmit("timer", {
@@ -430,9 +431,9 @@ class Room {
             const hintsReveal = Math.floor((spellingHints + 1) * (1 - this.timer / this.settings.guessTime));
             if (hintsReveal > spellingHintsRevealed) {
                 spellingHintsRevealed = hintsReveal;
-                const hintedWord = hiddenString(this.targetWord, indices.slice(0, hintsReveal));
+                this.currentSpellingHint = hiddenString(this.targetWord, indices.slice(0, hintsReveal));
                 this.socketEmit("spelling-hint", {
-                    targetWord : hintedWord,
+                    targetWord : this.currentSpellingHint,
                 });
             }
             await new Promise((resolve) => setTimeout(resolve, 1000));
