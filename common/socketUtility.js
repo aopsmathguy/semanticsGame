@@ -146,12 +146,13 @@ export class SocketClient{
                 const packet1 = this.cfg.serializePacket({ eventCode, data: info });
                 this._ws.send(packet1);
             } catch (e){
-                console.log('error serializing ', eventCode, JSON.stringify(info, undefined, 4)); 
+                console.log('error serializing ', this.cfg.eventCodeNames[eventCode], JSON.stringify(info, undefined, 4)); 
             }
         } else if (this._ws.readyState === 0){
             setTimeout(this.emitEventCode.bind(this,eventCode, info), 1000)
         } else{
             console.log("packet fail " + this._ws.readyState);
+            this.disconnect();
         }
     }
     
