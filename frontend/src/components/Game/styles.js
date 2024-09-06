@@ -385,16 +385,27 @@ export const StyledProgressBarContainer = styled.div`
     width: min(150px, 37.5%);
     margin: 5px 0;
 `;
+export const StyledProgressBarWrapper = styled.div`
+    position: relative;
+    width: 100%;
+    height: 100%;
+`;
 export const StyledProgressBarBorder = styled.div`
     border: 2px solid black;
+    flex-grow: 1;
 `;
 
 export const StyledProgressBar = styled.div`
     height: 20px;
-    width: ${({ sim }) => `${sim * 100}%`};
-    background-color: ${({ sim }) => `hsl(${sim ** 0.5 * 100}, 100%, 50%)`};
+    width: ${({ ranking }) => `${100-ranking}%`};
+    background-color: ${({ ranking }) => `hsl(${100-ranking}, 100%, 50%)`};
 `;
-
+export const StyledProgressBarText = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
 export const StyledPlayerAvatarColumn = styled.div`
     width: min(50px, 12.5%);
 `;

@@ -25,6 +25,7 @@ const guessSchema = {
     word: "string",
     wordHash: "int32",
     similarity: "float32",
+    ranking: "uint8",
     hidden: "boolean",
     solved: "boolean",
 };

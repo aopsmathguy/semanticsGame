@@ -7,7 +7,9 @@ import {
     StyledProgressBarContainer,
     StyledProgressBarBorder,
     StyledProgressBar,
-    StyledPlayerAvatarColumn
+    StyledPlayerAvatarColumn,
+    StyledProgressBarWrapper,
+    StyledProgressBarText,
 } from "./styles";
 import Avatar from "../Shared/Avatar";
 function GuessList({ guesses, lastGuessHash, players }) {
@@ -21,25 +23,32 @@ function GuessList({ guesses, lastGuessHash, players }) {
             </StyledGuessRow>
             {Object.entries(guesses)
                 .sort((a, b) => b[1].similarity - a[1].similarity)
-                .map(([wordHash, { playerId, word, similarity }]) => {
+                .map(([wordHash, { playerId, word, similarity, ranking }]) => {
                     const avatar = players[playerId]?.profile?.avatar;
-                    return <StyledGuessRow
-                        key={wordHash}
-                        isLastGuess={wordHash == lastGuessHash}
-                    >
-                        <StyledWordColumn>{word}</StyledWordColumn>
-                        <StyledSimilarityColumn>{(100 * similarity).toFixed(1)}%
-                        </StyledSimilarityColumn>
-                        <StyledProgressBarContainer>
-                            <StyledProgressBarBorder>
-                                <StyledProgressBar sim={similarity} />
-                            </StyledProgressBarBorder>
-                        </StyledProgressBarContainer>
-                        <StyledPlayerAvatarColumn>
-                            {avatar &&
-                            <Avatar opts={avatar} size={36} />}
-                        </StyledPlayerAvatarColumn>
-                    </StyledGuessRow>
+                    return (
+                        <StyledGuessRow
+                            key={wordHash}
+                            isLastGuess={wordHash == lastGuessHash}
+                        >
+                            <StyledWordColumn>{word}</StyledWordColumn>
+                            <StyledSimilarityColumn>
+                                {(100 * similarity).toFixed(1)}%
+                            </StyledSimilarityColumn>
+                            <StyledProgressBarContainer>
+                                <StyledProgressBarWrapper>
+                                    <StyledProgressBarBorder>
+                                        <StyledProgressBar ranking={ranking} />
+                                    </StyledProgressBarBorder>
+                                    <StyledProgressBarText>
+                                        {ranking == 100 ? "?" : `#${ranking}`}
+                                    </StyledProgressBarText>
+                                </StyledProgressBarWrapper>
+                            </StyledProgressBarContainer>
+                            <StyledPlayerAvatarColumn>
+                                {avatar && <Avatar opts={avatar} size={36} />}
+                            </StyledPlayerAvatarColumn>
+                        </StyledGuessRow>
+                    );
                 })}
         </StyledGuessListContainer>
     );

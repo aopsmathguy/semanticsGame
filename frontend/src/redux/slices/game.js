@@ -56,7 +56,7 @@ export const gameSlice = createSlice({
             }
             const guessesData = {};
             for (const guess of guesses) {
-                const { playerId, word, wordHash, similarity, hidden, solved } =
+                const { playerId, word, wordHash, similarity, ranking, hidden, solved } =
                     guess;
                 const existingGuess = guessesData[wordHash];
                 if (existingGuess && !existingGuess.hidden) {
@@ -66,6 +66,7 @@ export const gameSlice = createSlice({
                     playerId,
                     word,
                     similarity,
+                    ranking,
                     hidden,
                     solved,
                 };
@@ -117,7 +118,7 @@ export const gameSlice = createSlice({
             }
 
             for (const guess of guesses) {
-                const { playerId, word, wordHash, similarity, hidden, solved } =
+                const { playerId, word, wordHash, similarity, ranking, hidden, solved } =
                     guess;
                 const existingGuess = room.guesses[wordHash];
                 if (existingGuess && !existingGuess.hidden) {
@@ -127,6 +128,7 @@ export const gameSlice = createSlice({
                     playerId,
                     word,
                     similarity,
+                    ranking,
                     hidden,
                     solved,
                 };
@@ -216,7 +218,7 @@ export const gameSlice = createSlice({
             }
         },
         handleGuessResponse: (state, action) => {
-            const { playerId, word, wordHash, similarity, hidden, solved } =
+            const { playerId, word, wordHash, similarity, ranking, hidden, solved } =
                 action.payload;
             const room = state.room;
             if (playerId === state.playerId) {
@@ -230,13 +232,13 @@ export const gameSlice = createSlice({
                 playerId,
                 word,
                 similarity,
+                ranking,
                 hidden,
                 solved,
             };
             if (solved) {
                 const { playerRoomInfo } = room.players[playerId];
                 playerRoomInfo.solved = true;
-
                 const color = "#56CE27";
                 const content = `**${room.players[playerId].profile.name} found the word!**`;
                 room.chatMessages.push({ color, content });

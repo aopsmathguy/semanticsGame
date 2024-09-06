@@ -1,4 +1,4 @@
-import words from "./common/word_list.js";
+import { words } from "./common/word_list.js";
 import wordEmbeddings from "./embeddings.js";
 function generateId() {
     return crypto.getRandomValues(new Int32Array(1))[0];
@@ -316,6 +316,7 @@ class Room {
         this.currentRound = 0;
         this.targetWord = "";
         this.currentSpellingHint = "";
+        this.wordRanking = null;
         this.guesses = []; //{ playerId, word, similarity }
 
         this.playerSolveOrder = [];
@@ -329,12 +330,9 @@ class Room {
         this.socketEmit("new-host", { hostId: value });
     }
 
-    async createHints() {
-        const word = this.targetWord;
+    async createHints(allSimilarities) {
         const hints = this.settings.numberOfHints;
-        let wordsBySimilarity = (
-            await wordEmbeddings.getSimilarities(word, words)
-        ).filter(({ similarity }) => similarity < 0.65);
+        let wordsBySimilarity = allSimilarities.filter(({ similarity }) => similarity < 0.65);
         if (wordsBySimilarity[20].similarity > 0.47) {
             wordsBySimilarity = wordsBySimilarity.filter(
                 ({ similarity }) => similarity > 0.47
@@ -348,11 +346,16 @@ class Room {
         const settings = this.settings;
         const wordHash = hashStr(guess.word + this.salt);
         const hidden = guess.similarity > 0.65 && !isSender;
+        let ranking = this.wordRanking.get(guess.word)?.ranking;
+        if (ranking == undefined || ranking >= 100) {
+            ranking = 100;
+        }
         return {
             playerId: guess.playerId,
             word: hidden ? hiddenString(guess.word) : guess.word,
             wordHash: wordHash,
             similarity: guess.similarity,
+            ranking: ranking,
             hidden: hidden,
             solved: guess.word === this.targetWord,
         };
@@ -386,7 +389,9 @@ class Room {
 
         this.targetWord = words[Math.floor(Math.random() * words.length)];
         console.log("Target word", this.targetWord);
-        const hints = await this.createHints();
+        const allSimilarities = await wordEmbeddings.getSimilarities(this.targetWord, words);
+        this.wordRanking = new Map(allSimilarities.map(({ word, similarity }, i) => [word, {ranking : i, similarity}])); 
+        const hints = await this.createHints(allSimilarities);
 
         for (const [playerId, { playerRoomInfo }] of this.players) {
             //reset roundScores to 0
