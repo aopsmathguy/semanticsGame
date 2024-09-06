@@ -103,6 +103,7 @@ export const CONFIG = new SocketConfig({
         },
         "guess-start": { 
             targetWord: "string",
+            guesses : [guessSchema],
         },
         "round-end": {
             "targetWord": "string",

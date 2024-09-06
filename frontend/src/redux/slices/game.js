@@ -106,7 +106,7 @@ export const gameSlice = createSlice({
             room.gameState = "WAIT_ROUND_START";
         },
         handleGuessStart: (state, action) => {
-            const { targetWord } = action.payload;
+            const { targetWord, guesses } = action.payload;
             const room = state.room;
             room.guesses = {};
             room.targetWord = targetWord;
@@ -115,6 +115,23 @@ export const gameSlice = createSlice({
                 playerRoomInfo.roundScore = 0;
                 playerRoomInfo.solved = false;
             }
+
+            for (const guess of guesses) {
+                const { playerId, word, wordHash, similarity, hidden, solved } =
+                    guess;
+                const existingGuess = room.guesses[wordHash];
+                if (existingGuess && !existingGuess.hidden) {
+                    continue;
+                }
+                room.guesses[wordHash] = {
+                    playerId,
+                    word,
+                    similarity,
+                    hidden,
+                    solved,
+                };
+            }
+
             room.gameState = "GUESSING";
         },
         handleRoundEnd: (state, action) => {
