@@ -372,7 +372,6 @@ function getCompiledSchema(schema, validate) {
   strByteCount = "var byteC=0;".concat(strByteCount, "var wBuffer=bag.allocUnsafe(byteC);")
   strEncodeFunction = strEncodeRefDecs.concat(strByteCount, strEncodeFunction, "return wBuffer;");
   strDecodeFunction = strDecodeFunction.concat("return ref1['a'];");
-
   var compiledEncode = new Function('json', 'bag', strEncodeFunction);
   var compiledDecode = new Function('buffer', 'bag', strDecodeFunction);
 
@@ -396,5 +395,170 @@ export function build(schema, validate) {
     }
   }
 }
+function getCompiledSchemas(schemas, validate) {
+  var compiledEncodes = [];
+  var compiledDecodes = [];
 
+  for (var i = 0; i < schemas.length; i++) {
+    var schema = schemas[i];
+    if (schema == null){
+      compiledEncodes.push(null);
+      compiledDecodes.push(null);
+      continue;
+    }
+    var strEncodeFunction = "bag.byteOffset=1;"; // Start encoding from the second byte
+    var strDecodeFunction = "var ref1={}; bag.byteOffset=1;"; // Start decoding from the second byte
+    var strByteCount = "";
+    var strEncodeRefDecs = "var ref1=json;console.log(ref1);";
+    var incID = 0;
+
+    var repEncArrStack = [""];
+    var repDecArrStack = [""];
+    var repByteCountStack = [""];
+    var tmpRepEncArr = "";
+    var tmpRepDecArr = "";
+    var tmpRepByteCount = "";
+
+    schema = { 'a': schema };
+
+    function compileSchema(json, inArray) {
+      incID++;
+      var keys = Object.keys(json);
+      keys.sort(function(a, b) { return a < b ? -1 : (a > b ? 1 : 0); });
+  
+      var saveID = incID;
+  
+      for (var i = 0; i < keys.length; i++) {
+        var key = keys[i];
+        var val = json[key];
+  
+        if (inArray) { key = +key; }
+  
+        var prop = typeof key === "number" ? key : "'" + key + "'";
+        var container = val.constructor === Array ? "[]" : "{}";
+        var isRepArrItem = inArray && i >= keys.length - 1;
+  
+        if (isRepArrItem) {
+          repEncArrStack.push("");
+          repDecArrStack.push("");
+          repByteCountStack.push("");
+        }
+  
+        if (val.constructor === Array) {
+          var newID = incID + 1;
+          var repID = repEncArrStack.length <= 1 ? newID : newID + "xn";
+          var arrLenStr = "arrLen" + incID;
+  
+          if (repEncArrStack.length === 1) {
+            strEncodeRefDecs += declareEncodeRef(newID, saveID, prop);
+            strDecodeFunction += declareDecodeRef(newID, saveID, prop, "[]");
+          }
+  
+          var encArrayLength = encodeArrayLength(repID);
+          var decArrayLength = decodeArrayLength(arrLenStr);
+          var byteArrayLength = getArrayLengthByteCount(repID);
+  
+          declareRepeatRefs(isRepArrItem, newID, saveID, prop, container, repEncArrStack, repDecArrStack, repByteCountStack);
+  
+          compileSchema(val, true);
+  
+          tmpRepEncArr = encArrayLength + processArrayEnd(val, newID, repEncArrStack.pop() + tmpRepEncArr, repEncArrStack.length);
+          tmpRepDecArr = decArrayLength + processArrayEnd(val, newID, repDecArrStack.pop() + tmpRepDecArr, repEncArrStack.length, arrLenStr);
+          tmpRepByteCount = byteArrayLength + processArrayEnd(val, newID, repByteCountStack.pop() + tmpRepByteCount, repEncArrStack.length);
+  
+          if (repEncArrStack.length === 1) {
+            strEncodeFunction += tmpRepEncArr; tmpRepEncArr = "";
+            strDecodeFunction += tmpRepDecArr; tmpRepDecArr = "";
+            strByteCount += tmpRepByteCount; tmpRepByteCount = "";
+          }
+        } else if (typeof val === 'object') {
+          var newID = incID + 1;
+  
+          if (repEncArrStack.length === 1) {
+            strEncodeRefDecs += declareEncodeRef(newID, saveID, prop);
+            strDecodeFunction += declareDecodeRef(newID, saveID, prop, "{}");
+          }
+  
+          declareRepeatRefs(isRepArrItem, newID, saveID, prop, container, repEncArrStack, repDecArrStack, repByteCountStack);
+  
+          compileSchema(val, false);
+        } else {
+          var index = inArray ? "" : "[" + prop + "]";
+          var dataType = getDataType(val);
+          json[key] = dataType;
+  
+          var repID = getXN(repEncArrStack, saveID);
+          if (inArray) { repID += isRepArrItem ? "[j" + saveID + "]" : "[" + i + "]"; }
+  
+          repEncArrStack[repEncArrStack.length - 1] += encodeValue(dataType, repID, index, validate);
+          repDecArrStack[repDecArrStack.length - 1] += decodeValue(dataType, repID, index);
+          repByteCountStack[repByteCountStack.length - 1] += encodeByteCount(dataType, repID, index);
+  
+          if (repEncArrStack.length > 1) { continue; }
+  
+          var uniqID = inArray ? saveID + "[" + i + "]" : saveID;
+          strEncodeFunction += encodeValue(dataType, uniqID, index, validate);
+          strDecodeFunction += decodeValue(dataType, uniqID, index);
+          strByteCount += encodeByteCount(dataType, uniqID, index);
+        }
+      }
+    }
+
+    compileSchema(schema, false);
+
+    strByteCount = "var byteC=1;".concat(strByteCount, "var wBuffer=bag.allocUnsafe(byteC);"); // Add 1 byte for eventCode
+    strEncodeFunction = strEncodeRefDecs.concat(strByteCount, strEncodeFunction, "return wBuffer;");
+    strDecodeFunction = strDecodeFunction.concat("return ref1['a'];");
+    var compiledEncode = new Function('json', 'bag', strEncodeFunction);
+    var compiledDecode = new Function('buffer', 'bag', strDecodeFunction);
+
+    compiledEncodes.push(compiledEncode);
+    compiledDecodes.push(compiledDecode);
+  }
+
+  function encode(obj, bag) {
+    const {eventCode, data} = obj;
+    if (eventCode < 0 || eventCode >= schemas.length) {
+      throw new Error("Invalid eventCode");
+    }
+    const buffer = compiledEncodes[eventCode](data, bag);
+    // Write eventCode to the first byte
+    buffer.writeUInt8(eventCode, 0);
+    return buffer;
+  }
+
+  function decode(buffer, bag) {
+    var eventCode = buffer.readUInt8(0); // Read eventCode from the first byte
+    if (eventCode < 0 || eventCode >= schemas.length) {
+      throw new Error("Invalid eventCode");
+    }
+    var data = compiledDecodes[eventCode](buffer, bag);
+    return { eventCode: eventCode, data: data };
+  }
+
+  return [encode, decode];
+}
+export function buildSchemas(schemas, validate) {
+  /**
+   * @param {Array} schemas
+   */
+  var builtSchema = getCompiledSchemas(schemas, validate === undefined ? validateByDefault : validate);
+
+  var compiledEncode = builtSchema[0];
+  var compiledDecode = builtSchema[1];
+  return {
+    "encode": function(obj) {
+      const { eventCode, data } = obj;
+      return compiledEncode({eventCode, data : {
+        'a': data
+      }}, bag);
+    },
+    "decode": function(buffer) {
+      var bufferWrapper = Buffer.isBuffer(buffer) ? buffer : bufferFrom(buffer);
+      return compiledDecode(bufferWrapper, bag);
+    }
+  }
+
+}
 addTypeAlias('bool', 'boolean');
+

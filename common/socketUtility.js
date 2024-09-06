@@ -1,4 +1,4 @@
-import { build } from './schemapack.js';
+import { buildSchemas } from './schemapack.js';
 const EVENTCODE_CODE = 255;
 const PING_CODE = 254;
 const PONG_CODE = 253;
@@ -13,22 +13,23 @@ export class SocketConfig {
         this.keepAliveTimeout = opts.keepAliveTimeout || 10000;
 
         this.eventCodes = {};
-        this.schemas = new Array(256).fill(null);
-        for (const [i, [eventName, schema]] of Object.entries(this.packetSchemas).entries()){
+        const schemasArray = new Array(256).fill(null);
+        const packetSchemaEntries = Object.entries(this.packetSchemas).sort((a, b) => a[0].localeCompare(b[0]));
+        for (const [i, [eventName, schema]] of packetSchemaEntries.entries()){
             this.eventCodes[eventName] = i;
-            this.schemas[i] = build(schema);
+            schemasArray[i] = schema;
         }
-        this.schemas[EVENTCODE_CODE] = build({
-            eventCode : 'uint8'
-        });
-        this.schemas[PING_CODE] = build({});
-        this.schemas[PONG_CODE] = build({});
+        this.eventCodes["ping"] = PING_CODE;
+        this.eventCodes["pong"] = PONG_CODE;
+        schemasArray[PING_CODE] = {};
+        schemasArray[PONG_CODE] = {};
+        this.binaryCodec = buildSchemas(schemasArray);
     }
-    serializePacket(ec, info){
-        return this.schemas[ec].encode(info);
+    serializePacket(info){
+        return this.binaryCodec.encode(info);
     }
-    deserializePacket(ec, buffer){
-        return this.schemas[ec].decode(buffer);
+    deserializePacket(buffer){
+        return this.binaryCodec.decode(buffer);
     }
 }
 export class SocketClient{
@@ -38,7 +39,6 @@ export class SocketClient{
     connectListeners;
     disconnectListeners;
     errorListeners;
-    nextRecieveCode;
     pingPongDelta;
     constructor(ws, cfg){
         this.cfg = new SocketConfig(cfg);
@@ -56,7 +56,6 @@ export class SocketClient{
         this.connectListeners = new Set();
         this.disconnectListeners = new Set();
         this.errorListeners = new Set();
-        this.nextRecieveCode = EVENTCODE_CODE;
 
         this.pingPongDelta = 0;
 
@@ -66,7 +65,6 @@ export class SocketClient{
     }
     init(){
         const that = this;
-        this.nextRecieveCode = EVENTCODE_CODE;
         this._ws.binaryType = "arraybuffer";
         this._ws.onopen = function(){
             for (const listener of that.connectListeners){
@@ -103,19 +101,14 @@ export class SocketClient{
             }
         }
         this._ws.onmessage = function(event){
-            const data = event.data;
+            const eventData = event.data;
             try{
-                const packetInfo = that.cfg.deserializePacket(that.nextRecieveCode, data);
-                if (that.nextRecieveCode == EVENTCODE_CODE){
-                    that.nextRecieveCode = packetInfo.eventCode;
-                } else{
-                    for (const listener of that.listeners[that.nextRecieveCode]){
-                        listener(packetInfo);
-                    }
-                    that.nextRecieveCode = EVENTCODE_CODE;
+                const { eventCode, data } = that.cfg.deserializePacket(eventData);
+                for (const listener of that.listeners[eventCode]){
+                    listener(data);
                 }
             } catch (e){
-                console.log("Packet does not fit schema. PacketCode: " + that.nextRecieveCode + ".", e);
+                console.log("Packet doesn't fit schema: ");
                 return;
             }
         }
@@ -145,15 +138,12 @@ export class SocketClient{
     }
     emitEventCode(eventCode, info){
         if (this._ws.readyState === 1){
-            let packet1, packet2;
             try{
-                packet1 = this.cfg.serializePacket(EVENTCODE_CODE, { eventCode });
-                packet2 = this.cfg.serializePacket(eventCode, info);
+                const packet1 = this.cfg.serializePacket({ eventCode, data: info });
+                this._ws.send(packet1);
             } catch (e){
                 console.log('error serializing ', eventCode, JSON.stringify(info, undefined, 4)); 
             }
-            this._ws.send(packet1);
-            this._ws.send(packet2);
         } else if (this._ws.readyState === 0){
             setTimeout(this.emitEventCode.bind(this,eventCode, info), 1000)
         } else{
