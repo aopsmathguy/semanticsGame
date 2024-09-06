@@ -156,7 +156,7 @@ class Game {
             "settings": roomObj.settings,
             "currentRound": roomObj.currentRound,
             "guesses": roomObj.guesses.map(
-                roomObj.createGuessResponse.bind(roomObj)
+                (guess) => roomObj.createGuessResponse(guess, playerId === guess.playerId)
             ),
             "targetWord":
                 roomObj.gameState === "ROUND_OVER"
