@@ -76,7 +76,6 @@ export class SocketClient{
             }
             that.pingPongDelta = 0;
             const interval = setInterval(()=>{
-                // console.log(that.pingPongDelta, that.cfg.keepAliveTimeout / that.cfg.heartBeatInterval);
                 if (that._ws.readyState > 1 || that.pingPongDelta > that.cfg.keepAliveTimeout / that.cfg.heartBeatInterval){
                     that._ws.close();
                     that._ws.onclose();

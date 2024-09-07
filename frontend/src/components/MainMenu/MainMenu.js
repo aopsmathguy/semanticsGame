@@ -72,7 +72,6 @@ function MainMenu({ profile, sendJoin }) {
                 avatar: { shapeIdx, colorIdx, eyesIdx, mouthIdx },
             },
         };
-        console.log("Joining game with profile", info);
         sendJoin(info);
     };
     return (

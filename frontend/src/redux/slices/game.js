@@ -11,14 +11,12 @@ export const gameSlice = createSlice({
     },
     reducers: {
         handleJoinResponse: (state, action) => {
-            console.log("handleJoinResponse", action.payload);
             const { playerId, profile } = action.payload;
             const { name, avatar } = profile;
             state.playerId = playerId;
             state.profile = { name, avatar };
         },
         handleRoomListResponse: (state, action) => {
-            console.log("handleRoomListResponse", action.payload);
             const { rooms } = action.payload;
             const roomList = {};
             for (const room of rooms) {
@@ -31,12 +29,10 @@ export const gameSlice = createSlice({
                 }
                 roomList[roomId] = { roomName, playersData, settings };
             }
-            console.log("roomList", roomList);
             state.roomList = roomList;
             state.activeView = "RoomList";
         },
         handleJoinRoomResponse: (state, action) => {
-            console.log("handleJoinRoomResponse", action.payload);
             const { roomId, room: roomData } = action.payload;
             const {
                 "room-name": roomName,
@@ -138,7 +134,6 @@ export const gameSlice = createSlice({
         },
         handleRoundEnd: (state, action) => {
             const { targetWord, scores } = action.payload;
-            console.log("handleRoundEnd", targetWord, scores);
             const room = state.room;
             room.targetWord = targetWord;
             for (const player of scores) {

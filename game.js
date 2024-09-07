@@ -75,7 +75,6 @@ class Game {
         profile.name =
             profile.name || words[Math.floor(Math.random() * words.length)];
         const playerId = generateId();
-        console.log("Player joined", playerId, profile);
         socket.playerId = playerId;
         const player = new Player(socket, playerId, profile);
         this.players.set(playerId, player);
@@ -105,7 +104,6 @@ class Game {
         let { "room-name": roomName } = data;
         const playerId = socket.playerId;
         if (!playerId) {
-            console.log("Player not found", playerId);
             return;
         }
         const { profile } = this.players.get(playerId);
@@ -119,19 +117,16 @@ class Game {
         const { roomId } = data;
         const playerId = socket.playerId;
         if (!playerId) {
-            console.log("Player not found", playerId);
             return;
         }
         const player = this.players.get(playerId);
         const roomObj = this.rooms.get(roomId);
         if (roomObj === undefined) {
-            console.log("Room not found", roomId);
             socket.emit("join-room-fail", { reason: "Room not found" });
             return;
         }
         const { maxPlayers } = roomObj.settings;
         if (roomObj.players.size >= maxPlayers) {
-            console.log("Room is full", roomId);
             socket.emit("join-room-fail", { reason: "Room is full" });
             return;
         }
@@ -176,7 +171,6 @@ class Game {
     leaveRoomHandler(socket, data) {
         const playerId = socket.playerId;
         if (!playerId) {
-            console.log("Player not found", playerId);
             return;
         }
         const player = this.players.get(playerId);
@@ -205,7 +199,6 @@ class Game {
     async settingsChangeHandler(socket, data) {
         const playerId = socket.playerId;
         if (!playerId) {
-            console.log("Player not found", playerId);
             return;
         }
         const player = this.players.get(playerId);
@@ -221,7 +214,6 @@ class Game {
     async startGameHandler(socket, data) {
         const playerId = socket.playerId;
         if (!playerId) {
-            console.log("Player not found", playerId);
             return;
         }
         const player = this.players.get(playerId);
@@ -236,19 +228,16 @@ class Game {
         const { word } = data;
         const playerId = socket.playerId;
         if (!playerId) {
-            console.log("Player not found", playerId);
             return;
         }
         const player = this.players.get(playerId);
         const roomId = player.roomId;
         const roomObj = this.rooms.get(roomId);
         if (roomObj.gameState !== "GUESSING") {
-            console.log("Not guessing state", roomObj.gameState);
             return;
         }
         const { playerRoomInfo } = roomObj.players.get(playerId);
         if (playerRoomInfo.solved) {
-            console.log("Player already solved", playerId);
             return;
         }
         if (word == roomObj.targetWord) {
@@ -275,7 +264,6 @@ class Game {
         const { message } = data;
         const playerId = socket.playerId;
         if (!playerId) {
-            console.log("Player not found", playerId);
             return;
         }
         const player = this.players.get(playerId);
@@ -285,7 +273,6 @@ class Game {
     }
     disconnectHandler(socket) {
         const playerId = socket.playerId;
-        console.log("Player disconnected", playerId);
         const player = this.players.get(playerId);
         if (player === undefined) {
             return;
@@ -389,10 +376,8 @@ class Room {
             this.timer--;
         }
         //time how long it takes to start the round
-        const startRoundTime = Date.now();
 
         this.targetWord = words[Math.floor(Math.random() * words.length)];
-        console.log("Target word", this.targetWord);
         const allSimilarities = await wordEmbeddings.getSimilarities(this.targetWord, words);
         this.wordRanking = new Map(allSimilarities.map(({ word, similarity }, i) => [word, {ranking : i, similarity}])); 
         const hints = await this.createHints(allSimilarities);
@@ -428,7 +413,6 @@ class Room {
                 this.createGuessResponse(guess, false)
             ),
         });
-        console.log("Time to start round:", Date.now() - startRoundTime);
         nextTime = Date.now();
         while (this.timer > 0) {
             nextTime += 1000;

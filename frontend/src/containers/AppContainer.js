@@ -59,9 +59,6 @@ function AppContainer() {
     socket.useOnSpellingHint((data) => dispatch(handleSpellingHint(data)));
     socket.useOnChatMessageResponse((data) => dispatch(handleChatMessageResponse(data)));
     socket.useOnDisconnect(() => dispatch(handleDisconnect()));
-    setTimeout(() => {
-        console.log(socket.socket.listeners[25]);
-    }, 1000);
     const activeView = useSelector(selectActiveView);
     return <div>
       {activeView == "MainMenu" && <MainMenuContainer />}

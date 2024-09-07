@@ -23,17 +23,12 @@ connect();
 const useSocket = () => {
   // Emit events
   const emitEvent = (eventName, data) => {
-    console.log(`Emitting event: ${eventName}`, data);
     socket.emit(eventName, data);
   };
 
   // Register listener helper function
   const useEventListener = (eventName, callback) => {
     useEffect(() => {
-      const listener = (data) => {
-        console.log(`Received event: ${eventName}`, data);
-        callback(data);
-      }
       socket.on(eventName, callback);
       return () => socket.removeListener(eventName, callback);
     }, [callback]);
