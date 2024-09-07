@@ -332,7 +332,7 @@ class Room {
 
     async createHints(allSimilarities) {
         const hints = this.settings.numberOfHints;
-        let wordsBySimilarity = allSimilarities.filter(({ similarity }) => similarity < 0.65);
+        let wordsBySimilarity = allSimilarities.filter(({ similarity }, i) => similarity < 0.64 && i > 4);
         if (wordsBySimilarity[20].similarity > 0.47) {
             wordsBySimilarity = wordsBySimilarity.filter(
                 ({ similarity }) => similarity > 0.47
@@ -378,14 +378,18 @@ class Room {
         this.socketEmit("round-start", {
             currentRound: this.currentRound,
         });
+        let nextTime = Date.now();
         while (this.timer > 0) {
+            nextTime += 1000;
             this.socketEmit("timer", {
                 timeLeft: this.timer,
                 emphasize: false,
             });
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            await new Promise((resolve) => setTimeout(resolve, nextTime - Date.now()));
             this.timer--;
         }
+        //time how long it takes to start the round
+        const startRoundTime = Date.now();
 
         this.targetWord = words[Math.floor(Math.random() * words.length)];
         console.log("Target word", this.targetWord);
@@ -424,7 +428,10 @@ class Room {
                 this.createGuessResponse(guess, false)
             ),
         });
+        console.log("Time to start round:", Date.now() - startRoundTime);
+        nextTime = Date.now();
         while (this.timer > 0) {
+            nextTime += 1000;
             const emphasize = this.timer < 10;
             this.socketEmit("timer", {
                 timeLeft: this.timer,
@@ -446,7 +453,7 @@ class Room {
                     targetWord: this.currentSpellingHint,
                 });
             }
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            await new Promise((resolve) => setTimeout(resolve, nextTime - Date.now()));
             this.timer--;
         }
         this.gameState = "ROUND_OVER";
