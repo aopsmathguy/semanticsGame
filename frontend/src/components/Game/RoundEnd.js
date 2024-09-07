@@ -5,11 +5,12 @@ import {
     StyledWordReveal,
 } from "./styles";
 import Avatar from "../Shared/Avatar";
-function RoundEnd({ players, targetWord, currentRound }) {
+function RoundEnd({ players, targetWord, currentRound, settings }) {
+    const { numberOfRounds } = settings;
     return (
         <>
             <StyledText fontSize={60} color="white">
-                ROUND {currentRound} END
+                ROUND {currentRound} OF {numberOfRounds} END
             </StyledText>
             <StyledWordReveal>
                 <StyledText fontSize={30} color="white">

@@ -293,6 +293,16 @@ export const StyledButton = styled.button`
     font: inherit;
     padding: 5px;
     flex: 1 1 auto;
+    border: 0;
+    background-color: #080;
+    color: white;
+    &:hover {
+        filter: brightness(90%);
+    }
+    &:disabled {
+      filter: brightness(50%);
+      cursor: not-allowed;
+    }
 `;
 export const StyledWordReveal = styled.div`
     display: flex;

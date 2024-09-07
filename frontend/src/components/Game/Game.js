@@ -50,6 +50,7 @@ function Game({
                     players={players}
                     playerId={playerId}
                     targetWord={targetWord}
+                    settings={settings}
                 />
             </StyledGameBarWrapper>
             <StyledGameContentWrapper>

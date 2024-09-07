@@ -68,6 +68,13 @@ export const StyledJoinButton = styled.button`
     color: white;
     border: none;
     cursor: pointer;
+    &:hover {
+        filter: brightness(90%);
+    }
+    &:disabled {
+      filter: brightness(50%);
+      cursor: not-allowed;
+    }
 `;
 export const StyledCreateRoom = styled.div`
     display: flex;
@@ -87,4 +94,11 @@ export const StyledCreateRoomButton = styled.button`
     color: white;
     border: none;
     cursor: pointer;
+    &:hover {
+        filter: brightness(90%);
+    }
+    &:disabled {
+      filter: brightness(50%);
+      cursor: not-allowed;
+    }
 `;

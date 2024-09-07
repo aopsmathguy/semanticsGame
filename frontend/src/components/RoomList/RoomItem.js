@@ -14,7 +14,7 @@ function RoomItem({
         <StyledRoomName>{roomName}</StyledRoomName>
         <StyledHints>{numberOfHints} hints</StyledHints>
         <StyledPlayers>{players}/{maxPlayers} players</StyledPlayers>
-        <StyledJoinButton onClick={() => onJoinRoom({roomId})}>Join</StyledJoinButton>
+        <StyledJoinButton onClick={() => onJoinRoom({roomId})} disabled={players >= maxPlayers}>Join</StyledJoinButton>
     </StyledRoomItem>
 }
 export default RoomItem;

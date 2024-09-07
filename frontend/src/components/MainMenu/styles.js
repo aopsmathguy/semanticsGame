@@ -70,6 +70,10 @@ export const JoinButton = styled.button`
     &:hover {
         filter: brightness(90%); // Apply a brightness filter on hover
     }
+    &:disabled {
+      filter: brightness(50%);
+      cursor: not-allowed;
+    }
 `;
 
 export const StyledWelcomeSection = styled.div`

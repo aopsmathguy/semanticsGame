@@ -28,11 +28,13 @@ function GuessAreaOverlay({
     const [roundStartProps, setRoundStartProps] = useState({
         currentRound: currentRound,
         timer: timer,
+        settings: settings,
     });
     const [roundEndProps, setRoundEndProps] = useState({
         players: players,
         targetWord: targetWord,
         currentRound: currentRound,
+        settings: settings,
     });
     const [gameEndProps, setGameEndProps] = useState({
         players: players,
@@ -43,6 +45,7 @@ function GuessAreaOverlay({
                 setRoundStartProps({
                     currentRound,
                     timer,
+                    settings
                 });
                 break;
             case "ROUND_OVER":
@@ -50,6 +53,7 @@ function GuessAreaOverlay({
                     players,
                     targetWord,
                     currentRound,
+                    settings
                 });
                 break;
             case "GAME_OVER":
@@ -58,7 +62,7 @@ function GuessAreaOverlay({
                 });
                 break;
         }
-    }, [gameState, currentRound, timer, players, targetWord]);
+    }, [gameState, currentRound, timer, players, targetWord, settings]);
     return (
         <StyledOverlay hideOverlay={gameState == "GUESSING"}>
             <StyledGuessAreaOverlay hideOverlay={gameState == "GUESSING"} />

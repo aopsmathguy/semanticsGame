@@ -10,10 +10,12 @@ function GameBar({
     timerEmphasize,
     players,
     playerId,
-    targetWord
+    targetWord,
+    settings
 }) {
     const { profile } = players[playerId];
     const { name, avatar } = profile;
+    const {  numberOfRounds } = settings;
     const state = (() => {
         switch (
             gameState //'WAIT_START' | 'WAIT_ROUND_START' | 'GUESSING' | 'WAIT_ROUND_END' | 'WAIT_GAME_END'
@@ -36,7 +38,7 @@ function GameBar({
         <div style={{position:"relative", "width" : "100%", height : "100%"}}>
             <StyledGameBarContainer>
                 <Timer timer={timer} timerEmphasize={timerEmphasize} />
-                <div><b>Round {currentRound}</b></div>
+                <div><b>Round {currentRound} of {numberOfRounds}</b></div>
                 <div>{state}</div>
                 <StyledGameBarPlayerAvatar>
                     <Avatar

@@ -11,42 +11,34 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
     useEffect(() => {
         setLocalSettings(settings);
     }, [settings]);
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        let newValue = 0;
-        try {
-            newValue = parseInt(value);
-        } catch (e) {
-            newValue = value;
-        }
-        const newSettings = { ...localSettings, [name]: newValue };
+
+    const changeSettings = (name, value) => {
+        const newSettings = { ...localSettings, [name]: value };
         setLocalSettings(newSettings);
-        onChangeSettings({ settings : newSettings });
+        onChangeSettings({ settings: newSettings });
     };
     const handleStartClick = () => {
         onStartGame({}); // no data needed for now
-    }
+    };
     return (
         <StyledRoomSettingsContainer>
             <StyledSettingRow>
-                <StyledLabel htmlFor="maxPlayers">
-                    Max Players:
-                </StyledLabel>
+                <StyledLabel htmlFor="maxPlayers">Max Players:</StyledLabel>
                 <StyledSelect
                     id="maxPlayers"
                     name="maxPlayers"
                     value={localSettings.maxPlayers}
-                    onChange={handleChange}
+                    onChange={(e) =>
+                        changeSettings("maxPlayers", parseInt(e.target.value))
+                    }
                     disabled={!isHost}
                 >
                     {/* Add options for max players (e.g., 2-10) */}
-                    {Array.from({ length: 19 }, (_, i) => i + 2).map(
-                        (num) => (
-                            <option key={num} value={num}>
-                                {num}
-                            </option>
-                        )
-                    )}
+                    {Array.from({ length: 19 }, (_, i) => i + 2).map((num) => (
+                        <option key={num} value={num}>
+                            {num}
+                        </option>
+                    ))}
                 </StyledSelect>
             </StyledSettingRow>
 
@@ -58,11 +50,13 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
                     id="guessTime"
                     name="guessTime"
                     value={localSettings.guessTime}
-                    onChange={handleChange}
+                    onChange={(e) =>
+                        changeSettings("guessTime", parseInt(e.target.value))
+                    }
                     disabled={!isHost}
                 >
                     {/* Add options for guess time (e.g., 30, 60, 90) */}
-                    {[15,30,45, 60, 90, 120,150, 180, 210].map((time) => (
+                    {[15, 30, 45, 60, 90, 120, 150, 180, 210].map((time) => (
                         <option key={time} value={time}>
                             {time}
                         </option>
@@ -79,17 +73,17 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
                     id="numberOfRounds"
                     name="numberOfRounds"
                     value={localSettings.numberOfRounds}
-                    onChange={handleChange}
+                    onChange={(e) =>
+                        changeSettings("numberOfRounds", parseInt(e.target.value))
+                    }
                     disabled={!isHost}
                 >
                     {/* Add options for number of rounds (e.g., 3-10) */}
-                    {Array.from({ length: 20 }, (_, i) => i + 1).map(
-                        (num) => (
-                            <option key={num} value={num}>
-                                {num}
-                            </option>
-                        )
-                    )}
+                    {[2,3,5,8,12,20].map((num) => (
+                        <option key={num} value={num}>
+                            {num}
+                        </option>
+                    ))}
                 </StyledSelect>
             </StyledSettingRow>
 
@@ -101,12 +95,13 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
                     id="numberOfHints"
                     name="numberOfHints"
                     value={localSettings.numberOfHints}
-                    onChange={handleChange}
+                    onChange={(e) =>
+                        changeSettings("numberOfHints", parseInt(e.target.value))
+                    }
                     disabled={!isHost}
                 >
-                    {/* Add options for number of hints (e.g., 0-5) */}
-                    {Array.from({ length: 21 }, (_, i) => i).map((num) => (
-                        <option key={num} value={num}>
+                    {[0,1,2,3,5,8,12,20].map((num) => (
+                        <option key={num} value={num} data-int-value={num}>
                             {num}
                         </option>
                     ))}
