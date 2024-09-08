@@ -12,7 +12,7 @@ async function getEmbeddings(texts) {
     const response = await openai.embeddings.create({
       model: "text-embedding-3-large",
       input: texts,
-      dimensions: 512,
+      dimensions: 1536,
     });
     return response.data.map((a) => a.embedding);
   } catch (e) {
