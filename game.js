@@ -319,7 +319,7 @@ class Room {
 
     async createHints(allSimilarities) {
         const hints = this.settings.numberOfHints;
-        let wordsBySimilarity = allSimilarities.filter(({ similarity }, i) => similarity < 0.64 && i > 4);
+        let wordsBySimilarity = allSimilarities.filter(({ similarity }, i) => similarity < 0.61 && i > 4);
         if (wordsBySimilarity[20].similarity > 0.46) {
             wordsBySimilarity = wordsBySimilarity.filter(
                 ({ similarity }) => similarity > 0.46
@@ -332,7 +332,7 @@ class Room {
     createGuessResponse(guess, isSender) {
         const settings = this.settings;
         const wordHash = hashStr(guess.word + this.salt);
-        const hidden = guess.similarity > 0.64 && !isSender;
+        const hidden = guess.similarity > 0.61 && !isSender;
         let ranking = this.wordRanking.get(guess.word)?.ranking;
         if (ranking == undefined || ranking >= 100) {
             ranking = 100;
