@@ -388,7 +388,7 @@ class Room {
             currentRound: this.currentRound,
         });
         let nextTime = Date.now();
-        while (this.timer >= 0) {
+        while (this.timer > 0) {
             nextTime += 1000;
             this.socketEmit("timer", {
                 timeLeft: this.timer,
@@ -447,7 +447,7 @@ class Room {
         let spellingHintsRevealed = 0;
 
         let nextTime = Date.now();
-        while (this.timer >= 0) {
+        while (this.timer > 0) {
             nextTime += 1000;
             const emphasize = this.timer < 10;
             this.socketEmit("timer", {
@@ -496,7 +496,7 @@ class Room {
             scores,
         });
         let nextTime = Date.now();
-        while (this.timer >= 0) {
+        while (this.timer > 0) {
             nextTime += 1000;
             this.socketEmit("timer", {
                 timeLeft: this.timer,
@@ -515,12 +515,14 @@ class Room {
         this.socketEmit("game-end", {
             scores: scores,
         });
-        while (this.timer >= 0) {
+        let nextTime = Date.now();
+        while (this.timer > 0) {
+            nextTime += 1000;
             this.socketEmit("timer", {
                 timeLeft: this.timer,
                 emphasize: false,
             });
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            await new Promise((resolve) => setTimeout(resolve, nextTime - Date.now()));
             this.timer--;
         }
         this.gameState = "WAIT_START";
