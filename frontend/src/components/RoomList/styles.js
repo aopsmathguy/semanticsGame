@@ -28,6 +28,7 @@ export const StyledRoomListContainer = styled.div`
     border: 3px solid #000;
     background-color: white;
     width : min(600px, 100%);
+    overflow-y: auto;
 `;
 export const StyledMakeRoomContainer = styled.div`
     flex-grow: 0;
