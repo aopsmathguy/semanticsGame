@@ -142,6 +142,19 @@ class Game {
         for (const [playerId, { playerRoomInfo, profile }] of roomObj.players) {
             playersData.push({ playerId, profile, playerRoomInfo });
         }
+        const guesses =
+            roomObj.gameState === "GUESSING"
+                ? roomObj.guesses.map((guess) =>
+                      roomObj.createGuessResponse(
+                          guess,
+                          playerId === guess.playerId
+                      )
+                  )
+                : [];
+        const targetWord =
+            roomObj.gameState === "ROUND_OVER"
+                ? roomObj.targetWord
+                : roomObj.currentSpellingHint;
         const room = {
             "room-name": roomObj.roomName,
             "gameState": roomObj.gameState,
@@ -150,13 +163,8 @@ class Game {
             "players": playersData,
             "settings": roomObj.settings,
             "currentRound": roomObj.currentRound,
-            "guesses": roomObj.guesses.map(
-                (guess) => roomObj.createGuessResponse(guess, playerId === guess.playerId)
-            ),
-            "targetWord":
-                roomObj.gameState === "ROUND_OVER"
-                    ? roomObj.targetWord
-                    : roomObj.currentSpellingHint,
+            "guesses": guesses,
+            "targetWord": targetWord,
         };
         socket.emit("join-room-response", {
             roomId,
@@ -319,7 +327,12 @@ class Room {
 
     async createHints(allSimilarities) {
         const hints = this.settings.numberOfHints;
-        let wordsBySimilarity = allSimilarities.filter(({ similarity }, i) => similarity < 0.6 && i > 4);
+        let wordsBySimilarity = allSimilarities.filter(
+            ({ similarity }, i) => similarity < 0.6 && i > 4
+        );
+
+        await Promise.resolve(); // Allow interruption point
+
         if (wordsBySimilarity[20].similarity > 0.455) {
             wordsBySimilarity = wordsBySimilarity.filter(
                 ({ similarity }) => similarity > 0.455
@@ -327,6 +340,9 @@ class Room {
         } else {
             wordsBySimilarity = wordsBySimilarity.splice(0, 20);
         }
+
+        await Promise.resolve(); // Allow interruption point
+
         return getDistinctSubset(wordsBySimilarity, hints);
     }
     createGuessResponse(guess, isSender) {
@@ -357,48 +373,71 @@ class Room {
         }
         await this.gameOver();
     }
+
     async doRound() {
         this.currentRound++;
+        await Promise.all([this.startRound(), this.prepareGuessingRound()]);
+        await this.handleGuesses();
+        await this.endRound();
+    }
 
+    async startRound() {
         this.gameState = "WAIT_ROUND_START";
         this.timer = 3;
         this.socketEmit("round-start", {
             currentRound: this.currentRound,
         });
         let nextTime = Date.now();
-        while (this.timer > 0) {
+        while (this.timer >= 0) {
             nextTime += 1000;
             this.socketEmit("timer", {
                 timeLeft: this.timer,
                 emphasize: false,
             });
-            await new Promise((resolve) => setTimeout(resolve, nextTime - Date.now()));
+            await new Promise((resolve) =>
+                setTimeout(resolve, nextTime - Date.now())
+            );
             this.timer--;
         }
-        //time how long it takes to start the round
+    }
 
+    async prepareGuessingRound() {
         this.targetWord = words[Math.floor(Math.random() * words.length)];
-        const allSimilarities = await wordEmbeddings.getSimilarities(this.targetWord, words);
-        this.wordRanking = new Map(allSimilarities.map(({ word, similarity }, i) => [word, {ranking : i, similarity}])); 
+        const allSimilarities = await wordEmbeddings.getSimilarities(
+            this.targetWord,
+            words
+        );
+        this.wordRanking = new Map(
+            allSimilarities.map(({ word, similarity }, i) => [
+                word,
+                { ranking: i, similarity },
+            ])
+        );
         const hints = await this.createHints(allSimilarities);
 
         for (const [playerId, { playerRoomInfo }] of this.players) {
-            //reset roundScores to 0
             playerRoomInfo.roundScore = 0;
             playerRoomInfo.solved = false;
         }
-        this.guesses = hints.map(({ word, similarity }) => {
-            return {
-                playerId: 0, //dummy playerId
-                word,
-                similarity,
-            };
-        });
+        this.guesses = hints.map(({ word, similarity }) => ({
+            playerId: 0,
+            word,
+            similarity,
+        }));
         this.playerSolveOrder = [];
         this.salt = Math.random().toString(36).substring(2, 15);
+        this.currentSpellingHint = hiddenString(this.targetWord);
+    }
 
+    async handleGuesses() {
         this.gameState = "GUESSING";
         this.timer = this.settings.guessTime;
+        this.socketEmit("guess-start", {
+            targetWord: this.currentSpellingHint,
+            guesses: this.guesses.map((guess) =>
+                this.createGuessResponse(guess, false)
+            ),
+        });
 
         const spellingHints = Math.ceil(this.targetWord.length / 3);
         const indices = getDistinctSubset(
@@ -406,15 +445,9 @@ class Room {
             spellingHints
         );
         let spellingHintsRevealed = 0;
-        this.currentSpellingHint = hiddenString(this.targetWord);
-        this.socketEmit("guess-start", {
-            targetWord: this.currentSpellingHint,
-            guesses: this.guesses.map((guess) =>
-                this.createGuessResponse(guess, false)
-            ),
-        });
-        nextTime = Date.now();
-        while (this.timer > 0) {
+
+        let nextTime = Date.now();
+        while (this.timer >= 0) {
             nextTime += 1000;
             const emphasize = this.timer < 10;
             this.socketEmit("timer", {
@@ -437,9 +470,14 @@ class Room {
                     targetWord: this.currentSpellingHint,
                 });
             }
-            await new Promise((resolve) => setTimeout(resolve, nextTime - Date.now()));
+            await new Promise((resolve) =>
+                setTimeout(resolve, nextTime - Date.now())
+            );
             this.timer--;
         }
+    }
+
+    async endRound() {
         this.gameState = "ROUND_OVER";
         this.timer = 5;
         for (const [i, playerId] of this.playerSolveOrder.entries()) {
@@ -457,25 +495,27 @@ class Room {
             targetWord: this.targetWord,
             scores,
         });
-        while (this.timer > 0) {
+        let nextTime = Date.now();
+        while (this.timer >= 0) {
+            nextTime += 1000;
             this.socketEmit("timer", {
                 timeLeft: this.timer,
                 emphasize: false,
             });
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            await new Promise((resolve) => setTimeout(resolve, nextTime - Date.now()));
             this.timer--;
         }
     }
     async gameOver() {
         this.gameState = "GAME_OVER";
-        this.timer = 10;
+        this.timer = 5;
         const scores = Array.from(this.players.values()).map(
             (playerInfo) => playerInfo.playerRoomInfo
         );
         this.socketEmit("game-end", {
             scores: scores,
         });
-        while (this.timer > 0) {
+        while (this.timer >= 0) {
             this.socketEmit("timer", {
                 timeLeft: this.timer,
                 emphasize: false,
