@@ -31,7 +31,7 @@ const useSocket = () => {
     useEffect(() => {
       socket.on(eventName, callback);
       return () => socket.removeListener(eventName, callback);
-    }, [callback]);
+    }, [eventName, callback]);
   }
 
   // Specific event emitters (for better readability)
