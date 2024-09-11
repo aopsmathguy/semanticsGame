@@ -21,12 +21,12 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, "frontend/build")));
+app.use(express.static(path.join(__dirname, "frontend/dist"))); // Serve frontend files
 
 app.use("/api", apiRouter); // App uses '/api' route
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend/build", "index.html"));
+    res.sendFile(path.join(__dirname, "frontend/dist", "index.html"));
 });
 
 const server = http.createServer(app);

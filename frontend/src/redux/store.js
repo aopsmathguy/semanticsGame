@@ -1,7 +1,7 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
-import gameReducer from "./slices/game";
+import gameReducer from "./slices/game.js";
 
 // Persist configuration
 const persistConfig = {

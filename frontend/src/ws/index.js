@@ -1,10 +1,10 @@
 // useSocket.js
 import { useState, useEffect, useRef } from "react";
-import { SocketClient } from "../common/socketUtility";
-import { CONFIG } from "../common/socketConfig";
+import { SocketClient } from "@common/socketUtility";
+import { CONFIG } from "@common/socketConfig";
 
 const WEBSOCKET_HOST =
-  process.env.REACT_APP_WEBSOCKET_HOST || "ws://localhost:3000/api/ws"; // Use environment variable for flexibility
+  import.meta.REACT_APP_WEBSOCKET_HOST || "ws://localhost:3000/api/ws"; // Use environment variable for flexibility
 const socket = new SocketClient(null, CONFIG);
 const connect = () => {
   socket.ws = new WebSocket(WEBSOCKET_HOST);

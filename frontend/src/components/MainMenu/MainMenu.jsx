@@ -10,7 +10,6 @@ import {
     ControlButton,
     JoinButton,
     AvatarControl,
-    RandomizerButton,
 } from "./styles";
 
 import colorFilters from "../Shared/images/color_filters.json";

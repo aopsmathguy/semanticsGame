@@ -4,7 +4,7 @@
   "main": "figure-it-out.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install-all": "cd common && npm install && cd ../frontend && npm install && npm run build --mode=production && cd .. && npm install",
+    "install-all": "cd common && npm install && cd ../frontend && npm install && npm run build && cd .. && npm install",
     "start": "node script.js"
   },
   "author": "",

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import useSocket from "../ws";
+import useSocket from "@/ws";
 import {
     handleJoinResponse,
     handleRoomListResponse,
@@ -22,13 +22,13 @@ import {
     handleSpellingHint,
     handleChatMessageResponse,
     handleDisconnect
-} from "../redux/slices/game";
+} from "@/redux/slices/game";
 
-import { selectActiveView } from "../redux/slices/game";
+import { selectActiveView } from "@/redux/slices/game";
 
-import GameContainer from "./GameContainer";
-import MainMenuContainer from "./MainMenuContainer";
-import RoomListContainer from "./RoomListContainer";
+import GameContainer from "./GameContainer.jsx";
+import MainMenuContainer from "./MainMenuContainer.jsx";
+import RoomListContainer from "./RoomListContainer.jsx";
 
 function AppContainer() {
     const dispatch = useDispatch();
