@@ -394,6 +394,7 @@ export const StyledGuessRow = styled.div`
         isLastGuess ? "lightgreen" : "white"};
     border-bottom: 1px solid black;
     padding: 0px 10px;
+    min-height: 40px;
 `;
 
 export const StyledWordColumn = styled.div`
