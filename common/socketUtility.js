@@ -111,7 +111,7 @@ export class SocketClient{
                     listener(data);
                 }
             } catch (e){
-                console.log("Packet doesn't fit schema: ", that.cfg.eventCodeNames[e.eventCode]);
+                console.log("Packet doesn't fit schema: ", that.cfg.eventCodeNames[e.eventCode], e);
                 return;
             }
         }

@@ -1,4 +1,41 @@
 import { createSlice } from "@reduxjs/toolkit";
+const addGuess = (guesses, guess, playerSolveCallback) => {
+    const { playerId, word, wordHash, similarity, ranking, hidden, solved } = guess;
+    let existingGuess = guesses[wordHash];
+    if (!existingGuess){
+        if (playerId){
+            existingGuess = guesses[wordHash] = {
+                playerIds: [playerId],
+                word,
+                similarity,
+                ranking,
+                hidden,
+                solved,
+            };
+        } else{
+            existingGuess = guesses[wordHash] = {
+                playerIds: [],
+                word,
+                similarity,
+                ranking,
+                hidden,
+                solved,
+            };
+        }
+        
+    } else{
+        if (!existingGuess.playerIds.includes(playerId)){
+            existingGuess.playerIds.push(playerId);
+        }
+        if (!hidden){
+            existingGuess.hidden = false;
+            existingGuess.word = word;
+        }
+    } 
+    if (solved){
+        playerSolveCallback(playerId);
+    }
+}
 
 export const gameSlice = createSlice({
     name: "game",
@@ -52,20 +89,7 @@ export const gameSlice = createSlice({
             }
             const guessesData = {};
             for (const guess of guesses) {
-                const { playerId, word, wordHash, similarity, ranking, hidden, solved } =
-                    guess;
-                const existingGuess = guessesData[wordHash];
-                if (existingGuess && !existingGuess.hidden) {
-                    continue;
-                }
-                guessesData[wordHash] = {
-                    playerId,
-                    word,
-                    similarity,
-                    ranking,
-                    hidden,
-                    solved,
-                };
+                addGuess(guessesData, guess, (playerId) => {});
             }
             state.room = {
                 roomId,
@@ -114,20 +138,7 @@ export const gameSlice = createSlice({
             }
 
             for (const guess of guesses) {
-                const { playerId, word, wordHash, similarity, ranking, hidden, solved } =
-                    guess;
-                const existingGuess = room.guesses[wordHash];
-                if (existingGuess && !existingGuess.hidden) {
-                    continue;
-                }
-                room.guesses[wordHash] = {
-                    playerId,
-                    word,
-                    similarity,
-                    ranking,
-                    hidden,
-                    solved,
-                };
+                addGuess(room.guesses, guess, (playerId) => {});
             }
 
             room.gameState = "GUESSING";
@@ -219,25 +230,13 @@ export const gameSlice = createSlice({
             if (playerId === state.playerId) {
                 room.lastGuessHash = wordHash;
             }
-            const existingGuess = room.guesses[wordHash];
-            if (existingGuess && !existingGuess.hidden) {
-                return;
-            }
-            room.guesses[wordHash] = {
-                playerId,
-                word,
-                similarity,
-                ranking,
-                hidden,
-                solved,
-            };
-            if (solved) {
+            addGuess(room.guesses, { playerId, word, wordHash, similarity, ranking, hidden, solved }, (playerId) => {
                 const { playerRoomInfo } = room.players[playerId];
                 playerRoomInfo.solved = true;
                 const color = "#56CE27";
                 const content = `**${room.players[playerId].profile.name} found the word!**`;
                 room.chatMessages.push({ color, content });
-            }
+            });
         },
         handleSpellingHint : (state, action) => {
             const { targetWord } = action.payload;

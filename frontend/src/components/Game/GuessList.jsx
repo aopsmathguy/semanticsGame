@@ -8,6 +8,7 @@ import {
     StyledProgressBarBorder,
     StyledProgressBar,
     StyledPlayerAvatarColumn,
+    StyledPlayerAvatarContainer,
     StyledProgressBarWrapper,
     StyledProgressBarText,
 } from "./styles";
@@ -23,33 +24,56 @@ function GuessList({ guesses, lastGuessHash, players }) {
             </StyledGuessRow>
             {Object.entries(guesses)
                 .sort((a, b) => b[1].similarity - a[1].similarity)
-                .map(([wordHash, { playerId, word, similarity, ranking }]) => {
-                    const avatar = players[playerId]?.profile?.avatar;
-                    return (
-                        <StyledGuessRow
-                            key={wordHash}
-                            isLastGuess={wordHash == lastGuessHash}
-                        >
-                            <StyledWordColumn>{word}</StyledWordColumn>
-                            <StyledSimilarityColumn>
-                                {(100 * similarity).toFixed(1)}%
-                            </StyledSimilarityColumn>
-                            <StyledProgressBarContainer>
-                                <StyledProgressBarWrapper>
-                                    <StyledProgressBarBorder>
-                                        <StyledProgressBar ranking={ranking} />
-                                    </StyledProgressBarBorder>
-                                    <StyledProgressBarText>
-                                        {ranking == 100 ? "?" : `#${ranking}`}
-                                    </StyledProgressBarText>
-                                </StyledProgressBarWrapper>
-                            </StyledProgressBarContainer>
-                            <StyledPlayerAvatarColumn>
-                                {avatar && <Avatar opts={avatar} size={36} />}
-                            </StyledPlayerAvatarColumn>
-                        </StyledGuessRow>
-                    );
-                })}
+                .map(
+                    ([
+                        wordHash,
+                        { playerIds, word, similarity, ranking },
+                    ]) => {
+                        const avatars = playerIds.map(
+                            (id) => players[id]?.profile?.avatar
+                        );
+                        return (
+                            <StyledGuessRow
+                                key={wordHash}
+                                isLastGuess={wordHash == lastGuessHash}
+                            >
+                                <StyledWordColumn>{word}</StyledWordColumn>
+                                <StyledSimilarityColumn>
+                                    {(100 * similarity).toFixed(1)}%
+                                </StyledSimilarityColumn>
+                                <StyledProgressBarContainer>
+                                    <StyledProgressBarWrapper>
+                                        <StyledProgressBarBorder>
+                                            <StyledProgressBar
+                                                ranking={ranking}
+                                            />
+                                        </StyledProgressBarBorder>
+                                        <StyledProgressBarText>
+                                            {ranking == 100
+                                                ? "?"
+                                                : `#${ranking}`}
+                                        </StyledProgressBarText>
+                                    </StyledProgressBarWrapper>
+                                </StyledProgressBarContainer>
+                                <StyledPlayerAvatarColumn
+                                    style={{ marginRight: "36px" }}
+                                >
+                                    {avatars.map(
+                                        (avatar, i) =>
+                                            avatar && (
+                                                <StyledPlayerAvatarContainer>
+                                                    <Avatar
+                                                        opts={avatar}
+                                                        size={36}
+                                                    />
+                                                </StyledPlayerAvatarContainer>
+                                            )
+                                    )}
+                                </StyledPlayerAvatarColumn>
+                            </StyledGuessRow>
+                        );
+                    }
+                )}
         </StyledGuessListContainer>
     );
 }

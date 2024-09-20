@@ -199,6 +199,7 @@ class Game {
         socket.emit("leave-room-response", {});
         roomObj.socketEmit("player-leave", { playerId }, playerId);
         if (roomObj.players.size === 0) {
+            roomObj.roomId = null;
             this.rooms.delete(roomId);
         }
 
@@ -304,8 +305,9 @@ class Room {
         this.settings = {
             maxPlayers: 8,
             guessTime: 60,
-            numberOfRounds: 3,
+            numberOfRounds: 8,
             numberOfHints: 5,
+            hintDifficulty : 5,
         };
 
         this.currentRound = 0;
@@ -327,23 +329,11 @@ class Room {
     }
 
     async createHints(allSimilarities) {
+        //allSimilarities is sorted by similarity
         const hints = this.settings.numberOfHints;
         let wordsBySimilarity = allSimilarities.filter(
-            ({ similarity }, i) => similarity < 0.6 && i > 4
+            ({ similarity }, i) => similarity < 0.6 && i > 4 && (i < 25 || similarity > 0.455)
         );
-
-        await Promise.resolve(); // Allow interruption point
-
-        if (wordsBySimilarity[20].similarity > 0.455) {
-            wordsBySimilarity = wordsBySimilarity.filter(
-                ({ similarity }) => similarity > 0.455
-            );
-        } else {
-            wordsBySimilarity = wordsBySimilarity.splice(0, 20);
-        }
-
-        await Promise.resolve(); // Allow interruption point
-
         return getDistinctSubset(wordsBySimilarity, hints).sort((a, b) => b.similarity - a.similarity);
     }
     createGuessResponse(guess, isSender) {
@@ -370,16 +360,23 @@ class Room {
         }
         this.currentRound = 0;
         while (this.currentRound < this.settings.numberOfRounds) {
-            await this.doRound();
+            const roomRemoved = await this.doRound();
+            if (roomRemoved) {
+                return;
+            }
         }
         await this.gameOver();
     }
 
     async doRound() {
+        if (this.roomId === null) {
+            return true;
+        }
         this.currentRound++;
         await Promise.all([this.startRound(), this.prepareGuessingRound()]);
         await this.handleGuesses();
         await this.endRound();
+        return false;
     }
 
     async startRound() {

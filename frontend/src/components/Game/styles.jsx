@@ -270,7 +270,13 @@ export const StyledRoomSettingsContainer = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    // overflow-y: auto;
+    justify-content: space-between;
+`;
+export const StyledRoomSettingsListContainer = styled.div`
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 `;
 
 export const StyledSettingRow = styled.div`
@@ -279,12 +285,19 @@ export const StyledSettingRow = styled.div`
     align-items: center;
     padding: 10px;
 `;
-
+export const StyledStartButtonContainer = styled.div`
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+`;
 export const StyledLabel = styled.label`
     text-align: left;
     color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 `;
-
 export const StyledSelect = styled.select`
     font: inherit;
     width: 100px;
@@ -375,24 +388,25 @@ export const StyledGuessListContainer = styled.div`
 export const StyledGuessRow = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; 
     background-color: ${({ isLastGuess }) =>
         isLastGuess ? "lightgreen" : "white"};
     border-bottom: 1px solid black;
+    padding: 0px 10px;
 `;
 
 export const StyledWordColumn = styled.div`
-    width: min(100px, 25%);
+    flex : 1;
     font-weight: bold;
 `;
 
 export const StyledSimilarityColumn = styled.div`
-    width: min(100px, 25%);
+    flex : 1;
     text-align: center;
 `;
 
 export const StyledProgressBarContainer = styled.div`
-    width: min(150px, 37.5%);
+    flex : 1;
     margin: 5px 0;
 `;
 export const StyledProgressBarWrapper = styled.div`
@@ -417,5 +431,12 @@ export const StyledProgressBarText = styled.div`
   transform: translate(-50%, -50%);
 `;
 export const StyledPlayerAvatarColumn = styled.div`
-    width: min(50px, 12.5%);
+    flex : 1;
+    display: flex;
+    justify-content: space-between;
+`;
+export const StyledPlayerAvatarContainer = styled.div`
+    width : 0;
+    height : 100%;
+    display: block;
 `;
