@@ -383,6 +383,7 @@ export const StyledGuessListContainer = styled.div`
     overflow-y: auto;
     color: black;
     width: 100%;
+    max-width: 400px;
 `;
 
 export const StyledGuessRow = styled.div`
@@ -396,7 +397,7 @@ export const StyledGuessRow = styled.div`
 `;
 
 export const StyledWordColumn = styled.div`
-    flex : 1;
+    flex : 2;
     font-weight: bold;
 `;
 
@@ -406,7 +407,7 @@ export const StyledSimilarityColumn = styled.div`
 `;
 
 export const StyledProgressBarContainer = styled.div`
-    flex : 1;
+    flex : 1.5;
     margin: 5px 0;
 `;
 export const StyledProgressBarWrapper = styled.div`
@@ -431,7 +432,7 @@ export const StyledProgressBarText = styled.div`
   transform: translate(-50%, -50%);
 `;
 export const StyledPlayerAvatarColumn = styled.div`
-    flex : 1;
+    flex : 0.5;
     display: flex;
     justify-content: space-between;
 `;
