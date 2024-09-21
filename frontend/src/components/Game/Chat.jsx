@@ -8,7 +8,7 @@ import {
 import Markdown from "react-markdown";
 
 function Chat({ messages, sendMessage, players, playerId }) {
-    const myPlayerId = playerId;
+    const [previousScrollTop, setPreviousScrollTop] = useState(0);
     const [isAtBottom, setIsAtBottom] = useState(true);
     const [message, setMessage] = useState("");
     const messagesContainerRef = useRef(null);
@@ -20,19 +20,22 @@ function Chat({ messages, sendMessage, players, playerId }) {
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
             if (message.trim() === "") return;
-            sendMessage({message});
+            sendMessage({ message });
             setMessage("");
         }
     };
     const onScroll = (e) => {
         const container = messagesContainerRef.current;
         if (container) {
-            setIsAtBottom(
+            const bottom =
+                (previousScrollTop < container.scrollTop && isAtBottom) ||
                 container.scrollHeight - container.scrollTop <=
-                    container.clientHeight + 60
-            );
+                    container.clientHeight + 35;
+            setPreviousScrollTop(container.scrollTop);
+            setIsAtBottom(bottom);
+            console.log("isAtBottom", bottom);
         }
-    }
+    };
     useEffect(() => {
         const container = messagesContainerRef.current;
         if (container) {
@@ -46,10 +49,12 @@ function Chat({ messages, sendMessage, players, playerId }) {
 
     return (
         <StyledChatContainer>
-            <StyledChatMessagesContainer ref={messagesContainerRef} onScroll={onScroll}>
+            <StyledChatMessagesContainer
+                ref={messagesContainerRef}
+                onScroll={onScroll}
+            >
                 {messages.map(({ color, content }, index) => (
-                    <StyledChatMessageItem key={index}
-                    color={color}>
+                    <StyledChatMessageItem key={index} color={color}>
                         <Markdown>{content}</Markdown>
                     </StyledChatMessageItem>
                 ))}

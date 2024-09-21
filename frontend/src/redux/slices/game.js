@@ -36,7 +36,13 @@ const addGuess = (guesses, guess, playerSolveCallback) => {
         playerSolveCallback(playerId);
     }
 }
-
+const addChatMessage = (chatMessages, color, content) => {
+    chatMessages.push({ color, content });
+    if (chatMessages.length > 100){
+        //remove top 10 messages
+        chatMessages.splice(0, 10);
+    }
+}
 export const gameSlice = createSlice({
     name: "game",
     initialState: {
@@ -158,7 +164,7 @@ export const gameSlice = createSlice({
 
             const color = "#f80";
             const content = `The word was **${targetWord}**`;
-            room.chatMessages.push({ color, content });
+            addChatMessage(room.chatMessages, color, content);
         },
         handleGameEnd: (state, action) => {
             const { scores } = action.payload;
@@ -173,7 +179,7 @@ export const gameSlice = createSlice({
             const winner = Object.values(room.players).reduce((a, b) => a.playerRoomInfo.score > b.playerRoomInfo.score ? a : b);
             const color = "#f80";
             const content = `Game over! **${winner.profile.name}** wins with **${winner.playerRoomInfo.score}** points!`;
-            room.chatMessages.push({ color, content });
+            addChatMessage(room.chatMessages, color, content);
         },
         handleWaitStartGame: (state) => {
             const room = state.room;
@@ -203,7 +209,7 @@ export const gameSlice = createSlice({
 
             const color = "#56CE27";
             const content = `**${room.players[playerId].profile.name} joined the room**`;
-            room.chatMessages.push({ color, content });
+            addChatMessage(room.chatMessages, color, content);
         },
         handlePlayerLeave: (state, action) => {
             const { playerId } = action.payload;
@@ -211,7 +217,7 @@ export const gameSlice = createSlice({
 
             const color = "#f00";
             const content = `**${room.players[playerId].profile.name} left the room**`;
-            room.chatMessages.push({ color, content });
+            addChatMessage(room.chatMessages, color, content);
 
 
             delete room.players[playerId];
@@ -235,7 +241,7 @@ export const gameSlice = createSlice({
                 playerRoomInfo.solved = true;
                 const color = "#56CE27";
                 const content = `**${room.players[playerId].profile.name} found the word!**`;
-                room.chatMessages.push({ color, content });
+                addChatMessage(room.chatMessages, color, content);
             });
         },
         handleSpellingHint : (state, action) => {
@@ -249,7 +255,7 @@ export const gameSlice = createSlice({
             const myPlayerId = state.playerId;
             const color = playerId === myPlayerId ? "blue" : "black";
             const content = `**${room.players[playerId].profile.name}:** ${message}`;
-            room.chatMessages.push({ color, content });
+            addChatMessage(room.chatMessages, color, content);
         },
         handleDisconnect: (state) => {
             state.activeView = "MainMenu";
