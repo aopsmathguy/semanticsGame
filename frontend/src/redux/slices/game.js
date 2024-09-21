@@ -37,9 +37,9 @@ const addGuess = (guesses, guess, playerSolveCallback) => {
     }
 }
 const addChatMessage = (chatMessages, color, content) => {
-    chatMessages.push({ color, content });
+    const id = Math.random().toString(36).slice(2);
+    chatMessages.push({ color, content, id});
     if (chatMessages.length > 100){
-        //remove top 10 messages
         chatMessages.splice(0, 10);
     }
 }

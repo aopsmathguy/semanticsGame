@@ -52,8 +52,8 @@ function Chat({ messages, sendMessage, players, playerId }) {
                 ref={messagesContainerRef}
                 onScroll={onScroll}
             >
-                {messages.map(({ color, content }, index) => (
-                    <StyledChatMessageItem key={index} color={color}>
+                {messages.map(({ color, content, id}) => (
+                    <StyledChatMessageItem key={id} color={color}>
                         <Markdown>{content}</Markdown>
                     </StyledChatMessageItem>
                 ))}
