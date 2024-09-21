@@ -20,18 +20,22 @@ export const StyledGameContentWrapper = styled.div`
 `;
 
 export const StyledPlayersSidebarWrapper = styled.div`
-    width: min(200px, 24%);
+    flex : 1;
     padding-right: 10px;
 `;
 
 export const StyledGuessListAndInputWrapper = styled.div`
     position: relative;
-    flex-grow: 1;
+    flex: 3;
 `;
 
+
 export const StyledChatWrapper = styled.div`
-    width: min(300px, 36%);
+    flex: 1.5;
     padding-left: 10px;
+    @media (max-width: 600px) {
+        display: none;
+    }
 `;
 //roombar
 export const RoomBarContainer = styled.div`
@@ -195,6 +199,7 @@ export const StyledChatMessagesContainer = styled.div`
     overflow-x: hidden;
     overflow-y: auto;
     color: black;
+    scroll-behavior: smooth;
 `;
 export const StyledChatMessageItem = styled.p`
     padding: 0.2em;
@@ -223,7 +228,7 @@ export const StyledGuessAreaContainer = styled.div`
     flex-direction: column;
     height: 100%;
     box-sizing: border-box;
-    background-color: white;
+    background-color: #aaa;
     border: 3px solid black;
     align-items: center;
 `;
@@ -384,17 +389,26 @@ export const StyledGuessListContainer = styled.div`
     color: black;
     width: 100%;
     max-width: 400px;
+    border: 2px solid black;
+    background-color: white;
+    scroll-behavior: smooth;
 `;
 
 export const StyledGuessRow = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    background-color: ${({ isLastGuess }) =>
-        isLastGuess ? "lightgreen" : "white"};
     border-bottom: 1px solid black;
     padding: 0px 10px;
-    min-height: 40px;
+    min-height: 40px; 
+    &:nth-child(odd) {
+        background-color: ${({ isLastGuess }) =>
+        isLastGuess ? "lightgreen" : "#f0f0f0"};
+    }
+    &:nth-child(even) {
+        background-color:${({ isLastGuess }) =>
+        isLastGuess ? "lightgreen" : "#ffffff"};
+    }
 `;
 
 export const StyledWordColumn = styled.div`

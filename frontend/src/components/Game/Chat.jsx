@@ -30,7 +30,7 @@ function Chat({ messages, sendMessage, players, playerId }) {
             // Check if we're at the bottom before new message
             const isAtBottom =
                 container.scrollHeight - container.scrollTop <=
-                container.clientHeight + 35;
+                container.clientHeight + 60;
             if (isAtBottom) {
                 // Scroll to bottom if we were at the bottom
                 container.scrollTop = container.scrollHeight;
