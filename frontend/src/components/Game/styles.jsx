@@ -1,7 +1,7 @@
 import styled from "styled-components";
 //game layout
 export const StyledGameLayout = styled.div`
-    height: calc(var(--vh, 1vh) * 100);
+    height: 100dvh;
     display: grid;
     grid-gap: 10px;
     gap: 10px;
