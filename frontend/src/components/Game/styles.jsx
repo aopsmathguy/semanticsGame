@@ -200,11 +200,11 @@ export const StyledChatContainer = styled.div`
 export const StyledChatMessagesContainer = styled.div`
     flex: 1 1 auto;
     height: 32px;
-    word-wrap: break-word;
     overflow-x: hidden;
     overflow-y: auto;
     color: black;
     scroll-behavior: smooth;
+    word-break: break-all;
 `;
 export const StyledChatMessageItem = styled.p`
     padding: 0.2em;
