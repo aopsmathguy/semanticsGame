@@ -112,6 +112,7 @@ function GuessInput({ onGuess, wordFuse }) {
                                 setCurrGuess("");
                                 setShowSuggestions(false);
                                 onGuess({ word: suggestion.word });
+                                inputRef.current.focus();
                             }}
                             onMouseEnter={() => setHighlightedSuggestion(index)}
                             onMouseLeave={() => setHighlightedSuggestion(null)}

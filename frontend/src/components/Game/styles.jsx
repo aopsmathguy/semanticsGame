@@ -9,14 +9,13 @@ export const StyledGameLayout = styled.div`
     grid-template-columns: 1fr 3fr 1.5fr;
     grid-template-rows: min-content 70px 1fr;
     @media (max-width: 768px) and (orientation: portrait) {
-        font-size: 0.8em;
         grid-template-areas: 
             "roombar roombar" 
             "gamebar gamebar" 
             "game game"
             "players chat";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content 70px 2fr 1fr; 
+        grid-template-rows: min-content 70px 1.5fr 1fr; 
     }
 `;
 export const StyledRoomBarWrapper = styled.div`
