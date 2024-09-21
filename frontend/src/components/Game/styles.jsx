@@ -15,7 +15,7 @@ export const StyledGameLayout = styled.div`
             "game game"
             "players chat";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content 70px 1.5fr 1fr; 
+        grid-template-rows: min-content 70px 1.25fr 1fr; 
     }
 `;
 export const StyledRoomBarWrapper = styled.div`
