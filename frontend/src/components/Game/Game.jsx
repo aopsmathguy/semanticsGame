@@ -3,7 +3,7 @@ import {
     StyledGameLayout,
     StyledRoomBarWrapper,
     StyledGameBarWrapper,
-    StyledGameContentWrapper,
+    // StyledGameContentWrapper,
     StyledPlayersSidebarWrapper,
     StyledGuessListAndInputWrapper,
     StyledChatWrapper,
@@ -53,44 +53,42 @@ function Game({
                     settings={settings}
                 />
             </StyledGameBarWrapper>
-            <StyledGameContentWrapper>
-                <StyledPlayersSidebarWrapper>
-                    <PlayerList
-                        players={players}
-                        playerId={playerId}
-                        hostId={hostId}
-                    />
-                </StyledPlayersSidebarWrapper>
-                <StyledGuessListAndInputWrapper>
-                    <GuessArea
-                        guesses={guesses}
-                        lastGuessHash={lastGuessHash}
-                        players={players}
-                        onGuess={onGuess}
-                        wordFuse={wordFuse}
-                    />
-                    <GuessAreaOverlay
-                        settings={settings}
-                        onChangeSettings={onChangeSettings}
-                        onStartGame={onStartGame}
-                        gameState={gameState}
-                        currentRound={currentRound}
-                        timer={timer}
-                        playerId={playerId}
-                        players={players}
-                        hostId={hostId}
-                        targetWord={targetWord}
-                    />
-                </StyledGuessListAndInputWrapper>
-                <StyledChatWrapper>
-                    <Chat
-                        messages={messages}
-                        sendMessage={sendMessage}
-                        players={players}
-                        playerId={playerId}
-                    />
-                </StyledChatWrapper>
-            </StyledGameContentWrapper>
+            <StyledPlayersSidebarWrapper>
+                <PlayerList
+                    players={players}
+                    playerId={playerId}
+                    hostId={hostId}
+                />
+            </StyledPlayersSidebarWrapper>
+            <StyledGuessListAndInputWrapper>
+                <GuessArea
+                    guesses={guesses}
+                    lastGuessHash={lastGuessHash}
+                    players={players}
+                    onGuess={onGuess}
+                    wordFuse={wordFuse}
+                />
+                <GuessAreaOverlay
+                    settings={settings}
+                    onChangeSettings={onChangeSettings}
+                    onStartGame={onStartGame}
+                    gameState={gameState}
+                    currentRound={currentRound}
+                    timer={timer}
+                    playerId={playerId}
+                    players={players}
+                    hostId={hostId}
+                    targetWord={targetWord}
+                />
+            </StyledGuessListAndInputWrapper>
+            <StyledChatWrapper>
+                <Chat
+                    messages={messages}
+                    sendMessage={sendMessage}
+                    players={players}
+                    playerId={playerId}
+                />
+            </StyledChatWrapper>
         </StyledGameLayout>
     );
 }

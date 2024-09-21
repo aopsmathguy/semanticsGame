@@ -1,51 +1,52 @@
 import styled from "styled-components";
 //game layout
 export const StyledGameLayout = styled.div`
-    display: flex;
-    flex-direction: column;
     height: 100vh;
-    width: 100vw;
+    display: grid;
+    grid-gap: 10px;
+    gap: 10px;
+    grid-template-areas: "roombar roombar roombar" "gamebar gamebar gamebar" "players game chat";
+    grid-template-columns: 1fr 3fr 1.5fr;
+    grid-template-rows: min-content 70px 1fr;
+    @media (max-width: 768px) and (orientation: portrait) {
+        font-size: 0.8em;
+        grid-template-areas: 
+            "roombar roombar" 
+            "gamebar gamebar" 
+            "game game"
+            "players chat";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content 70px 2fr 1fr; 
+    }
 `;
 export const StyledRoomBarWrapper = styled.div`
-    height: 30px;
+    grid-area: roombar;
 `;
 export const StyledGameBarWrapper = styled.div`
-    height: 70px;
-    padding-bottom: 10px;
-`;
-
-export const StyledGameContentWrapper = styled.div`
-    display: flex;
-    flex-grow: 1;
+    grid-area: gamebar;
 `;
 
 export const StyledPlayersSidebarWrapper = styled.div`
-    flex : 1;
-    padding-right: 10px;
+    grid-area: players;
 `;
 
 export const StyledGuessListAndInputWrapper = styled.div`
     position: relative;
-    flex: 3;
+    grid-area: game;
 `;
 
 
 export const StyledChatWrapper = styled.div`
-    flex: 1.5;
-    padding-left: 10px;
-    @media (max-width: 600px) {
-        display: none;
-    }
+    grid-area: chat;
 `;
 //roombar
 export const RoomBarContainer = styled.div`
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-radius: 15px;
     display: flex;
     width: 100%;
     align-items: center;
     position: relative;
-    background-color: #ccc;
+    background-color: white;
     box-sizing: border-box;
     border: 3px solid black;
 `;
@@ -72,6 +73,7 @@ export const LeaveButton = styled.div`
 //game bar
 
 export const StyledGameBarContainer = styled.div`
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,6 +126,7 @@ export const StyledGameBarPlayerAvatar = styled.div`
 `;
 //playerlist
 export const StyledPlayerListArea = styled.div`
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -131,6 +134,7 @@ export const StyledPlayerListArea = styled.div`
     box-sizing: border-box;
     background-color: white;
     border: 3px solid black;
+    overflow: hidden;
 `;
 export const StyledPlayerListContainer = styled.div`
     flex: 1 1 auto;
@@ -184,6 +188,8 @@ export const StyledPlayerAvatar = styled.div`
 `;
 //chat stuff
 export const StyledChatContainer = styled.div`
+    border-radius: 15px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -224,6 +230,8 @@ export const StyledChatSendArea = styled.input`
 `;
 //guess list and input
 export const StyledGuessAreaContainer = styled.div`
+    border-radius: 15px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -234,6 +242,8 @@ export const StyledGuessAreaContainer = styled.div`
 `;
 //overlay stuff
 export const StyledOverlay = styled.div`
+    border-radius: 15px;
+    overflow: hidden;
     position: absolute;
     left: 0;
     top: 0;
