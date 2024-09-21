@@ -123,11 +123,13 @@ class Game {
         const roomObj = this.rooms.get(roomId);
         if (roomObj === undefined) {
             socket.emit("join-room-fail", { reason: "Room not found" });
+            this.roomListRequestHandler(socket, {});
             return;
         }
         const { maxPlayers } = roomObj.settings;
         if (roomObj.players.size >= maxPlayers) {
             socket.emit("join-room-fail", { reason: "Room is full" });
+            this.roomListRequestHandler(socket, {});
             return;
         }
         player.roomId = roomId;
