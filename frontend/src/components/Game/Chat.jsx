@@ -33,7 +33,6 @@ function Chat({ messages, sendMessage, players, playerId }) {
                     container.clientHeight + 35;
             setPreviousScrollTop(container.scrollTop);
             setIsAtBottom(bottom);
-            console.log("isAtBottom", bottom);
         }
     };
     useEffect(() => {
