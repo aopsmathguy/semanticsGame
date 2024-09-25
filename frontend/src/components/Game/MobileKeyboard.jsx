@@ -84,10 +84,10 @@ function MobileKeyboard({ onGuess, wordFuse }) {
                 keyboardRef={(r) => (keyboard.current = r)}
                 layout={{
                     default: [
-                        "q w e r t y u i o p {bksp}",
-                        "a s d f g h j k l ; {enter}",
-                        "z x c v b n m , . ? {space}",
-                        "{space}",
+                        "q w e r t y u i o p",
+                        "a s d f g h j k l",
+                        "{space} z x c v b n m {bksp}",
+                        "{space} {enter}",
                     ],
                 }}
                 onChange={(value) => {
