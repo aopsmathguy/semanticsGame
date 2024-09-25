@@ -96,6 +96,7 @@ function MobileKeyboard({ onGuess, wordFuse }) {
                 }}
                 onKeyPress={(button) => {
                     if (button === "{enter}") {
+                        if (input.length === 0) return;
                         onGuess({ word: input });
                         setInput("");
                         keyboard.current.setInput("");
