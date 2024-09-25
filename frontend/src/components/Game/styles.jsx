@@ -33,7 +33,7 @@ export const StyledPlayersSidebarWrapper = styled.div`
 export const StyledGuessListAndInputWrapper = styled.div`
     position: relative;
     grid-area: game;
-    min-height: 300px;
+    min-height: 200px;
 `;
 
 
