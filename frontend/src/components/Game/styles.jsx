@@ -13,9 +13,10 @@ export const StyledGameLayout = styled.div`
             "roombar roombar" 
             "gamebar gamebar" 
             "game game"
-            "players chat";
+            "players chat"
+            "keyboard keyboard";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content 70px 1.25fr 1fr; 
+        grid-template-rows: min-content 70px 1fr minmax(0, 1fr); 
     }
 `;
 export const StyledRoomBarWrapper = styled.div`
@@ -32,11 +33,19 @@ export const StyledPlayersSidebarWrapper = styled.div`
 export const StyledGuessListAndInputWrapper = styled.div`
     position: relative;
     grid-area: game;
+    min-height: 300px;
 `;
 
 
 export const StyledChatWrapper = styled.div`
     grid-area: chat;
+`;
+export const StyledKeyboardWrapper = styled.div`
+    grid-area: keyboard;
+    display: none;
+    @media (max-width: 768px) and (orientation: portrait) {
+        display: block;
+    }
 `;
 //roombar
 export const RoomBarContainer = styled.div`
@@ -367,6 +376,8 @@ export const StyledGuessInput = styled.input`
     width: 120px;
     box-sizing: border-box;
     border: 2px solid black;
+    @media (max-width: 768px) and (orientation: portrait) {
+        display: none;
 `;
 export const StyledSuggestionsContainer = styled.div`
     position: absolute;
@@ -464,4 +475,57 @@ export const StyledPlayerAvatarContainer = styled.div`
     width : 0;
     height : 100%;
     display: block;
+`;
+//keyboard styles
+export const MobileInputContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+`;
+export const MobileInputSuggestionsWrapper = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+`;
+export const StyledGuessInputMobile = styled.div`
+    height: 2.2em;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 0 5px;
+`;
+export const StyledCursor = styled.div`
+    display: inline;
+    width: .2ch;
+    margin-left: .25ch;
+    height: 80%;
+    background-color: #000;
+    animation: cursorpulse 1s infinite;
+    @keyframes cursorpulse {
+        0% {
+            opacity: 1;
+        }
+        25% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 `;

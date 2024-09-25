@@ -4,7 +4,9 @@ import { SocketClient } from "@common/socketUtility";
 import { CONFIG } from "@common/socketConfig";
 
 const WEBSOCKET_HOST =
-  import.meta.env.VITE_WEBSOCKET_HOST || "ws://localhost:3000/api/ws"; // Use environment variable for flexibility
+  import.meta.env.VITE_WEBSOCKET_HOST 
+    // || "ws://localhost:3000/api/ws"; // Use environment variable for flexibility
+    || "https://2fb030cdd9eb.ngrok.app/api/ws"; // Use environment variable for flexibility
 const socket = new SocketClient(null, CONFIG);
 const connect = () => {
   socket.ws = new WebSocket(WEBSOCKET_HOST);

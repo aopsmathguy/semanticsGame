@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import WordSuggestion from "./WordSuggestion.jsx";
+import Suggestions from "./Suggestions.jsx"; // Import the new component
 import {
-    StyledSuggestionsContainer,
     StyledGuessInputContainer,
     StyledGuessInput,
 } from "./styles.jsx";
+
 function GuessInput({ onGuess, wordFuse }) {
     const [currGuess, setCurrGuess] = useState("");
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -19,24 +19,21 @@ function GuessInput({ onGuess, wordFuse }) {
             word: a.item,
             indices: a.matches[0].indices,
         }));
+
     const handleKeyDown = (event) => {
         if (event.key === "Enter") {
-            if (event.ctrlKey) {
-                setCurrGuess(currGuess + "\n");
-            } else {
-                event.preventDefault();
-                if (currGuess.trim() === "") {
-                    return;
-                }
-                let guess = currGuess;
-                if (highlightedSuggestion !== null) {
-                    guess = suggestions[highlightedSuggestion].word;
-                }
-                setCurrGuess("");
-                setHighlightedSuggestion(null);
-                setShowSuggestions(false);
-                onGuess({ word: guess });
+            event.preventDefault();
+            if (currGuess.trim() === "") {
+                return;
             }
+            let guess = currGuess;
+            if (highlightedSuggestion !== null) {
+                guess = suggestions[highlightedSuggestion].word;
+            }
+            setCurrGuess("");
+            setHighlightedSuggestion(null);
+            setShowSuggestions(false);
+            onGuess({ word: guess });
         } else if (event.key === "ArrowDown") {
             event.preventDefault();
             setHighlightedSuggestion((prev) =>
@@ -77,6 +74,18 @@ function GuessInput({ onGuess, wordFuse }) {
         };
     }, []);
 
+
+    const handleSuggestionClick = (word) => {
+        setCurrGuess("");
+        setShowSuggestions(false);
+        onGuess({ word });
+        inputRef.current.focus();
+    };
+
+    const handleSuggestionHover = (index) => {
+        setHighlightedSuggestion(index);
+    };
+
     return (
         <StyledGuessInputContainer>
             <StyledGuessInput
@@ -88,37 +97,14 @@ function GuessInput({ onGuess, wordFuse }) {
                 placeholder="Enter guess"
             />
             {showSuggestions && currGuess.length > 0 && (
-                <StyledSuggestionsContainer
-                    ref={suggestionRef}
-                    style={{
-                        position: "absolute",
-                        bottom: inputRef.current
-                            ? inputRef.current.offsetHeight + "px"
-                            : "auto", // Position above input
-                        left: inputRef.current
-                            ? inputRef.current.offsetLeft + "px"
-                            : "auto",
-                        width: inputRef.current
-                            ? inputRef.current.offsetWidth + "px"
-                            : "auto",
-                    }}
-                >
-                    {suggestions.map((suggestion, index) => (
-                        <WordSuggestion
-                            suggestion={suggestion}
-                            highlighted={highlightedSuggestion === index}
-                            key={index}
-                            onClick={() => {
-                                setCurrGuess("");
-                                setShowSuggestions(false);
-                                onGuess({ word: suggestion.word });
-                                inputRef.current.focus();
-                            }}
-                            onMouseEnter={() => setHighlightedSuggestion(index)}
-                            onMouseLeave={() => setHighlightedSuggestion(null)}
-                        />
-                    ))}
-                </StyledSuggestionsContainer>
+                <Suggestions 
+                    suggestionRef={suggestionRef}
+                    suggestions={suggestions}
+                    highlightedSuggestion={highlightedSuggestion}
+                    onSuggestionClick={handleSuggestionClick}
+                    onSuggestionHover={handleSuggestionHover}
+                    inputRef={inputRef}
+                />
             )}
         </StyledGuessInputContainer>
     );

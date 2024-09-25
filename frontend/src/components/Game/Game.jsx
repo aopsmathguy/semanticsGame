@@ -3,10 +3,10 @@ import {
     StyledGameLayout,
     StyledRoomBarWrapper,
     StyledGameBarWrapper,
-    // StyledGameContentWrapper,
     StyledPlayersSidebarWrapper,
     StyledGuessListAndInputWrapper,
     StyledChatWrapper,
+    StyledKeyboardWrapper
 } from "./styles";
 import RoomBar from "./RoomBar";
 import GameBar from "./GameBar";
@@ -14,6 +14,7 @@ import PlayerList from "./PlayerList";
 import GuessArea from "./GuessArea";
 import Chat from "./Chat";
 import GuessAreaOverlay from "./GuessAreaOverlay";
+import MobileKeyboard from "./MobileKeyboard";
 
 function Game({
     gameState,
@@ -89,6 +90,9 @@ function Game({
                     playerId={playerId}
                 />
             </StyledChatWrapper>
+            <StyledKeyboardWrapper>
+                <MobileKeyboard onGuess={onGuess} wordFuse={wordFuse} />
+            </StyledKeyboardWrapper>
         </StyledGameLayout>
     );
 }
