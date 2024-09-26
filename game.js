@@ -316,7 +316,7 @@ class Room {
         this.targetWord = "";
         this.currentSpellingHint = "";
         this.wordRanking = null;
-        this.hiddenCutoff = 0.6;
+        this.hiddenCutoff = 0.5;
         this.guesses = []; //{ playerId, word, similarity }
 
         this.playerSolveOrder = [];
@@ -334,7 +334,7 @@ class Room {
         //allSimilarities is sorted by similarity
         const hints = this.settings.numberOfHints;
         let wordsBySimilarity = allSimilarities.filter(
-            ({ similarity }, i) => similarity < 0.6 && i > 4 && (i < 25 || similarity > 0.455)
+            ({ similarity }, i) => similarity < 0.6 && i > 4 && (i < 40 || (similarity > 0.44 && i < 80))
         );
         return getDistinctSubset(wordsBySimilarity, hints).sort((a, b) => b.similarity - a.similarity);
     }
@@ -415,7 +415,7 @@ class Room {
             ])
         );
         const hints = await this.createHints(allSimilarities);
-        this.hiddenCutoff = hints[0].similarity;
+        this.hiddenCutoff = hints[0]?.similarity || 0.5;
         for (const [playerId, { playerRoomInfo }] of this.players) {
             playerRoomInfo.roundScore = 0;
             playerRoomInfo.solved = false;
