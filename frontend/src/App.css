@@ -8,3 +8,13 @@ html * {
 p * {
     margin: 0;
 }
+.hg-theme-default .hg-row:not(:last-child) {
+    margin-bottom: 0;
+}
+.hg-theme-default .hg-row .hg-button-container, .hg-theme-default .hg-row .hg-button:not(:last-child) {
+    margin-right: 0;
+}
+.hg-theme-default .hg-button {
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
