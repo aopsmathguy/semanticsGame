@@ -477,7 +477,9 @@ export const StyledPlayerAvatarColumn = styled.div`
 `;
 export const StyledPlayerAvatarContainer = styled.div`
     width : 0;
-    
+    height : 100%;
+    display: block;
+    position: relative;
 `;
 export const StyledPlayerAbsoluteAvatar = styled.div`
     position: absolute;

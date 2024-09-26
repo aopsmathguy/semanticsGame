@@ -27,7 +27,7 @@ function GuessList({ guesses, lastGuessHash, players }) {
                 .sort((a, b) => b[1].similarity - a[1].similarity)
                 .map(([wordHash, { playerIds, word, similarity, ranking }]) => {
                     const avatars = playerIds.map(
-                        (id) => players[id]?.profile?.avatar
+                        (id) => ({avatar: players[id]?.profile?.avatar, id})
                     );
                     return (
                         <StyledGuessRow
@@ -51,10 +51,10 @@ function GuessList({ guesses, lastGuessHash, players }) {
                             <StyledPlayerAvatarColumn
                             >
                                 {avatars.map(
-                                    (avatar, i) =>
+                                    ({avatar, id}) =>
                                         avatar && (
                                             <StyledPlayerAvatarContainer
-                                                key={i}
+                                                key={word + id}
                                             >
                                                 <StyledPlayerAbsoluteAvatar>
                                                     <Avatar
