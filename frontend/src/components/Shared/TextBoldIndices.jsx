@@ -16,7 +16,7 @@ function TextBoldIndices({ word, indices }) {
   return (
     <>
       {components.map(({ bold, text }, i) => {
-        return bold ? <span>{text}</span> : <span style={{color : "#888"}}>{text}</span>;
+        return bold ? <span key={i}>{text}</span> : <span key={i} style={{color : "#888"}}>{text}</span>;
       })}
     </>
   );

@@ -11,6 +11,7 @@ import {
     StyledPlayerAvatarContainer,
     StyledProgressBarWrapper,
     StyledProgressBarText,
+    StyledPlayerAbsoluteAvatar,
 } from "./styles";
 import Avatar from "../Shared/Avatar";
 function GuessList({ guesses, lastGuessHash, players }) {
@@ -55,10 +56,12 @@ function GuessList({ guesses, lastGuessHash, players }) {
                                             <StyledPlayerAvatarContainer
                                                 key={i}
                                             >
-                                                <Avatar
-                                                    opts={avatar}
-                                                    size={36}
-                                                />
+                                                <StyledPlayerAbsoluteAvatar>
+                                                    <Avatar
+                                                        opts={avatar}
+                                                        size={36}
+                                                    />
+                                                </StyledPlayerAbsoluteAvatar>
                                             </StyledPlayerAvatarContainer>
                                         )
                                 )}
