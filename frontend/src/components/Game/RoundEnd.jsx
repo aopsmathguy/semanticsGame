@@ -10,7 +10,7 @@ function RoundEnd({ players, targetWord, currentRound, settings }) {
     return (
         <>
             <StyledText fontSize={60} color="white">
-                ROUND {currentRound} OF {numberOfRounds} END
+                ROUND {currentRound}
             </StyledText>
             <StyledWordReveal>
                 <StyledText fontSize={30} color="white">

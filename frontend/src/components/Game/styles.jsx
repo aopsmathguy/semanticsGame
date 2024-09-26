@@ -16,7 +16,7 @@ export const StyledGameLayout = styled.div`
             "players chat"
             "keyboard keyboard";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content 70px 1fr minmax(0, 1fr); 
+        grid-template-rows: min-content 70px 2.5fr 1fr min-content; 
     }
 `;
 export const StyledRoomBarWrapper = styled.div`
@@ -33,7 +33,6 @@ export const StyledPlayersSidebarWrapper = styled.div`
 export const StyledGuessListAndInputWrapper = styled.div`
     position: relative;
     grid-area: game;
-    min-height: 200px;
 `;
 
 
