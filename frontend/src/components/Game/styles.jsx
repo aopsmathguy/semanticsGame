@@ -3,24 +3,26 @@ import styled from "styled-components";
 export const StyledGameLayout = styled.div`
     height: 100dvh;
     display: grid;
-    grid-gap: 10px;
-    gap: 10px;
+    grid-gap: 5px;
+    gap: 5px;
     grid-template-areas: "roombar roombar roombar" "gamebar gamebar gamebar" "players game chat";
     grid-template-columns: 1fr 3fr 1.5fr;
     grid-template-rows: min-content 70px 1fr;
     @media (max-width: 768px) and (orientation: portrait) {
         grid-template-areas: 
-            "roombar roombar" 
             "gamebar gamebar" 
             "game game"
             "players chat"
             "keyboard keyboard";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content 70px 2.5fr 1fr min-content; 
+        grid-template-rows: 70px 2.5fr 1fr min-content; 
     }
 `;
 export const StyledRoomBarWrapper = styled.div`
     grid-area: roombar;
+    @media (max-width: 768px) and (orientation: portrait) {
+        display: none;
+    }
 `;
 export const StyledGameBarWrapper = styled.div`
     grid-area: gamebar;
