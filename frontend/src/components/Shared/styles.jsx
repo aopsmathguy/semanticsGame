@@ -24,5 +24,5 @@ export const StyledSpriteImage = styled.div`
 
 export const StyledText = styled.span`
     color: ${({ color }) => color || "black"};
-    font-size: ${({ fontSize }) => fontSize || "1"}rem;
+    font-size: ${({ fontSize }) => fontSize || "1"}em;
 `;
