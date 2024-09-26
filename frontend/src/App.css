@@ -2,9 +2,9 @@
 
 html * {
     font-family: 'Patrick Hand' !important;
-    font-size: 20px;
+    font-size: 22px;
     @media (max-width: 768px) and (orientation: portrait){
-        font-size: 16px; 
+        font-size: 18px; 
     }
 }
 

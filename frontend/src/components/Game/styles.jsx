@@ -91,7 +91,7 @@ export const StyledGameBarContainer = styled.div`
     box-sizing: border-box;
     border: 0.15em solid #000;
     background-color: white;
-    padding: 5px;
+    padding: 0.25em;
 `;
 export const StyledGameBar = styled.div`
     width: 100%;
@@ -422,7 +422,7 @@ export const StyledGuessRow = styled.div`
     align-items: center;
     justify-content: space-between; 
     border-bottom: 1px solid black;
-    padding: 0px 0.5em;
+    padding: 0em 0.5em;
     &:nth-child(odd) {
         background-color: ${({ isLastGuess }) =>
         isLastGuess ? "lightgreen" : "#f0f0f0"};
@@ -445,7 +445,6 @@ export const StyledSimilarityColumn = styled.div`
 
 export const StyledProgressBarContainer = styled.div`
     flex : 1.5;
-    margin: 0.25em 0;
 `;
 export const StyledProgressBarWrapper = styled.div`
     position: relative;

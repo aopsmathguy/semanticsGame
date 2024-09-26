@@ -28,7 +28,7 @@ function Chat({ messages, sendMessage, players, playerId }) {
         const container = messagesContainerRef.current;
         if (container) {
             const bottom =
-                (previousScrollTop < container.scrollTop && isAtBottom) ||
+                (previousScrollTop <= container.scrollTop && isAtBottom) ||
                 container.scrollHeight - container.scrollTop <=
                     container.clientHeight + 35;
             setPreviousScrollTop(container.scrollTop);
