@@ -7,7 +7,7 @@ import {
 function GameEnd({ players }) {
     return (
         <>
-            <StyledText fontSize={60} color="white">
+            <StyledText fontSize={3} color="white">
                 GAME END
             </StyledText>
             <StyledPlayerRoundScoresContainer>
@@ -22,13 +22,13 @@ function GameEnd({ players }) {
                                 <Avatar size={48} opts={profile.avatar} />
                                 <StyledText
                                     key={playerRoomInfo.playerId}
-                                    fontSize={20}
+                                    fontSize={1}
                                     color="white"
                                 >
                                     {profile.name}:
                                 </StyledText>
                             </div>
-                            <StyledText fontSize={20} color={"#0f0"}>
+                            <StyledText fontSize={1} color={"#0f0"}>
                                 {playerRoomInfo.score}
                             </StyledText>
                         </StyledPlayerRoundScores>

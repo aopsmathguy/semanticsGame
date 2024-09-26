@@ -7,7 +7,7 @@ export const StyledGameLayout = styled.div`
     gap: 5px;
     grid-template-areas: "roombar roombar roombar" "gamebar gamebar gamebar" "players game chat";
     grid-template-columns: 1fr 3fr 1.5fr;
-    grid-template-rows: min-content 70px 1fr;
+    grid-template-rows: min-content min-content 1fr;
     @media (max-width: 768px) and (orientation: portrait) {
         grid-template-areas: 
             "gamebar gamebar" 
@@ -15,7 +15,7 @@ export const StyledGameLayout = styled.div`
             "players chat"
             "keyboard keyboard";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 70px 2.5fr 1fr min-content; 
+        grid-template-rows: min-content 2.5fr 1fr min-content; 
     }
 `;
 export const StyledRoomBarWrapper = styled.div`
@@ -73,7 +73,7 @@ export const LeaveButton = styled.div`
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    font-size: 30px;
+    font-size: 1.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -91,6 +91,7 @@ export const StyledGameBarContainer = styled.div`
     box-sizing: border-box;
     border: 3px solid #000;
     background-color: white;
+    padding: 5px;
 `;
 export const StyledGameBar = styled.div`
     width: 100%;
@@ -158,7 +159,7 @@ export const StyledPlayerCard = styled.div`
     cursor: pointer;
     position: relative;
     width: 100%;
-    height: 48px;
+    // height: 48px;
     &:nth-child(odd) {
         background-color: ${({ solved }) =>
             solved ? "hsl(120, 100%, 80%)" : "hsl(0, 0%, 90%)"};
@@ -421,7 +422,6 @@ export const StyledGuessRow = styled.div`
     justify-content: space-between; 
     border-bottom: 1px solid black;
     padding: 0px 10px;
-    min-height: 40px; 
     &:nth-child(odd) {
         background-color: ${({ isLastGuess }) =>
         isLastGuess ? "lightgreen" : "#f0f0f0"};
@@ -444,7 +444,7 @@ export const StyledSimilarityColumn = styled.div`
 
 export const StyledProgressBarContainer = styled.div`
     flex : 1.5;
-    margin: 5px 0;
+    margin: 0.25rem 0;
 `;
 export const StyledProgressBarWrapper = styled.div`
     position: relative;
@@ -454,10 +454,14 @@ export const StyledProgressBarWrapper = styled.div`
 export const StyledProgressBarBorder = styled.div`
     border: 2px solid black;
     flex-grow: 1;
+    height: 20px;
+    @media (max-width: 768px) and (orientation: portrait) {
+        height: 16px;
+    }
 `;
 
 export const StyledProgressBar = styled.div`
-    height: 20px;
+    height: 100%;
     width: ${({ ranking }) => `${100-ranking}%`};
     background-color: ${({ ranking }) => `hsl(${100-ranking}, 100%, 50%)`};
 `;
@@ -471,11 +475,13 @@ export const StyledPlayerAvatarColumn = styled.div`
     flex : 0.5;
     display: flex;
     justify-content: space-between;
+    position: relative;
 `;
 export const StyledPlayerAvatarContainer = styled.div`
     width : 0;
     height : 100%;
     display: block;
+    position: relative;
 `;
 //keyboard styles
 export const MobileInputContainer = styled.div`

@@ -6,8 +6,8 @@ function WaitRoundStart({
 }){
     const { numberOfRounds } = settings;
     return <>
-        <StyledText fontSize={30} color="white">Round {currentRound} of {numberOfRounds}</StyledText>
-        <StyledText fontSize={60} color="white">{timer}</StyledText>
+        <StyledText fontSize={1.5} color="white">Round {currentRound} of {numberOfRounds}</StyledText>
+        <StyledText fontSize={3} color="white">{timer}</StyledText>
     </>
 }
 export default WaitRoundStart;

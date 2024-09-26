@@ -29,6 +29,7 @@ import { selectActiveView } from "@/redux/slices/game";
 import GameContainer from "./GameContainer.jsx";
 import MainMenuContainer from "./MainMenuContainer.jsx";
 import RoomListContainer from "./RoomListContainer.jsx";
+import { StyledAppContainer } from "./styles.jsx";
 
 function AppContainer() {
     const dispatch = useDispatch();
@@ -60,11 +61,11 @@ function AppContainer() {
     socket.useOnChatMessageResponse((data) => dispatch(handleChatMessageResponse(data)));
     socket.useOnDisconnect(() => dispatch(handleDisconnect()));
     const activeView = useSelector(selectActiveView);
-    return <div>
+    return <StyledAppContainer>
       {activeView == "MainMenu" && <MainMenuContainer />}
       {activeView == "RoomList" && <RoomListContainer />}
       {activeView == "Game" && <GameContainer />}
-      </div>
+      </StyledAppContainer>
 }
 
 export default AppContainer;

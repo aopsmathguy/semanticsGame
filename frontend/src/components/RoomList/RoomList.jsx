@@ -13,7 +13,7 @@ function RoomList({ roomList, onJoinRoom, onMakeRoom, onRefresh }) {
     return (
         <StyledRoomListWrapper>
             <StyledRoomListBarWrapper>
-                <StyledText fontSize={30}>Room List</StyledText>
+                <StyledText fontSize={1.5}>Room List</StyledText>
                 <button onClick={refreshHandler} style={{marginLeft: "10px"}}>Refresh</button>
             </StyledRoomListBarWrapper>
             <StyledRoomListContainer>
@@ -29,7 +29,7 @@ function RoomList({ roomList, onJoinRoom, onMakeRoom, onRefresh }) {
                             onJoinRoom={joinRoomHandler.bind(this, roomIdInt)}
                         />
                     );
-                }) : <StyledText fontSize={20} color="grey">No rooms available</StyledText>}
+                }) : <StyledText fontSize={1} color="grey">No rooms available</StyledText>}
             </StyledRoomListContainer>
             <StyledMakeRoomContainer>
                 <CreateRoomForm onMakeRoom={onMakeRoom} />

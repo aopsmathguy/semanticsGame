@@ -56,15 +56,14 @@ function GuessList({ guesses, lastGuessHash, players }) {
                                     </StyledProgressBarWrapper>
                                 </StyledProgressBarContainer>
                                 <StyledPlayerAvatarColumn
-                                    style={{ marginRight: "36px" }}
-                                >
+                                    style={{ marginRight: "1.8rem" }}>
                                     {avatars.map(
                                         (avatar, i) =>
                                             avatar && (
-                                                <StyledPlayerAvatarContainer>
+                                                <StyledPlayerAvatarContainer key={i}>
                                                     <Avatar
                                                         opts={avatar}
-                                                        size={36}
+                                                        size={29}
                                                     />
                                                 </StyledPlayerAvatarContainer>
                                             )

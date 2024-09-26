@@ -75,7 +75,7 @@ function MainMenu({ profile, sendJoin }) {
     };
     return (
         <StyledMainMenuWrapper>
-            <StyledText fontSize={64}>COSEMANTLE</StyledText>
+            <StyledText fontSize={3}>COSEMANTLE</StyledText>
             <StyledText>
                 A game of guessing words based on association
             </StyledText>

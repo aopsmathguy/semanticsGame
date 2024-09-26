@@ -53,7 +53,7 @@ export const ControlButton = styled.div`
   display: flex;
   flex-direction: column;
   align-items: space-between;
-  font-size: 24px;
+  font-size: 1.2rem;
   cursor: pointer;
   margin: 0 10px;
 `;

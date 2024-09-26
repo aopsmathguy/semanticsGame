@@ -9,14 +9,14 @@ function RoundEnd({ players, targetWord, currentRound, settings }) {
     const { numberOfRounds } = settings;
     return (
         <>
-            <StyledText fontSize={60} color="white">
+            <StyledText fontSize={3} color="white">
                 ROUND {currentRound}
             </StyledText>
             <StyledWordReveal>
-                <StyledText fontSize={30} color="white">
+                <StyledText fontSize={1.5} color="white">
                     The word was&nbsp;
                 </StyledText>
-                <StyledText fontSize={45} color="#0f0">
+                <StyledText fontSize={2.25} color="#0f0">
                     {targetWord}
                 </StyledText>
             </StyledWordReveal>
@@ -38,18 +38,18 @@ function RoundEnd({ players, targetWord, currentRound, settings }) {
                                 <Avatar size={48} opts={profile.avatar} />
                                 <StyledText
                                     key={playerRoomInfo.playerId}
-                                    fontSize={20}
+                                    fontSize={1}
                                     color="white"
                                 >
                                     {profile.name}:
                                 </StyledText>
                             </div>
                             {playerRoomInfo.roundScore > 0 ? (
-                                <StyledText fontSize={20} color={"#0f0"}>
+                                <StyledText fontSize={1} color={"#0f0"}>
                                     +{playerRoomInfo.roundScore}
                                 </StyledText>
                             ) : (
-                                <StyledText fontSize={20} color={"#f00"}>
+                                <StyledText fontSize={1} color={"#f00"}>
                                     {playerRoomInfo.roundScore}
                                 </StyledText>
                             )}

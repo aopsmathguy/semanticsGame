@@ -12,7 +12,7 @@ function Timer({ timer, timerEmphasize }) {
             <SpriteImage atlas={alarmClockFill} size={70} filter={filter}/>
         </StyledEmphasis>
         <SpriteImage atlas={alarmClock} size={70}>
-            <StyledText fontSize={24}><b>{timer}</b></StyledText>
+            <StyledText fontSize={1.5}><b>{timer}</b></StyledText>
         </SpriteImage>
 
     </StyledTimer>
