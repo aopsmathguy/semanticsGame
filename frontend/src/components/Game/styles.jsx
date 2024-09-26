@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const StyledGameLayout = styled.div`
     height: 100dvh;
     display: grid;
-    grid-gap: 5px;
-    gap: 5px;
+    grid-gap: 0.25em;
+    gap: 0.25em;
     grid-template-areas: "roombar roombar roombar" "gamebar gamebar gamebar" "players game chat";
     grid-template-columns: 1fr 3fr 1.5fr;
     grid-template-rows: min-content min-content 1fr;
@@ -57,7 +57,7 @@ export const RoomBarContainer = styled.div`
     position: relative;
     background-color: white;
     box-sizing: border-box;
-    border: 3px solid black;
+    border: 0.15em solid black;
 `;
 
 export const RoomName = styled.div`
@@ -89,7 +89,7 @@ export const StyledGameBarContainer = styled.div`
     justify-content: center;
     height: 100%;
     box-sizing: border-box;
-    border: 3px solid #000;
+    border: 0.15em solid #000;
     background-color: white;
     padding: 5px;
 `;
@@ -143,7 +143,7 @@ export const StyledPlayerListArea = styled.div`
     height: 100%;
     box-sizing: border-box;
     background-color: white;
-    border: 3px solid black;
+    border: 0.15em solid black;
     overflow: hidden;
 `;
 export const StyledPlayerListContainer = styled.div`
@@ -206,7 +206,7 @@ export const StyledChatContainer = styled.div`
     height: 100%;
     box-sizing: border-box;
     background-color: white;
-    border: 3px solid black;
+    border: 0.15em solid black;
 `;
 export const StyledChatMessagesContainer = styled.div`
     flex: 1 1 auto;
@@ -236,7 +236,7 @@ export const StyledChatSendArea = styled.input`
     flex-grow: 0;
     min-width: 0;
     box-sizing: border-box;
-    border: 2px solid black;
+    border: 0.1em solid black;
 `;
 //guess list and input
 export const StyledGuessAreaContainer = styled.div`
@@ -247,7 +247,7 @@ export const StyledGuessAreaContainer = styled.div`
     height: 100%;
     box-sizing: border-box;
     background-color: #aaa;
-    border: 3px solid black;
+    border: 0.15em solid black;
     align-items: center;
 `;
 //overlay stuff
@@ -308,13 +308,13 @@ export const StyledSettingRow = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 0.5em;
 `;
 export const StyledStartButtonContainer = styled.div`
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 0.5em;
 `;
 export const StyledLabel = styled.label`
     text-align: left;
@@ -325,11 +325,11 @@ export const StyledLabel = styled.label`
 `;
 export const StyledSelect = styled.select`
     font: inherit;
-    width: 100px;
+    width: 5em;
 `;
 export const StyledButton = styled.button`
     font: inherit;
-    padding: 5px;
+    padding: 0.25em;
     flex: 1 1 auto;
     border: 0;
     background-color: #080;
@@ -345,10 +345,10 @@ export const StyledButton = styled.button`
 export const StyledWordReveal = styled.div`
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.5em;
 `;
 export const StyledPlayerRoundScoresContainer = styled.div`
-    width: min(200px, 100%);
+    width: min(10em, 100%);
     display: flex;
     flex-direction: column;
     // overflow-y: auto;
@@ -377,7 +377,7 @@ export const StyledGuessInput = styled.input`
     flex: 0 0 auto;
     width: 120px;
     box-sizing: border-box;
-    border: 2px solid black;
+    border: 0.1em solid black;
     @media (max-width: 768px) and (orientation: portrait) {
         display: none;
 `;
@@ -385,7 +385,8 @@ export const StyledSuggestionsContainer = styled.div`
     position: absolute;
     z-index: 1;
     background-color: white;
-    border: 1px solid black;
+    border: 0.05em solid black;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
 `;
@@ -394,7 +395,7 @@ export const StyledSuggestionItem = styled.div`
     text-align: left;
     border: 0;
     background: rgba(0, 0, 0, 0);
-    padding: 5px;
+    padding: 0.25em;
     background: white;
     &.highlighted {
         background: lightgray;
@@ -411,7 +412,7 @@ export const StyledGuessListContainer = styled.div`
     color: black;
     width: 100%;
     max-width: 400px;
-    border: 2px solid black;
+    border: 0.1em solid black;
     background-color: white;
     scroll-behavior: smooth;
 `;
@@ -421,7 +422,7 @@ export const StyledGuessRow = styled.div`
     align-items: center;
     justify-content: space-between; 
     border-bottom: 1px solid black;
-    padding: 0px 10px;
+    padding: 0px 0.5em;
     &:nth-child(odd) {
         background-color: ${({ isLastGuess }) =>
         isLastGuess ? "lightgreen" : "#f0f0f0"};
@@ -444,7 +445,7 @@ export const StyledSimilarityColumn = styled.div`
 
 export const StyledProgressBarContainer = styled.div`
     flex : 1.5;
-    margin: 0.25rem 0;
+    margin: 0.25em 0;
 `;
 export const StyledProgressBarWrapper = styled.div`
     position: relative;
@@ -452,7 +453,7 @@ export const StyledProgressBarWrapper = styled.div`
     height: 100%;
 `;
 export const StyledProgressBarBorder = styled.div`
-    border: 2px solid black;
+    border: 0.1em solid black;
     flex-grow: 1;
     height: 1em;
 `;
@@ -506,11 +507,11 @@ export const MobileInputSuggestionsWrapper = styled.div`
 `;
 export const StyledGuessInputMobile = styled.div`
     height: 2.2em;
-    width: 100px;
+    width: 120px;
     display: flex;
     align-items: center;
     justify-content: left;
-    border: 2px solid black;
+    border: 0.1em solid black;
     box-sizing: border-box;
     background-color: white;
     padding: 0 5px;

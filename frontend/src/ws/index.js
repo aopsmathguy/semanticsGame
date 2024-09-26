@@ -6,7 +6,7 @@ import { CONFIG } from "@common/socketConfig";
 const WEBSOCKET_HOST =
   import.meta.env.VITE_WEBSOCKET_HOST 
     // || "ws://localhost:3000/api/ws"; // Use environment variable for flexibility
-    || "https://80c7ed653fe5.ngrok.app/api/ws"; // Use environment variable for flexibility
+    || "https://6f2ff081cf3a.ngrok.app/api/ws"; // Use environment variable for flexibility
 const socket = new SocketClient(null, CONFIG);
 const connect = () => {
   socket.ws = new WebSocket(WEBSOCKET_HOST);
