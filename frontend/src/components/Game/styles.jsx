@@ -454,10 +454,7 @@ export const StyledProgressBarWrapper = styled.div`
 export const StyledProgressBarBorder = styled.div`
     border: 2px solid black;
     flex-grow: 1;
-    height: 20px;
-    @media (max-width: 768px) and (orientation: portrait) {
-        height: 16px;
-    }
+    height: 1em;
 `;
 
 export const StyledProgressBar = styled.div`
@@ -476,12 +473,14 @@ export const StyledPlayerAvatarColumn = styled.div`
     display: flex;
     justify-content: space-between;
     position: relative;
+    margin-right: 1.8em;
 `;
 export const StyledPlayerAvatarContainer = styled.div`
     width : 0;
-    height : 100%;
-    display: block;
-    position: relative;
+    position: absolute;
+    height: 36px;
+    top: 50%;
+    transform: translateY(-50%); 
 `;
 //keyboard styles
 export const MobileInputContainer = styled.div`

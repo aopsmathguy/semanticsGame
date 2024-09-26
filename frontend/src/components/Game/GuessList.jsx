@@ -24,55 +24,48 @@ function GuessList({ guesses, lastGuessHash, players }) {
             </StyledGuessRow>
             {Object.entries(guesses)
                 .sort((a, b) => b[1].similarity - a[1].similarity)
-                .map(
-                    ([
-                        wordHash,
-                        { playerIds, word, similarity, ranking },
-                    ]) => {
-                        const avatars = playerIds.map(
-                            (id) => players[id]?.profile?.avatar
-                        );
-                        return (
-                            <StyledGuessRow
-                                key={wordHash}
-                                isLastGuess={wordHash == lastGuessHash}
+                .map(([wordHash, { playerIds, word, similarity, ranking }]) => {
+                    const avatars = playerIds.map(
+                        (id) => players[id]?.profile?.avatar
+                    );
+                    return (
+                        <StyledGuessRow
+                            key={wordHash}
+                            isLastGuess={wordHash == lastGuessHash}
+                        >
+                            <StyledWordColumn>{word}</StyledWordColumn>
+                            <StyledSimilarityColumn>
+                                {(100 * similarity).toFixed(1)}%
+                            </StyledSimilarityColumn>
+                            <StyledProgressBarContainer>
+                                <StyledProgressBarWrapper>
+                                    <StyledProgressBarBorder>
+                                        <StyledProgressBar ranking={ranking} />
+                                    </StyledProgressBarBorder>
+                                    <StyledProgressBarText>
+                                        {ranking == 100 ? "?" : `#${ranking}`}
+                                    </StyledProgressBarText>
+                                </StyledProgressBarWrapper>
+                            </StyledProgressBarContainer>
+                            <StyledPlayerAvatarColumn
                             >
-                                <StyledWordColumn>{word}</StyledWordColumn>
-                                <StyledSimilarityColumn>
-                                    {(100 * similarity).toFixed(1)}%
-                                </StyledSimilarityColumn>
-                                <StyledProgressBarContainer>
-                                    <StyledProgressBarWrapper>
-                                        <StyledProgressBarBorder>
-                                            <StyledProgressBar
-                                                ranking={ranking}
-                                            />
-                                        </StyledProgressBarBorder>
-                                        <StyledProgressBarText>
-                                            {ranking == 100
-                                                ? "?"
-                                                : `#${ranking}`}
-                                        </StyledProgressBarText>
-                                    </StyledProgressBarWrapper>
-                                </StyledProgressBarContainer>
-                                <StyledPlayerAvatarColumn
-                                    style={{ marginRight: "1.8rem" }}>
-                                    {avatars.map(
-                                        (avatar, i) =>
-                                            avatar && (
-                                                <StyledPlayerAvatarContainer key={i}>
-                                                    <Avatar
-                                                        opts={avatar}
-                                                        size={29}
-                                                    />
-                                                </StyledPlayerAvatarContainer>
-                                            )
-                                    )}
-                                </StyledPlayerAvatarColumn>
-                            </StyledGuessRow>
-                        );
-                    }
-                )}
+                                {avatars.map(
+                                    (avatar, i) =>
+                                        avatar && (
+                                            <StyledPlayerAvatarContainer
+                                                key={i}
+                                            >
+                                                <Avatar
+                                                    opts={avatar}
+                                                    size={36}
+                                                />
+                                            </StyledPlayerAvatarContainer>
+                                        )
+                                )}
+                            </StyledPlayerAvatarColumn>
+                        </StyledGuessRow>
+                    );
+                })}
         </StyledGuessListContainer>
     );
 }
