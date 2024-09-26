@@ -12,6 +12,7 @@ import {
 import Suggestions from "./Suggestions";
 function MobileKeyboard({ onGuess, wordFuse }) {
     const [input, setInput] = useState("");
+    const [layoutName, setLayoutName] = useState("default");
     const [showKeyboard, setShowKeyboard] = useState(false);
     const [showSuggestions, setShowSuggestions] = useState(false);
     const inputRef = useRef(null);
@@ -49,6 +50,21 @@ function MobileKeyboard({ onGuess, wordFuse }) {
             setShowSuggestions(false);
         }
     };
+    const handleKeyPress = (button) => {
+        if (button === "{ent}") {
+            if (input.length === 0) return;
+            onGuess({ word: input });
+            setInput("");
+            keyboard.current.setInput("");
+            setShowSuggestions(false);
+        } else if (button === "{shift}") {
+            setLayoutName(layoutName === "default" ? "shift" : "default");
+        } else if (button === "{numbers}") {
+            setLayoutName("numbers");
+        } else if (button === "{abc}") {
+            setLayoutName("default");
+        }
+    }
     useEffect(() => {
         if (showKeyboard) {
             keyboard.current.setInput(input);
@@ -81,28 +97,36 @@ function MobileKeyboard({ onGuess, wordFuse }) {
                 )}
             </MobileInputSuggestionsWrapper>
             {showKeyboard && <Keyboard
-                keyboardRef={(r) => (keyboard.current = r)}
                 layout={{
                     default: [
-                        "q w e r t y u i o p",
-                        "a s d f g h j k l",
-                        "{space} z x c v b n m {bksp}",
-                        "{space} {enter}",
+                      "q w e r t y u i o p",
+                      "a s d f g h j k l",
+                      "{shift} z x c v b n m {backspace}",
+                      "{numbers} {space} {ent}"
                     ],
+                    shift: [
+                      "Q W E R T Y U I O P",
+                      "A S D F G H J K L",
+                      "{shift} Z X C V B N M {backspace}",
+                      "{numbers} {space} {ent}"
+                    ],
+                    numbers: ["1 2 3", "4 5 6", "7 8 9", "{abc} 0 {backspace}"]
                 }}
+                display={{
+                    "{space}": " ",
+                    "{numbers}": "123",
+                    "{ent}": "↵",
+                    "{backspace}": "⌫",
+                    "{shift}": "⇧",
+                    "{abc}": "ABC"
+                }}
+                layoutName={layoutName}
+                keyboardRef={(r) => (keyboard.current = r)}
                 onChange={(value) => {
                     setInput(value);
                     setShowSuggestions(true);
                 }}
-                onKeyPress={(button) => {
-                    if (button === "{enter}") {
-                        if (input.length === 0) return;
-                        onGuess({ word: input });
-                        setInput("");
-                        keyboard.current.setInput("");
-                        setShowSuggestions(false);
-                    }
-                }}
+                onKeyPress={handleKeyPress}
             />}
         </MobileInputContainer>
     );
