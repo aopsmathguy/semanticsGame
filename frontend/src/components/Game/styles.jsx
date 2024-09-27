@@ -411,7 +411,7 @@ export const StyledGuessListContainer = styled.div`
     overflow-y: auto;
     color: black;
     width: 100%;
-    max-width: 400px;
+    max-width: 20em;
     border: 0.1em solid black;
     background-color: white;
     scroll-behavior: smooth;
