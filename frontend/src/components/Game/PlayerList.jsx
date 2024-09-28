@@ -7,21 +7,34 @@ import {
     StyledPlayerName,
     StyledPlayerScore,
     StyledPlayerAvatar,
+    StyledPlayerRank,
 } from "./styles";
 import Avatar from "../Shared/Avatar";
+
 function PlayerList({ players, playerId, hostId }) {
     const myPlayerId = playerId;
-    const playerValues = Object.values(players);
+    const playerValues = [...Object.values(players)].sort((a, b) => b.playerRoomInfo.score - a.playerRoomInfo.score);
+
+    let rank = 1;
+    let lastScore = null;
+
     return (
         <StyledPlayerListArea>
             <StyledPlayerListContainer>
-                {playerValues.map(({ profile, playerRoomInfo }) => {
+                {playerValues.map(({ profile, playerRoomInfo }, i) => {
                     const { name, avatar } = profile;
                     const { playerId, score, solved } = playerRoomInfo;
+
+                    // Handle ties
+                    if (lastScore !== score) {
+                        rank = i + 1;
+                    }
+                    lastScore = score;
+
                     return (
                         <StyledPlayerCard key={playerId} solved={solved}>
                             <StyledPlayerInfo>
-                                <StyledPlayerName isMe={playerId == myPlayerId} isHost={playerId==hostId}>
+                                <StyledPlayerName isMe={playerId == myPlayerId} isHost={playerId == hostId}>
                                     {name}
                                 </StyledPlayerName>
                                 <StyledPlayerScore>
@@ -34,6 +47,9 @@ function PlayerList({ players, playerId, hostId }) {
                                     size={48}
                                 />
                             </StyledPlayerAvatar>
+                            <StyledPlayerRank>
+                                #{rank}
+                            </StyledPlayerRank>
                         </StyledPlayerCard>
                     );
                 })}
@@ -41,4 +57,5 @@ function PlayerList({ players, playerId, hostId }) {
         </StyledPlayerListArea>
     );
 }
+
 export default PlayerList;

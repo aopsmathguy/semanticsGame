@@ -195,7 +195,7 @@ class Game {
             }
         }
         roomObj.playerSolveOrder = roomObj.playerSolveOrder.filter(
-            (id) => id !== playerId
+            ({id}) => id !== playerId
         );
         player.roomId = null;
         socket.emit("leave-room-response", {});
@@ -252,7 +252,7 @@ class Game {
             return;
         }
         if (word == roomObj.targetWord) {
-            roomObj.playerSolveOrder.push(playerId);
+            roomObj.playerSolveOrder.push({id : playerId, timeFactor : roomObj.timer/roomObj.settings.guessTime});
             playerRoomInfo.solved = true;
         }
         const similarity = await wordEmbeddings.getSimilarity(
@@ -481,11 +481,11 @@ class Room {
     async endRound() {
         this.gameState = "ROUND_OVER";
         this.timer = 5;
-        for (const [i, playerId] of this.playerSolveOrder.entries()) {
-            const playerRoomInfo = this.players.get(playerId).playerRoomInfo;
+        for (const [i, {id, timeFactor}] of this.playerSolveOrder.entries()) {
+            const playerRoomInfo = this.players.get(id).playerRoomInfo;
             const numPlayers = this.players.size;
             playerRoomInfo.roundScore = Math.floor(
-                50 + (50 * (numPlayers - i)) / numPlayers
+                50 + (50 * (numPlayers - i)) / numPlayers + 50 * timeFactor
             );
             playerRoomInfo.score += playerRoomInfo.roundScore;
         }

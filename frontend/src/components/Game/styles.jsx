@@ -196,6 +196,13 @@ export const StyledPlayerAvatar = styled.div`
     top : 50%;
     transform: translateY(-50%);
 `;
+export const StyledPlayerRank = styled.div`
+    position: absolute;
+    left: 0;
+    top : 0;
+    font-weight: bold;
+    margin-left: 0.3em;
+`;
 //chat stuff
 export const StyledChatContainer = styled.div`
     border-radius: 15px;
@@ -411,7 +418,7 @@ export const StyledGuessListContainer = styled.div`
     overflow-y: auto;
     color: black;
     width: 100%;
-    max-width: 20em;
+    max-width: 22em;
     border: 0.1em solid black;
     background-color: white;
     scroll-behavior: smooth;
