@@ -238,7 +238,7 @@ export const StyledChatSendArea = styled.input`
     position: relative;
     font: inherit;
     height: 2.2em;
-    width: auto;
+    width: 100%;
     flex-grow: 0;
     min-width: 0;
     box-sizing: border-box;
