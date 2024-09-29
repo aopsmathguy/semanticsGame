@@ -50,7 +50,7 @@ export const StyledKeyboardWrapper = styled.div`
 `;
 //roombar
 export const RoomBarContainer = styled.div`
-    border-radius: 15px;
+    border-radius: 0.75em;
     display: flex;
     width: 100%;
     align-items: center;
@@ -82,7 +82,7 @@ export const LeaveButton = styled.div`
 //game bar
 
 export const StyledGameBarContainer = styled.div`
-    border-radius: 15px;
+    border-radius: 0.75em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,7 +136,7 @@ export const StyledGameBarPlayerAvatar = styled.div`
 `;
 //playerlist
 export const StyledPlayerListArea = styled.div`
-    border-radius: 15px;
+    border-radius: 0.75em;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -159,7 +159,6 @@ export const StyledPlayerCard = styled.div`
     cursor: pointer;
     position: relative;
     width: 100%;
-    // height: 48px;
     &:nth-child(odd) {
         background-color: ${({ solved }) =>
             solved ? "hsl(120, 100%, 80%)" : "hsl(0, 0%, 90%)"};
@@ -181,7 +180,7 @@ export const StyledPlayerInfo = styled.div`
 
 export const StyledPlayerName = styled.div`
     font-weight: bold;
-    margin-bottom: -7px; /* Adjust as needed for spacing */
+    margin-bottom: -0.35em; 
     color: ${({ isMe }) => (isMe ? "blue" : "black")};
     text-decoration: ${({ isHost }) => (isHost ? "underline" : "none")};
 `;
@@ -205,7 +204,7 @@ export const StyledPlayerRank = styled.div`
 `;
 //chat stuff
 export const StyledChatContainer = styled.div`
-    border-radius: 15px;
+    border-radius: 0.75em;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -247,7 +246,7 @@ export const StyledChatSendArea = styled.input`
 `;
 //guess list and input
 export const StyledGuessAreaContainer = styled.div`
-    border-radius: 15px;
+    border-radius: 0.75em;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -259,7 +258,7 @@ export const StyledGuessAreaContainer = styled.div`
 `;
 //overlay stuff
 export const StyledOverlay = styled.div`
-    border-radius: 15px;
+    border-radius: 0.75em;
     overflow: hidden;
     position: absolute;
     left: 0;

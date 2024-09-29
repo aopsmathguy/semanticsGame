@@ -8400,5 +8400,8 @@ export const words = [
     "zombie",
     "zone",
     "zoo",
-    "zoom"
+    "zoom",
+    "rainstorm",
+    "sandstorm",
+    "friday"
 ];
