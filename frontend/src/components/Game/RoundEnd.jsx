@@ -21,14 +21,14 @@ function RoundEnd({ players, targetWord, currentRound, settings }) {
                 </StyledText>
             </StyledWordReveal>
             <StyledPlayerRoundScoresContainer>
-                {[...Object.values(players)]
+                {[...Object.entries(players)]
                     .sort(
                         (a, b) =>
-                            b.playerRoomInfo.roundScore -
-                            a.playerRoomInfo.roundScore
+                            b[1].playerRoomInfo.roundScore -
+                            a[1].playerRoomInfo.roundScore
                     )
-                    .map(({ profile, playerRoomInfo }) => (
-                        <StyledPlayerRoundScores>
+                    .map(([id, { profile, playerRoomInfo }]) => (
+                        <StyledPlayerRoundScores key={id}>
                             <div
                                 style={{
                                     display: "flex",

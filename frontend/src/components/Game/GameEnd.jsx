@@ -11,13 +11,13 @@ function GameEnd({ players }) {
                 GAME END
             </StyledText>
             <StyledPlayerRoundScoresContainer>
-                {[...Object.values(players)]
+                {[...Object.entries(players)]
                     .sort(
                         (a, b) =>
-                            b.playerRoomInfo.score - a.playerRoomInfo.score
+                            b[1].playerRoomInfo.score - a[1].playerRoomInfo.score
                     )
-                    .map(({ profile, playerRoomInfo }) => (
-                        <StyledPlayerRoundScores>
+                    .map(([id, { profile, playerRoomInfo }]) => (
+                        <StyledPlayerRoundScores key={id}>
                             <div style={{display:"flex", alignItems:"center"}}>
                                 <Avatar size={48} opts={profile.avatar} />
                                 <StyledText

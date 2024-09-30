@@ -18,7 +18,7 @@ function RoomItem({
         <StyledPlayers>{players}/{maxPlayers}</StyledPlayers>
         <StyledPlayerAvatars>{
             avatars.map((avatar, i) => (
-                <StyledPlayerAvatarContainer>
+                <StyledPlayerAvatarContainer key={i}>
                     <StyledPlayerAbsoluteAvatar>
                         <Avatar opts={avatar} size={48} />
                     </StyledPlayerAbsoluteAvatar>
