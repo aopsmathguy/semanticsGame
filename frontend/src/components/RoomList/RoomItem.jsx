@@ -1,4 +1,5 @@
-import { StyledHints, StyledJoinButton, StyledPlayers, StyledRoomItem, StyledRoomName } from "./styles";
+import Avatar from "../Shared/Avatar";
+import { StyledHints, StyledJoinButton, StyledPlayerAbsoluteAvatar, StyledPlayerAvatarContainer, StyledPlayerAvatars, StyledPlayers, StyledRoomItem, StyledRoomName } from "./styles";
 
 function RoomItem({
     roomId,
@@ -10,10 +11,20 @@ function RoomItem({
     const maxPlayers = settings.maxPlayers;
     const players = Object.keys(playersData).length;
     const numberOfHints = settings.numberOfHints;
+    const avatars = Object.values(playersData).map(player => player.profile.avatar);
     return <StyledRoomItem>
         <StyledRoomName>{roomName}</StyledRoomName>
         <StyledHints>{numberOfHints} hints</StyledHints>
-        <StyledPlayers>{players}/{maxPlayers} players</StyledPlayers>
+        <StyledPlayers>{players}/{maxPlayers}</StyledPlayers>
+        <StyledPlayerAvatars>{
+            avatars.map((avatar, i) => (
+                <StyledPlayerAvatarContainer>
+                    <StyledPlayerAbsoluteAvatar>
+                        <Avatar opts={avatar} size={48} />
+                    </StyledPlayerAbsoluteAvatar>
+                </StyledPlayerAvatarContainer>
+            ))
+            }</StyledPlayerAvatars>
         <StyledJoinButton onClick={() => onJoinRoom({roomId})} disabled={players >= maxPlayers}>Join</StyledJoinButton>
     </StyledRoomItem>
 }

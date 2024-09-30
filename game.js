@@ -333,8 +333,14 @@ class Room {
     async createHints(allSimilarities) {
         //allSimilarities is sorted by similarity
         const hints = this.settings.numberOfHints;
+        const difficulty = this.settings.hintDifficulty;
+        const simThreshold1 = 0.6 - 0.005 * difficulty;
+        const simThreshold2 = 0.47 - 0.003 * difficulty;
+        const rankThreshold1 = 4 + 0.5 * difficulty;
+        const rankThreshold2 = 19 + 2 * difficulty;
+        const rankThreshold3 = 50 + 3 * difficulty;
         let wordsBySimilarity = allSimilarities.filter(
-            ({ similarity }, i) => similarity < 0.6 && i > 4 && (i < 40 || (similarity > 0.44 && i < 80))
+            ({ similarity }, i) => similarity < simThreshold1 && i >= rankThreshold1 && (i < rankThreshold2 || (similarity > simThreshold2 && i < rankThreshold3))
         );
         return getDistinctSubset(wordsBySimilarity, hints).sort((a, b) => b.similarity - a.similarity);
     }

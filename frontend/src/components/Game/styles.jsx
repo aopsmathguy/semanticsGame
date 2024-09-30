@@ -133,6 +133,7 @@ export const StyledGameBarPlayerAvatar = styled.div`
     right: 0;
     top : 50%;
     transform: translateY(-50%);
+    overflow: hidden;
 `;
 //playerlist
 export const StyledPlayerListArea = styled.div`
@@ -194,6 +195,7 @@ export const StyledPlayerAvatar = styled.div`
     right: 0;
     top : 50%;
     transform: translateY(-50%);
+    overflow: hidden;
 `;
 export const StyledPlayerRank = styled.div`
     position: absolute;
@@ -479,7 +481,7 @@ export const StyledPlayerAvatarColumn = styled.div`
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-right: 1.8em;
+    margin-right: 36px;
 `;
 export const StyledPlayerAvatarContainer = styled.div`
     width : 0;
@@ -492,6 +494,7 @@ export const StyledPlayerAbsoluteAvatar = styled.div`
     height: 36px;
     top: 50%;
     transform: translateY(-50%); 
+    overflow: hidden;
 `;
 //keyboard styles
 export const MobileInputContainer = styled.div`

@@ -19,7 +19,7 @@ const roomSettingsSchema = {
     guessTime: "uint8",
     numberOfRounds: "uint8",
     numberOfHints: "uint8",
-    hintDifficulty : "uint8"//1-10
+    hintDifficulty : "uint8"
 };
 const guessSchema = {
     playerId: "int32",

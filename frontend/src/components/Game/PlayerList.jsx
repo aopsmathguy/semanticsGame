@@ -33,6 +33,9 @@ function PlayerList({ players, playerId, hostId }) {
 
                     return (
                         <StyledPlayerCard key={playerId} solved={solved}>
+                            <StyledPlayerRank>
+                                #{rank}
+                            </StyledPlayerRank>
                             <StyledPlayerInfo>
                                 <StyledPlayerName isMe={playerId == myPlayerId} isHost={playerId == hostId}>
                                     {name}
@@ -47,9 +50,6 @@ function PlayerList({ players, playerId, hostId }) {
                                     size={48}
                                 />
                             </StyledPlayerAvatar>
-                            <StyledPlayerRank>
-                                #{rank}
-                            </StyledPlayerRank>
                         </StyledPlayerCard>
                     );
                 })}

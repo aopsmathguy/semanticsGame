@@ -6,6 +6,10 @@ export const StyledAvatarContainer = styled.div`
     flex: 0 0 auto;
     width: ${({ size }) => size}px;
     height: ${({ size }) => size}px;
+    transition: transform 0.1s;
+    &:hover {
+        transform: scale(1.1) rotate(5deg);
+    }
 `
 
 export const StyledSpriteImage = styled.div`

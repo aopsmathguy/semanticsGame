@@ -15,7 +15,7 @@ function GameBar({
 }) {
     const { profile } = players[playerId];
     const { name, avatar } = profile;
-    const {  numberOfRounds } = settings;
+    const { numberOfRounds } = settings;
     const state = (() => {
         switch (
             gameState //'WAIT_START' | 'WAIT_ROUND_START' | 'GUESSING' | 'WAIT_ROUND_END' | 'WAIT_GAME_END'
@@ -23,7 +23,7 @@ function GameBar({
             case "WAIT_START":
                 return "Waiting for host to start...";
             case "WAIT_ROUND_START":
-                return "Waiting...";
+                return "Round starting soon...";
             case "GUESSING":
                 return targetWord;
             case "ROUND_OVER":

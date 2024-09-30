@@ -61,10 +61,30 @@ export const StyledHints = styled.div`
     flex: 1;
 `;
 export const StyledPlayers = styled.div`
-    flex: 1;
+    flex: 0.5;
+`;
+export const StyledPlayerAvatars = styled.div`
+    flex: 0.5;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-right: 48px;
+`;
+export const StyledPlayerAvatarContainer = styled.div`
+    width : 0;
+    height : 100%;
+    display: block;
+    position: relative;
+`;
+export const StyledPlayerAbsoluteAvatar = styled.div`
+    position: absolute;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%); 
+    overflow: hidden;
 `;
 export const StyledJoinButton = styled.button`
-    flex: 1;
+    flex: 0.5;
     background-color: #00f;
     color: white;
     border: none;

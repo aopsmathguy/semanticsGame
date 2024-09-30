@@ -95,7 +95,26 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
                         }
                         disabled={!isHost}
                     >
-                        {[0,1,2,3,5,8,12,20].map((num) => (
+                        {[0,1,2,3,5,8,10,12,15].map((num) => (
+                            <option key={num} value={num} data-int-value={num}>
+                                {num}
+                            </option>
+                        ))}
+                    </StyledSelect>
+                </StyledSettingRow>
+
+                <StyledSettingRow>
+                    <StyledLabel htmlFor="hintDifficulty">
+                        Hint Difficulty (1-10):
+                    </StyledLabel>
+                    <StyledSelect
+                        value={localSettings.hintDifficulty}
+                        onChange={(e) =>
+                            changeSettings("hintDifficulty", parseInt(e.target.value))
+                        }
+                        disabled={!isHost}
+                    >
+                        {[1,2,3,4,5,6,7,8,9,10].map((num) => (
                             <option key={num} value={num} data-int-value={num}>
                                 {num}
                             </option>
