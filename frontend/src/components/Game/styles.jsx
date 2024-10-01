@@ -515,13 +515,14 @@ export const MobileInputSuggestionsWrapper = styled.div`
 `;
 export const StyledGuessInputMobile = styled.div`
     height: 2.2em;
-    width: 120px;
+    width: 150px;
     display: flex;
     align-items: center;
     justify-content: left;
-    border: 0.1em solid black;
+    border: 0em solid black;
     box-sizing: border-box;
-    background-color: white;
+    background-color: #88f;
+    color: white;
     padding: 0 5px;
 `;
 export const StyledCursor = styled.div`
@@ -529,7 +530,7 @@ export const StyledCursor = styled.div`
     width: .2ch;
     margin-left: .25ch;
     height: 80%;
-    background-color: #000;
+    background-color: white;
     animation: cursorpulse 1s infinite;
     @keyframes cursorpulse {
         0% {
