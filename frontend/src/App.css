@@ -25,4 +25,7 @@ p * {
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #66f;
     color: #fff;
+    &.hg-activeButton {
+        background-color: #44f;
+    }
 }
