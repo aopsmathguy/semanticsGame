@@ -13,14 +13,33 @@ p * {
 }
 .hg-theme-default{
     padding: 0;
-}
-.hg-theme-default .hg-row:not(:last-child) {
-    margin-bottom: 0;
+    background-color: #66f;
+    * {
+        font-size: 24px;
+    }
+    .hg-row{
+        &:not(:last-child) {
+            margin-bottom: 0px;
+        }
+        &:nth-child(2) {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        &:nth-child(4) {
+            :nth-child(1){
+                flex : 0.2;
+            }
+            :nth-child(3){
+                flex : 0.3;
+            }
+        }
+    }
 }
 .hg-theme-default .hg-row .hg-button-container, .hg-theme-default .hg-row .hg-button:not(:last-child) {
     margin-right: 0;
 }
 .hg-theme-default .hg-button {
+    height: 45px;
     border-radius: 0px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #66f;
