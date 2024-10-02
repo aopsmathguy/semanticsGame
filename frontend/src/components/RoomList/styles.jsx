@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 export const StyledRoomListWrapper = styled.div`
+    position: fixed;
     display: flex;
     flex-direction: column;
     height: 100dvh;

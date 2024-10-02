@@ -1,7 +1,9 @@
 import styled from "styled-components";
 //game layout
 export const StyledGameLayout = styled.div`
+    position: fixed;
     height: 100dvh;
+    width: 100vw;
     display: grid;
     grid-gap: 0.25em;
     gap: 0.25em;
