@@ -236,7 +236,8 @@ class Game {
         await roomObj.startGame();
     }
     async guessHandler(socket, data) {
-        const { word } = data;
+        let { word } = data;
+        word = word.trim().toLowerCase();
         const playerId = socket.playerId;
         if (!playerId) {
             return;

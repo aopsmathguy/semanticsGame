@@ -378,6 +378,9 @@ export const StyledWaitRoundContainer = styled.div`
 export const StyledGuessInputContainer = styled.div`
     display: flex;
     flex: 0 0 auto;
+    @media (max-width: 768px) and (orientation: portrait) {
+        display: none;
+    }
 `;
 export const StyledGuessInput = styled.input`
     font: inherit;
@@ -386,8 +389,6 @@ export const StyledGuessInput = styled.input`
     width: 150px;
     box-sizing: border-box;
     border: 0.1em solid black;
-    @media (max-width: 768px) and (orientation: portrait) {
-        display: none;
 `;
 export const StyledSuggestionsContainer = styled.div`
     position: absolute;
