@@ -383,7 +383,7 @@ export const StyledGuessInput = styled.input`
     font: inherit;
     position: relative;
     flex: 0 0 auto;
-    width: 120px;
+    width: 150px;
     box-sizing: border-box;
     border: 0.1em solid black;
     @media (max-width: 768px) and (orientation: portrait) {
