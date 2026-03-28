@@ -5,21 +5,16 @@ import RoomList from "../components/RoomList/RoomList";
 import { useSelector } from "react-redux";
 import { selectRoomList } from "../redux/slices/game";
 
-import useSocket from "../ws";
+import { emit } from "../ws";
 
 function RoomListContainer() {
     const roomList = useSelector(selectRoomList);
-
-    const socket = useSocket();
-    const onJoinRoom = socket.emitJoinRoom;
-    const onMakeRoom = socket.emitMakeRoom;
-    const onRefresh = socket.emitRoomListRequest;
     return (
         <RoomList
             roomList={roomList}
-            onJoinRoom={onJoinRoom}
-            onMakeRoom={onMakeRoom}
-            onRefresh={onRefresh}
+            onJoinRoom={(data) => emit("join-room", data)}
+            onMakeRoom={(data) => emit("make-room", data)}
+            onRefresh={(data) => emit("room-list-request", data)}
         />
     );
 }

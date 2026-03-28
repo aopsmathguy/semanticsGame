@@ -21,7 +21,7 @@ import {
     selectChatMessages,
 } from "../redux/slices/game";
 
-import useSocket from "../ws";
+import { emit } from "../ws";
 function GameContainer() {
     const wordFuse = useRef(new Fuse(words, { includeMatches: true }));
     const gameState = useSelector(selectGameState);
@@ -38,12 +38,11 @@ function GameContainer() {
     const targetWord = useSelector(selectTargetWord);
     const messages = useSelector(selectChatMessages);
 
-    const socket = useSocket();
-    const onChangeSettings = socket.emitSettingsChange;
-    const onLeaveRoom = socket.emitLeaveRoom;
-    const onStartGame = socket.emitStartGame;
-    const onGuess = socket.emitGuess;
-    const sendMessage = socket.emitChatMessage;
+    const onChangeSettings = (data) => emit("settings-change", data);
+    const onLeaveRoom = (data) => emit("leave-room", data);
+    const onStartGame = (data) => emit("start-game", data);
+    const onGuess = (data) => emit("guess", data);
+    const sendMessage = (data) => emit("chat-message", data);
 
     return (
         <>

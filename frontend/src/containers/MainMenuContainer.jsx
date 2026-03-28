@@ -4,12 +4,10 @@ import MainMenu from "../components/MainMenu/MainMenu";
 
 import { useSelector } from "react-redux";
 import { selectProfile } from "../redux/slices/game";
-import useSocket from "../ws";
+import { emit } from "../ws";
 
 function MainMenuContainer() {
     const profile = useSelector(selectProfile);
-    const socket = useSocket();
-    const sendJoin = socket.emitJoin;
-    return <MainMenu profile={profile} sendJoin={sendJoin} />;
+    return <MainMenu profile={profile} sendJoin={(data) => emit("join", data)} />;
 }
 export default MainMenuContainer;
