@@ -1,0 +1,13218 @@
+[
+  {
+    "word": "time",
+    "f": 955.185521
+  },
+  {
+    "word": "people",
+    "f": 554.876625
+  },
+  {
+    "word": "work",
+    "f": 521.783568
+  },
+  {
+    "word": "life",
+    "f": 484.140126
+  },
+  {
+    "word": "well",
+    "f": 443.495515
+  },
+  {
+    "word": "good",
+    "f": 414.056577
+  },
+  {
+    "word": "world",
+    "f": 407.240557
+  },
+  {
+    "word": "state",
+    "f": 402.267294
+  },
+  {
+    "word": "system",
+    "f": 395.282832
+  },
+  {
+    "word": "part",
+    "f": 382.25642
+  },
+  {
+    "word": "back",
+    "f": 372.531872
+  },
+  {
+    "word": "number",
+    "f": 344.028659
+  },
+  {
+    "word": "right",
+    "f": 336.057616
+  },
+  {
+    "word": "high",
+    "f": 334.035997
+  },
+  {
+    "word": "case",
+    "f": 319.15618
+  },
+  {
+    "word": "general",
+    "f": 317.69552
+  },
+  {
+    "word": "place",
+    "f": 302.443694
+  },
+  {
+    "word": "example",
+    "f": 295.866105
+  },
+  {
+    "word": "government",
+    "f": 290.396872
+  },
+  {
+    "word": "development",
+    "f": 283.987985
+  },
+  {
+    "word": "figure",
+    "f": 282.614786
+  },
+  {
+    "word": "power",
+    "f": 279.523905
+  },
+  {
+    "word": "university",
+    "f": 278.741098
+  },
+  {
+    "word": "water",
+    "f": 278.163521
+  },
+  {
+    "word": "point",
+    "f": 274.902257
+  },
+  {
+    "word": "information",
+    "f": 274.478822
+  },
+  {
+    "word": "year",
+    "f": 273.46584
+  },
+  {
+    "word": "second",
+    "f": 272.298387
+  },
+  {
+    "word": "form",
+    "f": 272.287986
+  },
+  {
+    "word": "group",
+    "f": 271.115113
+  },
+  {
+    "word": "women",
+    "f": 268.876614
+  },
+  {
+    "word": "data",
+    "f": 266.210894
+  },
+  {
+    "word": "need",
+    "f": 264.497187
+  },
+  {
+    "word": "press",
+    "f": 262.789827
+  },
+  {
+    "word": "order",
+    "f": 262.180982
+  },
+  {
+    "word": "public",
+    "f": 260.108854
+  },
+  {
+    "word": "process",
+    "f": 257.17594
+  },
+  {
+    "word": "human",
+    "f": 254.900655
+  },
+  {
+    "word": "family",
+    "f": 254.593884
+  },
+  {
+    "word": "think",
+    "f": 251.916515
+  },
+  {
+    "word": "thought",
+    "f": 249.773804
+  },
+  {
+    "word": "control",
+    "f": 246.187606
+  },
+  {
+    "word": "study",
+    "f": 242.114955
+  },
+  {
+    "word": "history",
+    "f": 241.764006
+  },
+  {
+    "word": "hand",
+    "f": 239.615147
+  },
+  {
+    "word": "chapter",
+    "f": 238.786295
+  },
+  {
+    "word": "school",
+    "f": 237.748931
+  },
+  {
+    "word": "present",
+    "f": 237.514875
+  },
+  {
+    "word": "change",
+    "f": 236.175639
+  },
+  {
+    "word": "house",
+    "f": 236.008193
+  },
+  {
+    "word": "home",
+    "f": 228.796558
+  },
+  {
+    "word": "fact",
+    "f": 228.672957
+  },
+  {
+    "word": "table",
+    "f": 226.456414
+  },
+  {
+    "word": "research",
+    "f": 223.407943
+  },
+  {
+    "word": "course",
+    "f": 220.505096
+  },
+  {
+    "word": "problem",
+    "f": 217.90582
+  },
+  {
+    "word": "level",
+    "f": 212.095488
+  },
+  {
+    "word": "something",
+    "f": 209.430557
+  },
+  {
+    "word": "want",
+    "f": 206.992682
+  },
+  {
+    "word": "book",
+    "f": 203.784999
+  },
+  {
+    "word": "area",
+    "f": 199.875599
+  },
+  {
+    "word": "body",
+    "f": 199.301229
+  },
+  {
+    "word": "means",
+    "f": 199.094628
+  },
+  {
+    "word": "value",
+    "f": 196.458103
+  },
+  {
+    "word": "society",
+    "f": 195.084278
+  },
+  {
+    "word": "help",
+    "f": 194.370396
+  },
+  {
+    "word": "nature",
+    "f": 192.196541
+  },
+  {
+    "word": "name",
+    "f": 189.826854
+  },
+  {
+    "word": "down",
+    "f": 188.994664
+  },
+  {
+    "word": "side",
+    "f": 188.963448
+  },
+  {
+    "word": "young",
+    "f": 188.43468
+  },
+  {
+    "word": "head",
+    "f": 188.298221
+  },
+  {
+    "word": "effect",
+    "f": 187.838873
+  },
+  {
+    "word": "period",
+    "f": 187.783766
+  },
+  {
+    "word": "common",
+    "f": 187.392464
+  },
+  {
+    "word": "line",
+    "f": 187.278742
+  },
+  {
+    "word": "self",
+    "f": 186.743563
+  },
+  {
+    "word": "type",
+    "f": 186.572249
+  },
+  {
+    "word": "education",
+    "f": 185.794009
+  },
+  {
+    "word": "white",
+    "f": 183.830588
+  },
+  {
+    "word": "question",
+    "f": 183.700459
+  },
+  {
+    "word": "look",
+    "f": 183.486814
+  },
+  {
+    "word": "child",
+    "f": 180.886155
+  },
+  {
+    "word": "nothing",
+    "f": 179.142175
+  },
+  {
+    "word": "country",
+    "f": 179.112969
+  },
+  {
+    "word": "city",
+    "f": 175.945864
+  },
+  {
+    "word": "result",
+    "f": 175.637413
+  },
+  {
+    "word": "business",
+    "f": 173.772647
+  },
+  {
+    "word": "light",
+    "f": 173.467557
+  },
+  {
+    "word": "love",
+    "f": 173.024319
+  },
+  {
+    "word": "policy",
+    "f": 172.113219
+  },
+  {
+    "word": "local",
+    "f": 172.02393
+  },
+  {
+    "word": "view",
+    "f": 170.489117
+  },
+  {
+    "word": "individual",
+    "f": 168.611472
+  },
+  {
+    "word": "major",
+    "f": 167.678075
+  },
+  {
+    "word": "experience",
+    "f": 167.649336
+  },
+  {
+    "word": "mind",
+    "f": 167.430787
+  },
+  {
+    "word": "land",
+    "f": 167.345007
+  },
+  {
+    "word": "support",
+    "f": 167.340302
+  },
+  {
+    "word": "century",
+    "f": 166.19293
+  },
+  {
+    "word": "action",
+    "f": 165.139071
+  },
+  {
+    "word": "sense",
+    "f": 164.466566
+  },
+  {
+    "word": "face",
+    "f": 164.057394
+  },
+  {
+    "word": "service",
+    "f": 164.034514
+  },
+  {
+    "word": "death",
+    "f": 163.536308
+  },
+  {
+    "word": "language",
+    "f": 163.50223
+  },
+  {
+    "word": "position",
+    "f": 162.847835
+  },
+  {
+    "word": "person",
+    "f": 162.817686
+  },
+  {
+    "word": "theory",
+    "f": 161.795971
+  },
+  {
+    "word": "rate",
+    "f": 161.436051
+  },
+  {
+    "word": "class",
+    "f": 160.716521
+  },
+  {
+    "word": "health",
+    "f": 160.523215
+  },
+  {
+    "word": "model",
+    "f": 160.019966
+  },
+  {
+    "word": "interest",
+    "f": 158.90582
+  },
+  {
+    "word": "black",
+    "f": 158.77652
+  },
+  {
+    "word": "room",
+    "f": 158.56048
+  },
+  {
+    "word": "section",
+    "f": 157.640393
+  },
+  {
+    "word": "open",
+    "f": 155.987617
+  },
+  {
+    "word": "care",
+    "f": 155.544581
+  },
+  {
+    "word": "father",
+    "f": 155.377135
+  },
+  {
+    "word": "mother",
+    "f": 155.348828
+  },
+  {
+    "word": "knowledge",
+    "f": 153.343727
+  },
+  {
+    "word": "treatment",
+    "f": 152.655092
+  },
+  {
+    "word": "full",
+    "f": 151.048063
+  },
+  {
+    "word": "field",
+    "f": 150.929509
+  },
+  {
+    "word": "community",
+    "f": 150.923666
+  },
+  {
+    "word": "total",
+    "f": 150.599969
+  },
+  {
+    "word": "show",
+    "f": 150.460715
+  },
+  {
+    "word": "function",
+    "f": 150.292461
+  },
+  {
+    "word": "south",
+    "f": 150.251232
+  },
+  {
+    "word": "structure",
+    "f": 149.51124
+  },
+  {
+    "word": "company",
+    "f": 149.228348
+  },
+  {
+    "word": "word",
+    "f": 147.674682
+  },
+  {
+    "word": "party",
+    "f": 147.305736
+  },
+  {
+    "word": "production",
+    "f": 147.215223
+  },
+  {
+    "word": "matter",
+    "f": 146.56748
+  },
+  {
+    "word": "short",
+    "f": 146.180344
+  },
+  {
+    "word": "kind",
+    "f": 145.930468
+  },
+  {
+    "word": "night",
+    "f": 145.767264
+  },
+  {
+    "word": "church",
+    "f": 143.404264
+  },
+  {
+    "word": "half",
+    "f": 142.941508
+  },
+  {
+    "word": "program",
+    "f": 142.672375
+  },
+  {
+    "word": "money",
+    "f": 142.643929
+  },
+  {
+    "word": "single",
+    "f": 142.090553
+  },
+  {
+    "word": "thing",
+    "f": 140.552279
+  },
+  {
+    "word": "woman",
+    "f": 139.496997
+  },
+  {
+    "word": "method",
+    "f": 139.448431
+  },
+  {
+    "word": "subject",
+    "f": 139.270627
+  },
+  {
+    "word": "growth",
+    "f": 139.186179
+  },
+  {
+    "word": "north",
+    "f": 136.206847
+  },
+  {
+    "word": "third",
+    "f": 136.108874
+  },
+  {
+    "word": "report",
+    "f": 135.537184
+  },
+  {
+    "word": "term",
+    "f": 134.185973
+  },
+  {
+    "word": "management",
+    "f": 133.838013
+  },
+  {
+    "word": "force",
+    "f": 133.254213
+  },
+  {
+    "word": "reason",
+    "f": 133.184169
+  },
+  {
+    "word": "blood",
+    "f": 132.957261
+  },
+  {
+    "word": "evidence",
+    "f": 132.542773
+  },
+  {
+    "word": "past",
+    "f": 131.986844
+  },
+  {
+    "word": "material",
+    "f": 131.495919
+  },
+  {
+    "word": "approach",
+    "f": 130.602692
+  },
+  {
+    "word": "energy",
+    "f": 130.59103
+  },
+  {
+    "word": "future",
+    "f": 129.319233
+  },
+  {
+    "word": "science",
+    "f": 129.308693
+  },
+  {
+    "word": "office",
+    "f": 129.158784
+  },
+  {
+    "word": "population",
+    "f": 128.8711
+  },
+  {
+    "word": "heart",
+    "f": 128.357442
+  },
+  {
+    "word": "journal",
+    "f": 127.65659
+  },
+  {
+    "word": "increase",
+    "f": 127.347683
+  },
+  {
+    "word": "activity",
+    "f": 126.06309
+  },
+  {
+    "word": "market",
+    "f": 125.651504
+  },
+  {
+    "word": "situation",
+    "f": 125.382031
+  },
+  {
+    "word": "food",
+    "f": 124.328279
+  },
+  {
+    "word": "cause",
+    "f": 124.146191
+  },
+  {
+    "word": "practice",
+    "f": 123.636513
+  },
+  {
+    "word": "surface",
+    "f": 123.607564
+  },
+  {
+    "word": "test",
+    "f": 123.437629
+  },
+  {
+    "word": "read",
+    "f": 123.42917
+  },
+  {
+    "word": "note",
+    "f": 123.243669
+  },
+  {
+    "word": "main",
+    "f": 122.73204
+  },
+  {
+    "word": "court",
+    "f": 122.433514
+  },
+  {
+    "word": "current",
+    "f": 121.269882
+  },
+  {
+    "word": "story",
+    "f": 120.74411
+  },
+  {
+    "word": "relationship",
+    "f": 120.132959
+  },
+  {
+    "word": "trade",
+    "f": 119.796355
+  },
+  {
+    "word": "patient",
+    "f": 119.508128
+  },
+  {
+    "word": "west",
+    "f": 119.056867
+  },
+  {
+    "word": "call",
+    "f": 118.794203
+  },
+  {
+    "word": "idea",
+    "f": 118.656309
+  },
+  {
+    "word": "turn",
+    "f": 117.907434
+  },
+  {
+    "word": "movement",
+    "f": 117.596683
+  },
+  {
+    "word": "cost",
+    "f": 117.076274
+  },
+  {
+    "word": "behavior",
+    "f": 116.665985
+  },
+  {
+    "word": "pressure",
+    "f": 115.794354
+  },
+  {
+    "word": "physical",
+    "f": 115.47518
+  },
+  {
+    "word": "play",
+    "f": 115.220277
+  },
+  {
+    "word": "culture",
+    "f": 114.949761
+  },
+  {
+    "word": "size",
+    "f": 114.779818
+  },
+  {
+    "word": "disease",
+    "f": 114.517241
+  },
+  {
+    "word": "paper",
+    "f": 114.33983
+  },
+  {
+    "word": "response",
+    "f": 114.294915
+  },
+  {
+    "word": "space",
+    "f": 113.702271
+  },
+  {
+    "word": "design",
+    "f": 113.598831
+  },
+  {
+    "word": "source",
+    "f": 112.547177
+  },
+  {
+    "word": "strong",
+    "f": 112.208948
+  },
+  {
+    "word": "hard",
+    "f": 111.908028
+  },
+  {
+    "word": "cell",
+    "f": 111.488249
+  },
+  {
+    "word": "account",
+    "f": 110.426637
+  },
+  {
+    "word": "range",
+    "f": 110.080468
+  },
+  {
+    "word": "influence",
+    "f": 109.823806
+  },
+  {
+    "word": "return",
+    "f": 109.609907
+  },
+  {
+    "word": "outside",
+    "f": 108.150856
+  },
+  {
+    "word": "plan",
+    "f": 107.311353
+  },
+  {
+    "word": "king",
+    "f": 107.269482
+  },
+  {
+    "word": "addition",
+    "f": 106.708629
+  },
+  {
+    "word": "attention",
+    "f": 106.030336
+  },
+  {
+    "word": "below",
+    "f": 105.809401
+  },
+  {
+    "word": "review",
+    "f": 105.426169
+  },
+  {
+    "word": "moment",
+    "f": 104.674448
+  },
+  {
+    "word": "middle",
+    "f": 104.173368
+  },
+  {
+    "word": "military",
+    "f": 103.888664
+  },
+  {
+    "word": "today",
+    "f": 103.842706
+  },
+  {
+    "word": "poor",
+    "f": 102.777063
+  },
+  {
+    "word": "building",
+    "f": 102.693035
+  },
+  {
+    "word": "series",
+    "f": 102.356249
+  },
+  {
+    "word": "organization",
+    "f": 101.691687
+  },
+  {
+    "word": "east",
+    "f": 101.665077
+  },
+  {
+    "word": "complete",
+    "f": 101.275903
+  },
+  {
+    "word": "performance",
+    "f": 100.959528
+  },
+  {
+    "word": "quality",
+    "f": 100.378586
+  },
+  {
+    "word": "amount",
+    "f": 100.112572
+  },
+  {
+    "word": "president",
+    "f": 99.963952
+  },
+  {
+    "word": "door",
+    "f": 99.584058
+  },
+  {
+    "word": "stage",
+    "f": 98.62556
+  },
+  {
+    "word": "learning",
+    "f": 98.584153
+  },
+  {
+    "word": "front",
+    "f": 98.069746
+  },
+  {
+    "word": "union",
+    "f": 97.51298
+  },
+  {
+    "word": "ground",
+    "f": 97.369025
+  },
+  {
+    "word": "letter",
+    "f": 97.12586
+  },
+  {
+    "word": "training",
+    "f": 96.439377
+  },
+  {
+    "word": "decision",
+    "f": 95.658461
+  },
+  {
+    "word": "standard",
+    "f": 95.216825
+  },
+  {
+    "word": "answer",
+    "f": 95.014088
+  },
+  {
+    "word": "industry",
+    "f": 94.801556
+  },
+  {
+    "word": "difference",
+    "f": 94.290138
+  },
+  {
+    "word": "understanding",
+    "f": 94.010275
+  },
+  {
+    "word": "voice",
+    "f": 93.741863
+  },
+  {
+    "word": "department",
+    "f": 93.649764
+  },
+  {
+    "word": "wife",
+    "f": 93.630519
+  },
+  {
+    "word": "project",
+    "f": 93.627475
+  },
+  {
+    "word": "capital",
+    "f": 93.052641
+  },
+  {
+    "word": "leave",
+    "f": 92.996226
+  },
+  {
+    "word": "discussion",
+    "f": 92.864643
+  },
+  {
+    "word": "price",
+    "f": 92.779885
+  },
+  {
+    "word": "rest",
+    "f": 92.603315
+  },
+  {
+    "word": "solution",
+    "f": 92.581136
+  },
+  {
+    "word": "potential",
+    "f": 92.394711
+  },
+  {
+    "word": "beginning",
+    "f": 92.334883
+  },
+  {
+    "word": "purpose",
+    "f": 92.003361
+  },
+  {
+    "word": "march",
+    "f": 91.785506
+  },
+  {
+    "word": "reading",
+    "f": 91.064097
+  },
+  {
+    "word": "center",
+    "f": 91.027637
+  },
+  {
+    "word": "writing",
+    "f": 90.838877
+  },
+  {
+    "word": "feet",
+    "f": 90.726055
+  },
+  {
+    "word": "issue",
+    "f": 90.559901
+  },
+  {
+    "word": "lord",
+    "f": 90.552461
+  },
+  {
+    "word": "town",
+    "f": 90.138295
+  },
+  {
+    "word": "parents",
+    "f": 90.128547
+  },
+  {
+    "word": "character",
+    "f": 90.027268
+  },
+  {
+    "word": "cent",
+    "f": 89.94475
+  },
+  {
+    "word": "text",
+    "f": 89.741054
+  },
+  {
+    "word": "lead",
+    "f": 89.425852
+  },
+  {
+    "word": "object",
+    "f": 89.321739
+  },
+  {
+    "word": "move",
+    "f": 89.24772
+  },
+  {
+    "word": "complex",
+    "f": 89.070646
+  },
+  {
+    "word": "income",
+    "f": 89.040555
+  },
+  {
+    "word": "western",
+    "f": 88.980402
+  },
+  {
+    "word": "risk",
+    "f": 88.52417
+  },
+  {
+    "word": "river",
+    "f": 88.511874
+  },
+  {
+    "word": "loss",
+    "f": 88.45054
+  },
+  {
+    "word": "morning",
+    "f": 88.105489
+  },
+  {
+    "word": "average",
+    "f": 87.986031
+  },
+  {
+    "word": "distribution",
+    "f": 87.947505
+  },
+  {
+    "word": "meaning",
+    "f": 87.847598
+  },
+  {
+    "word": "college",
+    "f": 87.802765
+  },
+  {
+    "word": "region",
+    "f": 87.706711
+  },
+  {
+    "word": "importance",
+    "f": 87.28571
+  },
+  {
+    "word": "property",
+    "f": 87.207248
+  },
+  {
+    "word": "volume",
+    "f": 86.942412
+  },
+  {
+    "word": "degree",
+    "f": 86.725813
+  },
+  {
+    "word": "committee",
+    "f": 86.464758
+  },
+  {
+    "word": "june",
+    "f": 86.447694
+  },
+  {
+    "word": "association",
+    "f": 86.363844
+  },
+  {
+    "word": "army",
+    "f": 86.220467
+  },
+  {
+    "word": "literature",
+    "f": 86.178838
+  },
+  {
+    "word": "step",
+    "f": 86.084436
+  },
+  {
+    "word": "rule",
+    "f": 86.008776
+  },
+  {
+    "word": "fire",
+    "f": 85.887745
+  },
+  {
+    "word": "truth",
+    "f": 85.871595
+  },
+  {
+    "word": "temperature",
+    "f": 85.78769
+  },
+  {
+    "word": "environment",
+    "f": 85.713366
+  },
+  {
+    "word": "list",
+    "f": 84.309565
+  },
+  {
+    "word": "music",
+    "f": 84.152561
+  },
+  {
+    "word": "product",
+    "f": 83.943323
+  },
+  {
+    "word": "talk",
+    "f": 83.738513
+  },
+  {
+    "word": "twenty",
+    "f": 83.458547
+  },
+  {
+    "word": "presence",
+    "f": 83.215703
+  },
+  {
+    "word": "condition",
+    "f": 83.031553
+  },
+  {
+    "word": "sound",
+    "f": 82.944786
+  },
+  {
+    "word": "positive",
+    "f": 82.390224
+  },
+  {
+    "word": "page",
+    "f": 82.221676
+  },
+  {
+    "word": "species",
+    "f": 81.783195
+  },
+  {
+    "word": "respect",
+    "f": 81.53712
+  },
+  {
+    "word": "application",
+    "f": 81.29413
+  },
+  {
+    "word": "street",
+    "f": 81.187923
+  },
+  {
+    "word": "image",
+    "f": 80.880744
+  },
+  {
+    "word": "road",
+    "f": 80.65533
+  },
+  {
+    "word": "factor",
+    "f": 80.626373
+  },
+  {
+    "word": "status",
+    "f": 80.349257
+  },
+  {
+    "word": "hope",
+    "f": 80.130315
+  },
+  {
+    "word": "deal",
+    "f": 80.07748
+  },
+  {
+    "word": "thinking",
+    "f": 80.009307
+  },
+  {
+    "word": "earth",
+    "f": 79.940786
+  },
+  {
+    "word": "produce",
+    "f": 79.649562
+  },
+  {
+    "word": "security",
+    "f": 79.64234
+  },
+  {
+    "word": "meeting",
+    "f": 79.193528
+  },
+  {
+    "word": "start",
+    "f": 79.142683
+  },
+  {
+    "word": "spirit",
+    "f": 79.00905
+  },
+  {
+    "word": "direction",
+    "f": 78.902899
+  },
+  {
+    "word": "july",
+    "f": 78.569181
+  },
+  {
+    "word": "pain",
+    "f": 78.528332
+  },
+  {
+    "word": "board",
+    "f": 78.295969
+  },
+  {
+    "word": "operation",
+    "f": 78.20217
+  },
+  {
+    "word": "fall",
+    "f": 78.107312
+  },
+  {
+    "word": "deep",
+    "f": 78.042093
+  },
+  {
+    "word": "length",
+    "f": 77.955917
+  },
+  {
+    "word": "mass",
+    "f": 77.950534
+  },
+  {
+    "word": "pattern",
+    "f": 77.745272
+  },
+  {
+    "word": "member",
+    "f": 77.293646
+  },
+  {
+    "word": "scale",
+    "f": 77.236609
+  },
+  {
+    "word": "authority",
+    "f": 77.198475
+  },
+  {
+    "word": "success",
+    "f": 77.051738
+  },
+  {
+    "word": "cross",
+    "f": 77.049736
+  },
+  {
+    "word": "politics",
+    "f": 76.845608
+  },
+  {
+    "word": "technology",
+    "f": 76.645459
+  },
+  {
+    "word": "concept",
+    "f": 76.375054
+  },
+  {
+    "word": "million",
+    "f": 76.108902
+  },
+  {
+    "word": "friend",
+    "f": 76.074051
+  },
+  {
+    "word": "unit",
+    "f": 75.8803
+  },
+  {
+    "word": "wall",
+    "f": 75.792471
+  },
+  {
+    "word": "council",
+    "f": 75.63333
+  },
+  {
+    "word": "base",
+    "f": 75.59943
+  },
+  {
+    "word": "will",
+    "f": 75.292956
+  },
+  {
+    "word": "expression",
+    "f": 75.026848
+  },
+  {
+    "word": "dead",
+    "f": 74.610065
+  },
+  {
+    "word": "staff",
+    "f": 74.524682
+  },
+  {
+    "word": "library",
+    "f": 74.437363
+  },
+  {
+    "word": "reference",
+    "f": 74.39747
+  },
+  {
+    "word": "choice",
+    "f": 74.351219
+  },
+  {
+    "word": "content",
+    "f": 73.803356
+  },
+  {
+    "word": "post",
+    "f": 73.776353
+  },
+  {
+    "word": "ability",
+    "f": 73.69883
+  },
+  {
+    "word": "task",
+    "f": 73.259247
+  },
+  {
+    "word": "bank",
+    "f": 72.908393
+  },
+  {
+    "word": "computer",
+    "f": 72.862308
+  },
+  {
+    "word": "peace",
+    "f": 72.244053
+  },
+  {
+    "word": "someone",
+    "f": 72.188601
+  },
+  {
+    "word": "extent",
+    "f": 71.639085
+  },
+  {
+    "word": "strength",
+    "f": 71.300722
+  },
+  {
+    "word": "inside",
+    "f": 71.264689
+  },
+  {
+    "word": "feeling",
+    "f": 71.011702
+  },
+  {
+    "word": "week",
+    "f": 70.947188
+  },
+  {
+    "word": "weight",
+    "f": 70.446905
+  },
+  {
+    "word": "moral",
+    "f": 70.435766
+  },
+  {
+    "word": "record",
+    "f": 70.267912
+  },
+  {
+    "word": "communication",
+    "f": 69.992635
+  },
+  {
+    "word": "introduction",
+    "f": 69.683981
+  },
+  {
+    "word": "freedom",
+    "f": 69.610961
+  },
+  {
+    "word": "hundred",
+    "f": 69.505544
+  },
+  {
+    "word": "failure",
+    "f": 69.472226
+  },
+  {
+    "word": "context",
+    "f": 68.954965
+  },
+  {
+    "word": "religion",
+    "f": 68.935348
+  },
+  {
+    "word": "fear",
+    "f": 68.883927
+  },
+  {
+    "word": "dark",
+    "f": 68.871627
+  },
+  {
+    "word": "distance",
+    "f": 68.486667
+  },
+  {
+    "word": "relation",
+    "f": 68.410884
+  },
+  {
+    "word": "date",
+    "f": 68.400158
+  },
+  {
+    "word": "october",
+    "f": 68.20701
+  },
+  {
+    "word": "supply",
+    "f": 68.201294
+  },
+  {
+    "word": "chief",
+    "f": 68.14122
+  },
+  {
+    "word": "access",
+    "f": 67.992766
+  },
+  {
+    "word": "demand",
+    "f": 67.801917
+  },
+  {
+    "word": "january",
+    "f": 67.643921
+  },
+  {
+    "word": "cold",
+    "f": 67.632612
+  },
+  {
+    "word": "contact",
+    "f": 67.590424
+  },
+  {
+    "word": "seven",
+    "f": 67.550495
+  },
+  {
+    "word": "picture",
+    "f": 67.454781
+  },
+  {
+    "word": "student",
+    "f": 67.350275
+  },
+  {
+    "word": "memory",
+    "f": 67.273283
+  },
+  {
+    "word": "news",
+    "f": 67.173705
+  },
+  {
+    "word": "attempt",
+    "f": 67.135984
+  },
+  {
+    "word": "reality",
+    "f": 67.115688
+  },
+  {
+    "word": "manner",
+    "f": 67.078161
+  },
+  {
+    "word": "september",
+    "f": 66.940287
+  },
+  {
+    "word": "acid",
+    "f": 66.672795
+  },
+  {
+    "word": "popular",
+    "f": 66.65173
+  },
+  {
+    "word": "principle",
+    "f": 66.498512
+  },
+  {
+    "word": "statement",
+    "f": 66.29432
+  },
+  {
+    "word": "relative",
+    "f": 66.253444
+  },
+  {
+    "word": "congress",
+    "f": 66.184812
+  },
+  {
+    "word": "girl",
+    "f": 66.081384
+  },
+  {
+    "word": "speech",
+    "f": 65.763867
+  },
+  {
+    "word": "share",
+    "f": 65.634119
+  },
+  {
+    "word": "heat",
+    "f": 65.587162
+  },
+  {
+    "word": "measure",
+    "f": 65.454805
+  },
+  {
+    "word": "existence",
+    "f": 65.441232
+  },
+  {
+    "word": "procedure",
+    "f": 65.430553
+  },
+  {
+    "word": "constant",
+    "f": 65.267341
+  },
+  {
+    "word": "plant",
+    "f": 65.234508
+  },
+  {
+    "word": "green",
+    "f": 65.11463
+  },
+  {
+    "word": "style",
+    "f": 65.032544
+  },
+  {
+    "word": "construction",
+    "f": 64.596881
+  },
+  {
+    "word": "author",
+    "f": 64.462174
+  },
+  {
+    "word": "police",
+    "f": 64.417278
+  },
+  {
+    "word": "instance",
+    "f": 64.257689
+  },
+  {
+    "word": "variety",
+    "f": 64.146789
+  },
+  {
+    "word": "marriage",
+    "f": 64.067272
+  },
+  {
+    "word": "hour",
+    "f": 63.914462
+  },
+  {
+    "word": "reaction",
+    "f": 63.494797
+  },
+  {
+    "word": "sample",
+    "f": 63.40342
+  },
+  {
+    "word": "stand",
+    "f": 63.385186
+  },
+  {
+    "word": "impact",
+    "f": 63.240822
+  },
+  {
+    "word": "exchange",
+    "f": 63.142504
+  },
+  {
+    "word": "stop",
+    "f": 63.140883
+  },
+  {
+    "word": "wrong",
+    "f": 63.088222
+  },
+  {
+    "word": "teaching",
+    "f": 62.90194
+  },
+  {
+    "word": "eight",
+    "f": 62.537723
+  },
+  {
+    "word": "network",
+    "f": 62.473321
+  },
+  {
+    "word": "faith",
+    "f": 62.384841
+  },
+  {
+    "word": "round",
+    "f": 62.224368
+  },
+  {
+    "word": "film",
+    "f": 62.044495
+  },
+  {
+    "word": "progress",
+    "f": 62.042668
+  },
+  {
+    "word": "november",
+    "f": 61.810059
+  },
+  {
+    "word": "professional",
+    "f": 61.633361
+  },
+  {
+    "word": "therapy",
+    "f": 61.571234
+  },
+  {
+    "word": "male",
+    "f": 61.475124
+  },
+  {
+    "word": "stress",
+    "f": 61.413366
+  },
+  {
+    "word": "village",
+    "f": 61.407899
+  },
+  {
+    "word": "brain",
+    "f": 61.107903
+  },
+  {
+    "word": "contrast",
+    "f": 61.027819
+  },
+  {
+    "word": "skin",
+    "f": 60.907656
+  },
+  {
+    "word": "female",
+    "f": 60.743413
+  },
+  {
+    "word": "opinion",
+    "f": 60.643703
+  },
+  {
+    "word": "teacher",
+    "f": 60.627923
+  },
+  {
+    "word": "brown",
+    "f": 60.545354
+  },
+  {
+    "word": "file",
+    "f": 60.274151
+  },
+  {
+    "word": "justice",
+    "f": 60.121444
+  },
+  {
+    "word": "formation",
+    "f": 59.750199
+  },
+  {
+    "word": "conflict",
+    "f": 59.719181
+  },
+  {
+    "word": "doubt",
+    "f": 59.703579
+  },
+  {
+    "word": "agreement",
+    "f": 59.61081
+  },
+  {
+    "word": "focus",
+    "f": 59.230591
+  },
+  {
+    "word": "floor",
+    "f": 58.995418
+  },
+  {
+    "word": "event",
+    "f": 58.74398
+  },
+  {
+    "word": "resistance",
+    "f": 58.716624
+  },
+  {
+    "word": "article",
+    "f": 58.684865
+  },
+  {
+    "word": "offer",
+    "f": 58.590939
+  },
+  {
+    "word": "equipment",
+    "f": 58.53037
+  },
+  {
+    "word": "color",
+    "f": 58.379672
+  },
+  {
+    "word": "code",
+    "f": 58.364724
+  },
+  {
+    "word": "hospital",
+    "f": 58.359238
+  },
+  {
+    "word": "revolution",
+    "f": 58.342133
+  },
+  {
+    "word": "collection",
+    "f": 58.236795
+  },
+  {
+    "word": "frequency",
+    "f": 58.10694
+  },
+  {
+    "word": "drug",
+    "f": 58.054532
+  },
+  {
+    "word": "county",
+    "f": 57.790092
+  },
+  {
+    "word": "hair",
+    "f": 57.648662
+  },
+  {
+    "word": "blue",
+    "f": 57.55614
+  },
+  {
+    "word": "nation",
+    "f": 57.292901
+  },
+  {
+    "word": "brother",
+    "f": 57.243431
+  },
+  {
+    "word": "commission",
+    "f": 57.173847
+  },
+  {
+    "word": "division",
+    "f": 56.990538
+  },
+  {
+    "word": "husband",
+    "f": 56.950649
+  },
+  {
+    "word": "summer",
+    "f": 56.83894
+  },
+  {
+    "word": "description",
+    "f": 56.683763
+  },
+  {
+    "word": "stay",
+    "f": 56.391885
+  },
+  {
+    "word": "address",
+    "f": 56.261427
+  },
+  {
+    "word": "minister",
+    "f": 56.255124
+  },
+  {
+    "word": "majority",
+    "f": 56.254502
+  },
+  {
+    "word": "opportunity",
+    "f": 56.169099
+  },
+  {
+    "word": "wish",
+    "f": 55.914676
+  },
+  {
+    "word": "desire",
+    "f": 55.662191
+  },
+  {
+    "word": "charge",
+    "f": 55.578088
+  },
+  {
+    "word": "conference",
+    "f": 55.45819
+  },
+  {
+    "word": "concern",
+    "f": 55.287225
+  },
+  {
+    "word": "responsibility",
+    "f": 55.116013
+  },
+  {
+    "word": "tree",
+    "f": 55.037083
+  },
+  {
+    "word": "investment",
+    "f": 54.938741
+  },
+  {
+    "word": "exercise",
+    "f": 54.748978
+  },
+  {
+    "word": "attack",
+    "f": 54.710199
+  },
+  {
+    "word": "hall",
+    "f": 54.685277
+  },
+  {
+    "word": "search",
+    "f": 54.443436
+  },
+  {
+    "word": "protection",
+    "f": 54.442073
+  },
+  {
+    "word": "command",
+    "f": 54.409762
+  },
+  {
+    "word": "island",
+    "f": 54.308899
+  },
+  {
+    "word": "argument",
+    "f": 54.306588
+  },
+  {
+    "word": "game",
+    "f": 53.865368
+  },
+  {
+    "word": "balance",
+    "f": 53.857397
+  },
+  {
+    "word": "tradition",
+    "f": 53.752478
+  },
+  {
+    "word": "element",
+    "f": 53.733384
+  },
+  {
+    "word": "employment",
+    "f": 53.720398
+  },
+  {
+    "word": "pass",
+    "f": 53.630642
+  },
+  {
+    "word": "window",
+    "f": 53.281279
+  },
+  {
+    "word": "concentration",
+    "f": 52.690117
+  },
+  {
+    "word": "gold",
+    "f": 52.502372
+  },
+  {
+    "word": "team",
+    "f": 52.471469
+  },
+  {
+    "word": "bill",
+    "f": 52.462709
+  },
+  {
+    "word": "survey",
+    "f": 52.355111
+  },
+  {
+    "word": "definition",
+    "f": 52.292092
+  },
+  {
+    "word": "soil",
+    "f": 52.272776
+  },
+  {
+    "word": "media",
+    "f": 52.017132
+  },
+  {
+    "word": "month",
+    "f": 51.972038
+  },
+  {
+    "word": "district",
+    "f": 51.92629
+  },
+  {
+    "word": "setting",
+    "f": 51.891463
+  },
+  {
+    "word": "identity",
+    "f": 51.846052
+  },
+  {
+    "word": "master",
+    "f": 51.749692
+  },
+  {
+    "word": "animal",
+    "f": 51.710976
+  },
+  {
+    "word": "hill",
+    "f": 51.64473
+  },
+  {
+    "word": "cover",
+    "f": 51.586527
+  },
+  {
+    "word": "alternative",
+    "f": 51.406155
+  },
+  {
+    "word": "shape",
+    "f": 51.372949
+  },
+  {
+    "word": "spring",
+    "f": 51.369901
+  },
+  {
+    "word": "machine",
+    "f": 51.227694
+  },
+  {
+    "word": "technique",
+    "f": 51.224697
+  },
+  {
+    "word": "daughter",
+    "f": 51.189453
+  },
+  {
+    "word": "evening",
+    "f": 51.095627
+  },
+  {
+    "word": "interpretation",
+    "f": 51.078696
+  },
+  {
+    "word": "index",
+    "f": 51.026388
+  },
+  {
+    "word": "chance",
+    "f": 51.006394
+  },
+  {
+    "word": "institute",
+    "f": 50.783366
+  },
+  {
+    "word": "glass",
+    "f": 50.772144
+  },
+  {
+    "word": "cancer",
+    "f": 50.683938
+  },
+  {
+    "word": "sign",
+    "f": 50.637076
+  },
+  {
+    "word": "carry",
+    "f": 50.628573
+  },
+  {
+    "word": "strategy",
+    "f": 50.450147
+  },
+  {
+    "word": "thousand",
+    "f": 50.227551
+  },
+  {
+    "word": "tissue",
+    "f": 50.213701
+  },
+  {
+    "word": "message",
+    "f": 50.114638
+  },
+  {
+    "word": "chemical",
+    "f": 50.0761
+  },
+  {
+    "word": "transfer",
+    "f": 50.054433
+  },
+  {
+    "word": "speed",
+    "f": 50.016775
+  },
+  {
+    "word": "mark",
+    "f": 49.983117
+  },
+  {
+    "word": "visit",
+    "f": 49.956515
+  },
+  {
+    "word": "birth",
+    "f": 49.928783
+  },
+  {
+    "word": "stone",
+    "f": 49.885446
+  },
+  {
+    "word": "iron",
+    "f": 49.870244
+  },
+  {
+    "word": "possibility",
+    "f": 49.728877
+  },
+  {
+    "word": "connection",
+    "f": 49.637952
+  },
+  {
+    "word": "joint",
+    "f": 49.601991
+  },
+  {
+    "word": "mouth",
+    "f": 49.593571
+  },
+  {
+    "word": "official",
+    "f": 49.496276
+  },
+  {
+    "word": "race",
+    "f": 49.441129
+  },
+  {
+    "word": "maximum",
+    "f": 49.403943
+  },
+  {
+    "word": "miss",
+    "f": 49.214577
+  },
+  {
+    "word": "commercial",
+    "f": 49.204406
+  },
+  {
+    "word": "double",
+    "f": 49.113797
+  },
+  {
+    "word": "happy",
+    "f": 49.009288
+  },
+  {
+    "word": "sleep",
+    "f": 48.983787
+  },
+  {
+    "word": "path",
+    "f": 48.936248
+  },
+  {
+    "word": "fish",
+    "f": 48.638919
+  },
+  {
+    "word": "comparison",
+    "f": 48.59
+  },
+  {
+    "word": "rose",
+    "f": 48.532839
+  },
+  {
+    "word": "advantage",
+    "f": 48.256639
+  },
+  {
+    "word": "check",
+    "f": 48.178446
+  },
+  {
+    "word": "motion",
+    "f": 48.13502
+  },
+  {
+    "word": "scene",
+    "f": 48.107522
+  },
+  {
+    "word": "piece",
+    "f": 48.026107
+  },
+  {
+    "word": "worth",
+    "f": 48.017973
+  },
+  {
+    "word": "attitude",
+    "f": 47.420969
+  },
+  {
+    "word": "foot",
+    "f": 46.962116
+  },
+  {
+    "word": "title",
+    "f": 46.774375
+  },
+  {
+    "word": "error",
+    "f": 46.698418
+  },
+  {
+    "word": "battle",
+    "f": 46.644009
+  },
+  {
+    "word": "background",
+    "f": 46.627828
+  },
+  {
+    "word": "location",
+    "f": 46.627047
+  },
+  {
+    "word": "lady",
+    "f": 46.38582
+  },
+  {
+    "word": "generation",
+    "f": 46.348753
+  },
+  {
+    "word": "selection",
+    "f": 46.303203
+  },
+  {
+    "word": "leadership",
+    "f": 45.943529
+  },
+  {
+    "word": "goal",
+    "f": 45.862344
+  },
+  {
+    "word": "origin",
+    "f": 45.832138
+  },
+  {
+    "word": "trust",
+    "f": 45.787532
+  },
+  {
+    "word": "principal",
+    "f": 45.67536
+  },
+  {
+    "word": "break",
+    "f": 45.652765
+  },
+  {
+    "word": "bone",
+    "f": 45.640719
+  },
+  {
+    "word": "perspective",
+    "f": 45.626294
+  },
+  {
+    "word": "detail",
+    "f": 45.463835
+  },
+  {
+    "word": "square",
+    "f": 45.370115
+  },
+  {
+    "word": "wind",
+    "f": 45.361731
+  },
+  {
+    "word": "drive",
+    "f": 45.241897
+  },
+  {
+    "word": "spread",
+    "f": 45.23448
+  },
+  {
+    "word": "wood",
+    "f": 45.003504
+  },
+  {
+    "word": "ratio",
+    "f": 44.986039
+  },
+  {
+    "word": "fast",
+    "f": 44.961078
+  },
+  {
+    "word": "vision",
+    "f": 44.632612
+  },
+  {
+    "word": "signal",
+    "f": 44.453283
+  },
+  {
+    "word": "bottom",
+    "f": 44.424536
+  },
+  {
+    "word": "secretary",
+    "f": 44.3071
+  },
+  {
+    "word": "gain",
+    "f": 44.092911
+  },
+  {
+    "word": "conclusion",
+    "f": 44.011143
+  },
+  {
+    "word": "credit",
+    "f": 43.885065
+  },
+  {
+    "word": "interaction",
+    "f": 43.857381
+  },
+  {
+    "word": "absence",
+    "f": 43.815941
+  },
+  {
+    "word": "winter",
+    "f": 43.806063
+  },
+  {
+    "word": "leader",
+    "f": 43.757188
+  },
+  {
+    "word": "input",
+    "f": 43.729844
+  },
+  {
+    "word": "royal",
+    "f": 43.616994
+  },
+  {
+    "word": "benefit",
+    "f": 43.611909
+  },
+  {
+    "word": "difficulty",
+    "f": 43.599287
+  },
+  {
+    "word": "violence",
+    "f": 43.526021
+  },
+  {
+    "word": "personality",
+    "f": 43.49431
+  },
+  {
+    "word": "medicine",
+    "f": 43.49052
+  },
+  {
+    "word": "adult",
+    "f": 43.262093
+  },
+  {
+    "word": "guide",
+    "f": 43.240275
+  },
+  {
+    "word": "version",
+    "f": 43.224427
+  },
+  {
+    "word": "doctor",
+    "f": 43.213757
+  },
+  {
+    "word": "muscle",
+    "f": 42.695239
+  },
+  {
+    "word": "professor",
+    "f": 42.59197
+  },
+  {
+    "word": "reduction",
+    "f": 42.440527
+  },
+  {
+    "word": "career",
+    "f": 42.364026
+  },
+  {
+    "word": "crisis",
+    "f": 42.358627
+  },
+  {
+    "word": "trouble",
+    "f": 42.271087
+  },
+  {
+    "word": "block",
+    "f": 42.234742
+  },
+  {
+    "word": "metal",
+    "f": 42.192006
+  },
+  {
+    "word": "station",
+    "f": 42.176253
+  },
+  {
+    "word": "edge",
+    "f": 42.101303
+  },
+  {
+    "word": "walk",
+    "f": 42.077646
+  },
+  {
+    "word": "layer",
+    "f": 41.988845
+  },
+  {
+    "word": "struggle",
+    "f": 41.953114
+  },
+  {
+    "word": "fight",
+    "f": 41.89025
+  },
+  {
+    "word": "rock",
+    "f": 41.76952
+  },
+  {
+    "word": "notice",
+    "f": 41.666409
+  },
+  {
+    "word": "safety",
+    "f": 41.583745
+  },
+  {
+    "word": "plate",
+    "f": 41.580502
+  },
+  {
+    "word": "forest",
+    "f": 41.519861
+  },
+  {
+    "word": "trial",
+    "f": 41.396115
+  },
+  {
+    "word": "opposite",
+    "f": 41.283716
+  },
+  {
+    "word": "wave",
+    "f": 41.279523
+  },
+  {
+    "word": "park",
+    "f": 41.261744
+  },
+  {
+    "word": "contract",
+    "f": 41.0898
+  },
+  {
+    "word": "farm",
+    "f": 40.956099
+  },
+  {
+    "word": "duty",
+    "f": 40.93551
+  },
+  {
+    "word": "agent",
+    "f": 40.912928
+  },
+  {
+    "word": "finding",
+    "f": 40.881406
+  },
+  {
+    "word": "nine",
+    "f": 40.874735
+  },
+  {
+    "word": "director",
+    "f": 40.643196
+  },
+  {
+    "word": "lake",
+    "f": 40.584922
+  },
+  {
+    "word": "novel",
+    "f": 40.558914
+  },
+  {
+    "word": "officer",
+    "f": 40.424929
+  },
+  {
+    "word": "damage",
+    "f": 40.405244
+  },
+  {
+    "word": "poetry",
+    "f": 40.345538
+  },
+  {
+    "word": "constitution",
+    "f": 40.338649
+  },
+  {
+    "word": "cycle",
+    "f": 40.335985
+  },
+  {
+    "word": "belief",
+    "f": 40.285651
+  },
+  {
+    "word": "feature",
+    "f": 40.27852
+  },
+  {
+    "word": "interview",
+    "f": 40.223028
+  },
+  {
+    "word": "creation",
+    "f": 40.082565
+  },
+  {
+    "word": "assistance",
+    "f": 40.065933
+  },
+  {
+    "word": "combination",
+    "f": 39.989797
+  },
+  {
+    "word": "opening",
+    "f": 39.968296
+  },
+  {
+    "word": "emphasis",
+    "f": 39.933461
+  },
+  {
+    "word": "edition",
+    "f": 39.771779
+  },
+  {
+    "word": "aspect",
+    "f": 39.753418
+  },
+  {
+    "word": "slow",
+    "f": 39.733142
+  },
+  {
+    "word": "wait",
+    "f": 39.711463
+  },
+  {
+    "word": "defense",
+    "f": 39.699492
+  },
+  {
+    "word": "explanation",
+    "f": 39.679621
+  },
+  {
+    "word": "youth",
+    "f": 39.66757
+  },
+  {
+    "word": "consideration",
+    "f": 39.657296
+  },
+  {
+    "word": "ship",
+    "f": 39.647628
+  },
+  {
+    "word": "mode",
+    "f": 39.574667
+  },
+  {
+    "word": "judge",
+    "f": 39.495979
+  },
+  {
+    "word": "sister",
+    "f": 39.441181
+  },
+  {
+    "word": "save",
+    "f": 39.430133
+  },
+  {
+    "word": "transport",
+    "f": 39.386855
+  },
+  {
+    "word": "mechanism",
+    "f": 39.374955
+  },
+  {
+    "word": "diagnosis",
+    "f": 39.353149
+  },
+  {
+    "word": "bear",
+    "f": 39.294439
+  },
+  {
+    "word": "reader",
+    "f": 39.172012
+  },
+  {
+    "word": "radio",
+    "f": 39.072762
+  },
+  {
+    "word": "competition",
+    "f": 39.056455
+  },
+  {
+    "word": "steel",
+    "f": 39.000361
+  },
+  {
+    "word": "baby",
+    "f": 38.982047
+  },
+  {
+    "word": "passage",
+    "f": 38.869126
+  },
+  {
+    "word": "horse",
+    "f": 38.638527
+  },
+  {
+    "word": "mission",
+    "f": 38.586781
+  },
+  {
+    "word": "camp",
+    "f": 38.534255
+  },
+  {
+    "word": "enemy",
+    "f": 38.505623
+  },
+  {
+    "word": "watch",
+    "f": 38.329663
+  },
+  {
+    "word": "foundation",
+    "f": 38.318797
+  },
+  {
+    "word": "independence",
+    "f": 38.306949
+  },
+  {
+    "word": "assembly",
+    "f": 38.252088
+  },
+  {
+    "word": "captain",
+    "f": 38.125273
+  },
+  {
+    "word": "intelligence",
+    "f": 38.097926
+  },
+  {
+    "word": "welfare",
+    "f": 38.038145
+  },
+  {
+    "word": "fluid",
+    "f": 37.889073
+  },
+  {
+    "word": "plane",
+    "f": 37.78289
+  },
+  {
+    "word": "limit",
+    "f": 37.75559
+  },
+  {
+    "word": "secret",
+    "f": 37.738299
+  },
+  {
+    "word": "television",
+    "f": 37.593389
+  },
+  {
+    "word": "release",
+    "f": 37.589342
+  },
+  {
+    "word": "client",
+    "f": 37.455455
+  },
+  {
+    "word": "campaign",
+    "f": 37.39837
+  },
+  {
+    "word": "infection",
+    "f": 37.393546
+  },
+  {
+    "word": "recognition",
+    "f": 37.232407
+  },
+  {
+    "word": "target",
+    "f": 37.115716
+  },
+  {
+    "word": "store",
+    "f": 36.971911
+  },
+  {
+    "word": "engineering",
+    "f": 36.86557
+  },
+  {
+    "word": "couple",
+    "f": 36.862169
+  },
+  {
+    "word": "coast",
+    "f": 36.627162
+  },
+  {
+    "word": "audience",
+    "f": 36.359908
+  },
+  {
+    "word": "minute",
+    "f": 36.339446
+  },
+  {
+    "word": "insurance",
+    "f": 36.320712
+  },
+  {
+    "word": "experiment",
+    "f": 36.271698
+  },
+  {
+    "word": "valley",
+    "f": 36.195261
+  },
+  {
+    "word": "evolution",
+    "f": 36.190829
+  },
+  {
+    "word": "mine",
+    "f": 36.054885
+  },
+  {
+    "word": "load",
+    "f": 35.941496
+  },
+  {
+    "word": "column",
+    "f": 35.906233
+  },
+  {
+    "word": "election",
+    "f": 35.747813
+  },
+  {
+    "word": "agriculture",
+    "f": 35.67266
+  },
+  {
+    "word": "challenge",
+    "f": 35.634927
+  },
+  {
+    "word": "garden",
+    "f": 35.607929
+  },
+  {
+    "word": "dream",
+    "f": 35.50835
+  },
+  {
+    "word": "document",
+    "f": 35.495852
+  },
+  {
+    "word": "touch",
+    "f": 35.472207
+  },
+  {
+    "word": "housing",
+    "f": 35.462412
+  },
+  {
+    "word": "judgment",
+    "f": 35.457913
+  },
+  {
+    "word": "draw",
+    "f": 35.37088
+  },
+  {
+    "word": "resolution",
+    "f": 35.367451
+  },
+  {
+    "word": "motor",
+    "f": 35.304912
+  },
+  {
+    "word": "wild",
+    "f": 35.295696
+  },
+  {
+    "word": "safe",
+    "f": 35.2886
+  },
+  {
+    "word": "mountain",
+    "f": 35.046053
+  },
+  {
+    "word": "thin",
+    "f": 35.034899
+  },
+  {
+    "word": "software",
+    "f": 35.016875
+  },
+  {
+    "word": "danger",
+    "f": 34.910736
+  },
+  {
+    "word": "executive",
+    "f": 34.866304
+  },
+  {
+    "word": "travel",
+    "f": 34.864056
+  },
+  {
+    "word": "democracy",
+    "f": 34.802496
+  },
+  {
+    "word": "laboratory",
+    "f": 34.709941
+  },
+  {
+    "word": "curve",
+    "f": 34.688342
+  },
+  {
+    "word": "crime",
+    "f": 34.646561
+  },
+  {
+    "word": "confidence",
+    "f": 34.635351
+  },
+  {
+    "word": "drawing",
+    "f": 34.590987
+  },
+  {
+    "word": "expansion",
+    "f": 34.518553
+  },
+  {
+    "word": "criticism",
+    "f": 34.462023
+  },
+  {
+    "word": "permission",
+    "f": 34.438509
+  },
+  {
+    "word": "scheme",
+    "f": 34.341063
+  },
+  {
+    "word": "device",
+    "f": 34.126795
+  },
+  {
+    "word": "shift",
+    "f": 34.095309
+  },
+  {
+    "word": "preparation",
+    "f": 34.080013
+  },
+  {
+    "word": "pleasure",
+    "f": 34.032901
+  },
+  {
+    "word": "improvement",
+    "f": 34
+  },
+  {
+    "word": "depth",
+    "f": 33.90362
+  },
+  {
+    "word": "museum",
+    "f": 33.897873
+  },
+  {
+    "word": "depression",
+    "f": 33.86513
+  },
+  {
+    "word": "governor",
+    "f": 33.858621
+  },
+  {
+    "word": "measurement",
+    "f": 33.852414
+  },
+  {
+    "word": "band",
+    "f": 33.837775
+  },
+  {
+    "word": "relief",
+    "f": 33.79735
+  },
+  {
+    "word": "warm",
+    "f": 33.678198
+  },
+  {
+    "word": "conversation",
+    "f": 33.612789
+  },
+  {
+    "word": "entry",
+    "f": 33.600068
+  },
+  {
+    "word": "frame",
+    "f": 33.526775
+  },
+  {
+    "word": "circuit",
+    "f": 33.318623
+  },
+  {
+    "word": "transition",
+    "f": 33.296017
+  },
+  {
+    "word": "empire",
+    "f": 33.168112
+  },
+  {
+    "word": "chair",
+    "f": 33.130938
+  },
+  {
+    "word": "zero",
+    "f": 33.097537
+  },
+  {
+    "word": "display",
+    "f": 33.097394
+  },
+  {
+    "word": "logic",
+    "f": 33.079295
+  },
+  {
+    "word": "kingdom",
+    "f": 33.042704
+  },
+  {
+    "word": "writer",
+    "f": 32.987133
+  },
+  {
+    "word": "wealth",
+    "f": 32.953955
+  },
+  {
+    "word": "train",
+    "f": 32.77365
+  },
+  {
+    "word": "hearing",
+    "f": 32.733317
+  },
+  {
+    "word": "exposure",
+    "f": 32.686514
+  },
+  {
+    "word": "silence",
+    "f": 32.594598
+  },
+  {
+    "word": "weak",
+    "f": 32.591645
+  },
+  {
+    "word": "gender",
+    "f": 32.546586
+  },
+  {
+    "word": "sentence",
+    "f": 32.496022
+  },
+  {
+    "word": "copy",
+    "f": 32.477728
+  },
+  {
+    "word": "beauty",
+    "f": 32.457655
+  },
+  {
+    "word": "publication",
+    "f": 32.441343
+  },
+  {
+    "word": "consumption",
+    "f": 32.401616
+  },
+  {
+    "word": "liquid",
+    "f": 32.38982
+  },
+  {
+    "word": "chain",
+    "f": 32.358378
+  },
+  {
+    "word": "category",
+    "f": 32.336635
+  },
+  {
+    "word": "circle",
+    "f": 32.336576
+  },
+  {
+    "word": "manager",
+    "f": 32.316308
+  },
+  {
+    "word": "advice",
+    "f": 32.255802
+  },
+  {
+    "word": "nerve",
+    "f": 32.242765
+  },
+  {
+    "word": "zone",
+    "f": 32.209626
+  },
+  {
+    "word": "count",
+    "f": 32.177419
+  },
+  {
+    "word": "corner",
+    "f": 32.172646
+  },
+  {
+    "word": "variation",
+    "f": 32.167668
+  },
+  {
+    "word": "silver",
+    "f": 32.16259
+  },
+  {
+    "word": "flat",
+    "f": 32.142675
+  },
+  {
+    "word": "identification",
+    "f": 32.062401
+  },
+  {
+    "word": "oxygen",
+    "f": 32.034126
+  },
+  {
+    "word": "neck",
+    "f": 31.888105
+  },
+  {
+    "word": "noise",
+    "f": 31.80845
+  },
+  {
+    "word": "clean",
+    "f": 31.784063
+  },
+  {
+    "word": "maintenance",
+    "f": 31.764878
+  },
+  {
+    "word": "phone",
+    "f": 31.743694
+  },
+  {
+    "word": "temple",
+    "f": 31.633294
+  },
+  {
+    "word": "determination",
+    "f": 31.550245
+  },
+  {
+    "word": "yellow",
+    "f": 31.52796
+  },
+  {
+    "word": "song",
+    "f": 31.518617
+  },
+  {
+    "word": "institution",
+    "f": 31.501988
+  },
+  {
+    "word": "escape",
+    "f": 31.464092
+  },
+  {
+    "word": "ring",
+    "f": 31.452359
+  },
+  {
+    "word": "contribution",
+    "f": 31.411653
+  },
+  {
+    "word": "cast",
+    "f": 31.326063
+  },
+  {
+    "word": "bridge",
+    "f": 31.221332
+  },
+  {
+    "word": "twelve",
+    "f": 31.213114
+  },
+  {
+    "word": "height",
+    "f": 31.186504
+  },
+  {
+    "word": "milk",
+    "f": 31.174089
+  },
+  {
+    "word": "corporation",
+    "f": 31.104791
+  },
+  {
+    "word": "ministry",
+    "f": 30.987965
+  },
+  {
+    "word": "salt",
+    "f": 30.977758
+  },
+  {
+    "word": "poverty",
+    "f": 30.954022
+  },
+  {
+    "word": "substance",
+    "f": 30.873462
+  },
+  {
+    "word": "angle",
+    "f": 30.834441
+  },
+  {
+    "word": "drink",
+    "f": 30.822855
+  },
+  {
+    "word": "drop",
+    "f": 30.792479
+  },
+  {
+    "word": "branch",
+    "f": 30.786937
+  },
+  {
+    "word": "translation",
+    "f": 30.755551
+  },
+  {
+    "word": "injury",
+    "f": 30.656725
+  },
+  {
+    "word": "season",
+    "f": 30.621719
+  },
+  {
+    "word": "editor",
+    "f": 30.600722
+  },
+  {
+    "word": "channel",
+    "f": 30.582337
+  },
+  {
+    "word": "quiet",
+    "f": 30.55472
+  },
+  {
+    "word": "request",
+    "f": 30.515382
+  },
+  {
+    "word": "instruction",
+    "f": 30.458123
+  },
+  {
+    "word": "hotel",
+    "f": 30.436654
+  },
+  {
+    "word": "tool",
+    "f": 30.427775
+  },
+  {
+    "word": "convention",
+    "f": 30.392527
+  },
+  {
+    "word": "surgery",
+    "f": 30.367824
+  },
+  {
+    "word": "smile",
+    "f": 30.268626
+  },
+  {
+    "word": "tube",
+    "f": 30.259861
+  },
+  {
+    "word": "extension",
+    "f": 30.245004
+  },
+  {
+    "word": "anxiety",
+    "f": 30.150428
+  },
+  {
+    "word": "item",
+    "f": 30.048705
+  },
+  {
+    "word": "cash",
+    "f": 30.040658
+  },
+  {
+    "word": "resource",
+    "f": 30.020073
+  },
+  {
+    "word": "heaven",
+    "f": 30.018405
+  },
+  {
+    "word": "radiation",
+    "f": 29.975511
+  },
+  {
+    "word": "dinner",
+    "f": 29.96434
+  },
+  {
+    "word": "link",
+    "f": 29.948924
+  },
+  {
+    "word": "intervention",
+    "f": 29.905479
+  },
+  {
+    "word": "port",
+    "f": 29.891249
+  },
+  {
+    "word": "storage",
+    "f": 29.889881
+  },
+  {
+    "word": "club",
+    "f": 29.852993
+  },
+  {
+    "word": "parent",
+    "f": 29.840034
+  },
+  {
+    "word": "root",
+    "f": 29.802432
+  },
+  {
+    "word": "afternoon",
+    "f": 29.785197
+  },
+  {
+    "word": "profit",
+    "f": 29.680707
+  },
+  {
+    "word": "screen",
+    "f": 29.665997
+  },
+  {
+    "word": "debate",
+    "f": 29.651917
+  },
+  {
+    "word": "tendency",
+    "f": 29.568844
+  },
+  {
+    "word": "budget",
+    "f": 29.505647
+  },
+  {
+    "word": "dance",
+    "f": 29.50305
+  },
+  {
+    "word": "prince",
+    "f": 29.364577
+  },
+  {
+    "word": "gene",
+    "f": 29.273105
+  },
+  {
+    "word": "ball",
+    "f": 29.207049
+  },
+  {
+    "word": "boat",
+    "f": 29.020617
+  },
+  {
+    "word": "clothes",
+    "f": 29.001835
+  },
+  {
+    "word": "legislation",
+    "f": 28.956206
+  },
+  {
+    "word": "poem",
+    "f": 28.953023
+  },
+  {
+    "word": "session",
+    "f": 28.909257
+  },
+  {
+    "word": "weather",
+    "f": 28.86473
+  },
+  {
+    "word": "star",
+    "f": 28.722372
+  },
+  {
+    "word": "establishment",
+    "f": 28.706322
+  },
+  {
+    "word": "seat",
+    "f": 28.663805
+  },
+  {
+    "word": "representative",
+    "f": 28.635926
+  },
+  {
+    "word": "pair",
+    "f": 28.60582
+  },
+  {
+    "word": "host",
+    "f": 28.60578
+  },
+  {
+    "word": "raise",
+    "f": 28.569435
+  },
+  {
+    "word": "instrument",
+    "f": 28.524828
+  },
+  {
+    "word": "decrease",
+    "f": 28.413564
+  },
+  {
+    "word": "mention",
+    "f": 28.410623
+  },
+  {
+    "word": "consequence",
+    "f": 28.377127
+  },
+  {
+    "word": "grade",
+    "f": 28.365208
+  },
+  {
+    "word": "assumption",
+    "f": 28.287102
+  },
+  {
+    "word": "outcome",
+    "f": 28.28569
+  },
+  {
+    "word": "route",
+    "f": 28.285068
+  },
+  {
+    "word": "sugar",
+    "f": 28.259358
+  },
+  {
+    "word": "transformation",
+    "f": 28.219306
+  },
+  {
+    "word": "legs",
+    "f": 28.204651
+  },
+  {
+    "word": "waste",
+    "f": 28.115799
+  },
+  {
+    "word": "estate",
+    "f": 28.060664
+  },
+  {
+    "word": "threat",
+    "f": 28.057438
+  },
+  {
+    "word": "childhood",
+    "f": 27.883785
+  },
+  {
+    "word": "alcohol",
+    "f": 27.829074
+  },
+  {
+    "word": "spot",
+    "f": 27.792158
+  },
+  {
+    "word": "vote",
+    "f": 27.769987
+  },
+  {
+    "word": "separation",
+    "f": 27.743837
+  },
+  {
+    "word": "quantity",
+    "f": 27.69009
+  },
+  {
+    "word": "vertical",
+    "f": 27.68498
+  },
+  {
+    "word": "mail",
+    "f": 27.674301
+  },
+  {
+    "word": "atmosphere",
+    "f": 27.674178
+  },
+  {
+    "word": "stream",
+    "f": 27.668165
+  },
+  {
+    "word": "fashion",
+    "f": 27.645741
+  },
+  {
+    "word": "poet",
+    "f": 27.638721
+  },
+  {
+    "word": "queen",
+    "f": 27.616301
+  },
+  {
+    "word": "liver",
+    "f": 27.598605
+  },
+  {
+    "word": "rain",
+    "f": 27.540684
+  },
+  {
+    "word": "criminal",
+    "f": 27.522283
+  },
+  {
+    "word": "dose",
+    "f": 27.498305
+  },
+  {
+    "word": "proof",
+    "f": 27.457853
+  },
+  {
+    "word": "promise",
+    "f": 27.344234
+  },
+  {
+    "word": "exception",
+    "f": 27.3238
+  },
+  {
+    "word": "theme",
+    "f": 27.281956
+  },
+  {
+    "word": "cooperation",
+    "f": 27.278599
+  },
+  {
+    "word": "trip",
+    "f": 27.213558
+  },
+  {
+    "word": "hell",
+    "f": 27.207462
+  },
+  {
+    "word": "abuse",
+    "f": 27.181918
+  },
+  {
+    "word": "chest",
+    "f": 27.102488
+  },
+  {
+    "word": "grace",
+    "f": 27.069508
+  },
+  {
+    "word": "estimate",
+    "f": 27.054409
+  },
+  {
+    "word": "tension",
+    "f": 27.006053
+  },
+  {
+    "word": "telephone",
+    "f": 26.974349
+  },
+  {
+    "word": "journey",
+    "f": 26.958727
+  },
+  {
+    "word": "domain",
+    "f": 26.886238
+  },
+  {
+    "word": "card",
+    "f": 26.80271
+  },
+  {
+    "word": "recovery",
+    "f": 26.797477
+  },
+  {
+    "word": "strike",
+    "f": 26.628977
+  },
+  {
+    "word": "parliament",
+    "f": 26.569129
+  },
+  {
+    "word": "debt",
+    "f": 26.547375
+  },
+  {
+    "word": "border",
+    "f": 26.522402
+  },
+  {
+    "word": "gray",
+    "f": 26.445549
+  },
+  {
+    "word": "prayer",
+    "f": 26.435354
+  },
+  {
+    "word": "traffic",
+    "f": 26.41886
+  },
+  {
+    "word": "breath",
+    "f": 26.363253
+  },
+  {
+    "word": "shoulder",
+    "f": 26.315155
+  },
+  {
+    "word": "coffee",
+    "f": 26.290201
+  },
+  {
+    "word": "flight",
+    "f": 26.249309
+  },
+  {
+    "word": "architecture",
+    "f": 26.137212
+  },
+  {
+    "word": "wisdom",
+    "f": 26.119668
+  },
+  {
+    "word": "fund",
+    "f": 26.026245
+  },
+  {
+    "word": "handle",
+    "f": 25.967575
+  },
+  {
+    "word": "sick",
+    "f": 25.913114
+  },
+  {
+    "word": "respond",
+    "f": 25.806594
+  },
+  {
+    "word": "commitment",
+    "f": 25.68741
+  },
+  {
+    "word": "victory",
+    "f": 25.644128
+  },
+  {
+    "word": "awareness",
+    "f": 25.618104
+  },
+  {
+    "word": "enterprise",
+    "f": 25.608781
+  },
+  {
+    "word": "worker",
+    "f": 25.592164
+  },
+  {
+    "word": "magazine",
+    "f": 25.565661
+  },
+  {
+    "word": "boundary",
+    "f": 25.536851
+  },
+  {
+    "word": "kitchen",
+    "f": 25.512092
+  },
+  {
+    "word": "track",
+    "f": 25.449584
+  },
+  {
+    "word": "finance",
+    "f": 25.363059
+  },
+  {
+    "word": "taste",
+    "f": 25.359674
+  },
+  {
+    "word": "fruit",
+    "f": 25.327732
+  },
+  {
+    "word": "wine",
+    "f": 25.251541
+  },
+  {
+    "word": "arrangement",
+    "f": 25.245044
+  },
+  {
+    "word": "snow",
+    "f": 25.217348
+  },
+  {
+    "word": "sunday",
+    "f": 25.098005
+  },
+  {
+    "word": "guard",
+    "f": 25.084563
+  },
+  {
+    "word": "discipline",
+    "f": 25.045689
+  },
+  {
+    "word": "peak",
+    "f": 25.033987
+  },
+  {
+    "word": "purchase",
+    "f": 25.031969
+  },
+  {
+    "word": "destruction",
+    "f": 25.016232
+  },
+  {
+    "word": "newspaper",
+    "f": 24.954177
+  },
+  {
+    "word": "anger",
+    "f": 24.936834
+  },
+  {
+    "word": "prison",
+    "f": 24.928998
+  },
+  {
+    "word": "sheet",
+    "f": 24.915905
+  },
+  {
+    "word": "uniform",
+    "f": 24.911215
+  },
+  {
+    "word": "print",
+    "f": 24.905729
+  },
+  {
+    "word": "wage",
+    "f": 24.892577
+  },
+  {
+    "word": "moon",
+    "f": 24.8641
+  },
+  {
+    "word": "fuel",
+    "f": 24.863779
+  },
+  {
+    "word": "sand",
+    "f": 24.848672
+  },
+  {
+    "word": "ocean",
+    "f": 24.817408
+  },
+  {
+    "word": "sale",
+    "f": 24.812306
+  },
+  {
+    "word": "fail",
+    "f": 24.801893
+  },
+  {
+    "word": "coal",
+    "f": 24.770859
+  },
+  {
+    "word": "engine",
+    "f": 24.710464
+  },
+  {
+    "word": "shock",
+    "f": 24.693205
+  },
+  {
+    "word": "universe",
+    "f": 24.686586
+  },
+  {
+    "word": "skill",
+    "f": 24.683807
+  },
+  {
+    "word": "abstract",
+    "f": 24.665037
+  },
+  {
+    "word": "nurse",
+    "f": 24.643426
+  },
+  {
+    "word": "wear",
+    "f": 24.617652
+  },
+  {
+    "word": "delivery",
+    "f": 24.502547
+  },
+  {
+    "word": "dress",
+    "f": 24.473876
+  },
+  {
+    "word": "presentation",
+    "f": 24.453429
+  },
+  {
+    "word": "impression",
+    "f": 24.414254
+  },
+  {
+    "word": "rice",
+    "f": 24.381143
+  },
+  {
+    "word": "mixture",
+    "f": 24.353645
+  },
+  {
+    "word": "guess",
+    "f": 24.249135
+  },
+  {
+    "word": "discovery",
+    "f": 24.11597
+  },
+  {
+    "word": "lips",
+    "f": 24.084131
+  },
+  {
+    "word": "shop",
+    "f": 24.034934
+  },
+  {
+    "word": "formula",
+    "f": 24.022503
+  },
+  {
+    "word": "achievement",
+    "f": 24.01211
+  },
+  {
+    "word": "payment",
+    "f": 23.986376
+  },
+  {
+    "word": "imagination",
+    "f": 23.978583
+  },
+  {
+    "word": "counter",
+    "f": 23.955857
+  },
+  {
+    "word": "chamber",
+    "f": 23.902423
+  },
+  {
+    "word": "internet",
+    "f": 23.891229
+  },
+  {
+    "word": "acceptance",
+    "f": 23.855498
+  },
+  {
+    "word": "breast",
+    "f": 23.802896
+  },
+  {
+    "word": "surprise",
+    "f": 23.76705
+  },
+  {
+    "word": "membership",
+    "f": 23.748479
+  },
+  {
+    "word": "slave",
+    "f": 23.667781
+  },
+  {
+    "word": "painting",
+    "f": 23.65221
+  },
+  {
+    "word": "cotton",
+    "f": 23.645043
+  },
+  {
+    "word": "gift",
+    "f": 23.630749
+  },
+  {
+    "word": "bond",
+    "f": 23.62512
+  },
+  {
+    "word": "hurt",
+    "f": 23.612578
+  },
+  {
+    "word": "favor",
+    "f": 23.515949
+  },
+  {
+    "word": "hole",
+    "f": 23.501429
+  },
+  {
+    "word": "diet",
+    "f": 23.496553
+  },
+  {
+    "word": "database",
+    "f": 23.413449
+  },
+  {
+    "word": "interior",
+    "f": 23.381202
+  },
+  {
+    "word": "quarter",
+    "f": 23.360784
+  },
+  {
+    "word": "decade",
+    "f": 23.320938
+  },
+  {
+    "word": "fort",
+    "f": 23.284719
+  },
+  {
+    "word": "minority",
+    "f": 23.250312
+  },
+  {
+    "word": "meat",
+    "f": 23.165947
+  },
+  {
+    "word": "symbol",
+    "f": 23.116219
+  },
+  {
+    "word": "climate",
+    "f": 23.111201
+  },
+  {
+    "word": "virus",
+    "f": 23.076651
+  },
+  {
+    "word": "grain",
+    "f": 22.945777
+  },
+  {
+    "word": "faculty",
+    "f": 22.926635
+  },
+  {
+    "word": "crowd",
+    "f": 22.914743
+  },
+  {
+    "word": "commerce",
+    "f": 22.904817
+  },
+  {
+    "word": "permit",
+    "f": 22.870046
+  },
+  {
+    "word": "pregnancy",
+    "f": 22.797707
+  },
+  {
+    "word": "owner",
+    "f": 22.720906
+  },
+  {
+    "word": "string",
+    "f": 22.60234
+  },
+  {
+    "word": "arch",
+    "f": 22.600262
+  },
+  {
+    "word": "server",
+    "f": 22.566818
+  },
+  {
+    "word": "league",
+    "f": 22.539352
+  },
+  {
+    "word": "reply",
+    "f": 22.495396
+  },
+  {
+    "word": "fiction",
+    "f": 22.485046
+  },
+  {
+    "word": "comment",
+    "f": 22.42965
+  },
+  {
+    "word": "score",
+    "f": 22.422645
+  },
+  {
+    "word": "mexican",
+    "f": 22.406472
+  },
+  {
+    "word": "customer",
+    "f": 22.379529
+  },
+  {
+    "word": "gate",
+    "f": 22.362195
+  },
+  {
+    "word": "bureau",
+    "f": 22.326151
+  },
+  {
+    "word": "physician",
+    "f": 22.306493
+  },
+  {
+    "word": "export",
+    "f": 22.24355
+  },
+  {
+    "word": "revenue",
+    "f": 22.230512
+  },
+  {
+    "word": "beam",
+    "f": 22.223662
+  },
+  {
+    "word": "plot",
+    "f": 22.209598
+  },
+  {
+    "word": "partner",
+    "f": 22.202368
+  },
+  {
+    "word": "delay",
+    "f": 22.155518
+  },
+  {
+    "word": "transportation",
+    "f": 22.126034
+  },
+  {
+    "word": "bird",
+    "f": 22.125467
+  },
+  {
+    "word": "diagram",
+    "f": 22.066868
+  },
+  {
+    "word": "phrase",
+    "f": 22.064402
+  },
+  {
+    "word": "liberty",
+    "f": 22.054524
+  },
+  {
+    "word": "grass",
+    "f": 22.044955
+  },
+  {
+    "word": "uncle",
+    "f": 22.040956
+  },
+  {
+    "word": "match",
+    "f": 21.959964
+  },
+  {
+    "word": "emergency",
+    "f": 21.947446
+  },
+  {
+    "word": "reflection",
+    "f": 21.93595
+  },
+  {
+    "word": "angry",
+    "f": 21.832293
+  },
+  {
+    "word": "confusion",
+    "f": 21.828975
+  },
+  {
+    "word": "trend",
+    "f": 21.827116
+  },
+  {
+    "word": "tumor",
+    "f": 21.821562
+  },
+  {
+    "word": "proposal",
+    "f": 21.773154
+  },
+  {
+    "word": "darkness",
+    "f": 21.719467
+  },
+  {
+    "word": "feed",
+    "f": 21.716216
+  },
+  {
+    "word": "province",
+    "f": 21.711578
+  },
+  {
+    "word": "infant",
+    "f": 21.697915
+  },
+  {
+    "word": "artist",
+    "f": 21.694589
+  },
+  {
+    "word": "beach",
+    "f": 21.687168
+  },
+  {
+    "word": "bell",
+    "f": 21.51696
+  },
+  {
+    "word": "wire",
+    "f": 21.467323
+  },
+  {
+    "word": "conversion",
+    "f": 21.455265
+  },
+  {
+    "word": "topic",
+    "f": 21.447024
+  },
+  {
+    "word": "copper",
+    "f": 21.352071
+  },
+  {
+    "word": "plastic",
+    "f": 21.333591
+  },
+  {
+    "word": "nose",
+    "f": 21.320403
+  },
+  {
+    "word": "cool",
+    "f": 21.296924
+  },
+  {
+    "word": "rank",
+    "f": 21.252734
+  },
+  {
+    "word": "chairman",
+    "f": 21.248061
+  },
+  {
+    "word": "tongue",
+    "f": 21.217126
+  },
+  {
+    "word": "essay",
+    "f": 21.211093
+  },
+  {
+    "word": "blind",
+    "f": 21.149528
+  },
+  {
+    "word": "suit",
+    "f": 21.09697
+  },
+  {
+    "word": "academy",
+    "f": 21.036449
+  },
+  {
+    "word": "aircraft",
+    "f": 20.999853
+  },
+  {
+    "word": "cattle",
+    "f": 20.950565
+  },
+  {
+    "word": "bread",
+    "f": 20.922873
+  },
+  {
+    "word": "intention",
+    "f": 20.901801
+  },
+  {
+    "word": "pull",
+    "f": 20.891368
+  },
+  {
+    "word": "somewhere",
+    "f": 20.883884
+  },
+  {
+    "word": "punishment",
+    "f": 20.876788
+  },
+  {
+    "word": "happiness",
+    "f": 20.866335
+  },
+  {
+    "word": "employee",
+    "f": 20.76749
+  },
+  {
+    "word": "schedule",
+    "f": 20.676957
+  },
+  {
+    "word": "manual",
+    "f": 20.671455
+  },
+  {
+    "word": "entrance",
+    "f": 20.652519
+  },
+  {
+    "word": "worship",
+    "f": 20.610953
+  },
+  {
+    "word": "crown",
+    "f": 20.54579
+  },
+  {
+    "word": "dimension",
+    "f": 20.533914
+  },
+  {
+    "word": "remote",
+    "f": 20.496438
+  },
+  {
+    "word": "diversity",
+    "f": 20.485312
+  },
+  {
+    "word": "factory",
+    "f": 20.45419
+  },
+  {
+    "word": "drama",
+    "f": 20.38144
+  },
+  {
+    "word": "fault",
+    "f": 20.381392
+  },
+  {
+    "word": "clay",
+    "f": 20.303223
+  },
+  {
+    "word": "murder",
+    "f": 20.222156
+  },
+  {
+    "word": "smoke",
+    "f": 20.221308
+  },
+  {
+    "word": "pride",
+    "f": 20.22046
+  },
+  {
+    "word": "arrival",
+    "f": 20.178711
+  },
+  {
+    "word": "assistant",
+    "f": 20.124076
+  },
+  {
+    "word": "witness",
+    "f": 20.040983
+  },
+  {
+    "word": "priest",
+    "f": 19.959667
+  },
+  {
+    "word": "worry",
+    "f": 19.92717
+  },
+  {
+    "word": "requirement",
+    "f": 19.88256
+  },
+  {
+    "word": "vessel",
+    "f": 19.827485
+  },
+  {
+    "word": "inch",
+    "f": 19.661494
+  },
+  {
+    "word": "ownership",
+    "f": 19.64234
+  },
+  {
+    "word": "finger",
+    "f": 19.629746
+  },
+  {
+    "word": "copyright",
+    "f": 19.612428
+  },
+  {
+    "word": "shell",
+    "f": 19.559029
+  },
+  {
+    "word": "tired",
+    "f": 19.535531
+  },
+  {
+    "word": "accident",
+    "f": 19.491139
+  },
+  {
+    "word": "comfortable",
+    "f": 19.484574
+  },
+  {
+    "word": "equality",
+    "f": 19.48285
+  },
+  {
+    "word": "guidance",
+    "f": 19.444685
+  },
+  {
+    "word": "vehicle",
+    "f": 19.406405
+  },
+  {
+    "word": "cook",
+    "f": 19.3278
+  },
+  {
+    "word": "roof",
+    "f": 19.316276
+  },
+  {
+    "word": "classroom",
+    "f": 19.294697
+  },
+  {
+    "word": "tomorrow",
+    "f": 19.29323
+  },
+  {
+    "word": "mirror",
+    "f": 19.252183
+  },
+  {
+    "word": "slavery",
+    "f": 19.247577
+  },
+  {
+    "word": "tiny",
+    "f": 19.219802
+  },
+  {
+    "word": "sports",
+    "f": 19.143606
+  },
+  {
+    "word": "navy",
+    "f": 19.109825
+  },
+  {
+    "word": "passion",
+    "f": 19.089657
+  },
+  {
+    "word": "cabinet",
+    "f": 18.997459
+  },
+  {
+    "word": "format",
+    "f": 18.990265
+  },
+  {
+    "word": "expert",
+    "f": 18.931376
+  },
+  {
+    "word": "desk",
+    "f": 18.895498
+  },
+  {
+    "word": "video",
+    "f": 18.873229
+  },
+  {
+    "word": "landscape",
+    "f": 18.846555
+  },
+  {
+    "word": "grave",
+    "f": 18.838968
+  },
+  {
+    "word": "unemployment",
+    "f": 18.829788
+  },
+  {
+    "word": "commander",
+    "f": 18.802369
+  },
+  {
+    "word": "mood",
+    "f": 18.74989
+  },
+  {
+    "word": "tape",
+    "f": 18.726142
+  },
+  {
+    "word": "expense",
+    "f": 18.708946
+  },
+  {
+    "word": "burden",
+    "f": 18.705418
+  },
+  {
+    "word": "interval",
+    "f": 18.644207
+  },
+  {
+    "word": "sacrifice",
+    "f": 18.62692
+  },
+  {
+    "word": "mile",
+    "f": 18.616863
+  },
+  {
+    "word": "shoulders",
+    "f": 18.605534
+  },
+  {
+    "word": "wing",
+    "f": 18.605186
+  },
+  {
+    "word": "stomach",
+    "f": 18.577989
+  },
+  {
+    "word": "loan",
+    "f": 18.572384
+  },
+  {
+    "word": "register",
+    "f": 18.556893
+  },
+  {
+    "word": "trace",
+    "f": 18.542722
+  },
+  {
+    "word": "friendship",
+    "f": 18.519314
+  },
+  {
+    "word": "welcome",
+    "f": 18.51872
+  },
+  {
+    "word": "physics",
+    "f": 18.506301
+  },
+  {
+    "word": "feedback",
+    "f": 18.492466
+  },
+  {
+    "word": "pool",
+    "f": 18.480507
+  },
+  {
+    "word": "mistake",
+    "f": 18.459601
+  },
+  {
+    "word": "flesh",
+    "f": 18.412422
+  },
+  {
+    "word": "camera",
+    "f": 18.399872
+  },
+  {
+    "word": "speaker",
+    "f": 18.399163
+  },
+  {
+    "word": "approval",
+    "f": 18.341479
+  },
+  {
+    "word": "clothing",
+    "f": 18.317343
+  },
+  {
+    "word": "palace",
+    "f": 18.278456
+  },
+  {
+    "word": "comfort",
+    "f": 18.277061
+  },
+  {
+    "word": "seed",
+    "f": 18.253206
+  },
+  {
+    "word": "fever",
+    "f": 18.247494
+  },
+  {
+    "word": "recording",
+    "f": 18.203014
+  },
+  {
+    "word": "desert",
+    "f": 18.194341
+  },
+  {
+    "word": "custom",
+    "f": 18.161484
+  },
+  {
+    "word": "lung",
+    "f": 18.160988
+  },
+  {
+    "word": "shore",
+    "f": 18.132824
+  },
+  {
+    "word": "repeat",
+    "f": 18.106916
+  },
+  {
+    "word": "filter",
+    "f": 18.105073
+  },
+  {
+    "word": "chart",
+    "f": 18.076215
+  },
+  {
+    "word": "loop",
+    "f": 18.053965
+  },
+  {
+    "word": "shadow",
+    "f": 18.045649
+  },
+  {
+    "word": "wound",
+    "f": 17.971832
+  },
+  {
+    "word": "hero",
+    "f": 17.95931
+  },
+  {
+    "word": "dialogue",
+    "f": 17.930405
+  },
+  {
+    "word": "sphere",
+    "f": 17.884165
+  },
+  {
+    "word": "compensation",
+    "f": 17.872325
+  },
+  {
+    "word": "magic",
+    "f": 17.85
+  },
+  {
+    "word": "canal",
+    "f": 17.839206
+  },
+  {
+    "word": "profession",
+    "f": 17.799051
+  },
+  {
+    "word": "courage",
+    "f": 17.77625
+  },
+  {
+    "word": "crystal",
+    "f": 17.755582
+  },
+  {
+    "word": "segment",
+    "f": 17.703155
+  },
+  {
+    "word": "conservation",
+    "f": 17.680981
+  },
+  {
+    "word": "throw",
+    "f": 17.641289
+  },
+  {
+    "word": "ease",
+    "f": 17.638784
+  },
+  {
+    "word": "storm",
+    "f": 17.601376
+  },
+  {
+    "word": "button",
+    "f": 17.574136
+  },
+  {
+    "word": "stuff",
+    "f": 17.492169
+  },
+  {
+    "word": "crop",
+    "f": 17.462543
+  },
+  {
+    "word": "meal",
+    "f": 17.372727
+  },
+  {
+    "word": "victim",
+    "f": 17.345982
+  },
+  {
+    "word": "mathematics",
+    "f": 17.343402
+  },
+  {
+    "word": "stick",
+    "f": 17.303667
+  },
+  {
+    "word": "trail",
+    "f": 17.301871
+  },
+  {
+    "word": "warning",
+    "f": 17.275368
+  },
+  {
+    "word": "ride",
+    "f": 17.25956
+  },
+  {
+    "word": "candidate",
+    "f": 17.206558
+  },
+  {
+    "word": "repair",
+    "f": 17.201678
+  },
+  {
+    "word": "organ",
+    "f": 17.18103
+  },
+  {
+    "word": "lesson",
+    "f": 17.179234
+  },
+  {
+    "word": "myth",
+    "f": 17.172995
+  },
+  {
+    "word": "draft",
+    "f": 17.148823
+  },
+  {
+    "word": "mill",
+    "f": 17.106531
+  },
+  {
+    "word": "suggestion",
+    "f": 17.092669
+  },
+  {
+    "word": "inflation",
+    "f": 17.037384
+  },
+  {
+    "word": "pocket",
+    "f": 16.95562
+  },
+  {
+    "word": "motivation",
+    "f": 16.932847
+  },
+  {
+    "word": "laugh",
+    "f": 16.887503
+  },
+  {
+    "word": "bull",
+    "f": 16.876741
+  },
+  {
+    "word": "fraction",
+    "f": 16.845219
+  },
+  {
+    "word": "machinery",
+    "f": 16.832269
+  },
+  {
+    "word": "bulletin",
+    "f": 16.827599
+  },
+  {
+    "word": "blow",
+    "f": 16.795567
+  },
+  {
+    "word": "roll",
+    "f": 16.774395
+  },
+  {
+    "word": "lunch",
+    "f": 16.763677
+  },
+  {
+    "word": "finish",
+    "f": 16.646062
+  },
+  {
+    "word": "push",
+    "f": 16.642118
+  },
+  {
+    "word": "apartment",
+    "f": 16.623432
+  },
+  {
+    "word": "harm",
+    "f": 16.603667
+  },
+  {
+    "word": "width",
+    "f": 16.572527
+  },
+  {
+    "word": "woods",
+    "f": 16.569474
+  },
+  {
+    "word": "emotion",
+    "f": 16.562387
+  },
+  {
+    "word": "coat",
+    "f": 16.522604
+  },
+  {
+    "word": "praise",
+    "f": 16.48327
+  },
+  {
+    "word": "dollar",
+    "f": 16.423287
+  },
+  {
+    "word": "steam",
+    "f": 16.420707
+  },
+  {
+    "word": "corn",
+    "f": 16.358013
+  },
+  {
+    "word": "forever",
+    "f": 16.270294
+  },
+  {
+    "word": "injection",
+    "f": 16.261768
+  },
+  {
+    "word": "clause",
+    "f": 16.249833
+  },
+  {
+    "word": "railroad",
+    "f": 16.248084
+  },
+  {
+    "word": "fortune",
+    "f": 16.214292
+  },
+  {
+    "word": "chemistry",
+    "f": 16.19532
+  },
+  {
+    "word": "soldier",
+    "f": 16.160473
+  },
+  {
+    "word": "driver",
+    "f": 16.13883
+  },
+  {
+    "word": "confused",
+    "f": 16.116314
+  },
+  {
+    "word": "paint",
+    "f": 16.093399
+  },
+  {
+    "word": "habit",
+    "f": 16.09146
+  },
+  {
+    "word": "pipe",
+    "f": 16.089078
+  },
+  {
+    "word": "testament",
+    "f": 16.085954
+  },
+  {
+    "word": "calm",
+    "f": 16.075926
+  },
+  {
+    "word": "appointment",
+    "f": 16.07084
+  },
+  {
+    "word": "pollution",
+    "f": 16.06927
+  },
+  {
+    "word": "cloth",
+    "f": 16.048471
+  },
+  {
+    "word": "wheel",
+    "f": 16.040159
+  },
+  {
+    "word": "movie",
+    "f": 16.009692
+  },
+  {
+    "word": "insight",
+    "f": 15.959223
+  },
+  {
+    "word": "photo",
+    "f": 15.895938
+  },
+  {
+    "word": "promotion",
+    "f": 15.871984
+  },
+  {
+    "word": "sheep",
+    "f": 15.868385
+  },
+  {
+    "word": "currency",
+    "f": 15.849944
+  },
+  {
+    "word": "tower",
+    "f": 15.770217
+  },
+  {
+    "word": "neighborhood",
+    "f": 15.765508
+  },
+  {
+    "word": "preference",
+    "f": 15.76357
+  },
+  {
+    "word": "outline",
+    "f": 15.758361
+  },
+  {
+    "word": "crew",
+    "f": 15.744047
+  },
+  {
+    "word": "paragraph",
+    "f": 15.740975
+  },
+  {
+    "word": "tale",
+    "f": 15.692746
+  },
+  {
+    "word": "switch",
+    "f": 15.684691
+  },
+  {
+    "word": "infinite",
+    "f": 15.649863
+  },
+  {
+    "word": "throat",
+    "f": 15.649637
+  },
+  {
+    "word": "divorce",
+    "f": 15.648654
+  },
+  {
+    "word": "residence",
+    "f": 15.623289
+  },
+  {
+    "word": "protest",
+    "f": 15.595058
+  },
+  {
+    "word": "savings",
+    "f": 15.567595
+  },
+  {
+    "word": "slope",
+    "f": 15.566375
+  },
+  {
+    "word": "indication",
+    "f": 15.540399
+  },
+  {
+    "word": "saving",
+    "f": 15.529149
+  },
+  {
+    "word": "eleven",
+    "f": 15.510257
+  },
+  {
+    "word": "castle",
+    "f": 15.508588
+  },
+  {
+    "word": "stem",
+    "f": 15.493303
+  },
+  {
+    "word": "tail",
+    "f": 15.491055
+  },
+  {
+    "word": "bottle",
+    "f": 15.468132
+  },
+  {
+    "word": "hate",
+    "f": 15.462765
+  },
+  {
+    "word": "pope",
+    "f": 15.460814
+  },
+  {
+    "word": "dozen",
+    "f": 15.447721
+  },
+  {
+    "word": "mystery",
+    "f": 15.441823
+  },
+  {
+    "word": "player",
+    "f": 15.423922
+  },
+  {
+    "word": "monitor",
+    "f": 15.414749
+  },
+  {
+    "word": "creek",
+    "f": 15.402397
+  },
+  {
+    "word": "rent",
+    "f": 15.353288
+  },
+  {
+    "word": "invasion",
+    "f": 15.292711
+  },
+  {
+    "word": "theater",
+    "f": 15.274861
+  },
+  {
+    "word": "aunt",
+    "f": 15.244505
+  },
+  {
+    "word": "bush",
+    "f": 15.222303
+  },
+  {
+    "word": "biology",
+    "f": 15.208469
+  },
+  {
+    "word": "platform",
+    "f": 15.201108
+  },
+  {
+    "word": "breakfast",
+    "f": 15.165472
+  },
+  {
+    "word": "grey",
+    "f": 15.154686
+  },
+  {
+    "word": "mouse",
+    "f": 15.087675
+  },
+  {
+    "word": "innovation",
+    "f": 15.075422
+  },
+  {
+    "word": "affair",
+    "f": 15.071653
+  },
+  {
+    "word": "facility",
+    "f": 15.062111
+  },
+  {
+    "word": "wheat",
+    "f": 15.05655
+  },
+  {
+    "word": "cord",
+    "f": 15.047151
+  },
+  {
+    "word": "replacement",
+    "f": 15.041637
+  },
+  {
+    "word": "sing",
+    "f": 15.014988
+  },
+  {
+    "word": "disk",
+    "f": 15.004911
+  },
+  {
+    "word": "somebody",
+    "f": 15.00159
+  },
+  {
+    "word": "package",
+    "f": 14.952044
+  },
+  {
+    "word": "orange",
+    "f": 14.948611
+  },
+  {
+    "word": "tour",
+    "f": 14.935419
+  },
+  {
+    "word": "calculation",
+    "f": 14.924138
+  },
+  {
+    "word": "servant",
+    "f": 14.916059
+  },
+  {
+    "word": "citizen",
+    "f": 14.888537
+  },
+  {
+    "word": "controversy",
+    "f": 14.843986
+  },
+  {
+    "word": "mobile",
+    "f": 14.841085
+  },
+  {
+    "word": "hide",
+    "f": 14.816251
+  },
+  {
+    "word": "pray",
+    "f": 14.736436
+  },
+  {
+    "word": "menu",
+    "f": 14.729341
+  },
+  {
+    "word": "tank",
+    "f": 14.727117
+  },
+  {
+    "word": "lawyer",
+    "f": 14.718614
+  },
+  {
+    "word": "pilot",
+    "f": 14.705946
+  },
+  {
+    "word": "inventory",
+    "f": 14.703646
+  },
+  {
+    "word": "rubber",
+    "f": 14.692048
+  },
+  {
+    "word": "flower",
+    "f": 14.690756
+  },
+  {
+    "word": "pace",
+    "f": 14.687699
+  },
+  {
+    "word": "vitamin",
+    "f": 14.600254
+  },
+  {
+    "word": "initiative",
+    "f": 14.57418
+  },
+  {
+    "word": "guilt",
+    "f": 14.550245
+  },
+  {
+    "word": "departure",
+    "f": 14.546963
+  },
+  {
+    "word": "enthusiasm",
+    "f": 14.516916
+  },
+  {
+    "word": "photograph",
+    "f": 14.493192
+  },
+  {
+    "word": "therapist",
+    "f": 14.488324
+  },
+  {
+    "word": "saturday",
+    "f": 14.471398
+  },
+  {
+    "word": "laser",
+    "f": 14.433146
+  },
+  {
+    "word": "margin",
+    "f": 14.412022
+  },
+  {
+    "word": "cable",
+    "f": 14.399769
+  },
+  {
+    "word": "leaf",
+    "f": 14.377531
+  },
+  {
+    "word": "stroke",
+    "f": 14.371284
+  },
+  {
+    "word": "attorney",
+    "f": 14.342609
+  },
+  {
+    "word": "inspection",
+    "f": 14.32099
+  },
+  {
+    "word": "blame",
+    "f": 14.201024
+  },
+  {
+    "word": "fiber",
+    "f": 14.169721
+  },
+  {
+    "word": "reward",
+    "f": 14.15618
+  },
+  {
+    "word": "mineral",
+    "f": 14.125784
+  },
+  {
+    "word": "instant",
+    "f": 14.120944
+  },
+  {
+    "word": "fleet",
+    "f": 14.107721
+  },
+  {
+    "word": "wedding",
+    "f": 14.022781
+  },
+  {
+    "word": "avenue",
+    "f": 13.994304
+  },
+  {
+    "word": "giant",
+    "f": 13.959948
+  },
+  {
+    "word": "smell",
+    "f": 13.954743
+  },
+  {
+    "word": "gentle",
+    "f": 13.93509
+  },
+  {
+    "word": "clock",
+    "f": 13.93486
+  },
+  {
+    "word": "cape",
+    "f": 13.918109
+  },
+  {
+    "word": "cloud",
+    "f": 13.903458
+  },
+  {
+    "word": "label",
+    "f": 13.887114
+  },
+  {
+    "word": "yard",
+    "f": 13.845402
+  },
+  {
+    "word": "truck",
+    "f": 13.841228
+  },
+  {
+    "word": "diary",
+    "f": 13.829011
+  },
+  {
+    "word": "tragedy",
+    "f": 13.823124
+  },
+  {
+    "word": "obligation",
+    "f": 13.819695
+  },
+  {
+    "word": "excitement",
+    "f": 13.793676
+  },
+  {
+    "word": "beer",
+    "f": 13.785078
+  },
+  {
+    "word": "smoking",
+    "f": 13.780611
+  },
+  {
+    "word": "sword",
+    "f": 13.719011
+  },
+  {
+    "word": "basin",
+    "f": 13.717009
+  },
+  {
+    "word": "pump",
+    "f": 13.704855
+  },
+  {
+    "word": "transaction",
+    "f": 13.696004
+  },
+  {
+    "word": "retirement",
+    "f": 13.692559
+  },
+  {
+    "word": "harmony",
+    "f": 13.663793
+  },
+  {
+    "word": "farmer",
+    "f": 13.659397
+  },
+  {
+    "word": "dictionary",
+    "f": 13.65156
+  },
+  {
+    "word": "lens",
+    "f": 13.62426
+  },
+  {
+    "word": "highway",
+    "f": 13.602209
+  },
+  {
+    "word": "bath",
+    "f": 13.58055
+  },
+  {
+    "word": "opera",
+    "f": 13.556893
+  },
+  {
+    "word": "barrier",
+    "f": 13.550665
+  },
+  {
+    "word": "engineer",
+    "f": 13.530306
+  },
+  {
+    "word": "sympathy",
+    "f": 13.484646
+  },
+  {
+    "word": "arrest",
+    "f": 13.484511
+  },
+  {
+    "word": "yesterday",
+    "f": 13.445311
+  },
+  {
+    "word": "guarantee",
+    "f": 13.44015
+  },
+  {
+    "word": "combat",
+    "f": 13.410167
+  },
+  {
+    "word": "electricity",
+    "f": 13.406195
+  },
+  {
+    "word": "furniture",
+    "f": 13.355417
+  },
+  {
+    "word": "modification",
+    "f": 13.355048
+  },
+  {
+    "word": "grammar",
+    "f": 13.328882
+  },
+  {
+    "word": "lift",
+    "f": 13.3251
+  },
+  {
+    "word": "wash",
+    "f": 13.323947
+  },
+  {
+    "word": "restaurant",
+    "f": 13.294344
+  },
+  {
+    "word": "demonstration",
+    "f": 13.255687
+  },
+  {
+    "word": "portrait",
+    "f": 13.232256
+  },
+  {
+    "word": "peasant",
+    "f": 13.230179
+  },
+  {
+    "word": "luck",
+    "f": 13.216163
+  },
+  {
+    "word": "conviction",
+    "f": 13.213915
+  },
+  {
+    "word": "ceremony",
+    "f": 13.207398
+  },
+  {
+    "word": "liability",
+    "f": 13.202875
+  },
+  {
+    "word": "collapse",
+    "f": 13.172397
+  },
+  {
+    "word": "gentleman",
+    "f": 13.149572
+  },
+  {
+    "word": "disaster",
+    "f": 13.104978
+  },
+  {
+    "word": "knife",
+    "f": 13.100855
+  },
+  {
+    "word": "employer",
+    "f": 13.098025
+  },
+  {
+    "word": "intent",
+    "f": 12.999207
+  },
+  {
+    "word": "sport",
+    "f": 12.991267
+  },
+  {
+    "word": "powder",
+    "f": 12.978392
+  },
+  {
+    "word": "genius",
+    "f": 12.971808
+  },
+  {
+    "word": "cure",
+    "f": 12.952044
+  },
+  {
+    "word": "knee",
+    "f": 12.935716
+  },
+  {
+    "word": "deck",
+    "f": 12.933465
+  },
+  {
+    "word": "graph",
+    "f": 12.91573
+  },
+  {
+    "word": "loyalty",
+    "f": 12.905963
+  },
+  {
+    "word": "lecture",
+    "f": 12.866415
+  },
+  {
+    "word": "gravity",
+    "f": 12.85614
+  },
+  {
+    "word": "suspect",
+    "f": 12.821701
+  },
+  {
+    "word": "dawn",
+    "f": 12.812747
+  },
+  {
+    "word": "substitute",
+    "f": 12.794187
+  },
+  {
+    "word": "hunt",
+    "f": 12.714968
+  },
+  {
+    "word": "pregnant",
+    "f": 12.692452
+  },
+  {
+    "word": "shirt",
+    "f": 12.659012
+  },
+  {
+    "word": "mankind",
+    "f": 12.642808
+  },
+  {
+    "word": "slip",
+    "f": 12.612329
+  },
+  {
+    "word": "flood",
+    "f": 12.611556
+  },
+  {
+    "word": "loading",
+    "f": 12.608262
+  },
+  {
+    "word": "kidney",
+    "f": 12.583967
+  },
+  {
+    "word": "flag",
+    "f": 12.580363
+  },
+  {
+    "word": "belt",
+    "f": 12.567231
+  },
+  {
+    "word": "devil",
+    "f": 12.551886
+  },
+  {
+    "word": "restoration",
+    "f": 12.499395
+  },
+  {
+    "word": "brand",
+    "f": 12.493822
+  },
+  {
+    "word": "laughter",
+    "f": 12.449561
+  },
+  {
+    "word": "vein",
+    "f": 12.437903
+  },
+  {
+    "word": "award",
+    "f": 12.389249
+  },
+  {
+    "word": "geography",
+    "f": 12.370622
+  },
+  {
+    "word": "hardware",
+    "f": 12.364133
+  },
+  {
+    "word": "script",
+    "f": 12.338031
+  },
+  {
+    "word": "junior",
+    "f": 12.301507
+  },
+  {
+    "word": "tropical",
+    "f": 12.287581
+  },
+  {
+    "word": "shame",
+    "f": 12.27848
+  },
+  {
+    "word": "cream",
+    "f": 12.208817
+  },
+  {
+    "word": "bedroom",
+    "f": 12.198848
+  },
+  {
+    "word": "cooking",
+    "f": 12.136725
+  },
+  {
+    "word": "grief",
+    "f": 12.132059
+  },
+  {
+    "word": "turkey",
+    "f": 12.124437
+  },
+  {
+    "word": "autumn",
+    "f": 12.057592
+  },
+  {
+    "word": "resident",
+    "f": 12.057569
+  },
+  {
+    "word": "pound",
+    "f": 12.048804
+  },
+  {
+    "word": "actor",
+    "f": 12.043742
+  },
+  {
+    "word": "bowl",
+    "f": 11.996686
+  },
+  {
+    "word": "cluster",
+    "f": 11.965323
+  },
+  {
+    "word": "partnership",
+    "f": 11.923488
+  },
+  {
+    "word": "lane",
+    "f": 11.900291
+  },
+  {
+    "word": "needle",
+    "f": 11.86169
+  },
+  {
+    "word": "correction",
+    "f": 11.854776
+  },
+  {
+    "word": "talent",
+    "f": 11.815335
+  },
+  {
+    "word": "gaze",
+    "f": 11.791325
+  },
+  {
+    "word": "merit",
+    "f": 11.791198
+  },
+  {
+    "word": "fold",
+    "f": 11.768865
+  },
+  {
+    "word": "palm",
+    "f": 11.767791
+  },
+  {
+    "word": "jury",
+    "f": 11.753834
+  },
+  {
+    "word": "crack",
+    "f": 11.729563
+  },
+  {
+    "word": "walker",
+    "f": 11.708653
+  },
+  {
+    "word": "tribe",
+    "f": 11.679962
+  },
+  {
+    "word": "excuse",
+    "f": 11.679696
+  },
+  {
+    "word": "affection",
+    "f": 11.673504
+  },
+  {
+    "word": "vacuum",
+    "f": 11.640635
+  },
+  {
+    "word": "prediction",
+    "f": 11.613336
+  },
+  {
+    "word": "salary",
+    "f": 11.596009
+  },
+  {
+    "word": "prize",
+    "f": 11.589155
+  },
+  {
+    "word": "arrow",
+    "f": 11.585219
+  },
+  {
+    "word": "weapon",
+    "f": 11.574009
+  },
+  {
+    "word": "studio",
+    "f": 11.567552
+  },
+  {
+    "word": "impulse",
+    "f": 11.561879
+  },
+  {
+    "word": "depressed",
+    "f": 11.553103
+  },
+  {
+    "word": "strip",
+    "f": 11.550709
+  },
+  {
+    "word": "publisher",
+    "f": 11.519897
+  },
+  {
+    "word": "pink",
+    "f": 11.507315
+  },
+  {
+    "word": "pack",
+    "f": 11.506499
+  },
+  {
+    "word": "angel",
+    "f": 11.505377
+  },
+  {
+    "word": "craft",
+    "f": 11.497739
+  },
+  {
+    "word": "continent",
+    "f": 11.490437
+  },
+  {
+    "word": "blank",
+    "f": 11.489997
+  },
+  {
+    "word": "creature",
+    "f": 11.477732
+  },
+  {
+    "word": "inspiration",
+    "f": 11.426792
+  },
+  {
+    "word": "episode",
+    "f": 11.376537
+  },
+  {
+    "word": "silk",
+    "f": 11.340623
+  },
+  {
+    "word": "shallow",
+    "f": 11.326991
+  },
+  {
+    "word": "stranger",
+    "f": 11.322912
+  },
+  {
+    "word": "horizon",
+    "f": 11.304678
+  },
+  {
+    "word": "leather",
+    "f": 11.295184
+  },
+  {
+    "word": "mask",
+    "f": 11.272681
+  },
+  {
+    "word": "gallery",
+    "f": 11.256813
+  },
+  {
+    "word": "seal",
+    "f": 11.235316
+  },
+  {
+    "word": "mayor",
+    "f": 11.230258
+  },
+  {
+    "word": "supplement",
+    "f": 11.217637
+  },
+  {
+    "word": "throne",
+    "f": 11.217546
+  },
+  {
+    "word": "jump",
+    "f": 11.208381
+  },
+  {
+    "word": "dirty",
+    "f": 11.174101
+  },
+  {
+    "word": "funeral",
+    "f": 11.164885
+  },
+  {
+    "word": "reception",
+    "f": 11.163192
+  },
+  {
+    "word": "cousin",
+    "f": 11.159006
+  },
+  {
+    "word": "guest",
+    "f": 11.148573
+  },
+  {
+    "word": "decay",
+    "f": 11.144252
+  },
+  {
+    "word": "kiss",
+    "f": 11.136661
+  },
+  {
+    "word": "grid",
+    "f": 11.113254
+  },
+  {
+    "word": "heading",
+    "f": 11.107887
+  },
+  {
+    "word": "fool",
+    "f": 11.087457
+  },
+  {
+    "word": "brush",
+    "f": 11.078106
+  },
+  {
+    "word": "moisture",
+    "f": 11.069552
+  },
+  {
+    "word": "cave",
+    "f": 11.028049
+  },
+  {
+    "word": "delight",
+    "f": 11.006901
+  },
+  {
+    "word": "friday",
+    "f": 11.002727
+  },
+  {
+    "word": "exit",
+    "f": 11.001423
+  },
+  {
+    "word": "shelter",
+    "f": 10.989004
+  },
+  {
+    "word": "span",
+    "f": 10.988948
+  },
+  {
+    "word": "disposal",
+    "f": 10.983867
+  },
+  {
+    "word": "chicken",
+    "f": 10.915108
+  },
+  {
+    "word": "entertainment",
+    "f": 10.910855
+  },
+  {
+    "word": "stretch",
+    "f": 10.881339
+  },
+  {
+    "word": "lock",
+    "f": 10.875567
+  },
+  {
+    "word": "piano",
+    "f": 10.872495
+  },
+  {
+    "word": "fabric",
+    "f": 10.851427
+  },
+  {
+    "word": "flash",
+    "f": 10.847871
+  },
+  {
+    "word": "deficit",
+    "f": 10.843118
+  },
+  {
+    "word": "ceiling",
+    "f": 10.831401
+  },
+  {
+    "word": "festival",
+    "f": 10.825467
+  },
+  {
+    "word": "hunter",
+    "f": 10.824698
+  },
+  {
+    "word": "invisible",
+    "f": 10.821428
+  },
+  {
+    "word": "flame",
+    "f": 10.810507
+  },
+  {
+    "word": "underground",
+    "f": 10.766574
+  },
+  {
+    "word": "legend",
+    "f": 10.755198
+  },
+  {
+    "word": "triumph",
+    "f": 10.7488
+  },
+  {
+    "word": "atom",
+    "f": 10.724219
+  },
+  {
+    "word": "grandfather",
+    "f": 10.710492
+  },
+  {
+    "word": "caution",
+    "f": 10.704725
+  },
+  {
+    "word": "harbor",
+    "f": 10.684512
+  },
+  {
+    "word": "funny",
+    "f": 10.666147
+  },
+  {
+    "word": "retreat",
+    "f": 10.654267
+  },
+  {
+    "word": "historian",
+    "f": 10.635795
+  },
+  {
+    "word": "disability",
+    "f": 10.626365
+  },
+  {
+    "word": "baker",
+    "f": 10.6142
+  },
+  {
+    "word": "patience",
+    "f": 10.608765
+  },
+  {
+    "word": "deposit",
+    "f": 10.607132
+  },
+  {
+    "word": "humor",
+    "f": 10.595755
+  },
+  {
+    "word": "glasses",
+    "f": 10.583919
+  },
+  {
+    "word": "brick",
+    "f": 10.541413
+  },
+  {
+    "word": "resort",
+    "f": 10.486231
+  },
+  {
+    "word": "monday",
+    "f": 10.423605
+  },
+  {
+    "word": "butter",
+    "f": 10.411078
+  },
+  {
+    "word": "tide",
+    "f": 10.390002
+  },
+  {
+    "word": "memorial",
+    "f": 10.361711
+  },
+  {
+    "word": "tooth",
+    "f": 10.355983
+  },
+  {
+    "word": "registration",
+    "f": 10.353783
+  },
+  {
+    "word": "communism",
+    "f": 10.352226
+  },
+  {
+    "word": "remark",
+    "f": 10.340734
+  },
+  {
+    "word": "pine",
+    "f": 10.338082
+  },
+  {
+    "word": "thread",
+    "f": 10.335969
+  },
+  {
+    "word": "slide",
+    "f": 10.322912
+  },
+  {
+    "word": "shopping",
+    "f": 10.31584
+  },
+  {
+    "word": "abortion",
+    "f": 10.313589
+  },
+  {
+    "word": "assault",
+    "f": 10.291847
+  },
+  {
+    "word": "boss",
+    "f": 10.287038
+  },
+  {
+    "word": "inheritance",
+    "f": 10.278908
+  },
+  {
+    "word": "invention",
+    "f": 10.277667
+  },
+  {
+    "word": "gesture",
+    "f": 10.26989
+  },
+  {
+    "word": "spin",
+    "f": 10.257804
+  },
+  {
+    "word": "battery",
+    "f": 10.249722
+  },
+  {
+    "word": "geometry",
+    "f": 10.245298
+  },
+  {
+    "word": "trunk",
+    "f": 10.236668
+  },
+  {
+    "word": "elder",
+    "f": 10.234896
+  },
+  {
+    "word": "pause",
+    "f": 10.210209
+  },
+  {
+    "word": "destination",
+    "f": 10.201298
+  },
+  {
+    "word": "privacy",
+    "f": 10.200517
+  },
+  {
+    "word": "planet",
+    "f": 10.188843
+  },
+  {
+    "word": "lamp",
+    "f": 10.17378
+  },
+  {
+    "word": "installation",
+    "f": 10.168274
+  },
+  {
+    "word": "producer",
+    "f": 10.149933
+  },
+  {
+    "word": "bomb",
+    "f": 10.138275
+  },
+  {
+    "word": "hunger",
+    "f": 10.086494
+  },
+  {
+    "word": "complaint",
+    "f": 10.077147
+  },
+  {
+    "word": "wolf",
+    "f": 10.058591
+  },
+  {
+    "word": "cylinder",
+    "f": 10.053121
+  },
+  {
+    "word": "spine",
+    "f": 10.049894
+  },
+  {
+    "word": "fame",
+    "f": 10.047409
+  },
+  {
+    "word": "horror",
+    "f": 10.046208
+  },
+  {
+    "word": "airport",
+    "f": 10.032378
+  },
+  {
+    "word": "expectation",
+    "f": 10.012601
+  },
+  {
+    "word": "cement",
+    "f": 10.006509
+  },
+  {
+    "word": "jail",
+    "f": 9.995053
+  },
+  {
+    "word": "harvest",
+    "f": 9.972922
+  },
+  {
+    "word": "prisoner",
+    "f": 9.971277
+  },
+  {
+    "word": "satellite",
+    "f": 9.970393
+  },
+  {
+    "word": "rope",
+    "f": 9.944219
+  },
+  {
+    "word": "ruler",
+    "f": 9.874113
+  },
+  {
+    "word": "apple",
+    "f": 9.854269
+  },
+  {
+    "word": "horn",
+    "f": 9.850971
+  },
+  {
+    "word": "football",
+    "f": 9.836431
+  },
+  {
+    "word": "mercury",
+    "f": 9.828844
+  },
+  {
+    "word": "desperate",
+    "f": 9.800228
+  },
+  {
+    "word": "charity",
+    "f": 9.798781
+  },
+  {
+    "word": "cabin",
+    "f": 9.790429
+  },
+  {
+    "word": "princess",
+    "f": 9.768897
+  },
+  {
+    "word": "ambassador",
+    "f": 9.751107
+  },
+  {
+    "word": "panic",
+    "f": 9.705696
+  },
+  {
+    "word": "voyage",
+    "f": 9.701898
+  },
+  {
+    "word": "restriction",
+    "f": 9.697241
+  },
+  {
+    "word": "rail",
+    "f": 9.673596
+  },
+  {
+    "word": "abundance",
+    "f": 9.62116
+  },
+  {
+    "word": "coach",
+    "f": 9.602355
+  },
+  {
+    "word": "shade",
+    "f": 9.596291
+  },
+  {
+    "word": "ghost",
+    "f": 9.587138
+  },
+  {
+    "word": "receiver",
+    "f": 9.572055
+  },
+  {
+    "word": "grandmother",
+    "f": 9.569625
+  },
+  {
+    "word": "cigarette",
+    "f": 9.55107
+  },
+  {
+    "word": "gear",
+    "f": 9.532883
+  },
+  {
+    "word": "disturbance",
+    "f": 9.518526
+  },
+  {
+    "word": "alarm",
+    "f": 9.517808
+  },
+  {
+    "word": "trap",
+    "f": 9.513289
+  },
+  {
+    "word": "curiosity",
+    "f": 9.485502
+  },
+  {
+    "word": "adventure",
+    "f": 9.485438
+  },
+  {
+    "word": "scientist",
+    "f": 9.485078
+  },
+  {
+    "word": "creativity",
+    "f": 9.444439
+  },
+  {
+    "word": "alien",
+    "f": 9.420378
+  },
+  {
+    "word": "chin",
+    "f": 9.361406
+  },
+  {
+    "word": "license",
+    "f": 9.350049
+  },
+  {
+    "word": "holiday",
+    "f": 9.339929
+  },
+  {
+    "word": "honey",
+    "f": 9.327102
+  },
+  {
+    "word": "chaos",
+    "f": 9.305534
+  },
+  {
+    "word": "frustration",
+    "f": 9.293305
+  },
+  {
+    "word": "diamond",
+    "f": 9.268729
+  },
+  {
+    "word": "climb",
+    "f": 9.244402
+  },
+  {
+    "word": "forum",
+    "f": 9.23115
+  },
+  {
+    "word": "critic",
+    "f": 9.228808
+  },
+  {
+    "word": "comedy",
+    "f": 9.206748
+  },
+  {
+    "word": "attraction",
+    "f": 9.198896
+  },
+  {
+    "word": "retail",
+    "f": 9.191911
+  },
+  {
+    "word": "invitation",
+    "f": 9.180967
+  },
+  {
+    "word": "shake",
+    "f": 9.180301
+  },
+  {
+    "word": "bronze",
+    "f": 9.177431
+  },
+  {
+    "word": "remedy",
+    "f": 9.153223
+  },
+  {
+    "word": "automobile",
+    "f": 9.152121
+  },
+  {
+    "word": "pile",
+    "f": 9.132083
+  },
+  {
+    "word": "surgeon",
+    "f": 9.126133
+  },
+  {
+    "word": "birthday",
+    "f": 9.106298
+  },
+  {
+    "word": "forehead",
+    "f": 9.097018
+  },
+  {
+    "word": "juice",
+    "f": 9.096015
+  },
+  {
+    "word": "clinic",
+    "f": 9.055166
+  },
+  {
+    "word": "exhibition",
+    "f": 9.036881
+  },
+  {
+    "word": "washing",
+    "f": 9.03084
+  },
+  {
+    "word": "blade",
+    "f": 9.022059
+  },
+  {
+    "word": "denial",
+    "f": 9.016474
+  },
+  {
+    "word": "deer",
+    "f": 8.993816
+  },
+  {
+    "word": "bench",
+    "f": 8.978357
+  },
+  {
+    "word": "knight",
+    "f": 8.96656
+  },
+  {
+    "word": "collar",
+    "f": 8.962501
+  },
+  {
+    "word": "container",
+    "f": 8.940925
+  },
+  {
+    "word": "cheese",
+    "f": 8.924982
+  },
+  {
+    "word": "twin",
+    "f": 8.90634
+  },
+  {
+    "word": "tear",
+    "f": 8.880859
+  },
+  {
+    "word": "attendance",
+    "f": 8.829681
+  },
+  {
+    "word": "dirt",
+    "f": 8.828745
+  },
+  {
+    "word": "specialist",
+    "f": 8.82161
+  },
+  {
+    "word": "midnight",
+    "f": 8.783714
+  },
+  {
+    "word": "wilderness",
+    "f": 8.779901
+  },
+  {
+    "word": "blessing",
+    "f": 8.737475
+  },
+  {
+    "word": "broadcast",
+    "f": 8.723538
+  },
+  {
+    "word": "wool",
+    "f": 8.710956
+  },
+  {
+    "word": "swing",
+    "f": 8.697748
+  },
+  {
+    "word": "tent",
+    "f": 8.693475
+  },
+  {
+    "word": "skull",
+    "f": 8.673029
+  },
+  {
+    "word": "hurry",
+    "f": 8.669675
+  },
+  {
+    "word": "carriage",
+    "f": 8.642637
+  },
+  {
+    "word": "goddess",
+    "f": 8.615738
+  },
+  {
+    "word": "sink",
+    "f": 8.612907
+  },
+  {
+    "word": "purity",
+    "f": 8.59767
+  },
+  {
+    "word": "parking",
+    "f": 8.574275
+  },
+  {
+    "word": "tunnel",
+    "f": 8.566529
+  },
+  {
+    "word": "supper",
+    "f": 8.559973
+  },
+  {
+    "word": "drain",
+    "f": 8.542607
+  },
+  {
+    "word": "calendar",
+    "f": 8.530643
+  },
+  {
+    "word": "contest",
+    "f": 8.517951
+  },
+  {
+    "word": "snake",
+    "f": 8.505425
+  },
+  {
+    "word": "lion",
+    "f": 8.503205
+  },
+  {
+    "word": "cheek",
+    "f": 8.480979
+  },
+  {
+    "word": "fence",
+    "f": 8.448407
+  },
+  {
+    "word": "jacket",
+    "f": 8.434561
+  },
+  {
+    "word": "purple",
+    "f": 8.415011
+  },
+  {
+    "word": "bride",
+    "f": 8.401422
+  },
+  {
+    "word": "miracle",
+    "f": 8.400982
+  },
+  {
+    "word": "noon",
+    "f": 8.389186
+  },
+  {
+    "word": "reporter",
+    "f": 8.364859
+  },
+  {
+    "word": "module",
+    "f": 8.357922
+  },
+  {
+    "word": "rabbit",
+    "f": 8.343354
+  },
+  {
+    "word": "chase",
+    "f": 8.337928
+  },
+  {
+    "word": "butler",
+    "f": 8.330166
+  },
+  {
+    "word": "penalty",
+    "f": 8.323487
+  },
+  {
+    "word": "thumb",
+    "f": 8.313585
+  },
+  {
+    "word": "buffalo",
+    "f": 8.308991
+  },
+  {
+    "word": "folder",
+    "f": 8.306164
+  },
+  {
+    "word": "petition",
+    "f": 8.295525
+  },
+  {
+    "word": "globe",
+    "f": 8.291181
+  },
+  {
+    "word": "refusal",
+    "f": 8.286245
+  },
+  {
+    "word": "singer",
+    "f": 8.275574
+  },
+  {
+    "word": "symmetry",
+    "f": 8.241837
+  },
+  {
+    "word": "texture",
+    "f": 8.223655
+  },
+  {
+    "word": "architect",
+    "f": 8.214751
+  },
+  {
+    "word": "sweat",
+    "f": 8.196961
+  },
+  {
+    "word": "passenger",
+    "f": 8.177673
+  },
+  {
+    "word": "spell",
+    "f": 8.164817
+  },
+  {
+    "word": "baseball",
+    "f": 8.161642
+  },
+  {
+    "word": "gang",
+    "f": 8.147772
+  },
+  {
+    "word": "joke",
+    "f": 8.146377
+  },
+  {
+    "word": "cathedral",
+    "f": 8.142699
+  },
+  {
+    "word": "sail",
+    "f": 8.141763
+  },
+  {
+    "word": "echo",
+    "f": 8.141751
+  },
+  {
+    "word": "envelope",
+    "f": 8.124365
+  },
+  {
+    "word": "boots",
+    "f": 8.119291
+  },
+  {
+    "word": "shelf",
+    "f": 8.072786
+  },
+  {
+    "word": "altar",
+    "f": 8.066262
+  },
+  {
+    "word": "accord",
+    "f": 8.056019
+  },
+  {
+    "word": "visitor",
+    "f": 8.044706
+  },
+  {
+    "word": "legacy",
+    "f": 8.044206
+  },
+  {
+    "word": "feast",
+    "f": 7.99973
+  },
+  {
+    "word": "shield",
+    "f": 7.989198
+  },
+  {
+    "word": "signature",
+    "f": 7.988691
+  },
+  {
+    "word": "temper",
+    "f": 7.986887
+  },
+  {
+    "word": "painter",
+    "f": 7.971991
+  },
+  {
+    "word": "explosion",
+    "f": 7.970837
+  },
+  {
+    "word": "update",
+    "f": 7.967725
+  },
+  {
+    "word": "sickness",
+    "f": 7.95397
+  },
+  {
+    "word": "ambition",
+    "f": 7.940846
+  },
+  {
+    "word": "triangle",
+    "f": 7.929295
+  },
+  {
+    "word": "trigger",
+    "f": 7.913094
+  },
+  {
+    "word": "printer",
+    "f": 7.901428
+  },
+  {
+    "word": "convenience",
+    "f": 7.890797
+  },
+  {
+    "word": "comic",
+    "f": 7.876511
+  },
+  {
+    "word": "neighbor",
+    "f": 7.86647
+  },
+  {
+    "word": "nest",
+    "f": 7.84189
+  },
+  {
+    "word": "manufacturer",
+    "f": 7.828004
+  },
+  {
+    "word": "cinema",
+    "f": 7.808069
+  },
+  {
+    "word": "regret",
+    "f": 7.797501
+  },
+  {
+    "word": "stack",
+    "f": 7.788598
+  },
+  {
+    "word": "researcher",
+    "f": 7.778462
+  },
+  {
+    "word": "cemetery",
+    "f": 7.761667
+  },
+  {
+    "word": "weekend",
+    "f": 7.723775
+  },
+  {
+    "word": "celebration",
+    "f": 7.697574
+  },
+  {
+    "word": "bass",
+    "f": 7.690593
+  },
+  {
+    "word": "tomb",
+    "f": 7.689864
+  },
+  {
+    "word": "bathroom",
+    "f": 7.688223
+  },
+  {
+    "word": "concert",
+    "f": 7.68586
+  },
+  {
+    "word": "volunteer",
+    "f": 7.679304
+  },
+  {
+    "word": "marble",
+    "f": 7.664276
+  },
+  {
+    "word": "racism",
+    "f": 7.637583
+  },
+  {
+    "word": "symptom",
+    "f": 7.616515
+  },
+  {
+    "word": "hire",
+    "f": 7.616499
+  },
+  {
+    "word": "tourist",
+    "f": 7.597714
+  },
+  {
+    "word": "plantation",
+    "f": 7.585211
+  },
+  {
+    "word": "charm",
+    "f": 7.581981
+  },
+  {
+    "word": "soap",
+    "f": 7.581715
+  },
+  {
+    "word": "anchor",
+    "f": 7.580264
+  },
+  {
+    "word": "mess",
+    "f": 7.574627
+  },
+  {
+    "word": "drum",
+    "f": 7.567687
+  },
+  {
+    "word": "basket",
+    "f": 7.549088
+  },
+  {
+    "word": "headache",
+    "f": 7.547439
+  },
+  {
+    "word": "cargo",
+    "f": 7.542856
+  },
+  {
+    "word": "lease",
+    "f": 7.536799
+  },
+  {
+    "word": "cake",
+    "f": 7.502701
+  },
+  {
+    "word": "gauge",
+    "f": 7.484471
+  },
+  {
+    "word": "disadvantage",
+    "f": 7.483262
+  },
+  {
+    "word": "peninsula",
+    "f": 7.481482
+  },
+  {
+    "word": "hook",
+    "f": 7.48084
+  },
+  {
+    "word": "treasure",
+    "f": 7.478565
+  },
+  {
+    "word": "donor",
+    "f": 7.476087
+  },
+  {
+    "word": "instinct",
+    "f": 7.458912
+  },
+  {
+    "word": "vegetable",
+    "f": 7.458261
+  },
+  {
+    "word": "sunlight",
+    "f": 7.451384
+  },
+  {
+    "word": "deaf",
+    "f": 7.444134
+  },
+  {
+    "word": "ticket",
+    "f": 7.437221
+  },
+  {
+    "word": "confirmation",
+    "f": 7.428873
+  },
+  {
+    "word": "grip",
+    "f": 7.422241
+  },
+  {
+    "word": "trick",
+    "f": 7.41184
+  },
+  {
+    "word": "dish",
+    "f": 7.40325
+  },
+  {
+    "word": "brass",
+    "f": 7.39881
+  },
+  {
+    "word": "spouse",
+    "f": 7.389404
+  },
+  {
+    "word": "mortgage",
+    "f": 7.388987
+  },
+  {
+    "word": "orbit",
+    "f": 7.386918
+  },
+  {
+    "word": "reed",
+    "f": 7.340944
+  },
+  {
+    "word": "cheeks",
+    "f": 7.340175
+  },
+  {
+    "word": "pearl",
+    "f": 7.325822
+  },
+  {
+    "word": "bite",
+    "f": 7.308138
+  },
+  {
+    "word": "hazard",
+    "f": 7.306295
+  },
+  {
+    "word": "coin",
+    "f": 7.29847
+  },
+  {
+    "word": "cottage",
+    "f": 7.280189
+  },
+  {
+    "word": "kindness",
+    "f": 7.255751
+  },
+  {
+    "word": "arena",
+    "f": 7.253186
+  },
+  {
+    "word": "acre",
+    "f": 7.251711
+  },
+  {
+    "word": "confession",
+    "f": 7.240612
+  },
+  {
+    "word": "pencil",
+    "f": 7.225819
+  },
+  {
+    "word": "photography",
+    "f": 7.218486
+  },
+  {
+    "word": "lightning",
+    "f": 7.199863
+  },
+  {
+    "word": "poison",
+    "f": 7.186524
+  },
+  {
+    "word": "luxury",
+    "f": 7.162086
+  },
+  {
+    "word": "math",
+    "f": 7.146805
+  },
+  {
+    "word": "beef",
+    "f": 7.137668
+  },
+  {
+    "word": "statue",
+    "f": 7.130454
+  },
+  {
+    "word": "sculpture",
+    "f": 7.129392
+  },
+  {
+    "word": "messenger",
+    "f": 7.116358
+  },
+  {
+    "word": "buyer",
+    "f": 7.111007
+  },
+  {
+    "word": "dwelling",
+    "f": 7.10512
+  },
+  {
+    "word": "generator",
+    "f": 7.08794
+  },
+  {
+    "word": "bacon",
+    "f": 7.072247
+  },
+  {
+    "word": "penguin",
+    "f": 7.024906
+  },
+  {
+    "word": "controller",
+    "f": 7.011967
+  },
+  {
+    "word": "spelling",
+    "f": 6.97672
+  },
+  {
+    "word": "marker",
+    "f": 6.973552
+  },
+  {
+    "word": "porch",
+    "f": 6.965708
+  },
+  {
+    "word": "orchestra",
+    "f": 6.962977
+  },
+  {
+    "word": "beast",
+    "f": 6.955893
+  },
+  {
+    "word": "allowance",
+    "f": 6.941769
+  },
+  {
+    "word": "screw",
+    "f": 6.921922
+  },
+  {
+    "word": "spray",
+    "f": 6.920943
+  },
+  {
+    "word": "straw",
+    "f": 6.884966
+  },
+  {
+    "word": "noun",
+    "f": 6.868575
+  },
+  {
+    "word": "waist",
+    "f": 6.853702
+  },
+  {
+    "word": "blanket",
+    "f": 6.847931
+  },
+  {
+    "word": "basement",
+    "f": 6.834536
+  },
+  {
+    "word": "disappointment",
+    "f": 6.827104
+  },
+  {
+    "word": "drill",
+    "f": 6.819493
+  },
+  {
+    "word": "bark",
+    "f": 6.806214
+  },
+  {
+    "word": "participant",
+    "f": 6.795571
+  },
+  {
+    "word": "gram",
+    "f": 6.793834
+  },
+  {
+    "word": "cone",
+    "f": 6.753604
+  },
+  {
+    "word": "reservation",
+    "f": 6.724533
+  },
+  {
+    "word": "olive",
+    "f": 6.721789
+  },
+  {
+    "word": "consultant",
+    "f": 6.717413
+  },
+  {
+    "word": "wrist",
+    "f": 6.714642
+  },
+  {
+    "word": "golf",
+    "f": 6.703698
+  },
+  {
+    "word": "lamb",
+    "f": 6.681643
+  },
+  {
+    "word": "workplace",
+    "f": 6.669806
+  },
+  {
+    "word": "discount",
+    "f": 6.667586
+  },
+  {
+    "word": "soup",
+    "f": 6.662917
+  },
+  {
+    "word": "elbow",
+    "f": 6.64301
+  },
+  {
+    "word": "ladder",
+    "f": 6.636438
+  },
+  {
+    "word": "microscope",
+    "f": 6.628521
+  },
+  {
+    "word": "pond",
+    "f": 6.622572
+  },
+  {
+    "word": "pepper",
+    "f": 6.620213
+  },
+  {
+    "word": "chip",
+    "f": 6.612154
+  },
+  {
+    "word": "hello",
+    "f": 6.597496
+  },
+  {
+    "word": "beard",
+    "f": 6.580744
+  },
+  {
+    "word": "shower",
+    "f": 6.560179
+  },
+  {
+    "word": "eagle",
+    "f": 6.540042
+  },
+  {
+    "word": "circumstance",
+    "f": 6.534437
+  },
+  {
+    "word": "embassy",
+    "f": 6.501203
+  },
+  {
+    "word": "catalog",
+    "f": 6.494151
+  },
+  {
+    "word": "vacation",
+    "f": 6.46831
+  },
+  {
+    "word": "enjoyment",
+    "f": 6.461092
+  },
+  {
+    "word": "detective",
+    "f": 6.457362
+  },
+  {
+    "word": "crash",
+    "f": 6.443206
+  },
+  {
+    "word": "jungle",
+    "f": 6.439211
+  },
+  {
+    "word": "monument",
+    "f": 6.425305
+  },
+  {
+    "word": "barrel",
+    "f": 6.418745
+  },
+  {
+    "word": "curtain",
+    "f": 6.417564
+  },
+  {
+    "word": "jazz",
+    "f": 6.416283
+  },
+  {
+    "word": "lesbian",
+    "f": 6.406072
+  },
+  {
+    "word": "insect",
+    "f": 6.374233
+  },
+  {
+    "word": "maid",
+    "f": 6.364375
+  },
+  {
+    "word": "canvas",
+    "f": 6.363111
+  },
+  {
+    "word": "wildlife",
+    "f": 6.351385
+  },
+  {
+    "word": "salmon",
+    "f": 6.327586
+  },
+  {
+    "word": "inspector",
+    "f": 6.326563
+  },
+  {
+    "word": "oven",
+    "f": 6.325088
+  },
+  {
+    "word": "lighter",
+    "f": 6.294213
+  },
+  {
+    "word": "belly",
+    "f": 6.291862
+  },
+  {
+    "word": "saddle",
+    "f": 6.289036
+  },
+  {
+    "word": "warrior",
+    "f": 6.283114
+  },
+  {
+    "word": "lime",
+    "f": 6.239677
+  },
+  {
+    "word": "cane",
+    "f": 6.231582
+  },
+  {
+    "word": "frost",
+    "f": 6.230108
+  },
+  {
+    "word": "seller",
+    "f": 6.218125
+  },
+  {
+    "word": "stamp",
+    "f": 6.212948
+  },
+  {
+    "word": "downtown",
+    "f": 6.212599
+  },
+  {
+    "word": "counselor",
+    "f": 6.200893
+  },
+  {
+    "word": "outlet",
+    "f": 6.196375
+  },
+  {
+    "word": "hood",
+    "f": 6.184788
+  },
+  {
+    "word": "tuesday",
+    "f": 6.179984
+  },
+  {
+    "word": "textbook",
+    "f": 6.164461
+  },
+  {
+    "word": "robin",
+    "f": 6.159038
+  },
+  {
+    "word": "knock",
+    "f": 6.155641
+  },
+  {
+    "word": "translate",
+    "f": 6.147562
+  },
+  {
+    "word": "innocence",
+    "f": 6.142469
+  },
+  {
+    "word": "contractor",
+    "f": 6.136071
+  },
+  {
+    "word": "conspiracy",
+    "f": 6.12247
+  },
+  {
+    "word": "shoe",
+    "f": 6.110539
+  },
+  {
+    "word": "radar",
+    "f": 6.092574
+  },
+  {
+    "word": "monkey",
+    "f": 6.091611
+  },
+  {
+    "word": "fraud",
+    "f": 6.083818
+  },
+  {
+    "word": "cage",
+    "f": 6.066559
+  },
+  {
+    "word": "modem",
+    "f": 6.064498
+  },
+  {
+    "word": "abdomen",
+    "f": 6.064387
+  },
+  {
+    "word": "thursday",
+    "f": 6.062008
+  },
+  {
+    "word": "canyon",
+    "f": 6.053898
+  },
+  {
+    "word": "bunch",
+    "f": 6.028556
+  },
+  {
+    "word": "hammer",
+    "f": 6.027423
+  },
+  {
+    "word": "monk",
+    "f": 6.018837
+  },
+  {
+    "word": "announcement",
+    "f": 5.975348
+  },
+  {
+    "word": "barn",
+    "f": 5.933564
+  },
+  {
+    "word": "geology",
+    "f": 5.928772
+  },
+  {
+    "word": "resignation",
+    "f": 5.928351
+  },
+  {
+    "word": "disagreement",
+    "f": 5.926833
+  },
+  {
+    "word": "chocolate",
+    "f": 5.871151
+  },
+  {
+    "word": "nickel",
+    "f": 5.866609
+  },
+  {
+    "word": "plague",
+    "f": 5.859937
+  },
+  {
+    "word": "breeze",
+    "f": 5.828095
+  },
+  {
+    "word": "accent",
+    "f": 5.826057
+  },
+  {
+    "word": "sauce",
+    "f": 5.823873
+  },
+  {
+    "word": "cliff",
+    "f": 5.785252
+  },
+  {
+    "word": "spiral",
+    "f": 5.776472
+  },
+  {
+    "word": "prescription",
+    "f": 5.775961
+  },
+  {
+    "word": "blast",
+    "f": 5.77361
+  },
+  {
+    "word": "fork",
+    "f": 5.767335
+  },
+  {
+    "word": "tennis",
+    "f": 5.766547
+  },
+  {
+    "word": "pants",
+    "f": 5.764236
+  },
+  {
+    "word": "wednesday",
+    "f": 5.76374
+  },
+  {
+    "word": "thunder",
+    "f": 5.755562
+  },
+  {
+    "word": "plug",
+    "f": 5.732797
+  },
+  {
+    "word": "intersection",
+    "f": 5.730728
+  },
+  {
+    "word": "champion",
+    "f": 5.718515
+  },
+  {
+    "word": "bullet",
+    "f": 5.716521
+  },
+  {
+    "word": "missile",
+    "f": 5.704578
+  },
+  {
+    "word": "politician",
+    "f": 5.702037
+  },
+  {
+    "word": "glow",
+    "f": 5.700967
+  },
+  {
+    "word": "nail",
+    "f": 5.700872
+  },
+  {
+    "word": "portal",
+    "f": 5.68483
+  },
+  {
+    "word": "decoration",
+    "f": 5.679197
+  },
+  {
+    "word": "marsh",
+    "f": 5.66935
+  },
+  {
+    "word": "cannon",
+    "f": 5.664399
+  },
+  {
+    "word": "celebrate",
+    "f": 5.655139
+  },
+  {
+    "word": "monster",
+    "f": 5.652939
+  },
+  {
+    "word": "earthquake",
+    "f": 5.646336
+  },
+  {
+    "word": "fairy",
+    "f": 5.633988
+  },
+  {
+    "word": "melt",
+    "f": 5.618096
+  },
+  {
+    "word": "couch",
+    "f": 5.615761
+  },
+  {
+    "word": "fortress",
+    "f": 5.60955
+  },
+  {
+    "word": "forecast",
+    "f": 5.60928
+  },
+  {
+    "word": "collision",
+    "f": 5.60603
+  },
+  {
+    "word": "wireless",
+    "f": 5.590785
+  },
+  {
+    "word": "punch",
+    "f": 5.586761
+  },
+  {
+    "word": "sheriff",
+    "f": 5.568959
+  },
+  {
+    "word": "highlight",
+    "f": 5.538821
+  },
+  {
+    "word": "mold",
+    "f": 5.525566
+  },
+  {
+    "word": "journalist",
+    "f": 5.517971
+  },
+  {
+    "word": "nationality",
+    "f": 5.460826
+  },
+  {
+    "word": "cart",
+    "f": 5.441982
+  },
+  {
+    "word": "kick",
+    "f": 5.427616
+  },
+  {
+    "word": "pardon",
+    "f": 5.413183
+  },
+  {
+    "word": "clue",
+    "f": 5.409053
+  },
+  {
+    "word": "blend",
+    "f": 5.40281
+  },
+  {
+    "word": "gravel",
+    "f": 5.393649
+  },
+  {
+    "word": "potato",
+    "f": 5.39261
+  },
+  {
+    "word": "fossil",
+    "f": 5.363705
+  },
+  {
+    "word": "heir",
+    "f": 5.336445
+  },
+  {
+    "word": "toilet",
+    "f": 5.323907
+  },
+  {
+    "word": "tray",
+    "f": 5.312701
+  },
+  {
+    "word": "elephant",
+    "f": 5.310366
+  },
+  {
+    "word": "tiger",
+    "f": 5.308245
+  },
+  {
+    "word": "receipt",
+    "f": 5.302145
+  },
+  {
+    "word": "paste",
+    "f": 5.299362
+  },
+  {
+    "word": "skeleton",
+    "f": 5.297452
+  },
+  {
+    "word": "parade",
+    "f": 5.273822
+  },
+  {
+    "word": "nursery",
+    "f": 5.257729
+  },
+  {
+    "word": "anniversary",
+    "f": 5.23735
+  },
+  {
+    "word": "boulder",
+    "f": 5.22256
+  },
+  {
+    "word": "flavor",
+    "f": 5.202923
+  },
+  {
+    "word": "brace",
+    "f": 5.200636
+  },
+  {
+    "word": "sadness",
+    "f": 5.193148
+  },
+  {
+    "word": "ceramic",
+    "f": 5.192831
+  },
+  {
+    "word": "icon",
+    "f": 5.185208
+  },
+  {
+    "word": "balloon",
+    "f": 5.165341
+  },
+  {
+    "word": "penny",
+    "f": 5.164485
+  },
+  {
+    "word": "twist",
+    "f": 5.164076
+  },
+  {
+    "word": "stove",
+    "f": 5.153259
+  },
+  {
+    "word": "drought",
+    "f": 5.136404
+  },
+  {
+    "word": "sunset",
+    "f": 5.105802
+  },
+  {
+    "word": "shrine",
+    "f": 5.10114
+  },
+  {
+    "word": "candle",
+    "f": 5.092186
+  },
+  {
+    "word": "witch",
+    "f": 5.089724
+  },
+  {
+    "word": "carpenter",
+    "f": 5.088198
+  },
+  {
+    "word": "cough",
+    "f": 5.083275
+  },
+  {
+    "word": "compartment",
+    "f": 5.074019
+  },
+  {
+    "word": "carpet",
+    "f": 5.070638
+  },
+  {
+    "word": "vaccine",
+    "f": 5.067253
+  },
+  {
+    "word": "dragon",
+    "f": 5.058421
+  },
+  {
+    "word": "exam",
+    "f": 5.028885
+  },
+  {
+    "word": "lawn",
+    "f": 5.024953
+  },
+  {
+    "word": "sanctuary",
+    "f": 5.02227
+  },
+  {
+    "word": "dial",
+    "f": 5.008075
+  },
+  {
+    "word": "website",
+    "f": 4.982785
+  },
+  {
+    "word": "bean",
+    "f": 4.976581
+  },
+  {
+    "word": "gasoline",
+    "f": 4.97291
+  },
+  {
+    "word": "dock",
+    "f": 4.970572
+  },
+  {
+    "word": "sunshine",
+    "f": 4.964602
+  },
+  {
+    "word": "cafe",
+    "f": 4.962346
+  },
+  {
+    "word": "fighter",
+    "f": 4.955572
+  },
+  {
+    "word": "shout",
+    "f": 4.943434
+  },
+  {
+    "word": "addiction",
+    "f": 4.937254
+  },
+  {
+    "word": "dealer",
+    "f": 4.927527
+  },
+  {
+    "word": "bubble",
+    "f": 4.924732
+  },
+  {
+    "word": "supplier",
+    "f": 4.919341
+  },
+  {
+    "word": "whisper",
+    "f": 4.842151
+  },
+  {
+    "word": "fountain",
+    "f": 4.828586
+  },
+  {
+    "word": "landlord",
+    "f": 4.828321
+  },
+  {
+    "word": "loneliness",
+    "f": 4.819691
+  },
+  {
+    "word": "keyboard",
+    "f": 4.811585
+  },
+  {
+    "word": "swallow",
+    "f": 4.808184
+  },
+  {
+    "word": "mist",
+    "f": 4.808029
+  },
+  {
+    "word": "humidity",
+    "f": 4.798548
+  },
+  {
+    "word": "plaster",
+    "f": 4.795016
+  },
+  {
+    "word": "boot",
+    "f": 4.787175
+  },
+  {
+    "word": "garage",
+    "f": 4.785899
+  },
+  {
+    "word": "costume",
+    "f": 4.779366
+  },
+  {
+    "word": "dome",
+    "f": 4.775303
+  },
+  {
+    "word": "elevator",
+    "f": 4.774482
+  },
+  {
+    "word": "pistol",
+    "f": 4.773119
+  },
+  {
+    "word": "robot",
+    "f": 4.767407
+  },
+  {
+    "word": "oval",
+    "f": 4.755582
+  },
+  {
+    "word": "abbey",
+    "f": 4.744804
+  },
+  {
+    "word": "nephew",
+    "f": 4.743187
+  },
+  {
+    "word": "spark",
+    "f": 4.740991
+  },
+  {
+    "word": "coral",
+    "f": 4.733447
+  },
+  {
+    "word": "submarine",
+    "f": 4.72169
+  },
+  {
+    "word": "ferry",
+    "f": 4.721361
+  },
+  {
+    "word": "purse",
+    "f": 4.710254
+  },
+  {
+    "word": "airplane",
+    "f": 4.669584
+  },
+  {
+    "word": "slice",
+    "f": 4.661022
+  },
+  {
+    "word": "skirt",
+    "f": 4.641555
+  },
+  {
+    "word": "fist",
+    "f": 4.634479
+  },
+  {
+    "word": "stool",
+    "f": 4.619293
+  },
+  {
+    "word": "crust",
+    "f": 4.608369
+  },
+  {
+    "word": "taxi",
+    "f": 4.60488
+  },
+  {
+    "word": "ankle",
+    "f": 4.588537
+  },
+  {
+    "word": "lumber",
+    "f": 4.586361
+  },
+  {
+    "word": "closet",
+    "f": 4.583796
+  },
+  {
+    "word": "grin",
+    "f": 4.570671
+  },
+  {
+    "word": "winner",
+    "f": 4.569986
+  },
+  {
+    "word": "lemon",
+    "f": 4.561273
+  },
+  {
+    "word": "pillow",
+    "f": 4.559886
+  },
+  {
+    "word": "amusement",
+    "f": 4.553266
+  },
+  {
+    "word": "duck",
+    "f": 4.549801
+  },
+  {
+    "word": "moss",
+    "f": 4.548224
+  },
+  {
+    "word": "puzzle",
+    "f": 4.528015
+  },
+  {
+    "word": "brow",
+    "f": 4.52021
+  },
+  {
+    "word": "symphony",
+    "f": 4.511648
+  },
+  {
+    "word": "candy",
+    "f": 4.500212
+  },
+  {
+    "word": "gossip",
+    "f": 4.491856
+  },
+  {
+    "word": "policeman",
+    "f": 4.474978
+  },
+  {
+    "word": "ballet",
+    "f": 4.467351
+  },
+  {
+    "word": "rocket",
+    "f": 4.449513
+  },
+  {
+    "word": "lily",
+    "f": 4.445672
+  },
+  {
+    "word": "crane",
+    "f": 4.442885
+  },
+  {
+    "word": "warehouse",
+    "f": 4.418202
+  },
+  {
+    "word": "yoga",
+    "f": 4.40677
+  },
+  {
+    "word": "odor",
+    "f": 4.397859
+  },
+  {
+    "word": "foam",
+    "f": 4.397728
+  },
+  {
+    "word": "pyramid",
+    "f": 4.394909
+  },
+  {
+    "word": "corpse",
+    "f": 4.379779
+  },
+  {
+    "word": "librarian",
+    "f": 4.371157
+  },
+  {
+    "word": "microwave",
+    "f": 4.367063
+  },
+  {
+    "word": "recorder",
+    "f": 4.356875
+  },
+  {
+    "word": "goat",
+    "f": 4.352019
+  },
+  {
+    "word": "basketball",
+    "f": 4.349039
+  },
+  {
+    "word": "crow",
+    "f": 4.343422
+  },
+  {
+    "word": "veteran",
+    "f": 4.336013
+  },
+  {
+    "word": "scream",
+    "f": 4.334154
+  },
+  {
+    "word": "preach",
+    "f": 4.333127
+  },
+  {
+    "word": "thirst",
+    "f": 4.331347
+  },
+  {
+    "word": "heel",
+    "f": 4.32554
+  },
+  {
+    "word": "dent",
+    "f": 4.322936
+  },
+  {
+    "word": "shine",
+    "f": 4.315044
+  },
+  {
+    "word": "boil",
+    "f": 4.305784
+  },
+  {
+    "word": "garment",
+    "f": 4.286158
+  },
+  {
+    "word": "album",
+    "f": 4.283586
+  },
+  {
+    "word": "scent",
+    "f": 4.280311
+  },
+  {
+    "word": "compass",
+    "f": 4.260313
+  },
+  {
+    "word": "password",
+    "f": 4.256286
+  },
+  {
+    "word": "homeless",
+    "f": 4.25543
+  },
+  {
+    "word": "garbage",
+    "f": 4.254363
+  },
+  {
+    "word": "banner",
+    "f": 4.246146
+  },
+  {
+    "word": "tuition",
+    "f": 4.241924
+  },
+  {
+    "word": "mansion",
+    "f": 4.233077
+  },
+  {
+    "word": "canoe",
+    "f": 4.218002
+  },
+  {
+    "word": "mole",
+    "f": 4.214969
+  },
+  {
+    "word": "scratch",
+    "f": 4.213071
+  },
+  {
+    "word": "investor",
+    "f": 4.185957
+  },
+  {
+    "word": "nightmare",
+    "f": 4.184855
+  },
+  {
+    "word": "graduation",
+    "f": 4.168849
+  },
+  {
+    "word": "notebook",
+    "f": 4.167247
+  },
+  {
+    "word": "diagonal",
+    "f": 4.16521
+  },
+  {
+    "word": "knot",
+    "f": 4.164302
+  },
+  {
+    "word": "coffin",
+    "f": 4.153968
+  },
+  {
+    "word": "whip",
+    "f": 4.147027
+  },
+  {
+    "word": "berry",
+    "f": 4.137454
+  },
+  {
+    "word": "doll",
+    "f": 4.134894
+  },
+  {
+    "word": "gown",
+    "f": 4.126304
+  },
+  {
+    "word": "console",
+    "f": 4.125562
+  },
+  {
+    "word": "flock",
+    "f": 4.124849
+  },
+  {
+    "word": "pledge",
+    "f": 4.12253
+  },
+  {
+    "word": "soda",
+    "f": 4.116691
+  },
+  {
+    "word": "bucket",
+    "f": 4.10761
+  },
+  {
+    "word": "snap",
+    "f": 4.098647
+  },
+  {
+    "word": "wrap",
+    "f": 4.098294
+  },
+  {
+    "word": "bulb",
+    "f": 4.097664
+  },
+  {
+    "word": "calf",
+    "f": 4.096836
+  },
+  {
+    "word": "cherry",
+    "f": 4.085047
+  },
+  {
+    "word": "germ",
+    "f": 4.082795
+  },
+  {
+    "word": "greeting",
+    "f": 4.081947
+  },
+  {
+    "word": "antenna",
+    "f": 4.067934
+  },
+  {
+    "word": "demon",
+    "f": 4.063522
+  },
+  {
+    "word": "sofa",
+    "f": 4.055468
+  },
+  {
+    "word": "pork",
+    "f": 4.050671
+  },
+  {
+    "word": "guitar",
+    "f": 4.050029
+  },
+  {
+    "word": "riot",
+    "f": 4.042434
+  },
+  {
+    "word": "tire",
+    "f": 4.042077
+  },
+  {
+    "word": "trousers",
+    "f": 4.040845
+  },
+  {
+    "word": "weed",
+    "f": 4.040302
+  },
+  {
+    "word": "flush",
+    "f": 4.039374
+  },
+  {
+    "word": "chill",
+    "f": 4.032092
+  },
+  {
+    "word": "clip",
+    "f": 4.030586
+  },
+  {
+    "word": "alphabet",
+    "f": 4.028529
+  },
+  {
+    "word": "dots",
+    "f": 4.023875
+  },
+  {
+    "word": "advertisement",
+    "f": 4.018999
+  },
+  {
+    "word": "bicycle",
+    "f": 4.01783
+  },
+  {
+    "word": "recipe",
+    "f": 4.014615
+  },
+  {
+    "word": "whale",
+    "f": 4.011476
+  },
+  {
+    "word": "scar",
+    "f": 3.971452
+  },
+  {
+    "word": "glue",
+    "f": 3.961558
+  },
+  {
+    "word": "bamboo",
+    "f": 3.954117
+  },
+  {
+    "word": "homework",
+    "f": 3.948147
+  },
+  {
+    "word": "queue",
+    "f": 3.940247
+  },
+  {
+    "word": "memo",
+    "f": 3.93926
+  },
+  {
+    "word": "worm",
+    "f": 3.93161
+  },
+  {
+    "word": "bonus",
+    "f": 3.928149
+  },
+  {
+    "word": "thief",
+    "f": 3.914442
+  },
+  {
+    "word": "salad",
+    "f": 3.911949
+  },
+  {
+    "word": "sleeve",
+    "f": 3.907652
+  },
+  {
+    "word": "spear",
+    "f": 3.905039
+  },
+  {
+    "word": "cruise",
+    "f": 3.900144
+  },
+  {
+    "word": "sack",
+    "f": 3.870101
+  },
+  {
+    "word": "ditch",
+    "f": 3.855113
+  },
+  {
+    "word": "choir",
+    "f": 3.852707
+  },
+  {
+    "word": "yearbook",
+    "f": 3.84996
+  },
+  {
+    "word": "ballot",
+    "f": 3.848712
+  },
+  {
+    "word": "brake",
+    "f": 3.839107
+  },
+  {
+    "word": "drawer",
+    "f": 3.836843
+  },
+  {
+    "word": "rainbow",
+    "f": 3.820777
+  },
+  {
+    "word": "ribbon",
+    "f": 3.817943
+  },
+  {
+    "word": "goodbye",
+    "f": 3.815383
+  },
+  {
+    "word": "email",
+    "f": 3.814673
+  },
+  {
+    "word": "frog",
+    "f": 3.812445
+  },
+  {
+    "word": "towel",
+    "f": 3.806923
+  },
+  {
+    "word": "alley",
+    "f": 3.803697
+  },
+  {
+    "word": "sandwich",
+    "f": 3.797751
+  },
+  {
+    "word": "photographer",
+    "f": 3.79362
+  },
+  {
+    "word": "rider",
+    "f": 3.790005
+  },
+  {
+    "word": "magnet",
+    "f": 3.776425
+  },
+  {
+    "word": "chat",
+    "f": 3.775018
+  },
+  {
+    "word": "animation",
+    "f": 3.763558
+  },
+  {
+    "word": "telescope",
+    "f": 3.752102
+  },
+  {
+    "word": "cloak",
+    "f": 3.745181
+  },
+  {
+    "word": "allergy",
+    "f": 3.736868
+  },
+  {
+    "word": "laundry",
+    "f": 3.72684
+  },
+  {
+    "word": "garlic",
+    "f": 3.725504
+  },
+  {
+    "word": "applause",
+    "f": 3.709053
+  },
+  {
+    "word": "apology",
+    "f": 3.706536
+  },
+  {
+    "word": "spoon",
+    "f": 3.702188
+  },
+  {
+    "word": "feather",
+    "f": 3.685761
+  },
+  {
+    "word": "massage",
+    "f": 3.681369
+  },
+  {
+    "word": "refrigerator",
+    "f": 3.648286
+  },
+  {
+    "word": "pillar",
+    "f": 3.640497
+  },
+  {
+    "word": "musician",
+    "f": 3.626543
+  },
+  {
+    "word": "lace",
+    "f": 3.616622
+  },
+  {
+    "word": "greed",
+    "f": 3.609586
+  },
+  {
+    "word": "barber",
+    "f": 3.597821
+  },
+  {
+    "word": "jewelry",
+    "f": 3.56865
+  },
+  {
+    "word": "actress",
+    "f": 3.558332
+  },
+  {
+    "word": "meadow",
+    "f": 3.555696
+  },
+  {
+    "word": "pavement",
+    "f": 3.548632
+  },
+  {
+    "word": "facade",
+    "f": 3.546345
+  },
+  {
+    "word": "mosque",
+    "f": 3.543946
+  },
+  {
+    "word": "makeup",
+    "f": 3.535361
+  },
+  {
+    "word": "violin",
+    "f": 3.535297
+  },
+  {
+    "word": "ingredient",
+    "f": 3.515402
+  },
+  {
+    "word": "auction",
+    "f": 3.511941
+  },
+  {
+    "word": "fireplace",
+    "f": 3.504434
+  },
+  {
+    "word": "sponsor",
+    "f": 3.497497
+  },
+  {
+    "word": "hawk",
+    "f": 3.496387
+  },
+  {
+    "word": "onion",
+    "f": 3.495174
+  },
+  {
+    "word": "foil",
+    "f": 3.488082
+  },
+  {
+    "word": "circus",
+    "f": 3.487876
+  },
+  {
+    "word": "whistle",
+    "f": 3.479358
+  },
+  {
+    "word": "wizard",
+    "f": 3.479251
+  },
+  {
+    "word": "umbrella",
+    "f": 3.467727
+  },
+  {
+    "word": "swamp",
+    "f": 3.462804
+  },
+  {
+    "word": "sailor",
+    "f": 3.455451
+  },
+  {
+    "word": "hallway",
+    "f": 3.45429
+  },
+  {
+    "word": "antique",
+    "f": 3.450655
+  },
+  {
+    "word": "hedge",
+    "f": 3.446667
+  },
+  {
+    "word": "jeans",
+    "f": 3.441446
+  },
+  {
+    "word": "parcel",
+    "f": 3.435267
+  },
+  {
+    "word": "provoke",
+    "f": 3.429511
+  },
+  {
+    "word": "champagne",
+    "f": 3.425476
+  },
+  {
+    "word": "dough",
+    "f": 3.422812
+  },
+  {
+    "word": "dive",
+    "f": 3.419137
+  },
+  {
+    "word": "staircase",
+    "f": 3.418265
+  },
+  {
+    "word": "armor",
+    "f": 3.41113
+  },
+  {
+    "word": "cheer",
+    "f": 3.408621
+  },
+  {
+    "word": "bike",
+    "f": 3.40405
+  },
+  {
+    "word": "airline",
+    "f": 3.393241
+  },
+  {
+    "word": "tutor",
+    "f": 3.380306
+  },
+  {
+    "word": "leak",
+    "f": 3.379672
+  },
+  {
+    "word": "helicopter",
+    "f": 3.321216
+  },
+  {
+    "word": "dove",
+    "f": 3.306474
+  },
+  {
+    "word": "dancer",
+    "f": 3.30404
+  },
+  {
+    "word": "deadline",
+    "f": 3.302716
+  },
+  {
+    "word": "herb",
+    "f": 3.300421
+  },
+  {
+    "word": "teen",
+    "f": 3.293658
+  },
+  {
+    "word": "trash",
+    "f": 3.286622
+  },
+  {
+    "word": "chess",
+    "f": 3.285833
+  },
+  {
+    "word": "grocery",
+    "f": 3.271852
+  },
+  {
+    "word": "chord",
+    "f": 3.262616
+  },
+  {
+    "word": "veto",
+    "f": 3.258613
+  },
+  {
+    "word": "mall",
+    "f": 3.25759
+  },
+  {
+    "word": "litter",
+    "f": 3.256635
+  },
+  {
+    "word": "notification",
+    "f": 3.25382
+  },
+  {
+    "word": "murderer",
+    "f": 3.252738
+  },
+  {
+    "word": "cork",
+    "f": 3.238289
+  },
+  {
+    "word": "picnic",
+    "f": 3.236767
+  },
+  {
+    "word": "spider",
+    "f": 3.229176
+  },
+  {
+    "word": "vent",
+    "f": 3.226679
+  },
+  {
+    "word": "grapes",
+    "f": 3.220654
+  },
+  {
+    "word": "taxpayer",
+    "f": 3.196767
+  },
+  {
+    "word": "chalk",
+    "f": 3.177336
+  },
+  {
+    "word": "whiskey",
+    "f": 3.16542
+  },
+  {
+    "word": "rectangle",
+    "f": 3.155688
+  },
+  {
+    "word": "tablet",
+    "f": 3.153881
+  },
+  {
+    "word": "ruby",
+    "f": 3.147606
+  },
+  {
+    "word": "vine",
+    "f": 3.146286
+  },
+  {
+    "word": "cube",
+    "f": 3.14233
+  },
+  {
+    "word": "coconut",
+    "f": 3.142021
+  },
+  {
+    "word": "goose",
+    "f": 3.129285
+  },
+  {
+    "word": "banker",
+    "f": 3.128202
+  },
+  {
+    "word": "lyrics",
+    "f": 3.124686
+  },
+  {
+    "word": "balcony",
+    "f": 3.124016
+  },
+  {
+    "word": "poster",
+    "f": 3.122189
+  },
+  {
+    "word": "banana",
+    "f": 3.115125
+  },
+  {
+    "word": "afro",
+    "f": 3.114114
+  },
+  {
+    "word": "torch",
+    "f": 3.110277
+  },
+  {
+    "word": "bald",
+    "f": 3.104906
+  },
+  {
+    "word": "sidewalk",
+    "f": 3.092011
+  },
+  {
+    "word": "passport",
+    "f": 3.091896
+  },
+  {
+    "word": "wreck",
+    "f": 3.090497
+  },
+  {
+    "word": "baggage",
+    "f": 3.085851
+  },
+  {
+    "word": "dentist",
+    "f": 3.079584
+  },
+  {
+    "word": "tomato",
+    "f": 3.078601
+  },
+  {
+    "word": "turtle",
+    "f": 3.076826
+  },
+  {
+    "word": "athlete",
+    "f": 3.07042
+  },
+  {
+    "word": "robbery",
+    "f": 3.068299
+  },
+  {
+    "word": "waiter",
+    "f": 3.060078
+  },
+  {
+    "word": "hose",
+    "f": 3.053299
+  },
+  {
+    "word": "reunion",
+    "f": 3.045538
+  },
+  {
+    "word": "recycling",
+    "f": 3.039192
+  },
+  {
+    "word": "helmet",
+    "f": 3.027617
+  },
+  {
+    "word": "chimney",
+    "f": 3.023701
+  },
+  {
+    "word": "attic",
+    "f": 3.018631
+  },
+  {
+    "word": "ornament",
+    "f": 3.017838
+  },
+  {
+    "word": "hurricane",
+    "f": 3.016534
+  },
+  {
+    "word": "butterfly",
+    "f": 3.016137
+  },
+  {
+    "word": "camping",
+    "f": 3.010865
+  },
+  {
+    "word": "outfit",
+    "f": 3.008003
+  },
+  {
+    "word": "birch",
+    "f": 3.005962
+  },
+  {
+    "word": "teaspoon",
+    "f": 3.001907
+  },
+  {
+    "word": "cellar",
+    "f": 2.991002
+  },
+  {
+    "word": "toast",
+    "f": 2.989813
+  },
+  {
+    "word": "salesman",
+    "f": 2.989535
+  },
+  {
+    "word": "flask",
+    "f": 2.987446
+  },
+  {
+    "word": "landmark",
+    "f": 2.986792
+  },
+  {
+    "word": "pill",
+    "f": 2.978063
+  },
+  {
+    "word": "ambulance",
+    "f": 2.974623
+  },
+  {
+    "word": "canopy",
+    "f": 2.962969
+  },
+  {
+    "word": "swan",
+    "f": 2.962212
+  },
+  {
+    "word": "tractor",
+    "f": 2.945131
+  },
+  {
+    "word": "poisonous",
+    "f": 2.935487
+  },
+  {
+    "word": "programmer",
+    "f": 2.933612
+  },
+  {
+    "word": "backbone",
+    "f": 2.90955
+  },
+  {
+    "word": "asymmetry",
+    "f": 2.908012
+  },
+  {
+    "word": "spike",
+    "f": 2.904833
+  },
+  {
+    "word": "grease",
+    "f": 2.901321
+  },
+  {
+    "word": "handwriting",
+    "f": 2.900635
+  },
+  {
+    "word": "chick",
+    "f": 2.897131
+  },
+  {
+    "word": "kindergarten",
+    "f": 2.892172
+  },
+  {
+    "word": "cereal",
+    "f": 2.871996
+  },
+  {
+    "word": "microphone",
+    "f": 2.86819
+  },
+  {
+    "word": "pike",
+    "f": 2.854792
+  },
+  {
+    "word": "vault",
+    "f": 2.853686
+  },
+  {
+    "word": "handicap",
+    "f": 2.83674
+  },
+  {
+    "word": "spit",
+    "f": 2.836463
+  },
+  {
+    "word": "maze",
+    "f": 2.816881
+  },
+  {
+    "word": "girlfriend",
+    "f": 2.812865
+  },
+  {
+    "word": "galaxy",
+    "f": 2.790711
+  },
+  {
+    "word": "cardboard",
+    "f": 2.790493
+  },
+  {
+    "word": "runner",
+    "f": 2.789153
+  },
+  {
+    "word": "cowboy",
+    "f": 2.788725
+  },
+  {
+    "word": "trailer",
+    "f": 2.786901
+  },
+  {
+    "word": "willow",
+    "f": 2.775132
+  },
+  {
+    "word": "cradle",
+    "f": 2.760513
+  },
+  {
+    "word": "flute",
+    "f": 2.760343
+  },
+  {
+    "word": "vase",
+    "f": 2.756617
+  },
+  {
+    "word": "betray",
+    "f": 2.75557
+  },
+  {
+    "word": "cocoa",
+    "f": 2.754564
+  },
+  {
+    "word": "boyfriend",
+    "f": 2.746814
+  },
+  {
+    "word": "trumpet",
+    "f": 2.732825
+  },
+  {
+    "word": "dwarf",
+    "f": 2.731244
+  },
+  {
+    "word": "socks",
+    "f": 2.728794
+  },
+  {
+    "word": "glacier",
+    "f": 2.72699
+  },
+  {
+    "word": "beaver",
+    "f": 2.721009
+  },
+  {
+    "word": "ounce",
+    "f": 2.718008
+  },
+  {
+    "word": "cricket",
+    "f": 2.714678
+  },
+  {
+    "word": "pest",
+    "f": 2.707519
+  },
+  {
+    "word": "vanish",
+    "f": 2.707416
+  },
+  {
+    "word": "maple",
+    "f": 2.698065
+  },
+  {
+    "word": "bait",
+    "f": 2.691315
+  },
+  {
+    "word": "competitor",
+    "f": 2.69072
+  },
+  {
+    "word": "socket",
+    "f": 2.685928
+  },
+  {
+    "word": "saliva",
+    "f": 2.675035
+  },
+  {
+    "word": "lounge",
+    "f": 2.669338
+  },
+  {
+    "word": "sunrise",
+    "f": 2.655762
+  },
+  {
+    "word": "shrimp",
+    "f": 2.654287
+  },
+  {
+    "word": "lantern",
+    "f": 2.652821
+  },
+  {
+    "word": "perfume",
+    "f": 2.650549
+  },
+  {
+    "word": "sponge",
+    "f": 2.650347
+  },
+  {
+    "word": "diploma",
+    "f": 2.640639
+  },
+  {
+    "word": "stadium",
+    "f": 2.630246
+  },
+  {
+    "word": "palette",
+    "f": 2.623079
+  },
+  {
+    "word": "comb",
+    "f": 2.621842
+  },
+  {
+    "word": "groom",
+    "f": 2.610731
+  },
+  {
+    "word": "patriot",
+    "f": 2.602304
+  },
+  {
+    "word": "luggage",
+    "f": 2.59507
+  },
+  {
+    "word": "technician",
+    "f": 2.58556
+  },
+  {
+    "word": "soccer",
+    "f": 2.578405
+  },
+  {
+    "word": "tailor",
+    "f": 2.577283
+  },
+  {
+    "word": "vinegar",
+    "f": 2.570517
+  },
+  {
+    "word": "peas",
+    "f": 2.568226
+  },
+  {
+    "word": "spill",
+    "f": 2.552536
+  },
+  {
+    "word": "mint",
+    "f": 2.547332
+  },
+  {
+    "word": "donation",
+    "f": 2.530469
+  },
+  {
+    "word": "mustard",
+    "f": 2.518308
+  },
+  {
+    "word": "ramp",
+    "f": 2.518264
+  },
+  {
+    "word": "crab",
+    "f": 2.504707
+  },
+  {
+    "word": "jewel",
+    "f": 2.500283
+  },
+  {
+    "word": "butcher",
+    "f": 2.490572
+  },
+  {
+    "word": "quart",
+    "f": 2.485264
+  },
+  {
+    "word": "daisy",
+    "f": 2.482152
+  },
+  {
+    "word": "camel",
+    "f": 2.48023
+  },
+  {
+    "word": "eclipse",
+    "f": 2.479056
+  },
+  {
+    "word": "traveler",
+    "f": 2.477546
+  },
+  {
+    "word": "survivor",
+    "f": 2.46234
+  },
+  {
+    "word": "lava",
+    "f": 2.457136
+  },
+  {
+    "word": "cartoon",
+    "f": 2.448007
+  },
+  {
+    "word": "stump",
+    "f": 2.446734
+  },
+  {
+    "word": "gallon",
+    "f": 2.438731
+  },
+  {
+    "word": "driveway",
+    "f": 2.436852
+  },
+  {
+    "word": "nostrils",
+    "f": 2.436598
+  },
+  {
+    "word": "scissors",
+    "f": 2.433431
+  },
+  {
+    "word": "shorts",
+    "f": 2.426427
+  },
+  {
+    "word": "visa",
+    "f": 2.424286
+  },
+  {
+    "word": "accountant",
+    "f": 2.418027
+  },
+  {
+    "word": "shark",
+    "f": 2.417861
+  },
+  {
+    "word": "archer",
+    "f": 2.415669
+  },
+  {
+    "word": "bead",
+    "f": 2.408831
+  },
+  {
+    "word": "thermometer",
+    "f": 2.405311
+  },
+  {
+    "word": "puppet",
+    "f": 2.397886
+  },
+  {
+    "word": "vortex",
+    "f": 2.39087
+  },
+  {
+    "word": "idol",
+    "f": 2.390244
+  },
+  {
+    "word": "carnival",
+    "f": 2.383002
+  },
+  {
+    "word": "teenager",
+    "f": 2.368839
+  },
+  {
+    "word": "equator",
+    "f": 2.367003
+  },
+  {
+    "word": "fright",
+    "f": 2.352733
+  },
+  {
+    "word": "pony",
+    "f": 2.350442
+  },
+  {
+    "word": "wrestling",
+    "f": 2.323086
+  },
+  {
+    "word": "prism",
+    "f": 2.317065
+  },
+  {
+    "word": "syrup",
+    "f": 2.310259
+  },
+  {
+    "word": "mister",
+    "f": 2.308047
+  },
+  {
+    "word": "dice",
+    "f": 2.302676
+  },
+  {
+    "word": "jeep",
+    "f": 2.301828
+  },
+  {
+    "word": "glove",
+    "f": 2.300738
+  },
+  {
+    "word": "recess",
+    "f": 2.298625
+  },
+  {
+    "word": "mattress",
+    "f": 2.295977
+  },
+  {
+    "word": "idiom",
+    "f": 2.292294
+  },
+  {
+    "word": "miner",
+    "f": 2.290792
+  },
+  {
+    "word": "playground",
+    "f": 2.289464
+  },
+  {
+    "word": "ache",
+    "f": 2.286654
+  },
+  {
+    "word": "observatory",
+    "f": 2.283653
+  },
+  {
+    "word": "roast",
+    "f": 2.277941
+  },
+  {
+    "word": "raft",
+    "f": 2.269565
+  },
+  {
+    "word": "pigeon",
+    "f": 2.26285
+  },
+  {
+    "word": "grape",
+    "f": 2.260924
+  },
+  {
+    "word": "apron",
+    "f": 2.258426
+  },
+  {
+    "word": "fabulous",
+    "f": 2.258125
+  },
+  {
+    "word": "slippery",
+    "f": 2.257562
+  },
+  {
+    "word": "suburb",
+    "f": 2.253662
+  },
+  {
+    "word": "cushion",
+    "f": 2.252619
+  },
+  {
+    "word": "metro",
+    "f": 2.251002
+  },
+  {
+    "word": "stereo",
+    "f": 2.238567
+  },
+  {
+    "word": "trainer",
+    "f": 2.231345
+  },
+  {
+    "word": "championship",
+    "f": 2.229914
+  },
+  {
+    "word": "mosquito",
+    "f": 2.22415
+  },
+  {
+    "word": "wheelchair",
+    "f": 2.224071
+  },
+  {
+    "word": "thorn",
+    "f": 2.223262
+  },
+  {
+    "word": "badge",
+    "f": 2.222271
+  },
+  {
+    "word": "cabbage",
+    "f": 2.21602
+  },
+  {
+    "word": "volcano",
+    "f": 2.212012
+  },
+  {
+    "word": "undo",
+    "f": 2.201171
+  },
+  {
+    "word": "download",
+    "f": 2.199538
+  },
+  {
+    "word": "jelly",
+    "f": 2.199122
+  },
+  {
+    "word": "sting",
+    "f": 2.195142
+  },
+  {
+    "word": "herring",
+    "f": 2.191994
+  },
+  {
+    "word": "pizza",
+    "f": 2.189117
+  },
+  {
+    "word": "headline",
+    "f": 2.184066
+  },
+  {
+    "word": "mechanic",
+    "f": 2.173467
+  },
+  {
+    "word": "plank",
+    "f": 2.170668
+  },
+  {
+    "word": "wrapping",
+    "f": 2.167683
+  },
+  {
+    "word": "hairy",
+    "f": 2.164881
+  },
+  {
+    "word": "yacht",
+    "f": 2.163723
+  },
+  {
+    "word": "cute",
+    "f": 2.161718
+  },
+  {
+    "word": "warden",
+    "f": 2.158289
+  },
+  {
+    "word": "kettle",
+    "f": 2.14874
+  },
+  {
+    "word": "celebrity",
+    "f": 2.148407
+  },
+  {
+    "word": "tournament",
+    "f": 2.148276
+  },
+  {
+    "word": "precaution",
+    "f": 2.144145
+  },
+  {
+    "word": "pendulum",
+    "f": 2.142199
+  },
+  {
+    "word": "suitcase",
+    "f": 2.142152
+  },
+  {
+    "word": "motel",
+    "f": 2.138437
+  },
+  {
+    "word": "hobby",
+    "f": 2.138429
+  },
+  {
+    "word": "subtraction",
+    "f": 2.135452
+  },
+  {
+    "word": "quilt",
+    "f": 2.124785
+  },
+  {
+    "word": "revolver",
+    "f": 2.12211
+  },
+  {
+    "word": "razor",
+    "f": 2.112224
+  },
+  {
+    "word": "upgrade",
+    "f": 2.111851
+  },
+  {
+    "word": "caravan",
+    "f": 2.107324
+  },
+  {
+    "word": "liar",
+    "f": 2.10476
+  },
+  {
+    "word": "bowling",
+    "f": 2.1043
+  },
+  {
+    "word": "dessert",
+    "f": 2.103325
+  },
+  {
+    "word": "gloss",
+    "f": 2.103043
+  },
+  {
+    "word": "cocktail",
+    "f": 2.088824
+  },
+  {
+    "word": "duel",
+    "f": 2.086062
+  },
+  {
+    "word": "donkey",
+    "f": 2.075387
+  },
+  {
+    "word": "fragrance",
+    "f": 2.072976
+  },
+  {
+    "word": "abyss",
+    "f": 2.072307
+  },
+  {
+    "word": "villain",
+    "f": 2.064319
+  },
+  {
+    "word": "necklace",
+    "f": 2.052007
+  },
+  {
+    "word": "orphan",
+    "f": 2.051377
+  },
+  {
+    "word": "peach",
+    "f": 2.045708
+  },
+  {
+    "word": "rubbish",
+    "f": 2.044749
+  },
+  {
+    "word": "fisherman",
+    "f": 2.044476
+  },
+  {
+    "word": "cookie",
+    "f": 2.040726
+  },
+  {
+    "word": "insomnia",
+    "f": 2.040385
+  },
+  {
+    "word": "chestnut",
+    "f": 2.021199
+  },
+  {
+    "word": "hike",
+    "f": 2.02093
+  },
+  {
+    "word": "peacock",
+    "f": 2.020823
+  },
+  {
+    "word": "frown",
+    "f": 2.012114
+  },
+  {
+    "word": "dagger",
+    "f": 2.006283
+  },
+  {
+    "word": "overweight",
+    "f": 1.999548
+  },
+  {
+    "word": "casino",
+    "f": 1.991133
+  },
+  {
+    "word": "lottery",
+    "f": 1.983609
+  },
+  {
+    "word": "blouse",
+    "f": 1.977762
+  },
+  {
+    "word": "loaf",
+    "f": 1.974092
+  },
+  {
+    "word": "beggar",
+    "f": 1.971725
+  },
+  {
+    "word": "gardener",
+    "f": 1.963286
+  },
+  {
+    "word": "squirrel",
+    "f": 1.962188
+  },
+  {
+    "word": "harp",
+    "f": 1.9604
+  },
+  {
+    "word": "wallet",
+    "f": 1.953895
+  },
+  {
+    "word": "walnut",
+    "f": 1.944124
+  },
+  {
+    "word": "chew",
+    "f": 1.943533
+  },
+  {
+    "word": "hockey",
+    "f": 1.941012
+  },
+  {
+    "word": "sweater",
+    "f": 1.937124
+  },
+  {
+    "word": "subway",
+    "f": 1.918537
+  },
+  {
+    "word": "sewer",
+    "f": 1.916309
+  },
+  {
+    "word": "puppy",
+    "f": 1.897286
+  },
+  {
+    "word": "plum",
+    "f": 1.893952
+  },
+  {
+    "word": "paddle",
+    "f": 1.892168
+  },
+  {
+    "word": "halo",
+    "f": 1.890876
+  },
+  {
+    "word": "cola",
+    "f": 1.879103
+  },
+  {
+    "word": "moth",
+    "f": 1.879071
+  },
+  {
+    "word": "magician",
+    "f": 1.874061
+  },
+  {
+    "word": "steak",
+    "f": 1.867834
+  },
+  {
+    "word": "scarf",
+    "f": 1.866252
+  },
+  {
+    "word": "supermarket",
+    "f": 1.864341
+  },
+  {
+    "word": "brochure",
+    "f": 1.855744
+  },
+  {
+    "word": "curry",
+    "f": 1.852065
+  },
+  {
+    "word": "torpedo",
+    "f": 1.847772
+  },
+  {
+    "word": "pirate",
+    "f": 1.843943
+  },
+  {
+    "word": "dizzy",
+    "f": 1.828872
+  },
+  {
+    "word": "barge",
+    "f": 1.827354
+  },
+  {
+    "word": "spice",
+    "f": 1.8267
+  },
+  {
+    "word": "logo",
+    "f": 1.825911
+  },
+  {
+    "word": "artwork",
+    "f": 1.824952
+  },
+  {
+    "word": "blush",
+    "f": 1.823846
+  },
+  {
+    "word": "locker",
+    "f": 1.82159
+  },
+  {
+    "word": "cupboard",
+    "f": 1.820575
+  },
+  {
+    "word": "appliance",
+    "f": 1.819366
+  },
+  {
+    "word": "clown",
+    "f": 1.815886
+  },
+  {
+    "word": "chef",
+    "f": 1.81174
+  },
+  {
+    "word": "broom",
+    "f": 1.810384
+  },
+  {
+    "word": "plow",
+    "f": 1.808905
+  },
+  {
+    "word": "coyote",
+    "f": 1.802519
+  },
+  {
+    "word": "clover",
+    "f": 1.801992
+  },
+  {
+    "word": "wardrobe",
+    "f": 1.797378
+  },
+  {
+    "word": "pear",
+    "f": 1.79406
+  },
+  {
+    "word": "shotgun",
+    "f": 1.785847
+  },
+  {
+    "word": "snack",
+    "f": 1.785256
+  },
+  {
+    "word": "buzz",
+    "f": 1.777297
+  },
+  {
+    "word": "pedal",
+    "f": 1.769476
+  },
+  {
+    "word": "patio",
+    "f": 1.768679
+  },
+  {
+    "word": "peanut",
+    "f": 1.766836
+  },
+  {
+    "word": "skinny",
+    "f": 1.76284
+  },
+  {
+    "word": "underwear",
+    "f": 1.755919
+  },
+  {
+    "word": "motorcycle",
+    "f": 1.753216
+  },
+  {
+    "word": "scanner",
+    "f": 1.747361
+  },
+  {
+    "word": "grill",
+    "f": 1.744261
+  },
+  {
+    "word": "shovel",
+    "f": 1.73717
+  },
+  {
+    "word": "fern",
+    "f": 1.734958
+  },
+  {
+    "word": "oyster",
+    "f": 1.734367
+  },
+  {
+    "word": "comet",
+    "f": 1.732698
+  },
+  {
+    "word": "lighthouse",
+    "f": 1.731699
+  },
+  {
+    "word": "yolk",
+    "f": 1.726725
+  },
+  {
+    "word": "scary",
+    "f": 1.723526
+  },
+  {
+    "word": "stair",
+    "f": 1.718317
+  },
+  {
+    "word": "curl",
+    "f": 1.710393
+  },
+  {
+    "word": "flashlight",
+    "f": 1.698672
+  },
+  {
+    "word": "beetle",
+    "f": 1.695536
+  },
+  {
+    "word": "waitress",
+    "f": 1.691933
+  },
+  {
+    "word": "shrub",
+    "f": 1.691001
+  },
+  {
+    "word": "calculator",
+    "f": 1.681286
+  },
+  {
+    "word": "calorie",
+    "f": 1.668982
+  },
+  {
+    "word": "apocalypse",
+    "f": 1.663955
+  },
+  {
+    "word": "polo",
+    "f": 1.64808
+  },
+  {
+    "word": "beverage",
+    "f": 1.647767
+  },
+  {
+    "word": "bully",
+    "f": 1.647156
+  },
+  {
+    "word": "eskimo",
+    "f": 1.646744
+  },
+  {
+    "word": "settler",
+    "f": 1.646569
+  },
+  {
+    "word": "bounce",
+    "f": 1.644659
+  },
+  {
+    "word": "hostage",
+    "f": 1.640786
+  },
+  {
+    "word": "tuna",
+    "f": 1.635696
+  },
+  {
+    "word": "bandage",
+    "f": 1.629354
+  },
+  {
+    "word": "pasta",
+    "f": 1.622734
+  },
+  {
+    "word": "laborer",
+    "f": 1.61837
+  },
+  {
+    "word": "mushroom",
+    "f": 1.612864
+  },
+  {
+    "word": "pudding",
+    "f": 1.612674
+  },
+  {
+    "word": "hermit",
+    "f": 1.609431
+  },
+  {
+    "word": "bedtime",
+    "f": 1.602296
+  },
+  {
+    "word": "sausage",
+    "f": 1.599398
+  },
+  {
+    "word": "lettuce",
+    "f": 1.598946
+  },
+  {
+    "word": "drip",
+    "f": 1.595327
+  },
+  {
+    "word": "beak",
+    "f": 1.590067
+  },
+  {
+    "word": "colt",
+    "f": 1.585132
+  },
+  {
+    "word": "moose",
+    "f": 1.584252
+  },
+  {
+    "word": "barbarian",
+    "f": 1.581901
+  },
+  {
+    "word": "reeds",
+    "f": 1.577006
+  },
+  {
+    "word": "seafood",
+    "f": 1.56023
+  },
+  {
+    "word": "lobster",
+    "f": 1.55899
+  },
+  {
+    "word": "dresser",
+    "f": 1.55101
+  },
+  {
+    "word": "lizard",
+    "f": 1.549936
+  },
+  {
+    "word": "stab",
+    "f": 1.549472
+  },
+  {
+    "word": "vegetarian",
+    "f": 1.538984
+  },
+  {
+    "word": "parachute",
+    "f": 1.537406
+  },
+  {
+    "word": "zoom",
+    "f": 1.5372
+  },
+  {
+    "word": "aroma",
+    "f": 1.520476
+  },
+  {
+    "word": "swarm",
+    "f": 1.517023
+  },
+  {
+    "word": "parrot",
+    "f": 1.515862
+  },
+  {
+    "word": "graveyard",
+    "f": 1.499514
+  },
+  {
+    "word": "strawberry",
+    "f": 1.489351
+  },
+  {
+    "word": "emerald",
+    "f": 1.484796
+  },
+  {
+    "word": "viola",
+    "f": 1.484301
+  },
+  {
+    "word": "leopard",
+    "f": 1.47994
+  },
+  {
+    "word": "vanilla",
+    "f": 1.473741
+  },
+  {
+    "word": "vampire",
+    "f": 1.471477
+  },
+  {
+    "word": "marathon",
+    "f": 1.47091
+  },
+  {
+    "word": "bulge",
+    "f": 1.461579
+  },
+  {
+    "word": "armchair",
+    "f": 1.456121
+  },
+  {
+    "word": "spade",
+    "f": 1.453822
+  },
+  {
+    "word": "dolphin",
+    "f": 1.447349
+  },
+  {
+    "word": "claw",
+    "f": 1.446489
+  },
+  {
+    "word": "crucible",
+    "f": 1.441102
+  },
+  {
+    "word": "mustache",
+    "f": 1.440471
+  },
+  {
+    "word": "almond",
+    "f": 1.436369
+  },
+  {
+    "word": "waterfall",
+    "f": 1.428698
+  },
+  {
+    "word": "gymnasium",
+    "f": 1.424294
+  },
+  {
+    "word": "eyebrow",
+    "f": 1.423803
+  },
+  {
+    "word": "carrot",
+    "f": 1.416473
+  },
+  {
+    "word": "briefcase",
+    "f": 1.410159
+  },
+  {
+    "word": "blacksmith",
+    "f": 1.397736
+  },
+  {
+    "word": "pharmacist",
+    "f": 1.391663
+  },
+  {
+    "word": "messy",
+    "f": 1.390934
+  },
+  {
+    "word": "fencing",
+    "f": 1.388361
+  },
+  {
+    "word": "gasp",
+    "f": 1.386542
+  },
+  {
+    "word": "mafia",
+    "f": 1.386347
+  },
+  {
+    "word": "rake",
+    "f": 1.382118
+  },
+  {
+    "word": "loser",
+    "f": 1.381507
+  },
+  {
+    "word": "robber",
+    "f": 1.37664
+  },
+  {
+    "word": "trophy",
+    "f": 1.367526
+  },
+  {
+    "word": "beet",
+    "f": 1.364863
+  },
+  {
+    "word": "meme",
+    "f": 1.357938
+  },
+  {
+    "word": "panther",
+    "f": 1.357732
+  },
+  {
+    "word": "slump",
+    "f": 1.346228
+  },
+  {
+    "word": "snail",
+    "f": 1.339327
+  },
+  {
+    "word": "bakery",
+    "f": 1.3269
+  },
+  {
+    "word": "mammoth",
+    "f": 1.321977
+  },
+  {
+    "word": "boar",
+    "f": 1.318936
+  },
+  {
+    "word": "aquarium",
+    "f": 1.313807
+  },
+  {
+    "word": "spinach",
+    "f": 1.312023
+  },
+  {
+    "word": "millionaire",
+    "f": 1.310743
+  },
+  {
+    "word": "kite",
+    "f": 1.31012
+  },
+  {
+    "word": "scoop",
+    "f": 1.30622
+  },
+  {
+    "word": "abrasion",
+    "f": 1.305094
+  },
+  {
+    "word": "droplet",
+    "f": 1.303536
+  },
+  {
+    "word": "vodka",
+    "f": 1.298787
+  },
+  {
+    "word": "toad",
+    "f": 1.298748
+  },
+  {
+    "word": "hamburger",
+    "f": 1.297138
+  },
+  {
+    "word": "freezer",
+    "f": 1.295949
+  },
+  {
+    "word": "napkin",
+    "f": 1.291434
+  },
+  {
+    "word": "chrome",
+    "f": 1.289298
+  },
+  {
+    "word": "spore",
+    "f": 1.286618
+  },
+  {
+    "word": "crib",
+    "f": 1.285009
+  },
+  {
+    "word": "tortoise",
+    "f": 1.283875
+  },
+  {
+    "word": "postcard",
+    "f": 1.282024
+  },
+  {
+    "word": "crocodile",
+    "f": 1.269617
+  },
+  {
+    "word": "pastry",
+    "f": 1.264281
+  },
+  {
+    "word": "kneel",
+    "f": 1.261177
+  },
+  {
+    "word": "braces",
+    "f": 1.257003
+  },
+  {
+    "word": "otter",
+    "f": 1.255461
+  },
+  {
+    "word": "hostel",
+    "f": 1.2538
+  },
+  {
+    "word": "cactus",
+    "f": 1.252695
+  },
+  {
+    "word": "kitten",
+    "f": 1.252576
+  },
+  {
+    "word": "celery",
+    "f": 1.251799
+  },
+  {
+    "word": "acne",
+    "f": 1.244085
+  },
+  {
+    "word": "refund",
+    "f": 1.243355
+  },
+  {
+    "word": "wreath",
+    "f": 1.24089
+  },
+  {
+    "word": "washer",
+    "f": 1.236977
+  },
+  {
+    "word": "radiator",
+    "f": 1.221688
+  },
+  {
+    "word": "reindeer",
+    "f": 1.216234
+  },
+  {
+    "word": "wrench",
+    "f": 1.214748
+  },
+  {
+    "word": "magma",
+    "f": 1.214311
+  },
+  {
+    "word": "bungalow",
+    "f": 1.211632
+  },
+  {
+    "word": "slam",
+    "f": 1.207834
+  },
+  {
+    "word": "dynamite",
+    "f": 1.207462
+  },
+  {
+    "word": "mango",
+    "f": 1.20529
+  },
+  {
+    "word": "dryer",
+    "f": 1.203153
+  },
+  {
+    "word": "bumper",
+    "f": 1.186473
+  },
+  {
+    "word": "antelope",
+    "f": 1.186298
+  },
+  {
+    "word": "overcoat",
+    "f": 1.168956
+  },
+  {
+    "word": "fries",
+    "f": 1.161698
+  },
+  {
+    "word": "pineapple",
+    "f": 1.161484
+  },
+  {
+    "word": "bartender",
+    "f": 1.154511
+  },
+  {
+    "word": "binoculars",
+    "f": 1.151859
+  },
+  {
+    "word": "clap",
+    "f": 1.144946
+  },
+  {
+    "word": "assassin",
+    "f": 1.144653
+  },
+  {
+    "word": "vomit",
+    "f": 1.14405
+  },
+  {
+    "word": "evaporate",
+    "f": 1.143583
+  },
+  {
+    "word": "squid",
+    "f": 1.14059
+  },
+  {
+    "word": "pumpkin",
+    "f": 1.134612
+  },
+  {
+    "word": "windshield",
+    "f": 1.125035
+  },
+  {
+    "word": "margarine",
+    "f": 1.120259
+  },
+  {
+    "word": "hive",
+    "f": 1.116251
+  },
+  {
+    "word": "biscuit",
+    "f": 1.116243
+  },
+  {
+    "word": "flea",
+    "f": 1.114206
+  },
+  {
+    "word": "lipstick",
+    "f": 1.104557
+  },
+  {
+    "word": "laptop",
+    "f": 1.102615
+  },
+  {
+    "word": "totem",
+    "f": 1.096253
+  },
+  {
+    "word": "canary",
+    "f": 1.095167
+  },
+  {
+    "word": "bunny",
+    "f": 1.092107
+  },
+  {
+    "word": "poke",
+    "f": 1.090481
+  },
+  {
+    "word": "hamster",
+    "f": 1.08936
+  },
+  {
+    "word": "archaeologist",
+    "f": 1.088484
+  },
+  {
+    "word": "poppy",
+    "f": 1.074978
+  },
+  {
+    "word": "kilogram",
+    "f": 1.074661
+  },
+  {
+    "word": "roommate",
+    "f": 1.068307
+  },
+  {
+    "word": "mailbox",
+    "f": 1.060534
+  },
+  {
+    "word": "wallpaper",
+    "f": 1.059654
+  },
+  {
+    "word": "musket",
+    "f": 1.056411
+  },
+  {
+    "word": "mime",
+    "f": 1.054156
+  },
+  {
+    "word": "glitter",
+    "f": 1.053613
+  },
+  {
+    "word": "jaguar",
+    "f": 1.051373
+  },
+  {
+    "word": "wasp",
+    "f": 1.051337
+  },
+  {
+    "word": "referee",
+    "f": 1.049264
+  },
+  {
+    "word": "loot",
+    "f": 1.04377
+  },
+  {
+    "word": "bracelet",
+    "f": 1.043393
+  },
+  {
+    "word": "badger",
+    "f": 1.038197
+  },
+  {
+    "word": "yogurt",
+    "f": 1.03474
+  },
+  {
+    "word": "caterpillar",
+    "f": 1.033979
+  },
+  {
+    "word": "tripod",
+    "f": 1.030737
+  },
+  {
+    "word": "bayonet",
+    "f": 1.029183
+  },
+  {
+    "word": "autograph",
+    "f": 1.022242
+  },
+  {
+    "word": "twig",
+    "f": 1.020918
+  },
+  {
+    "word": "slime",
+    "f": 1.01383
+  },
+  {
+    "word": "seaweed",
+    "f": 1.012146
+  },
+  {
+    "word": "pail",
+    "f": 1.010726
+  },
+  {
+    "word": "sunflower",
+    "f": 1.002751
+  },
+  {
+    "word": "battleship",
+    "f": 0.996282
+  },
+  {
+    "word": "aristocrat",
+    "f": 0.996167
+  },
+  {
+    "word": "tattoo",
+    "f": 0.995402
+  },
+  {
+    "word": "receptionist",
+    "f": 0.99145
+  },
+  {
+    "word": "chore",
+    "f": 0.982812
+  },
+  {
+    "word": "tornado",
+    "f": 0.979879
+  },
+  {
+    "word": "barbecue",
+    "f": 0.976636
+  },
+  {
+    "word": "superpower",
+    "f": 0.975439
+  },
+  {
+    "word": "afterlife",
+    "f": 0.974179
+  },
+  {
+    "word": "handshake",
+    "f": 0.972958
+  },
+  {
+    "word": "forgery",
+    "f": 0.971563
+  },
+  {
+    "word": "caribou",
+    "f": 0.97136
+  },
+  {
+    "word": "punk",
+    "f": 0.969355
+  },
+  {
+    "word": "cobra",
+    "f": 0.966937
+  },
+  {
+    "word": "dinosaur",
+    "f": 0.966314
+  },
+  {
+    "word": "sunglasses",
+    "f": 0.962556
+  },
+  {
+    "word": "chimpanzee",
+    "f": 0.958517
+  },
+  {
+    "word": "outing",
+    "f": 0.957241
+  },
+  {
+    "word": "hurdle",
+    "f": 0.947783
+  },
+  {
+    "word": "graffiti",
+    "f": 0.946736
+  },
+  {
+    "word": "spaghetti",
+    "f": 0.943672
+  },
+  {
+    "word": "plunger",
+    "f": 0.939883
+  },
+  {
+    "word": "cucumber",
+    "f": 0.939145
+  },
+  {
+    "word": "crate",
+    "f": 0.938
+  },
+  {
+    "word": "tombstone",
+    "f": 0.935197
+  },
+  {
+    "word": "diner",
+    "f": 0.931182
+  },
+  {
+    "word": "iceberg",
+    "f": 0.929917
+  },
+  {
+    "word": "catfish",
+    "f": 0.929212
+  },
+  {
+    "word": "grenade",
+    "f": 0.929029
+  },
+  {
+    "word": "yardstick",
+    "f": 0.927682
+  },
+  {
+    "word": "comedian",
+    "f": 0.926405
+  },
+  {
+    "word": "popcorn",
+    "f": 0.917439
+  },
+  {
+    "word": "hoof",
+    "f": 0.916071
+  },
+  {
+    "word": "anvil",
+    "f": 0.914826
+  },
+  {
+    "word": "leash",
+    "f": 0.908813
+  },
+  {
+    "word": "hacker",
+    "f": 0.908734
+  },
+  {
+    "word": "gorilla",
+    "f": 0.906419
+  },
+  {
+    "word": "skyline",
+    "f": 0.904798
+  },
+  {
+    "word": "locust",
+    "f": 0.902839
+  },
+  {
+    "word": "clam",
+    "f": 0.900453
+  },
+  {
+    "word": "cello",
+    "f": 0.894055
+  },
+  {
+    "word": "rooster",
+    "f": 0.893655
+  },
+  {
+    "word": "bodyguard",
+    "f": 0.893044
+  },
+  {
+    "word": "sphinx",
+    "f": 0.888054
+  },
+  {
+    "word": "bathtub",
+    "f": 0.886108
+  },
+  {
+    "word": "scarecrow",
+    "f": 0.882318
+  },
+  {
+    "word": "blizzard",
+    "f": 0.882223
+  },
+  {
+    "word": "leech",
+    "f": 0.881382
+  },
+  {
+    "word": "dungeon",
+    "f": 0.880407
+  },
+  {
+    "word": "cashier",
+    "f": 0.878287
+  },
+  {
+    "word": "kangaroo",
+    "f": 0.8768
+  },
+  {
+    "word": "kilometer",
+    "f": 0.874664
+  },
+  {
+    "word": "darts",
+    "f": 0.872182
+  },
+  {
+    "word": "pelican",
+    "f": 0.870497
+  },
+  {
+    "word": "toolbox",
+    "f": 0.867778
+  },
+  {
+    "word": "backpack",
+    "f": 0.86301
+  },
+  {
+    "word": "hammock",
+    "f": 0.862938
+  },
+  {
+    "word": "sledge",
+    "f": 0.862692
+  },
+  {
+    "word": "clarinet",
+    "f": 0.860651
+  },
+  {
+    "word": "godfather",
+    "f": 0.854602
+  },
+  {
+    "word": "quill",
+    "f": 0.854011
+  },
+  {
+    "word": "alligator",
+    "f": 0.852259
+  },
+  {
+    "word": "stoned",
+    "f": 0.848854
+  },
+  {
+    "word": "zigzag",
+    "f": 0.848656
+  },
+  {
+    "word": "ailment",
+    "f": 0.844803
+  },
+  {
+    "word": "limousine",
+    "f": 0.840387
+  },
+  {
+    "word": "embers",
+    "f": 0.838714
+  },
+  {
+    "word": "grandchild",
+    "f": 0.831337
+  },
+  {
+    "word": "mohawk",
+    "f": 0.831306
+  },
+  {
+    "word": "melon",
+    "f": 0.826811
+  },
+  {
+    "word": "diaper",
+    "f": 0.824686
+  },
+  {
+    "word": "octopus",
+    "f": 0.823243
+  },
+  {
+    "word": "asparagus",
+    "f": 0.821665
+  },
+  {
+    "word": "thunderstorm",
+    "f": 0.821043
+  },
+  {
+    "word": "chihuahua",
+    "f": 0.821011
+  },
+  {
+    "word": "lotion",
+    "f": 0.818585
+  },
+  {
+    "word": "pajamas",
+    "f": 0.813531
+  },
+  {
+    "word": "limbo",
+    "f": 0.813024
+  },
+  {
+    "word": "shipwreck",
+    "f": 0.80814
+  },
+  {
+    "word": "orchid",
+    "f": 0.807589
+  },
+  {
+    "word": "puddle",
+    "f": 0.805802
+  },
+  {
+    "word": "lemonade",
+    "f": 0.797612
+  },
+  {
+    "word": "macho",
+    "f": 0.796578
+  },
+  {
+    "word": "windmill",
+    "f": 0.794084
+  },
+  {
+    "word": "pant",
+    "f": 0.790556
+  },
+  {
+    "word": "ostrich",
+    "f": 0.789748
+  },
+  {
+    "word": "rainforest",
+    "f": 0.788483
+  },
+  {
+    "word": "cocoon",
+    "f": 0.787674
+  },
+  {
+    "word": "bruise",
+    "f": 0.783144
+  },
+  {
+    "word": "gangster",
+    "f": 0.779481
+  },
+  {
+    "word": "hilarious",
+    "f": 0.779457
+  },
+  {
+    "word": "scorpion",
+    "f": 0.775537
+  },
+  {
+    "word": "veterinarian",
+    "f": 0.775196
+  },
+  {
+    "word": "sock",
+    "f": 0.77495
+  },
+  {
+    "word": "blender",
+    "f": 0.774911
+  },
+  {
+    "word": "bleach",
+    "f": 0.765306
+  },
+  {
+    "word": "fridge",
+    "f": 0.76334
+  },
+  {
+    "word": "genie",
+    "f": 0.761802
+  },
+  {
+    "word": "treadmill",
+    "f": 0.759059
+  },
+  {
+    "word": "nutshell",
+    "f": 0.75609
+  },
+  {
+    "word": "cauldron",
+    "f": 0.745371
+  },
+  {
+    "word": "hanger",
+    "f": 0.740234
+  },
+  {
+    "word": "whisk",
+    "f": 0.739639
+  },
+  {
+    "word": "cuckoo",
+    "f": 0.739413
+  },
+  {
+    "word": "burglar",
+    "f": 0.735917
+  },
+  {
+    "word": "cracker",
+    "f": 0.735647
+  },
+  {
+    "word": "zebra",
+    "f": 0.735172
+  },
+  {
+    "word": "spool",
+    "f": 0.732017
+  },
+  {
+    "word": "reptile",
+    "f": 0.728687
+  },
+  {
+    "word": "campfire",
+    "f": 0.724671
+  },
+  {
+    "word": "bingo",
+    "f": 0.71781
+  },
+  {
+    "word": "prune",
+    "f": 0.716315
+  },
+  {
+    "word": "unicorn",
+    "f": 0.708142
+  },
+  {
+    "word": "broccoli",
+    "f": 0.707694
+  },
+  {
+    "word": "nightclub",
+    "f": 0.707127
+  },
+  {
+    "word": "pickle",
+    "f": 0.704828
+  },
+  {
+    "word": "fireman",
+    "f": 0.694113
+  },
+  {
+    "word": "shampoo",
+    "f": 0.690859
+  },
+  {
+    "word": "safari",
+    "f": 0.688956
+  },
+  {
+    "word": "goldfish",
+    "f": 0.688627
+  },
+  {
+    "word": "bellow",
+    "f": 0.686074
+  },
+  {
+    "word": "vulture",
+    "f": 0.68236
+  },
+  {
+    "word": "billboard",
+    "f": 0.682051
+  },
+  {
+    "word": "banjo",
+    "f": 0.678404
+  },
+  {
+    "word": "skate",
+    "f": 0.675502
+  },
+  {
+    "word": "coaster",
+    "f": 0.672985
+  },
+  {
+    "word": "yawn",
+    "f": 0.671526
+  },
+  {
+    "word": "haircut",
+    "f": 0.668236
+  },
+  {
+    "word": "filmmaker",
+    "f": 0.665474
+  },
+  {
+    "word": "grasshopper",
+    "f": 0.657585
+  },
+  {
+    "word": "handbag",
+    "f": 0.65682
+  },
+  {
+    "word": "voodoo",
+    "f": 0.655992
+  },
+  {
+    "word": "weasel",
+    "f": 0.655576
+  },
+  {
+    "word": "wonderland",
+    "f": 0.654553
+  },
+  {
+    "word": "porcupine",
+    "f": 0.652868
+  },
+  {
+    "word": "crayon",
+    "f": 0.65219
+  },
+  {
+    "word": "grapefruit",
+    "f": 0.652186
+  },
+  {
+    "word": "nutmeg",
+    "f": 0.651045
+  },
+  {
+    "word": "vise",
+    "f": 0.646466
+  },
+  {
+    "word": "mayonnaise",
+    "f": 0.644314
+  },
+  {
+    "word": "volleyball",
+    "f": 0.644191
+  },
+  {
+    "word": "fireside",
+    "f": 0.643699
+  },
+  {
+    "word": "toothpaste",
+    "f": 0.640382
+  },
+  {
+    "word": "sloth",
+    "f": 0.636992
+  },
+  {
+    "word": "spatula",
+    "f": 0.636517
+  },
+  {
+    "word": "cookbook",
+    "f": 0.634083
+  },
+  {
+    "word": "petal",
+    "f": 0.63245
+  },
+  {
+    "word": "astronaut",
+    "f": 0.632168
+  },
+  {
+    "word": "skunk",
+    "f": 0.631962
+  },
+  {
+    "word": "raspberry",
+    "f": 0.631035
+  },
+  {
+    "word": "zipper",
+    "f": 0.626329
+  },
+  {
+    "word": "stylus",
+    "f": 0.6225
+  },
+  {
+    "word": "wrinkle",
+    "f": 0.620249
+  },
+  {
+    "word": "toothbrush",
+    "f": 0.618909
+  },
+  {
+    "word": "janitor",
+    "f": 0.617022
+  },
+  {
+    "word": "sprinkler",
+    "f": 0.615008
+  },
+  {
+    "word": "adorable",
+    "f": 0.613669
+  },
+  {
+    "word": "acorn",
+    "f": 0.610053
+  },
+  {
+    "word": "faucet",
+    "f": 0.609023
+  },
+  {
+    "word": "canister",
+    "f": 0.608539
+  },
+  {
+    "word": "tsunami",
+    "f": 0.608381
+  },
+  {
+    "word": "scuba",
+    "f": 0.604892
+  },
+  {
+    "word": "teapot",
+    "f": 0.603164
+  },
+  {
+    "word": "skates",
+    "f": 0.602855
+  },
+  {
+    "word": "honeycomb",
+    "f": 0.600564
+  },
+  {
+    "word": "knuckle",
+    "f": 0.597139
+  },
+  {
+    "word": "triplets",
+    "f": 0.596092
+  },
+  {
+    "word": "hippie",
+    "f": 0.595525
+  },
+  {
+    "word": "tablecloth",
+    "f": 0.594515
+  },
+  {
+    "word": "rhinoceros",
+    "f": 0.59394
+  },
+  {
+    "word": "dashboard",
+    "f": 0.591197
+  },
+  {
+    "word": "sniper",
+    "f": 0.590642
+  },
+  {
+    "word": "baboon",
+    "f": 0.589825
+  },
+  {
+    "word": "semicircle",
+    "f": 0.589096
+  },
+  {
+    "word": "eraser",
+    "f": 0.588196
+  },
+  {
+    "word": "bookcase",
+    "f": 0.58797
+  },
+  {
+    "word": "mermaid",
+    "f": 0.5873
+  },
+  {
+    "word": "asteroid",
+    "f": 0.582135
+  },
+  {
+    "word": "weekday",
+    "f": 0.575745
+  },
+  {
+    "word": "watermelon",
+    "f": 0.573573
+  },
+  {
+    "word": "potion",
+    "f": 0.570576
+  },
+  {
+    "word": "shrew",
+    "f": 0.569427
+  },
+  {
+    "word": "blog",
+    "f": 0.567857
+  },
+  {
+    "word": "cauliflower",
+    "f": 0.566735
+  },
+  {
+    "word": "screwdriver",
+    "f": 0.565217
+  },
+  {
+    "word": "freckles",
+    "f": 0.559671
+  },
+  {
+    "word": "electrician",
+    "f": 0.557016
+  },
+  {
+    "word": "apricot",
+    "f": 0.554257
+  },
+  {
+    "word": "accordion",
+    "f": 0.553809
+  },
+  {
+    "word": "cranberry",
+    "f": 0.553408
+  },
+  {
+    "word": "sticker",
+    "f": 0.550174
+  },
+  {
+    "word": "raincoat",
+    "f": 0.541667
+  },
+  {
+    "word": "spaceship",
+    "f": 0.537065
+  },
+  {
+    "word": "acrobat",
+    "f": 0.535797
+  },
+  {
+    "word": "wart",
+    "f": 0.535717
+  },
+  {
+    "word": "sauna",
+    "f": 0.534972
+  },
+  {
+    "word": "pancake",
+    "f": 0.534381
+  },
+  {
+    "word": "silo",
+    "f": 0.533989
+  },
+  {
+    "word": "saltwater",
+    "f": 0.528963
+  },
+  {
+    "word": "skyscraper",
+    "f": 0.524257
+  },
+  {
+    "word": "plumber",
+    "f": 0.524123
+  },
+  {
+    "word": "dispenser",
+    "f": 0.520829
+  },
+  {
+    "word": "meteorite",
+    "f": 0.51985
+  },
+  {
+    "word": "guillotine",
+    "f": 0.518644
+  },
+  {
+    "word": "stork",
+    "f": 0.515493
+  },
+  {
+    "word": "karate",
+    "f": 0.513824
+  },
+  {
+    "word": "lynx",
+    "f": 0.512932
+  },
+  {
+    "word": "procrastination",
+    "f": 0.510281
+  },
+  {
+    "word": "tickle",
+    "f": 0.509908
+  },
+  {
+    "word": "charger",
+    "f": 0.508988
+  },
+  {
+    "word": "turnip",
+    "f": 0.508215
+  },
+  {
+    "word": "eggplant",
+    "f": 0.496716
+  },
+  {
+    "word": "dishwasher",
+    "f": 0.494298
+  },
+  {
+    "word": "macaroni",
+    "f": 0.491686
+  },
+  {
+    "word": "raccoon",
+    "f": 0.490005
+  },
+  {
+    "word": "saxophone",
+    "f": 0.486501
+  },
+  {
+    "word": "cockroach",
+    "f": 0.48522
+  },
+  {
+    "word": "snowstorm",
+    "f": 0.485201
+  },
+  {
+    "word": "chandelier",
+    "f": 0.484689
+  },
+  {
+    "word": "notepad",
+    "f": 0.484344
+  },
+  {
+    "word": "woodpecker",
+    "f": 0.483425
+  },
+  {
+    "word": "typhoon",
+    "f": 0.482033
+  },
+  {
+    "word": "brunette",
+    "f": 0.481459
+  },
+  {
+    "word": "jester",
+    "f": 0.480115
+  },
+  {
+    "word": "muffin",
+    "f": 0.479889
+  },
+  {
+    "word": "snowball",
+    "f": 0.476377
+  },
+  {
+    "word": "chameleon",
+    "f": 0.472456
+  },
+  {
+    "word": "blackberry",
+    "f": 0.467402
+  },
+  {
+    "word": "kale",
+    "f": 0.466035
+  },
+  {
+    "word": "fingernail",
+    "f": 0.461338
+  },
+  {
+    "word": "figurine",
+    "f": 0.460497
+  },
+  {
+    "word": "sneeze",
+    "f": 0.459086
+  },
+  {
+    "word": "harpoon",
+    "f": 0.459011
+  },
+  {
+    "word": "walrus",
+    "f": 0.455927
+  },
+  {
+    "word": "albatross",
+    "f": 0.453096
+  },
+  {
+    "word": "giraffe",
+    "f": 0.452954
+  },
+  {
+    "word": "raisin",
+    "f": 0.451868
+  },
+  {
+    "word": "headphones",
+    "f": 0.449196
+  },
+  {
+    "word": "octagon",
+    "f": 0.448082
+  },
+  {
+    "word": "poop",
+    "f": 0.447844
+  },
+  {
+    "word": "kayak",
+    "f": 0.442798
+  },
+  {
+    "word": "sunburn",
+    "f": 0.441894
+  },
+  {
+    "word": "hedgehog",
+    "f": 0.441514
+  },
+  {
+    "word": "hippo",
+    "f": 0.440491
+  },
+  {
+    "word": "firearm",
+    "f": 0.44044
+  },
+  {
+    "word": "blackbird",
+    "f": 0.439742
+  },
+  {
+    "word": "hyena",
+    "f": 0.437613
+  },
+  {
+    "word": "silverware",
+    "f": 0.436967
+  },
+  {
+    "word": "centaur",
+    "f": 0.436951
+  },
+  {
+    "word": "gadget",
+    "f": 0.435342
+  },
+  {
+    "word": "starfish",
+    "f": 0.434482
+  },
+  {
+    "word": "scooter",
+    "f": 0.433562
+  },
+  {
+    "word": "scythe",
+    "f": 0.433142
+  },
+  {
+    "word": "gnome",
+    "f": 0.432238
+  },
+  {
+    "word": "caviar",
+    "f": 0.432234
+  },
+  {
+    "word": "chime",
+    "f": 0.431766
+  },
+  {
+    "word": "joker",
+    "f": 0.431148
+  },
+  {
+    "word": "wrestler",
+    "f": 0.426768
+  },
+  {
+    "word": "doorknob",
+    "f": 0.423934
+  },
+  {
+    "word": "tabletop",
+    "f": 0.423684
+  },
+  {
+    "word": "bookmark",
+    "f": 0.422542
+  },
+  {
+    "word": "avocado",
+    "f": 0.420164
+  },
+  {
+    "word": "trombone",
+    "f": 0.418487
+  },
+  {
+    "word": "panda",
+    "f": 0.417389
+  },
+  {
+    "word": "cornfield",
+    "f": 0.413881
+  },
+  {
+    "word": "fingertip",
+    "f": 0.412169
+  },
+  {
+    "word": "sailboat",
+    "f": 0.412038
+  },
+  {
+    "word": "brownie",
+    "f": 0.411487
+  },
+  {
+    "word": "wiggle",
+    "f": 0.403571
+  },
+  {
+    "word": "bulldozer",
+    "f": 0.402679
+  },
+  {
+    "word": "papaya",
+    "f": 0.401605
+  },
+  {
+    "word": "abacus",
+    "f": 0.399107
+  },
+  {
+    "word": "bookshelf",
+    "f": 0.396951
+  },
+  {
+    "word": "dandelion",
+    "f": 0.396265
+  },
+  {
+    "word": "wheelbarrow",
+    "f": 0.394497
+  },
+  {
+    "word": "boomerang",
+    "f": 0.393364
+  },
+  {
+    "word": "lasso",
+    "f": 0.391282
+  },
+  {
+    "word": "motherboard",
+    "f": 0.390169
+  },
+  {
+    "word": "billiards",
+    "f": 0.389915
+  },
+  {
+    "word": "zombie",
+    "f": 0.388884
+  },
+  {
+    "word": "poodle",
+    "f": 0.387418
+  },
+  {
+    "word": "hexagon",
+    "f": 0.386157
+  },
+  {
+    "word": "toothpick",
+    "f": 0.385071
+  },
+  {
+    "word": "frostbite",
+    "f": 0.383561
+  },
+  {
+    "word": "goblin",
+    "f": 0.382364
+  },
+  {
+    "word": "blueberry",
+    "f": 0.38052
+  },
+  {
+    "word": "jellyfish",
+    "f": 0.376675
+  },
+  {
+    "word": "caramel",
+    "f": 0.373314
+  },
+  {
+    "word": "frosting",
+    "f": 0.367392
+  },
+  {
+    "word": "tuxedo",
+    "f": 0.363309
+  },
+  {
+    "word": "hummingbird",
+    "f": 0.363261
+  },
+  {
+    "word": "nugget",
+    "f": 0.36279
+  },
+  {
+    "word": "radish",
+    "f": 0.361184
+  },
+  {
+    "word": "blindfold",
+    "f": 0.360435
+  },
+  {
+    "word": "armpit",
+    "f": 0.355345
+  },
+  {
+    "word": "dominoes",
+    "f": 0.354255
+  },
+  {
+    "word": "rune",
+    "f": 0.352574
+  },
+  {
+    "word": "zeppelin",
+    "f": 0.351032
+  },
+  {
+    "word": "ponytail",
+    "f": 0.344876
+  },
+  {
+    "word": "puma",
+    "f": 0.343477
+  },
+  {
+    "word": "licorice",
+    "f": 0.342042
+  },
+  {
+    "word": "ballerina",
+    "f": 0.341119
+  },
+  {
+    "word": "scribble",
+    "f": 0.339937
+  },
+  {
+    "word": "llama",
+    "f": 0.339485
+  },
+  {
+    "word": "sushi",
+    "f": 0.338831
+  },
+  {
+    "word": "catapult",
+    "f": 0.337832
+  },
+  {
+    "word": "periscope",
+    "f": 0.337662
+  },
+  {
+    "word": "ketchup",
+    "f": 0.337317
+  },
+  {
+    "word": "pinky",
+    "f": 0.335585
+  },
+  {
+    "word": "underweight",
+    "f": 0.335577
+  },
+  {
+    "word": "mascot",
+    "f": 0.335089
+  },
+  {
+    "word": "espresso",
+    "f": 0.335066
+  },
+  {
+    "word": "thug",
+    "f": 0.331962
+  },
+  {
+    "word": "cringe",
+    "f": 0.327784
+  },
+  {
+    "word": "noodle",
+    "f": 0.327407
+  },
+  {
+    "word": "harmonica",
+    "f": 0.327146
+  },
+  {
+    "word": "roadblock",
+    "f": 0.326955
+  },
+  {
+    "word": "chopsticks",
+    "f": 0.326848
+  },
+  {
+    "word": "quicksand",
+    "f": 0.325144
+  },
+  {
+    "word": "welder",
+    "f": 0.324426
+  },
+  {
+    "word": "juggle",
+    "f": 0.324133
+  },
+  {
+    "word": "tadpole",
+    "f": 0.321683
+  },
+  {
+    "word": "necktie",
+    "f": 0.320748
+  },
+  {
+    "word": "hippopotamus",
+    "f": 0.320391
+  },
+  {
+    "word": "flamingo",
+    "f": 0.320018
+  },
+  {
+    "word": "udder",
+    "f": 0.31959
+  },
+  {
+    "word": "fireball",
+    "f": 0.318441
+  },
+  {
+    "word": "hourglass",
+    "f": 0.316047
+  },
+  {
+    "word": "florist",
+    "f": 0.313474
+  },
+  {
+    "word": "incognito",
+    "f": 0.312427
+  },
+  {
+    "word": "tuba",
+    "f": 0.308876
+  },
+  {
+    "word": "seagull",
+    "f": 0.307564
+  },
+  {
+    "word": "werewolf",
+    "f": 0.306826
+  },
+  {
+    "word": "marmalade",
+    "f": 0.303497
+  },
+  {
+    "word": "anaconda",
+    "f": 0.302613
+  },
+  {
+    "word": "pensioner",
+    "f": 0.301566
+  },
+  {
+    "word": "grumpy",
+    "f": 0.301344
+  },
+  {
+    "word": "milkman",
+    "f": 0.300314
+  },
+  {
+    "word": "rainstorm",
+    "f": 0.29788
+  },
+  {
+    "word": "firefly",
+    "f": 0.29457
+  },
+  {
+    "word": "sardine",
+    "f": 0.294082
+  },
+  {
+    "word": "marigold",
+    "f": 0.292172
+  },
+  {
+    "word": "toaster",
+    "f": 0.291343
+  },
+  {
+    "word": "diva",
+    "f": 0.29017
+  },
+  {
+    "word": "corkscrew",
+    "f": 0.289904
+  },
+  {
+    "word": "hibernate",
+    "f": 0.289421
+  },
+  {
+    "word": "streamer",
+    "f": 0.283994
+  },
+  {
+    "word": "carnivore",
+    "f": 0.282618
+  },
+  {
+    "word": "rewind",
+    "f": 0.282087
+  },
+  {
+    "word": "excavator",
+    "f": 0.280799
+  },
+  {
+    "word": "cheerleader",
+    "f": 0.278044
+  },
+  {
+    "word": "drawbridge",
+    "f": 0.277949
+  },
+  {
+    "word": "crossbow",
+    "f": 0.277663
+  },
+  {
+    "word": "fireproof",
+    "f": 0.275959
+  },
+  {
+    "word": "prawn",
+    "f": 0.275301
+  },
+  {
+    "word": "swordfish",
+    "f": 0.273271
+  },
+  {
+    "word": "gladiator",
+    "f": 0.272352
+  },
+  {
+    "word": "manhole",
+    "f": 0.269902
+  },
+  {
+    "word": "seasick",
+    "f": 0.269038
+  },
+  {
+    "word": "geyser",
+    "f": 0.268626
+  },
+  {
+    "word": "tricycle",
+    "f": 0.267567
+  },
+  {
+    "word": "sparkles",
+    "f": 0.263203
+  },
+  {
+    "word": "mailman",
+    "f": 0.260048
+  },
+  {
+    "word": "omelet",
+    "f": 0.258498
+  },
+  {
+    "word": "snowflake",
+    "f": 0.254324
+  },
+  {
+    "word": "dragonfly",
+    "f": 0.252627
+  },
+  {
+    "word": "headboard",
+    "f": 0.252286
+  },
+  {
+    "word": "sandbox",
+    "f": 0.251168
+  },
+  {
+    "word": "bluebird",
+    "f": 0.251109
+  },
+  {
+    "word": "taco",
+    "f": 0.247779
+  },
+  {
+    "word": "cyborg",
+    "f": 0.246816
+  },
+  {
+    "word": "mantis",
+    "f": 0.245928
+  },
+  {
+    "word": "firefighter",
+    "f": 0.243233
+  },
+  {
+    "word": "trapdoor",
+    "f": 0.240759
+  },
+  {
+    "word": "crowbar",
+    "f": 0.235388
+  },
+  {
+    "word": "seesaw",
+    "f": 0.235158
+  },
+  {
+    "word": "kiwi",
+    "f": 0.2345
+  },
+  {
+    "word": "sensei",
+    "f": 0.234024
+  },
+  {
+    "word": "flagpole",
+    "f": 0.230484
+  },
+  {
+    "word": "headband",
+    "f": 0.229696
+  },
+  {
+    "word": "snowman",
+    "f": 0.229113
+  },
+  {
+    "word": "dalmatian",
+    "f": 0.228954
+  },
+  {
+    "word": "waffle",
+    "f": 0.228748
+  },
+  {
+    "word": "deodorant",
+    "f": 0.228423
+  },
+  {
+    "word": "cheetah",
+    "f": 0.228154
+  },
+  {
+    "word": "pitchfork",
+    "f": 0.227349
+  },
+  {
+    "word": "tentacle",
+    "f": 0.224154
+  },
+  {
+    "word": "motorbike",
+    "f": 0.220004
+  },
+  {
+    "word": "bagel",
+    "f": 0.219746
+  },
+  {
+    "word": "cheesecake",
+    "f": 0.217423
+  },
+  {
+    "word": "marshland",
+    "f": 0.216079
+  },
+  {
+    "word": "sombrero",
+    "f": 0.210328
+  },
+  {
+    "word": "bricklayer",
+    "f": 0.207176
+  },
+  {
+    "word": "goatee",
+    "f": 0.206736
+  },
+  {
+    "word": "armadillo",
+    "f": 0.20303
+  },
+  {
+    "word": "mannequin",
+    "f": 0.201881
+  },
+  {
+    "word": "nutcracker",
+    "f": 0.199411
+  },
+  {
+    "word": "megaphone",
+    "f": 0.198658
+  },
+  {
+    "word": "gummy",
+    "f": 0.198511
+  },
+  {
+    "word": "dandruff",
+    "f": 0.198456
+  },
+  {
+    "word": "detonate",
+    "f": 0.197033
+  },
+  {
+    "word": "bouncer",
+    "f": 0.196303
+  },
+  {
+    "word": "sledgehammer",
+    "f": 0.191479
+  },
+  {
+    "word": "karaoke",
+    "f": 0.189549
+  },
+  {
+    "word": "stapler",
+    "f": 0.187269
+  },
+  {
+    "word": "chipmunk",
+    "f": 0.184661
+  },
+  {
+    "word": "cymbal",
+    "f": 0.183234
+  },
+  {
+    "word": "marshmallow",
+    "f": 0.180047
+  },
+  {
+    "word": "tangerine",
+    "f": 0.179532
+  },
+  {
+    "word": "broomstick",
+    "f": 0.177748
+  },
+  {
+    "word": "centipede",
+    "f": 0.177585
+  },
+  {
+    "word": "drool",
+    "f": 0.175881
+  },
+  {
+    "word": "pinball",
+    "f": 0.172135
+  },
+  {
+    "word": "ninja",
+    "f": 0.169083
+  },
+  {
+    "word": "manatee",
+    "f": 0.167358
+  },
+  {
+    "word": "swimsuit",
+    "f": 0.166685
+  },
+  {
+    "word": "marmot",
+    "f": 0.166546
+  },
+  {
+    "word": "daffodil",
+    "f": 0.166371
+  },
+  {
+    "word": "bagpipes",
+    "f": 0.165428
+  },
+  {
+    "word": "nerd",
+    "f": 0.165365
+  },
+  {
+    "word": "antivirus",
+    "f": 0.16414
+  },
+  {
+    "word": "puffin",
+    "f": 0.163153
+  },
+  {
+    "word": "pimple",
+    "f": 0.161714
+  },
+  {
+    "word": "eyelash",
+    "f": 0.161464
+  },
+  {
+    "word": "matchbox",
+    "f": 0.160909
+  },
+  {
+    "word": "firehouse",
+    "f": 0.156505
+  },
+  {
+    "word": "raindrop",
+    "f": 0.156366
+  },
+  {
+    "word": "tarantula",
+    "f": 0.155712
+  },
+  {
+    "word": "tampon",
+    "f": 0.155137
+  },
+  {
+    "word": "cicada",
+    "f": 0.154547
+  },
+  {
+    "word": "mousetrap",
+    "f": 0.154301
+  },
+  {
+    "word": "spoiler",
+    "f": 0.153802
+  },
+  {
+    "word": "condiment",
+    "f": 0.151249
+  },
+  {
+    "word": "lightbulb",
+    "f": 0.150607
+  },
+  {
+    "word": "burp",
+    "f": 0.150563
+  },
+  {
+    "word": "magnifier",
+    "f": 0.145477
+  },
+  {
+    "word": "manicure",
+    "f": 0.144839
+  },
+  {
+    "word": "cappuccino",
+    "f": 0.142944
+  },
+  {
+    "word": "blimp",
+    "f": 0.141922
+  },
+  {
+    "word": "lollipop",
+    "f": 0.141561
+  },
+  {
+    "word": "anthill",
+    "f": 0.141105
+  },
+  {
+    "word": "pistachio",
+    "f": 0.139305
+  },
+  {
+    "word": "orangutan",
+    "f": 0.139036
+  },
+  {
+    "word": "lemur",
+    "f": 0.138945
+  },
+  {
+    "word": "anime",
+    "f": 0.13879
+  },
+  {
+    "word": "parakeet",
+    "f": 0.137827
+  },
+  {
+    "word": "xylophone",
+    "f": 0.137557
+  },
+  {
+    "word": "swag",
+    "f": 0.137082
+  },
+  {
+    "word": "toenail",
+    "f": 0.136039
+  },
+  {
+    "word": "alpaca",
+    "f": 0.135908
+  },
+  {
+    "word": "skateboard",
+    "f": 0.135298
+  },
+  {
+    "word": "slingshot",
+    "f": 0.135199
+  },
+  {
+    "word": "hovercraft",
+    "f": 0.133772
+  },
+  {
+    "word": "platypus",
+    "f": 0.133003
+  },
+  {
+    "word": "firecracker",
+    "f": 0.131905
+  },
+  {
+    "word": "pretzel",
+    "f": 0.131552
+  },
+  {
+    "word": "hieroglyph",
+    "f": 0.130648
+  },
+  {
+    "word": "croissant",
+    "f": 0.129911
+  },
+  {
+    "word": "chinchilla",
+    "f": 0.12982
+  },
+  {
+    "word": "heist",
+    "f": 0.129649
+  },
+  {
+    "word": "koala",
+    "f": 0.128809
+  },
+  {
+    "word": "hopscotch",
+    "f": 0.128377
+  },
+  {
+    "word": "timpani",
+    "f": 0.127314
+  },
+  {
+    "word": "nuke",
+    "f": 0.126898
+  },
+  {
+    "word": "icicle",
+    "f": 0.126641
+  },
+  {
+    "word": "hairbrush",
+    "f": 0.126379
+  },
+  {
+    "word": "bandana",
+    "f": 0.126133
+  },
+  {
+    "word": "minivan",
+    "f": 0.12563
+  },
+  {
+    "word": "turd",
+    "f": 0.125527
+  },
+  {
+    "word": "hypnotize",
+    "f": 0.125352
+  },
+  {
+    "word": "lumberjack",
+    "f": 0.125099
+  },
+  {
+    "word": "origami",
+    "f": 0.124972
+  },
+  {
+    "word": "fizz",
+    "f": 0.123985
+  },
+  {
+    "word": "doghouse",
+    "f": 0.121876
+  },
+  {
+    "word": "rapper",
+    "f": 0.121289
+  },
+  {
+    "word": "bazooka",
+    "f": 0.121261
+  },
+  {
+    "word": "hazelnut",
+    "f": 0.12096
+  },
+  {
+    "word": "shoebox",
+    "f": 0.120465
+  },
+  {
+    "word": "orca",
+    "f": 0.120378
+  },
+  {
+    "word": "chainsaw",
+    "f": 0.119216
+  },
+  {
+    "word": "ravioli",
+    "f": 0.118499
+  },
+  {
+    "word": "hobbit",
+    "f": 0.117773
+  },
+  {
+    "word": "firework",
+    "f": 0.117674
+  },
+  {
+    "word": "hitchhiker",
+    "f": 0.112822
+  },
+  {
+    "word": "pigsty",
+    "f": 0.112541
+  },
+  {
+    "word": "surfboard",
+    "f": 0.108624
+  },
+  {
+    "word": "seashell",
+    "f": 0.108208
+  },
+  {
+    "word": "sandstorm",
+    "f": 0.106789
+  },
+  {
+    "word": "sandstorm",
+    "f": 0.106789
+  },
+  {
+    "word": "stingray",
+    "f": 0.105247
+  },
+  {
+    "word": "cheeseburger",
+    "f": 0.105132
+  },
+  {
+    "word": "dollhouse",
+    "f": 0.104748
+  },
+  {
+    "word": "gravedigger",
+    "f": 0.104573
+  },
+  {
+    "word": "beanie",
+    "f": 0.102932
+  },
+  {
+    "word": "jello",
+    "f": 0.102789
+  },
+  {
+    "word": "beanstalk",
+    "f": 0.101969
+  },
+  {
+    "word": "caveman",
+    "f": 0.097985
+  },
+  {
+    "word": "jalapeno",
+    "f": 0.097454
+  },
+  {
+    "word": "nosebleed",
+    "f": 0.096824
+  },
+  {
+    "word": "barcode",
+    "f": 0.090228
+  },
+  {
+    "word": "yeti",
+    "f": 0.089831
+  },
+  {
+    "word": "pinwheel",
+    "f": 0.089788
+  },
+  {
+    "word": "cupcake",
+    "f": 0.088705
+  },
+  {
+    "word": "leprechaun",
+    "f": 0.088158
+  },
+  {
+    "word": "pepperoni",
+    "f": 0.087235
+  },
+  {
+    "word": "shoelace",
+    "f": 0.08473
+  },
+  {
+    "word": "anteater",
+    "f": 0.083009
+  },
+  {
+    "word": "baguette",
+    "f": 0.082573
+  },
+  {
+    "word": "burrito",
+    "f": 0.082522
+  },
+  {
+    "word": "milkshake",
+    "f": 0.079997
+  },
+  {
+    "word": "meatloaf",
+    "f": 0.07943
+  },
+  {
+    "word": "pickaxe",
+    "f": 0.079184
+  },
+  {
+    "word": "sunshade",
+    "f": 0.076778
+  },
+  {
+    "word": "ladybug",
+    "f": 0.076469
+  },
+  {
+    "word": "seahorse",
+    "f": 0.076195
+  },
+  {
+    "word": "floodlight",
+    "f": 0.075664
+  },
+  {
+    "word": "kebab",
+    "f": 0.073912
+  },
+  {
+    "word": "airbag",
+    "f": 0.070408
+  },
+  {
+    "word": "ukulele",
+    "f": 0.06887
+  },
+  {
+    "word": "narwhal",
+    "f": 0.068267
+  },
+  {
+    "word": "skydiving",
+    "f": 0.065933
+  },
+  {
+    "word": "levitate",
+    "f": 0.064525
+  },
+  {
+    "word": "snowboard",
+    "f": 0.063733
+  },
+  {
+    "word": "meatball",
+    "f": 0.063713
+  },
+  {
+    "word": "toucan",
+    "f": 0.063237
+  },
+  {
+    "word": "booger",
+    "f": 0.06133
+  },
+  {
+    "word": "maracas",
+    "f": 0.059166
+  },
+  {
+    "word": "jackhammer",
+    "f": 0.058817
+  },
+  {
+    "word": "treehouse",
+    "f": 0.057874
+  },
+  {
+    "word": "brainwash",
+    "f": 0.056031
+  },
+  {
+    "word": "nachos",
+    "f": 0.05412
+  },
+  {
+    "word": "horsewhip",
+    "f": 0.051876
+  },
+  {
+    "word": "flamethrower",
+    "f": 0.043869
+  },
+  {
+    "word": "hairspray",
+    "f": 0.043722
+  },
+  {
+    "word": "katana",
+    "f": 0.042192
+  },
+  {
+    "word": "kraken",
+    "f": 0.041701
+  },
+  {
+    "word": "cowbell",
+    "f": 0.040908
+  },
+  {
+    "word": "panpipes",
+    "f": 0.040591
+  },
+  {
+    "word": "blowfish",
+    "f": 0.040119
+  },
+  {
+    "word": "eyeshadow",
+    "f": 0.03943
+  },
+  {
+    "word": "bobsled",
+    "f": 0.036647
+  },
+  {
+    "word": "kazoo",
+    "f": 0.035957
+  },
+  {
+    "word": "dishrag",
+    "f": 0.035941
+  },
+  {
+    "word": "baklava",
+    "f": 0.034475
+  },
+  {
+    "word": "earwax",
+    "f": 0.031216
+  },
+  {
+    "word": "taser",
+    "f": 0.029785
+  },
+  {
+    "word": "unicycle",
+    "f": 0.028564
+  },
+  {
+    "word": "racecar",
+    "f": 0.026146
+  },
+  {
+    "word": "mothball",
+    "f": 0.023209
+  },
+  {
+    "word": "paintball",
+    "f": 0.02198
+  },
+  {
+    "word": "tiramisu",
+    "f": 0.021818
+  },
+  {
+    "word": "lightsaber",
+    "f": 0.017723
+  },
+  {
+    "word": "clownfish",
+    "f": 0.017319
+  },
+  {
+    "word": "skateboarder",
+    "f": 0.017164
+  },
+  {
+    "word": "derp",
+    "f": 0.016569
+  },
+  {
+    "word": "anglerfish",
+    "f": 0.013707
+  },
+  {
+    "word": "meerkat",
+    "f": 0.012463
+  },
+  {
+    "word": "ringtone",
+    "f": 0.010124
+  },
+  {
+    "word": "backflip",
+    "f": 0.009264
+  },
+  {
+    "word": "razorblade",
+    "f": 0.009153
+  },
+  {
+    "word": "quokka",
+    "f": 0.007972
+  },
+  {
+    "word": "minigolf",
+    "f": 0.007246
+  },
+  {
+    "word": "spelunker",
+    "f": 0.007111
+  },
+  {
+    "word": "wingnut",
+    "f": 0.007111
+  },
+  {
+    "word": "rockstar",
+    "f": 0.005851
+  },
+  {
+    "word": "starfruit",
+    "f": 0.004796
+  },
+  {
+    "word": "earbuds",
+    "f": 0.004721
+  },
+  {
+    "word": "lilypad",
+    "f": 0.003528
+  },
+  {
+    "word": "unibrow",
+    "f": 0.002466
+  },
+  {
+    "word": "beatbox",
+    "f": 0.002374
+  },
+  {
+    "word": "zipline",
+    "f": 0.00128
+  },
+  {
+    "word": "chestplate",
+    "f": 0.001237
+  },
+  {
+    "word": "glowstick",
+    "f": 0.000828
+  },
+  {
+    "word": "noob",
+    "f": 0.000777
+  },
+  {
+    "word": "clickbait",
+    "f": 0
+  },
+  {
+    "word": "emoji",
+    "f": 0
+  },
+  {
+    "word": "hashtag",
+    "f": 0
+  },
+  {
+    "word": "kendama",
+    "f": 0
+  },
+  {
+    "word": "vlogger",
+    "f": 0
+  },
+  {
+    "word": "vuvuzela",
+    "f": 0
+  },
+  {
+    "word": "youtuber",
+    "f": 0
+  }
+]

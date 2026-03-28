@@ -1,4 +1,4 @@
-import { words } from "./common/word_list.js";
+import { wordsMedium as words } from "./common/word_list.js";
 import wordEmbeddings from "./embeddings.js";
 function generateId() {
     return crypto.getRandomValues(new Int32Array(1))[0];
