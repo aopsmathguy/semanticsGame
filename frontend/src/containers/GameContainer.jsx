@@ -1,7 +1,7 @@
 //game screen
 import React, { useEffect, useState, useRef } from "react";
 import Game from "@/components/Game/Game";
-import { words } from "@common/word_list.js";
+import { wordsMedium as words } from "@common/word_list.js";
 import Fuse from "fuse.js";
 
 import { useSelector } from "react-redux";
