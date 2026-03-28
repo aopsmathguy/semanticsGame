@@ -2,7 +2,7 @@ import fs from "fs";
 import readline from "readline";
 import OpenAI from "openai";
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "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";
 const openai = new OpenAI({
   apiKey: OPENAI_API_KEY,
 });
