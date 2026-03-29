@@ -305,6 +305,10 @@ export const StyledRoomSettingsContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    ${({ isHost }) => !isHost && `
+        pointer-events: none;
+        opacity: 0.6;
+    `}
 `;
 export const StyledRoomSettingsListContainer = styled.div`
     flex: 1 1 auto;
@@ -345,10 +349,6 @@ export const StyledButton = styled.button`
     color: white;
     &:hover {
         filter: brightness(90%);
-    }
-    &:disabled {
-      filter: brightness(50%);
-      cursor: not-allowed;
     }
 `;
 export const StyledWordReveal = styled.div`

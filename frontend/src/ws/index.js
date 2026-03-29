@@ -4,8 +4,8 @@ import { CONFIG } from "@common/socketConfig";
 
 const WEBSOCKET_HOST =
   import.meta.env.VITE_WEBSOCKET_HOST
-    // || "ws://localhost:3000/api/ws";
-    || "https://e1b11dd17125.ngrok.app/api/ws";
+    || "ws://localhost:3000/api/ws";
+    // || "https://e1b11dd17125.ngrok.app/api/ws";
 
 const socket = new SocketClient(null, CONFIG);
 const connect = () => {

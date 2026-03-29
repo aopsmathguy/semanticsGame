@@ -1,5 +1,5 @@
 //game screen
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef } from "react";
 import Game from "@/components/Game/Game";
 import { wordsMedium as words } from "@common/word_list.js";
 import Fuse from "fuse.js";

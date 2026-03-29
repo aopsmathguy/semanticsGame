@@ -23,7 +23,7 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
         onStartGame({}); // no data needed for now
     };
     return (
-        <StyledRoomSettingsContainer>
+        <StyledRoomSettingsContainer isHost={isHost}>
             <StyledRoomSettingsListContainer>
                 <StyledSettingRow>
                     <StyledLabel htmlFor="maxPlayers">Max Players:</StyledLabel>
@@ -32,7 +32,6 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
                         onChange={(e) =>
                             changeSettings("maxPlayers", parseInt(e.target.value))
                         }
-                        disabled={!isHost}
                     >
                         {/* Add options for max players (e.g., 2-10) */}
                         {Array.from({ length: 19 }, (_, i) => i + 2).map((num) => (
@@ -52,7 +51,6 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
                         onChange={(e) =>
                             changeSettings("guessTime", parseInt(e.target.value))
                         }
-                        disabled={!isHost}
                     >
                         {/* Add options for guess time (e.g., 30, 60, 90) */}
                         {[15, 30, 45, 60, 90, 120, 150, 180, 210].map((time) => (
@@ -73,7 +71,6 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
                         onChange={(e) =>
                             changeSettings("numberOfRounds", parseInt(e.target.value))
                         }
-                        disabled={!isHost}
                     >
                         {/* Add options for number of rounds (e.g., 3-10) */}
                         {[2,3,5,8,12,20].map((num) => (
@@ -93,7 +90,6 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
                         onChange={(e) =>
                             changeSettings("numberOfHints", parseInt(e.target.value))
                         }
-                        disabled={!isHost}
                     >
                         {[0,1,2,3,5,8,10,12,15].map((num) => (
                             <option key={num} value={num} data-int-value={num}>
@@ -112,7 +108,6 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
                         onChange={(e) =>
                             changeSettings("hintDifficulty", parseInt(e.target.value))
                         }
-                        disabled={!isHost}
                     >
                         {[1,2,3,4,5,6,7,8,9,10].map((num) => (
                             <option key={num} value={num} data-int-value={num}>
@@ -123,7 +118,7 @@ function RoomSettings({ settings, onChangeSettings, onStartGame, isHost }) {
                 </StyledSettingRow>
             </StyledRoomSettingsListContainer>
             <StyledStartButtonContainer>
-                <StyledButton onClick={handleStartClick} disabled={!isHost}>
+                <StyledButton onClick={handleStartClick}>
                     Start
                 </StyledButton>
             </StyledStartButtonContainer>

@@ -29,10 +29,10 @@ function MainMenu({ profile, sendJoin }) {
     const onNameChange = (e) => {
         setLocalName(e.target.value);
     };
-    const [shapeIdx, setShapeIdx] = useState(avatar?.shapeIdx || 0);
-    const [colorIdx, setColorIdx] = useState(avatar?.colorIdx || 0);
-    const [eyesIdx, setEyesIdx] = useState(avatar?.eyesIdx || 0);
-    const [mouthIdx, setMouthIdx] = useState(avatar?.mouthIdx || 0);
+    const [shapeIdx, setShapeIdx] = useState(avatar?.shapeIdx ?? Math.floor(Math.random() * shapeNum));
+    const [colorIdx, setColorIdx] = useState(avatar?.colorIdx ?? Math.floor(Math.random() * colorNum));
+    const [eyesIdx, setEyesIdx] = useState(avatar?.eyesIdx ?? Math.floor(Math.random() * eyesNum));
+    const [mouthIdx, setMouthIdx] = useState(avatar?.mouthIdx ?? Math.floor(Math.random() * mouthNum));
 
     const clickLeftShape = () => {
         setShapeIdx((shapeIdx + shapeNum - 1) % shapeNum);

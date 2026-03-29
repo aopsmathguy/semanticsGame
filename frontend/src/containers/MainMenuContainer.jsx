@@ -1,5 +1,5 @@
 //game screen
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import MainMenu from "../components/MainMenu/MainMenu";
 
 import { useSelector } from "react-redux";

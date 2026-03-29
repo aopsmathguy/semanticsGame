@@ -7,7 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "@common": path.resolve(__dirname, "./common"),
+      "@common": path.resolve(__dirname, "../common"),
+      buffer: path.resolve(__dirname, "node_modules/buffer/index.js"),
     },
   },
   base: "./",

@@ -73,7 +73,7 @@ function GuessAreaOverlay({
                     settings={settings}
                     onChangeSettings={onChangeSettings}
                     onStartGame={onStartGame}
-                    isHost={hostId == playerId}
+                    isHost={hostId === playerId}
                 />
             </StyledGuessAreaOverlayContent>
             <StyledGuessAreaOverlayContent
