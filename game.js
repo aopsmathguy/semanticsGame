@@ -1,4 +1,5 @@
 import { wordsMedium as words } from "./common/word_list.js";
+import { GAME_STATE } from "./common/gameState.js";
 import wordEmbeddings from "./embeddings.js";
 function generateId() {
     return crypto.getRandomValues(new Int32Array(1))[0];
@@ -145,7 +146,7 @@ class Game {
             playersData.push({ playerId, profile, playerRoomInfo });
         }
         const guesses =
-            roomObj.gameState === "GUESSING"
+            roomObj.gameState === GAME_STATE.GUESSING
                 ? roomObj.guesses.map((guess) =>
                       roomObj.createGuessResponse(
                           guess,
@@ -154,7 +155,7 @@ class Game {
                   )
                 : [];
         const targetWord =
-            roomObj.gameState === "ROUND_OVER"
+            roomObj.gameState === GAME_STATE.ROUND_OVER
                 ? roomObj.targetWord
                 : roomObj.currentSpellingHint;
         const room = {
@@ -245,7 +246,7 @@ class Game {
         const player = this.players.get(playerId);
         const roomId = player.roomId;
         const roomObj = this.rooms.get(roomId);
-        if (roomObj.gameState !== "GUESSING") {
+        if (roomObj.gameState !== GAME_STATE.GUESSING) {
             return;
         }
         const { playerRoomInfo } = roomObj.players.get(playerId);
@@ -301,7 +302,7 @@ class Room {
 
         this.roomId = roomId;
         this.roomName = roomName;
-        this.gameState = "WAIT_START"; //'WAIT_START' | 'WAIT_ROUND_START' | 'GUESSING' | 'ROUND_OVER' | 'GAME_OVER'
+        this.gameState = GAME_STATE.WAIT_START;
         this.timer = 0;
         this._hostId = 0;
         this.players = new Map(); //playerId -> {playerRoomInfo: PlayerRoomInfo, profile: Profile}
@@ -364,7 +365,7 @@ class Room {
         };
     }
     async startGame() {
-        if (this.gameState !== "WAIT_START") {
+        if (this.gameState !== GAME_STATE.WAIT_START) {
             return;
         }
         this.currentRound = 0;
@@ -389,7 +390,7 @@ class Room {
     }
 
     async startRound() {
-        this.gameState = "WAIT_ROUND_START";
+        this.gameState = GAME_STATE.WAIT_ROUND_START;
         this.timer = 3;
         this.socketEmit("round-start", {
             currentRound: this.currentRound,
@@ -438,7 +439,7 @@ class Room {
     }
 
     async handleGuesses() {
-        this.gameState = "GUESSING";
+        this.gameState = GAME_STATE.GUESSING;
         this.timer = this.settings.guessTime;
         this.socketEmit("guess-start", {
             targetWord: this.currentSpellingHint,
@@ -487,7 +488,7 @@ class Room {
     }
 
     async endRound() {
-        this.gameState = "ROUND_OVER";
+        this.gameState = GAME_STATE.ROUND_OVER;
         this.timer = 5;
         for (const [i, {id, timeFactor}] of this.playerSolveOrder.entries()) {
             const playerRoomInfo = this.players.get(id).playerRoomInfo;
@@ -516,7 +517,7 @@ class Room {
         }
     }
     async gameOver() {
-        this.gameState = "GAME_OVER";
+        this.gameState = GAME_STATE.GAME_OVER;
         this.timer = 5;
         const scores = Array.from(this.players.values()).map(
             (playerInfo) => playerInfo.playerRoomInfo
@@ -534,7 +535,7 @@ class Room {
             await new Promise((resolve) => setTimeout(resolve, nextTime - Date.now()));
             this.timer--;
         }
-        this.gameState = "WAIT_START";
+        this.gameState = GAME_STATE.WAIT_START;
         this.timer = 0;
         this.currentRound = 0;
         for (const [playerId, { playerRoomInfo }] of this.players) {
@@ -545,7 +546,7 @@ class Room {
     }
     socketEmit(event, data, excludePlayerId = null) {
         for (const [playerId, { playerRoomInfo }] of this.players) {
-            if (playerId !== excludePlayerId) {
+            if (playerId !== excludePlayerId && this.game.players.has(playerId)) {
                 this.game.players.get(playerId).socketEmit(event, data);
             }
         }

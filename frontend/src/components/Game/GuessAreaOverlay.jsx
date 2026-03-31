@@ -4,11 +4,7 @@ import {
     StyledGuessAreaOverlay,
     StyledGuessAreaOverlayContent,
 } from "./styles";
-//on gameState = "WAIT_START", show settings
-//on gameState = "WAIT_ROUND_START", show round number with timer
-//on gameState = "GUESSING", hide overlay
-//on gameState = "ROUND_OVER", show target word and roundScores
-//on gameState = "GAME_OVER", show final scores podium
+import { GAME_STATE } from "@common/gameState";
 import RoomSettings from "./RoomSettings";
 import WaitRoundStart from "./WaitRoundStart";
 import RoundEnd from "./RoundEnd";
@@ -41,14 +37,14 @@ function GuessAreaOverlay({
     });
     useEffect(() => {
         switch (gameState){
-            case "WAIT_ROUND_START":
+            case GAME_STATE.WAIT_ROUND_START:
                 setRoundStartProps({
                     currentRound,
                     timer,
                     settings
                 });
                 break;
-            case "ROUND_OVER":
+            case GAME_STATE.ROUND_OVER:
                 setRoundEndProps({
                     players,
                     targetWord,
@@ -56,7 +52,7 @@ function GuessAreaOverlay({
                     settings
                 });
                 break;
-            case "GAME_OVER":
+            case GAME_STATE.GAME_OVER:
                 setGameEndProps({
                     players,
                 });
@@ -64,10 +60,10 @@ function GuessAreaOverlay({
         }
     }, [gameState, currentRound, timer, players, targetWord, settings]);
     return (
-        <StyledOverlay hideOverlay={gameState == "GUESSING"}>
-            <StyledGuessAreaOverlay hideOverlay={gameState == "GUESSING"} />
+        <StyledOverlay hideOverlay={gameState == GAME_STATE.GUESSING}>
+            <StyledGuessAreaOverlay hideOverlay={gameState == GAME_STATE.GUESSING} />
             <StyledGuessAreaOverlayContent
-                hideOverlay={gameState != "WAIT_START"}
+                hideOverlay={gameState != GAME_STATE.WAIT_START}
             >
                 <RoomSettings
                     settings={settings}
@@ -77,17 +73,17 @@ function GuessAreaOverlay({
                 />
             </StyledGuessAreaOverlayContent>
             <StyledGuessAreaOverlayContent
-                hideOverlay={gameState != "WAIT_ROUND_START"}
+                hideOverlay={gameState != GAME_STATE.WAIT_ROUND_START}
             >
                 <WaitRoundStart {...roundStartProps} />
             </StyledGuessAreaOverlayContent>
             <StyledGuessAreaOverlayContent
-                hideOverlay={gameState != "ROUND_OVER"}
+                hideOverlay={gameState != GAME_STATE.ROUND_OVER}
             >
                 <RoundEnd {...roundEndProps} />
             </StyledGuessAreaOverlayContent>
             <StyledGuessAreaOverlayContent
-                hideOverlay={gameState != "GAME_OVER"}
+                hideOverlay={gameState != GAME_STATE.GAME_OVER}
             >
                 <GameEnd {...gameEndProps} />
             </StyledGuessAreaOverlayContent>

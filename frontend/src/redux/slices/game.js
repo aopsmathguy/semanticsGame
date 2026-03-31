@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { GAME_STATE } from "@common/gameState";
 const addGuess = (guesses, guess, playerSolveCallback) => {
     const { playerId, word, wordHash, similarity, ranking, hidden, solved } = guess;
     let existingGuess = guesses[wordHash];
@@ -130,7 +131,7 @@ export const gameSlice = createSlice({
             const { currentRound } = action.payload;
             const room = state.room;
             room.currentRound = currentRound;
-            room.gameState = "WAIT_ROUND_START";
+            room.gameState = GAME_STATE.WAIT_ROUND_START;
         },
         handleGuessStart: (state, action) => {
             const { targetWord, guesses } = action.payload;
@@ -147,7 +148,7 @@ export const gameSlice = createSlice({
                 addGuess(room.guesses, guess, (playerId) => {});
             }
 
-            room.gameState = "GUESSING";
+            room.gameState = GAME_STATE.GUESSING;
         },
         handleRoundEnd: (state, action) => {
             const { targetWord, scores } = action.payload;
@@ -160,7 +161,7 @@ export const gameSlice = createSlice({
                 playerRoomInfo.roundScore = roundScore;
                 playerRoomInfo.solved = solved;
             }
-            room.gameState = "ROUND_OVER";
+            room.gameState = GAME_STATE.ROUND_OVER;
 
             const color = "#f80";
             const content = `The word was **${targetWord}**`;
@@ -174,7 +175,7 @@ export const gameSlice = createSlice({
                 const { playerRoomInfo } = room.players[playerId];
                 playerRoomInfo.score = score;
             }
-            room.gameState = "GAME_OVER";
+            room.gameState = GAME_STATE.GAME_OVER;
             
             const winner = Object.values(room.players).reduce((a, b) => a.playerRoomInfo.score > b.playerRoomInfo.score ? a : b);
             const color = "#f80";
@@ -191,7 +192,7 @@ export const gameSlice = createSlice({
             }
             room.timer = 0;
             room.currentRound = 0;
-            room.gameState = "WAIT_START";
+            room.gameState = GAME_STATE.WAIT_START;
         },
         handleTimer: (state, action) => {
             const { timeLeft, emphasize } = action.payload;

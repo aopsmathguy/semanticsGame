@@ -79,7 +79,7 @@ export const CONFIG = new SocketConfig({
             roomId: "int32",
             room: {
                 "room-name": "string",
-                "gameState": "string",
+                "gameState": "uint8",
                 "timer": "uint32",
                 "hostId": "int32",
                 "players": [{

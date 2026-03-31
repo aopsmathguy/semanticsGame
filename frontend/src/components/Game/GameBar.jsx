@@ -2,6 +2,7 @@ import React from "react";
 import { StyledGameBarContainer, StyledGameBarPlayerAvatar } from "./styles";
 import Timer from "./Timer";
 import Avatar from "../Shared/Avatar";
+import { GAME_STATE } from "@common/gameState";
 
 function GameBar({
     gameState,
@@ -17,18 +18,17 @@ function GameBar({
     const { name, avatar } = profile;
     const { numberOfRounds } = settings;
     const state = (() => {
-        switch (
-            gameState //'WAIT_START' | 'WAIT_ROUND_START' | 'GUESSING' | 'WAIT_ROUND_END' | 'WAIT_GAME_END'
-        ) {
-            case "WAIT_START":
+        console.log(gameState);
+        switch (gameState) {
+            case GAME_STATE.WAIT_START:
                 return "Waiting for host to start...";
-            case "WAIT_ROUND_START":
+            case GAME_STATE.WAIT_ROUND_START:
                 return "Round starting soon...";
-            case "GUESSING":
+            case GAME_STATE.GUESSING:
                 return targetWord;
-            case "ROUND_OVER":
+            case GAME_STATE.ROUND_OVER:
                 return targetWord;
-            case "GAME_OVER":
+            case GAME_STATE.GAME_OVER:
                 return "Game over!";
             default:
                 return "Unknown state";
